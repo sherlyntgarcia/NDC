@@ -1,0 +1,23 @@
+div#container {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div.projectTitle {
+	font-size: 12px;
+	position: absolute;
+}
+
+.fixed.fixed {
+	position: absolute;
+}
+
+.thumb{
+	height: 100px;
+	width: 130px;
+}
+
+a img, .fixed.fixed {
+	height: 15px;
+	width: 15px;
+}

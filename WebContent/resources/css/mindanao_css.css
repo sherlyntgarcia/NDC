@@ -1,0 +1,46 @@
+div#mcontainer {
+	background-image: url('../img/maps/mindanao_main.png');
+	background-size: 100% 100%;
+	width: 380px;
+	height: 400px;
+}
+
+div.fixed#iligan {
+	margin-left: 290px;
+	margin-top: 248px;
+}
+
+div.fixed#zamboanga {
+	margin-left: 78px;
+	margin-top: 295px;
+}
+
+div.fixed#davao {
+	margin-left: 233px;
+	margin-top: 170px;
+}
+
+div.fixed#cotabato {
+	margin-left: 233px;
+	margin-top: 218px;
+}
+
+div.projectTitle#iligan {
+	margin-left: 0px;
+	margin-top: 150px;
+}
+
+div.projectTitle#zamboanga {
+	margin-left: -100px;
+	margin-top: 270px;
+}
+
+div.projectTitle#davao {
+	margin-left: 380px;
+	margin-top: 240px;
+}
+
+div.projectTitle#cotabato {
+	margin-left: 0px;
+	margin-top: 210px;
+}

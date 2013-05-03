@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/security
+    	http://www.springframework.org/schema/security/spring-security-3.1.xsd
+    	http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ 		http://www.springframework.org/schema/mvc
+ 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/context
+ 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 		
+ 	<http pattern="/resources/**" security="none" />
+ 	<http pattern="/download/**" security="none" />
+    <http pattern="/favicon.ico" security="none" />
+    
+    <http auto-config="true" use-expressions="true">
+    
+    	<intercept-url pattern="/" access="permitAll" />
+    	<intercept-url pattern="/login/**" access="permitAll" />
+    	<intercept-url pattern="/visualization/**" access="permitAll" />
+    	
+    	<!-- initial dashboard -->
+    	<intercept-url pattern="/dashboard" access="isAuthenticated()" />
+    	<intercept-url pattern="/dashboard/" access="isAuthenticated()" />
+    	
+    	<intercept-url pattern="/dashboard/editProfile" access="isAuthenticated()" />
+    	<intercept-url pattern="/dashboard/editProfileSubmit" access="isAuthenticated()" />
+    	
+    	<!-- tactical dashboard -->
+    	<intercept-url pattern="/dashboard/tactical/**" access="hasRole('TACTICAL_USER') or hasRole('POWER_USER')" />
+    	
+    	<!-- allow tactical to view personal services, mooe and capital expenditures -->
+    	<intercept-url pattern="/dashboard/internal/FAD/GetPersonalServices" access="hasRole('TACTICAL_USER') or hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	<intercept-url pattern="/dashboard/internal/FAD/GetMooe" access="hasRole('TACTICAL_USER') or hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	<intercept-url pattern="/dashboard/internal/FAD/GetCapitalExpenditures" access="hasRole('TACTICAL_USER') or hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	
+    	<intercept-url pattern="/dashboard/internal/SPG/existing/10" access="principal.username eq 'vel'" />
+    	<intercept-url pattern="/dashboard/internal/SPG/existing/11" access="principal.username eq 'vel'" />
+    	<intercept-url pattern="/dashboard/internal/SPG/existing/12" access="principal.username eq 'vel'" />
+    	<intercept-url pattern="/dashboard/internal/SPG/existing/13" access="principal.username eq 'vel'" />
+    	
+    	<intercept-url pattern="/dashboard/internal/SPG/existing/**" access="hasRole('SPG_STRATEGIC_USER') or hasRole('SPG_OPERATIONAL_USER') or hasRole('AMG_STRATEGIC_USER') or hasRole('AMG_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	
+    	<!-- internal dashboard -->
+    	<intercept-url pattern="/dashboard/internal/FAD/**" access="hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	<intercept-url pattern="/dashboard/internal/AMG/**" access="hasRole('AMG_STRATEGIC_USER') or hasRole('AMG_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	<intercept-url pattern="/dashboard/internal/FMG/**" access="hasRole('FMG_STRATEGIC_USER') or hasRole('FMG_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	<intercept-url pattern="/dashboard/internal/SPG/**" access="hasRole('SPG_STRATEGIC_USER') or hasRole('SPG_OPERATIONAL_USER') or hasRole('POWER_USER')" />
+    	
+    	<!-- external dashboard -->
+    	<intercept-url pattern="/external/**" access="permitAll" />
+    	
+    	<!-- dashboard for administrators (POWER_USER) -->
+    	<intercept-url pattern="/dashboard/admin/**" access="hasRole('POWER_USER')" />
+    	
+    	<!-- all other links are denied -->
+    	<intercept-url pattern="/**" access="denyAll" />
+    	
+    	<form-login login-page="/login" authentication-failure-url="/login?error=t" default-target-url="/dashboard"
+    		always-use-default-target="true" />
+    	<logout logout-success-url="/login" logout-url="/logout" />
+    </http>
+    
+    <authentication-manager>
+    	<authentication-provider>
+    	
+    		<password-encoder hash="md5" />
+    	
+    		<jdbc-user-service data-source-ref="dataSource" 
+    			users-by-username-query="select username, password, is_activated from ndc_tbl_users where username=?"
+    			authorities-by-username-query="select username, role from ndc_tbl_users where username=?" />
+    		
+    	</authentication-provider>
+    </authentication-manager>
+    
+</beans:beans>
