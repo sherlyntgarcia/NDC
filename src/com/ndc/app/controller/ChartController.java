@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
 import java.text.NumberFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -2664,20 +2665,8 @@ public class ChartController {
 				calendar.setTime(projectedActualIncome.getDateUpdated());
 				
 				int month = calendar.get(Calendar.MONTH);
-				String monthString = "";
-				
-				if(month==0) monthString="Jan";
-				if(month==1) monthString="Feb";
-				if(month==2) monthString="Mar";
-				if(month==3) monthString="Apr";
-				if(month==4) monthString="May";
-				if(month==5) monthString="Jun";
-				if(month==6) monthString="Jul";
-				if(month==7) monthString="Aug";
-				if(month==8) monthString="Sep";
-				if(month==9) monthString="Oct";
-				if(month==10) monthString="Nov";
-				if(month==11) monthString="Dec";
+				int year = calendar.get(Calendar.YEAR);
+				String monthString = AppHelper.convertIntegerToMonth(month);
 				
 				plot.setUnits("% of " + monthString + " " +  calendar.get(Calendar.YEAR));
 
@@ -2731,23 +2720,10 @@ public class ChartController {
 				plot.setValuePaint(Color.black);
 
 				plot.setNoDataMessage("No data to display");
-
-				/*
-				 * float h = displayFrame.getHeight(); float w =
-				 * displayFrame.getWidth();
-				 */
-				// GradientPaint gradientPaint = new GradientPaint(0.0F, 10.0F,
-				// Color.WHITE, h, w, Color.green.darker());
-				// plot.setBackgroundPaint(gradientPaint);
-				/*
-				 * chart.setBackgroundPaint(new GradientPaint(0, 0, new
-				 * Color(102, 0, 102), 0, h, Color.black));
-				 * chart.getTitle().setPaint(Color.white);
-				 */
-				plot.setValueFont(new Font("Dialog", Font.BOLD, 14));
+				plot.setValueFont(new Font("Dialog", Font.BOLD, 18));
 
 				JFreeChart chart = new JFreeChart(
-						"INCOME- ACTUAL VS PROJECTION CHART",
+						"Income:  Actual vs Budget as of " + monthString + " " + year,
 						JFreeChart.DEFAULT_TITLE_FONT, plot, true);
 
 				chart.getLegend().setVisible(false);
@@ -2872,36 +2848,16 @@ public class ChartController {
 			// / projectedActualIncome.getprojectedDividend()) * 100;
 
 			if (actualIncomeExpense != null) {
+				
+				String newDate = null;
+				int year = 0;
 
 				if (actualIncomeExpense.size() != 0) {
 					for (ActualIncomeExpense expense : actualIncomeExpense) {
 						if (expense != null) {
 
-							String newDate = "";
-							if (expense.getMonth() == AppHelper.JANUARY)
-								newDate = "January";
-							else if (expense.getMonth() == AppHelper.FEBRUARY)
-								newDate = "February";
-							else if (expense.getMonth() == AppHelper.MARCH)
-								newDate = "March";
-							else if (expense.getMonth() == AppHelper.APRIL)
-								newDate = "April";
-							else if (expense.getMonth() == AppHelper.MAY)
-								newDate = "May";
-							else if (expense.getMonth() == AppHelper.JUNE)
-								newDate = "June";
-							else if (expense.getMonth() == AppHelper.JULY)
-								newDate = "July";
-							else if (expense.getMonth() == AppHelper.AUGUST)
-								newDate = "August";
-							else if (expense.getMonth() == AppHelper.SEPTEMBER)
-								newDate = "September";
-							else if (expense.getMonth() == AppHelper.OCTOBER)
-								newDate = "October";
-							else if (expense.getMonth() == AppHelper.NOVEMBER)
-								newDate = "November";
-							else if (expense.getMonth() == AppHelper.DECEMBER)
-								newDate = "December";
+							newDate = AppHelper.convertIntegerToMonth(expense.getMonth());
+							year = expense.getYear();
 
 							dataset.addValue(expense.gettotalExpense(),
 									"Expense", newDate);
@@ -2912,7 +2868,7 @@ public class ChartController {
 					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
-							"Actual Income vs Actual Expenses", // chart
+							"Expense: Actual vs Budget as of " + newDate + " " + year, // chart
 							// title
 							"", // domain(x-axis) axis label
 							"", // range(y-axis) axis label
@@ -3195,6 +3151,8 @@ public class ChartController {
 					Double current_amountBilled = 0.0;
 					Double pastDue_amountColleted = 0.0;
 					Double pastDue_amountBilled = 0.0;
+					int monthNum = 0;
+					int year = 0;
 
 					for (CollectionEfficiency newCollectionEfficiency : collectionEfficiency) {
 						current_amountCollected += newCollectionEfficiency
@@ -3205,7 +3163,12 @@ public class ChartController {
 								.getPastdueAmountCollected();
 						pastDue_amountBilled += newCollectionEfficiency
 								.getPastdueAmountBilled();
+						
+						monthNum = newCollectionEfficiency.getMonth();
+						year = newCollectionEfficiency.getYear();
 					}
+					
+					String month = AppHelper.convertIntegerToMonth(monthNum);
 
 					categoryDataset.setValue(pastDue_amountColleted,
 							"Amount Collected", "Past Due");
@@ -3218,7 +3181,7 @@ public class ChartController {
 							"Amount Billed", "Current");
 
 					JFreeChart chart = ChartFactory.createStackedBarChart3D(
-							"Collection Efficiency", // Title
+							"Collection Efficiency as of " + month + " " + year, // Title
 							"", // X-Axis label
 							"",// Y-Axis label
 							categoryDataset, // Dataset
@@ -3324,10 +3287,34 @@ public class ChartController {
 						"Unutilized", "Capital Expenditures");
 			}
 			
+			int m1 = buCapitalExpenditures.getMonth();
+			int m2 = buMooe.getMonth();
+			int m3 = buPersonalServices.getMonth();
+			
+			int y1 = buCapitalExpenditures.getYear();
+			int y2 = buMooe.getYear();
+			int y3 = buPersonalServices.getYear();
+			
+			int[] months = new int[3];
+			months[0] = m1;
+			months[1] = m2;
+			months[2] = m3;
+			
+			int[] years = new int[3];
+			years[0] = y1;
+			years[1] = y2;
+			years[2] = y3;
+			
+			Arrays.sort(months);
+			Arrays.sort(years);
+			
+			String month = AppHelper.convertIntegerToMonth(months[2]);
+			String year = "" + years[2];
+			
 			if(buPersonalServices != null || buMooe != null || buCapitalExpenditures != null) {
 				
 				JFreeChart chart = ChartFactory.createStackedBarChart(
-						"Budget Utilization", // Title
+						"Budget Utilization as of " + month + " " + year, // Title
 						"", // X-Axis label
 						"",// Y-Axis label
 						categoryDataset, // Dataset
@@ -3404,31 +3391,7 @@ public class ChartController {
 
 					for (PdstFRates newAvg : pdstfrates) {
 						if (newAvg != null) {
-							String newDate = "";
-							if (newAvg.getMonth() == AppHelper.JANUARY)
-								newDate = "January";
-							else if (newAvg.getMonth() == AppHelper.FEBRUARY)
-								newDate = "February";
-							else if (newAvg.getMonth() == AppHelper.MARCH)
-								newDate = "March";
-							else if (newAvg.getMonth() == AppHelper.APRIL)
-								newDate = "April";
-							else if (newAvg.getMonth() == AppHelper.MAY)
-								newDate = "May";
-							else if (newAvg.getMonth() == AppHelper.JUNE)
-								newDate = "June";
-							else if (newAvg.getMonth() == AppHelper.JULY)
-								newDate = "July";
-							else if (newAvg.getMonth() == AppHelper.AUGUST)
-								newDate = "August";
-							else if (newAvg.getMonth() == AppHelper.SEPTEMBER)
-								newDate = "September";
-							else if (newAvg.getMonth() == AppHelper.OCTOBER)
-								newDate = "October";
-							else if (newAvg.getMonth() == AppHelper.NOVEMBER)
-								newDate = "November";
-							else if (newAvg.getMonth() == AppHelper.DECEMBER)
-								newDate = "December";
+							String newDate = AppHelper.convertIntegerToMonth(newAvg.getMonth());
 
 							dataset.addValue(newAvg.getYear25Avg(), "25 Years",
 									newDate);

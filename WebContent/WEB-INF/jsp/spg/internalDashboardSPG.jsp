@@ -41,107 +41,109 @@
 				<div class="row-fluid">
 					<div class="span12">
 						
-						<table class="table table-bordered table-striped">
+<!-- 						<table class="table table-bordered table-striped"> -->
 							
-								<tr>
-									<th>YEAR</td>
-									<th>EQUITY INVESTMENTS (in millions)</td>
-									<th>PROJECT FINANCING (in millions)</td>
-									<th>TOTAL (in millions)</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<th>YEAR</td> -->
+<!-- 									<th>EQUITY INVESTMENTS (in millions)</td> -->
+<!-- 									<th>PROJECT FINANCING (in millions)</td> -->
+<!-- 									<th>TOTAL (in millions)</td> -->
+<!-- 								</tr> -->
 							
-								<tr>
-									<td>2000</td>
-									<td>6.70</td>
-									<td>1.30</td>
-									<td>8.00</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2000</td> -->
+<!-- 									<td>6.70</td> -->
+<!-- 									<td>1.30</td> -->
+<!-- 									<td>8.00</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2001</td>
-									<td>1.70</td>
-									<td>32.00</td>
-									<td>33.70</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2001</td> -->
+<!-- 									<td>1.70</td> -->
+<!-- 									<td>32.00</td> -->
+<!-- 									<td>33.70</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2002</td>
-									<td>3.90</td>
-									<td>5.00</td>
-									<td>8.90</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2002</td> -->
+<!-- 									<td>3.90</td> -->
+<!-- 									<td>5.00</td> -->
+<!-- 									<td>8.90</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2003</td>
-									<td>2.00</td>
-									<td>-</td>
-									<td>2.00</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2003</td> -->
+<!-- 									<td>2.00</td> -->
+<!-- 									<td>-</td> -->
+<!-- 									<td>2.00</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2004</td>
-									<td>-</td>
-									<td>216.20</td>
-									<td>216.20</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2004</td> -->
+<!-- 									<td>-</td> -->
+<!-- 									<td>216.20</td> -->
+<!-- 									<td>216.20</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2005</td>
-									<td>158.70</td>
-									<td>631.10</td>
-									<td>789.80</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2005</td> -->
+<!-- 									<td>158.70</td> -->
+<!-- 									<td>631.10</td> -->
+<!-- 									<td>789.80</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2006</td>
-									<td>128.50</td>
-									<td>1,518.60</td>
-									<td>1,647.10</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2006</td> -->
+<!-- 									<td>128.50</td> -->
+<!-- 									<td>1,518.60</td> -->
+<!-- 									<td>1,647.10</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2007</td>
-									<td>170.80</td>
-									<td>2,075.00</td>
-									<td>2,245.80</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2007</td> -->
+<!-- 									<td>170.80</td> -->
+<!-- 									<td>2,075.00</td> -->
+<!-- 									<td>2,245.80</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2008</td>
-									<td>8.10</td>
-									<td>1,000.00</td>
-									<td>1,008.10</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2008</td> -->
+<!-- 									<td>8.10</td> -->
+<!-- 									<td>1,000.00</td> -->
+<!-- 									<td>1,008.10</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2009</td>
-									<td>-</td>
-									<td>3,671.80</td>
-									<td>3,671.80</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2009</td> -->
+<!-- 									<td>-</td> -->
+<!-- 									<td>3,671.80</td> -->
+<!-- 									<td>3,671.80</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2010</td>
-									<td>-</td>
-									<td>828.20</td>
-									<td>828.20</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2010</td> -->
+<!-- 									<td>-</td> -->
+<!-- 									<td>828.20</td> -->
+<!-- 									<td>828.20</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2011</td>
-									<td>207.50</td>
-									<td>-</td>
-									<td>207.50</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2011</td> -->
+<!-- 									<td>207.50</td> -->
+<!-- 									<td>-</td> -->
+<!-- 									<td>207.50</td> -->
+<!-- 								</tr> -->
 								
-								<tr>
-									<td>2012</td>
-									<td>7.60</td>
-									<td>3.40</td>
-									<td>11.00</td>
-								</tr>
+<!-- 								<tr> -->
+<!-- 									<td>2012</td> -->
+<!-- 									<td>7.60</td> -->
+<!-- 									<td>3.40</td> -->
+<!-- 									<td>11.00</td> -->
+<!-- 								</tr> -->
 							
-						</table>
+<!-- 						</table> -->
+
+							<img src="${pageContext.request.contextPath}/visualization/spglinechart/1000/500" />
 						
 					</div>
 				</div>
@@ -222,12 +224,6 @@
 						</table>
 					
 					</div>
-				</div>
-				
-				<div style="margin-top:20px">
-					
-					<img src="${pageContext.request.contextPath}/visualization/spglinechart/1000/500" />
-					
 				</div>
 			
 			</div>

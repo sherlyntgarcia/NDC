@@ -43,6 +43,37 @@ public class AppHelper {
 		
 	}
 	
+	public static String convertIntegerToMonth(int num) {
+		String month = null;
+		
+		if (num == AppHelper.JANUARY)
+			month = "January";
+		else if (num == AppHelper.FEBRUARY)
+			month = "February";
+		else if (num == AppHelper.MARCH)
+			month = "March";
+		else if (num == AppHelper.APRIL)
+			month = "April";
+		else if (num == AppHelper.MAY)
+			month = "May";
+		else if (num == AppHelper.JUNE)
+			month = "June";
+		else if (num == AppHelper.JULY)
+			month = "July";
+		else if (num == AppHelper.AUGUST)
+			month = "August";
+		else if (num == AppHelper.SEPTEMBER)
+			month = "September";
+		else if (num == AppHelper.OCTOBER)
+			month = "October";
+		else if (num == AppHelper.NOVEMBER)
+			month = "November";
+		else if (num == AppHelper.DECEMBER)
+			month = "December";
+		
+		return month;
+	}
+	
 	public static Map<Integer, String> getMonths() {
 		Map<Integer, String> months = new HashMap<Integer, String>();
 		

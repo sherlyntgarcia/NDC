@@ -564,7 +564,7 @@
 			
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="projectedActualIncomeExpenseSubModalLabel">Projected Income vs Actual Income Expense</h3>
+				<h3 id="projectedActualIncomeExpenseSubModalLabel">Income: Actual vs Budget</h3>
 			</div>
 			
 			<form method="POST">
@@ -586,7 +586,7 @@
 			
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="actualIncomeExpenseModalLabel"> Actual Income vs Actual Expense </h3>
+				<h3 id="actualIncomeExpenseModalLabel"> Expense: Actual vs Budget </h3>
 			</div>
 			
 			<div class="modal-body">
