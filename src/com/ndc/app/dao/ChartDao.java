@@ -35,18 +35,23 @@ public interface ChartDao {
 	
 	public BalanceSheet getBalanceSheetByYear(Integer year);
 	public void addBalanceSheet(BalanceSheet balanceSheet) throws Exception;
+	public List<BalanceSheet> generateBalanceSheet();
 	
 	public IncomeStatement getIncomeStatementByYear(Integer year);
 	public void addIncomeStatement(IncomeStatement incomeStatement) throws Exception;
+	public List<IncomeStatement> generateIncomeStatement();
 	
 	public BondsIssued getBondsIssuedByYear(Integer year);
 	public void addBondsIssued(BondsIssued bondsIssued) throws Exception;
+	public List<BondsIssued> generateBondsIssued();
 	
 	public BondMaturity getBondMaturityByYear(Integer year);
 	public void addBondMaturity(BondMaturity bondMaturity) throws Exception;
+	public List<BondMaturity> generateBondMaturity();
 	
 	public PrincipalCouponPayments getPrincipalCouponPaymentsByYear(Integer year);
 	public void addPrincipalCouponPayments(PrincipalCouponPayments principalCouponPayments) throws Exception;
+	public List<PrincipalCouponPayments> generatePrincipalCouponPayments();
 	
 	public List<PdstFRates> getPdstFRates();
 	public void addPdstFRates(PdstFRates pdstFRates) throws Exception;
@@ -71,28 +76,36 @@ public interface ChartDao {
 	
 	public NetLending getNetLendingByYear(Integer year);
 	public void addNetLending(NetLending netLending) throws Exception;
+	public List<NetLending> generateNetLending();
 	
 	public AgriAgraBonds getAgriAgraBondsByYear(Integer year);
 	public void addAgriAgraBonds(AgriAgraBonds agriAgraBonds) throws Exception;
 	public Double getLatestAgriAgraBonds();
+	public List<AgriAgraBonds> generateAgriAgraBonds();
 	
 	public MaintenanceCost getMaintenaneCostByYear(Integer year);
 	public void addMaintenanceCost(MaintenanceCost maintenanceCost) throws Exception;
+	public List<MaintenanceCost> generateMaintenanceCost();
 	
 	public SourcesFunds getSourcesFundsByYear(Integer year);
 	public void addSourcesFunds(SourcesFunds sourcesFunds) throws Exception;
+	public List<SourcesFunds> generateSourcesFunds();
 	
 	public StatusAssets getLatestStatusAssets();
 	public void addStatusAssets(StatusAssets statusAssets) throws Exception;
+	public List<StatusAssets> generateStatusAssets();
 
 	public SpgIncomeStatement getSpgIncomeStatementByYear(Integer year, Long projectId);
 	public void addSpgIncomeStatement(SpgIncomeStatement spgIncomeStatement) throws Exception;
+	public List<SpgIncomeStatement> generateSpgIncomeStatement();
 	
 	public SpgBalanceSheet getSpgBalanceSheetByYear(Integer year, Long projectId);
 	public void addSpgBalanceSheet(SpgBalanceSheet spgBalanceSheet) throws Exception;
+	public List<SpgBalanceSheet> generateSpgBalanceSheet();
 	
 	public SpgCashFlow getSpgCashFlowByYear(Integer year, Long projectId);
 	public void addSpgCashFlow(SpgCashFlow spgCashFlow) throws Exception;
+	public List<SpgCashFlow> generateSpgCashFlow();
 	
 	public ProjectedActualIncome getLatestProjectedActualIncome();
 	public void addProjectedActualIncome(ProjectedActualIncome projectedActualIncome) throws Exception;

@@ -19,13 +19,14 @@
     	<property name="user" value="${jdbc.user}" />
     	<property name="password" value="${jdbc.password}" />
     	<property name="acquireIncrement" value="${jdbc.acquireIncrement}" />
-    	<property name="initialPoolSize" value="${jdbc.initialPoolSize}" />
+<!--     	<property name="initialPoolSize" value="${jdbc.initialPoolSize}" /> -->
     	<property name="minPoolSize" value="${jdbc.minPoolSize}" />
     	<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
-    	<property name="maxIdleTime" value="${jdbc.maxIdleTime}" />
+<!--     	<property name="maxIdleTime" value="${jdbc.maxIdleTime}" /> -->
+<!--     	<property name="maxIdleTimeExcessConnections" value="${jdbc.maxIdleTimeExcessConnections}" /> -->
     	<property name="idleConnectionTestPeriod" value="${jdbc.idleConnectionTestPeriod}" />
  		<property name="maxStatements" value="${jdbc.maxStatements}" />
- 		<property name="numHelperThreads" value="${jdbc.numHelperThreads}" />
+<!--  		<property name="numHelperThreads" value="${jdbc.numHelperThreads}" /> -->
     </bean>
     
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
@@ -36,9 +37,11 @@
     			<prop key="hibernate.dialect">${hibernate.dialect}</prop>
     			<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
     			
-    			<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
-                <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
-                <prop key="hibernate.connection.release_mode">${hibernate.connection.release_mode}</prop>
+<!--     			<prop key="hibernate.auto_close_session">${hibernate.auto_close_session}</prop> -->
+    			
+<!--     			<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop> -->
+<!--                 <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop> -->
+<!--                 <prop key="hibernate.connection.release_mode">${hibernate.connection.release_mode}</prop> -->
     		</props>
     	</property>
     </bean>

@@ -63,6 +63,12 @@ public class ChartDaoImpl implements ChartDao {
 
 		return (BalanceSheet) query.uniqueResult();
 	}
+	
+	@Override
+	public List<BalanceSheet> generateBalanceSheet() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_balance_sheet` WHERE id  in (select max(id) from ndc_tbl_balance_sheet group by year) order by year DESC LIMIT 3").addEntity(BalanceSheet.class);
+		return (List<BalanceSheet>) query.list();
+	}
 
 	@Override
 	public IncomeStatement getIncomeStatementByYear(Integer year) {
@@ -72,6 +78,12 @@ public class ChartDaoImpl implements ChartDao {
 		query.setMaxResults(1);
 
 		return (IncomeStatement) query.uniqueResult();
+	}
+	
+	@Override
+	public List<IncomeStatement> generateIncomeStatement() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_income_statement` WHERE id  in (select max(id) from ndc_tbl_income_statement group by year) order by year DESC LIMIT 3").addEntity(IncomeStatement.class);
+		return (List<IncomeStatement>) query.list();
 	}
 
 	@Override
@@ -96,6 +108,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(bondsIssued);
 	}
+	
+	@Override
+	public List<BondsIssued> generateBondsIssued() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_bonds_issued` WHERE id  in (select max(id) from ndc_tbl_bonds_issued group by year) order by year DESC LIMIT 4").addEntity(BondsIssued.class);
+		return (List<BondsIssued>) query.list();
+	}
 
 	@Override
 	public BondMaturity getBondMaturityByYear(Integer year) {
@@ -111,6 +129,12 @@ public class ChartDaoImpl implements ChartDao {
 	public void addBondMaturity(BondMaturity bondMaturity) throws Exception {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(bondMaturity);
+	}
+	
+	@Override
+	public List<BondMaturity> generateBondMaturity() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_bond_maturity` WHERE id  in (select max(id) from ndc_tbl_bond_maturity group by year) order by year DESC LIMIT 4").addEntity(BondMaturity.class);
+		return (List<BondMaturity>) query.list();
 	}
 
 	@Override
@@ -128,6 +152,12 @@ public class ChartDaoImpl implements ChartDao {
 			PrincipalCouponPayments principalCouponPayments) throws Exception {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(principalCouponPayments);
+	}
+	
+	@Override
+	public List<PrincipalCouponPayments> generatePrincipalCouponPayments() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_principal_and_coupon_payments` WHERE id  in (select max(id) from ndc_tbl_principal_and_coupon_payments group by year) order by year DESC LIMIT 3").addEntity(PrincipalCouponPayments.class);
+		return (List<PrincipalCouponPayments>) query.list();
 	}
 
 	@Override
@@ -200,7 +230,6 @@ public class ChartDaoImpl implements ChartDao {
 	public List<Shareholders> getShareholdersByProjectId(Long id) {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM ndc_tbl_shareholders WHERE id in (select MAX(id) from ndc_tbl_shareholders WHERE project_id = :id group by shareholders ) order by id desc")
 				.addEntity(Shareholders.class);
-		
 		query.setLong("id", id);
 
 		return query.list();
@@ -258,6 +287,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(netLending);
 	}
+	
+	@Override
+	public List<NetLending> generateNetLending() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_net_lending` WHERE id  in (select max(id) from ndc_tbl_net_lending group by year) order by year DESC LIMIT 3").addEntity(NetLending.class);
+		return (List<NetLending>) query.list();
+	}
 
 	@Override
 	public AgriAgraBonds getAgriAgraBondsByYear(Integer year) {
@@ -282,14 +317,13 @@ public class ChartDaoImpl implements ChartDao {
 		Query query = sessionFactory.getCurrentSession().createQuery("SELECT a.total from AgriAgraBonds a ORDER BY a.id DESC");
 		query.setMaxResults(1);
 
-//		if (query.list() != null) {
-//			if (query.list().size() > 0) {
-//				AgriAgraBonds bonds = (AgriAgraBonds) query.uniqueResult();
-//				return bonds.getTotal();
-//			}
-//		}
-
 		return (Double) query.uniqueResult();
+	}
+	
+	@Override
+	public List<AgriAgraBonds> generateAgriAgraBonds() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_agri_agra_bonds` WHERE id  in (select max(id) from ndc_tbl_agri_agra_bonds group by year) order by year DESC LIMIT 4").addEntity(AgriAgraBonds.class);
+		return (List<AgriAgraBonds>) query.list();
 	}
 
 	@Override
@@ -308,6 +342,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(maintenanceCost);
 	}
+	
+	@Override
+	public List<MaintenanceCost> generateMaintenanceCost() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_maintenance_cost` WHERE id  in (select max(id) from ndc_tbl_maintenance_cost group by year) order by year DESC LIMIT 3").addEntity(MaintenanceCost.class);
+		return (List<MaintenanceCost>) query.list();
+	}
 
 	@Override
 	public SourcesFunds getSourcesFundsByYear(Integer year) {
@@ -324,6 +364,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(sourcesFunds);
 	}
+	
+	@Override
+	public List<SourcesFunds> generateSourcesFunds() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_sources_funds` WHERE id  in (select max(id) from ndc_tbl_sources_funds group by year) order by year DESC LIMIT 3").addEntity(SourcesFunds.class);
+		return (List<SourcesFunds>) query.list();
+	}
 
 	@Override
 	public StatusAssets getLatestStatusAssets() {
@@ -338,6 +384,12 @@ public class ChartDaoImpl implements ChartDao {
 	public void addStatusAssets(StatusAssets statusAssets) throws Exception {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(statusAssets);
+	}
+	
+	@Override
+	public List<StatusAssets> generateStatusAssets() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_status_assets` WHERE id  in (select max(id) from ndc_tbl_status_assets group by year) order by year DESC LIMIT 3").addEntity(StatusAssets.class);
+		return (List<StatusAssets>) query.list();
 	}
 
 	@Override
@@ -357,6 +409,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(spgIncomeStatement);
 	}
+	
+	@Override
+	public List<SpgIncomeStatement> generateSpgIncomeStatement() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_income_statement` WHERE id  in (select max(id) from ndc_tbl_spg_income_statement group by year) order by year DESC LIMIT 3").addEntity(SpgIncomeStatement.class);
+		return (List<SpgIncomeStatement>) query.list();
+	}
 
 	@Override
 	public SpgBalanceSheet getSpgBalanceSheetByYear(Integer year, Long projectId) {
@@ -375,6 +433,12 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(spgBalanceSheet);
 	}
+	
+	@Override
+	public List<SpgBalanceSheet> generateSpgBalanceSheet() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_balance_sheet` WHERE id  in (select max(id) from ndc_tbl_spg_balance_sheet group by year) order by year DESC LIMIT 3").addEntity(SpgBalanceSheet.class);
+		return (List<SpgBalanceSheet>) query.list();
+	}
 
 	@Override
 	public SpgCashFlow getSpgCashFlowByYear(Integer year, Long projectId) {
@@ -391,6 +455,12 @@ public class ChartDaoImpl implements ChartDao {
 	public void addSpgCashFlow(SpgCashFlow spgCashFlow) throws Exception {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(spgCashFlow);
+	}
+	
+	@Override
+	public List<SpgCashFlow> generateSpgCashFlow() {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_cash_flow` WHERE id  in (select max(id) from ndc_tbl_spg_cash_flow group by year) order by year DESC LIMIT 3").addEntity(SpgCashFlow.class);
+		return (List<SpgCashFlow>) query.list();
 	}
 
 	@Override

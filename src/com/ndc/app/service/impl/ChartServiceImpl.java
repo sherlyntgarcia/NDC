@@ -64,6 +64,13 @@ public class ChartServiceImpl implements ChartService {
 		// TODO Auto-generated method stub
 		return chartDao.getBalanceSheetByYear(year);
 	}
+	
+	@Override
+	@Transactional
+	public List<BalanceSheet> generateBalanceSheet() {
+		// TODO Auto-generated method stub
+		return chartDao.generateBalanceSheet();
+	}
 
 	@Override
 	@Transactional
@@ -83,6 +90,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addIncomeStatement(incomeStatement);
 	}
+	
+	@Override
+	@Transactional
+	public List<IncomeStatement> generateIncomeStatement() {
+		// TODO Auto-generated method stub
+		return chartDao.generateIncomeStatement();
+	}
 
 	@Override
 	@Transactional
@@ -100,6 +114,13 @@ public class ChartServiceImpl implements ChartService {
 				.getName());
 
 		chartDao.addBondsIssued(bondsIssued);
+	}
+	
+	@Override
+	@Transactional
+	public List<BondsIssued> generateBondsIssued() {
+		// TODO Auto-generated method stub
+		return chartDao.generateBondsIssued();
 	}
 
 	@Override
@@ -119,6 +140,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addBondMaturity(bondMaturity);
 	}
+	
+	@Override
+	@Transactional
+	public List<BondMaturity> generateBondMaturity() {
+		// TODO Auto-generated method stub
+		return chartDao.generateBondMaturity();
+	}
 
 	@Override
 	@Transactional
@@ -137,6 +165,13 @@ public class ChartServiceImpl implements ChartService {
 				.getAuthenticationDetails().getName());
 
 		chartDao.addPrincipalCouponPayments(principalCouponPayments);
+	}
+	
+	@Override
+	@Transactional
+	public List<PrincipalCouponPayments> generatePrincipalCouponPayments() {
+		// TODO Auto-generated method stub
+		return chartDao.generatePrincipalCouponPayments();
 	}
 
 	@Override
@@ -288,6 +323,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addNetLending(netLending);
 	}
+	
+	@Override
+	@Transactional
+	public List<NetLending> generateNetLending() {
+		// TODO Auto-generated method stub
+		return chartDao.generateNetLending();
+	}
 
 	@Override
 	@Transactional
@@ -313,6 +355,13 @@ public class ChartServiceImpl implements ChartService {
 		// TODO Auto-generated method stub
 		return chartDao.getLatestAgriAgraBonds();
 	}
+	
+	@Override
+	@Transactional
+	public List<AgriAgraBonds> generateAgriAgraBonds() {
+		// TODO Auto-generated method stub
+		return chartDao.generateAgriAgraBonds();
+	}
 
 	@Override
 	@Transactional
@@ -332,6 +381,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addMaintenanceCost(maintenanceCost);
 	}
+	
+	@Override
+	@Transactional
+	public List<MaintenanceCost> generateMaintenanceCost() {
+		// TODO Auto-generated method stub
+		return chartDao.generateMaintenanceCost();
+	}
 
 	@Override
 	@Transactional
@@ -350,6 +406,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addSourcesFunds(sourcesFunds);
 	}
+	
+	@Override
+	@Transactional
+	public List<SourcesFunds> generateSourcesFunds() {
+		// TODO Auto-generated method stub
+		return chartDao.generateSourcesFunds();
+	}
 
 	@Override
 	@Transactional
@@ -367,6 +430,13 @@ public class ChartServiceImpl implements ChartService {
 				.getName());
 
 		chartDao.addStatusAssets(statusAssets);
+	}
+	
+	@Override
+	@Transactional
+	public List<StatusAssets> generateStatusAssets() {
+		// TODO Auto-generated method stub
+		return chartDao.generateStatusAssets();
 	}
 
 	@Override
@@ -387,6 +457,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addSpgIncomeStatement(spgIncomeStatement);
 	}
+	
+	@Override
+	@Transactional
+	public List<SpgIncomeStatement> generateSpgIncomeStatement() {
+		// TODO Auto-generated method stub
+		return chartDao.generateSpgIncomeStatement();
+	}
 
 	@Override
 	@Transactional
@@ -406,6 +483,13 @@ public class ChartServiceImpl implements ChartService {
 
 		chartDao.addSpgBalanceSheet(spgBalanceSheet);
 	}
+	
+	@Override
+	@Transactional
+	public List<SpgBalanceSheet> generateSpgBalanceSheet() {
+		// TODO Auto-generated method stub
+		return chartDao.generateSpgBalanceSheet();
+	}
 
 	@Override
 	@Transactional
@@ -423,6 +507,13 @@ public class ChartServiceImpl implements ChartService {
 				.getName());
 		
 		chartDao.addSpgCashFlow(spgCashFlow);
+	}
+	
+	@Override
+	@Transactional
+	public List<SpgCashFlow> generateSpgCashFlow() {
+		// TODO Auto-generated method stub
+		return chartDao.generateSpgCashFlow();
 	}
 
 	@Override
