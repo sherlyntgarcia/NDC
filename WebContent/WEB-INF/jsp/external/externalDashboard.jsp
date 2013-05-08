@@ -140,13 +140,13 @@
 							<p class="lead">Legends</p>
 							<hr />
 							<ul class="unstyled">
-								<li><img
+								<li><img onclick="window.location.href='${pageContext.request.contextPath}/external/luzon'"
 									src="${pageContext.request.contextPath}/resources/img/luzon_legend.png" />
 									- <span style="font-weight: bold">Luzon</span></li>
-								<li><img
+								<li><img onclick="window.location.href='${pageContext.request.contextPath}/external/visayas'"
 									src="${pageContext.request.contextPath}/resources/img/visayas_legend.png" />
 									- <span style="font-weight: bold">Visayas</span></li>
-								<li><img
+								<li><img onclick="window.location.href='${pageContext.request.contextPath}/external/mindanao'"
 									src="${pageContext.request.contextPath}/resources/img/mindanao_legend.png" />
 									- <span style="font-weight: bold">Mindanao</span></li>
 							</ul>
