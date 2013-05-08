@@ -156,7 +156,7 @@ public class ChartDaoImpl implements ChartDao {
 	
 	@Override
 	public List<PrincipalCouponPayments> generatePrincipalCouponPayments() {
-		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_principal_and_coupon_payments` WHERE id  in (select max(id) from ndc_tbl_principal_and_coupon_payments group by year) order by year DESC LIMIT 3").addEntity(PrincipalCouponPayments.class);
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_principal_and_coupon_payments` WHERE id  in (select max(id) from ndc_tbl_principal_and_coupon_payments group by year) order by year DESC LIMIT 4").addEntity(PrincipalCouponPayments.class);
 		return (List<PrincipalCouponPayments>) query.list();
 	}
 

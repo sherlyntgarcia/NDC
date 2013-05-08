@@ -76,9 +76,9 @@
 								<spring:input path="amountIssued" class="span3" placeholder="(e.g. 300000)" constraint="number" />
 							</div>
 							
-							<label>Bond Payment (Maturity)</label>
+							<label>Maturity (Years)</label>
 							<div>
-								<spring:input path="bondPayment" class="span3" placeholder="(e.g. 450000)" constraint="number" />
+								<spring:input path="bondPayment" class="span3" placeholder="(e.g. 5)" constraint="number" />
 							</div>
 							
 							<div class="form-actions">

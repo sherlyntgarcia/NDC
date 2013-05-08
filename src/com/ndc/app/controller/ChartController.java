@@ -454,7 +454,7 @@ public class ChartController {
 						"Term of the Bond", bm.getYear());
 					categoryDataset.setValue(
 							bm.getBondPayment() / 1000000,
-							"Bond Payment", bm.getYear());
+							"Maturity(Years)", bm.getYear());
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity", // Title

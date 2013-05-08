@@ -7,8 +7,8 @@
 		<li> <a href="<c:url value="/dashboard/internal/FAD" />">View Dashboard</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/FAD/balanceSheet" />">Balance Sheet</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/FAD/incomeStatement" />">Income Statement</a> </li>
-		<li> <a href="<c:url value="/dashboard/internal/FAD/projectedActualIncome" />">Projected/Actual Income</a> </li>
-		<li> <a href="<c:url value="/dashboard/internal/FAD/actualIncomeExpense" />">Actual Income Expense</a> </li>
+		<li> <a href="<c:url value="/dashboard/internal/FAD/projectedActualIncome" />">Income: Actual vs Budget</a> </li>
+		<li> <a href="<c:url value="/dashboard/internal/FAD/actualIncomeExpense" />">Expense: Actual vs Budget</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/FAD/collectionEfficiency" />">Collection Efficiency</a> </li>
 		<li class="dropdown-submenu"> 
 			<a href="#">Budget Utilization</a>
