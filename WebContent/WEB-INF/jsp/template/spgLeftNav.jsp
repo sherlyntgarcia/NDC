@@ -4,29 +4,30 @@
     
 <div>
 	<ul class="nav nav-tabs nav-stacked">
+		<li> <a href="<c:url value="/dashboard" />">View Dashboard</a> </li>
 		<li class="dropdown-submenu">
 			<a href="#" tabindex="-1" >New</a>
 			<ul class="dropdown-menu">
 				<li>
 					<a href = "#" style="font-weight:bold">Projects for Implementation</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_ndcSchool" />">NDC School Building Program</a></li>												
+						<li><a href = "<c:url value="/external/project_ndcSchool" />">NDC School Building Program</a></li>												
 					</ul>
 				</li>
 				<li>
 					<a href = "#" style="font-weight:bold">Projects Under Evaluation</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_FCIE"/>">FCIE Expansion Project</a></li>
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_foodExchange"/>">Davao Food Exchange Terminal</a></li>
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_mini-hydro"/>">Mini-Hydro Projects</a></li>												
+						<li><a href = "<c:url value="/external/project_FCIE"/>">FCIE Expansion Project</a></li>
+						<li><a href = "<c:url value="/external/project_foodExchange"/>">Davao Food Exchange Terminal</a></li>
+						<li><a href = "<c:url value="/external/project_mini-hydro"/>">Mini-Hydro Projects</a></li>												
 					</ul>
 				</li>	
 				<li>
 					<a href = "#" style="font-weight:bold">Projects Identified</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_redondo"/>">Redondo Wind Power Project</a></li>	
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_biomass"/>">Biomass Development Project</a></li>
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_rubberProcessing"/>">Mindanao Rubber Processing Plant</a></li>													
+						<li><a href = "<c:url value="/external/project_redondo"/>">Redondo Wind Power Project</a></li>	
+						<li><a href = "<c:url value="/external/project_biomass"/>">Biomass Development Project</a></li>
+						<li><a href = "<c:url value="/external/project_rubberProcessing"/>">Mindanao Rubber Processing Plant</a></li>													
 					</ul>
 				</li>											
 			</ul>

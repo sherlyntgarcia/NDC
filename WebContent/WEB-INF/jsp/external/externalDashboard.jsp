@@ -19,7 +19,7 @@
 							<div>
 								<a class="btn btn-primary btn-large"
 									href="<c:url value="/dashboard/" />"><i
-									class="icon icon-backward icon-white"></i> Back to Internal</a>
+									class="icon icon-backward icon-white"></i> Back to Internal </a>
 							</div>
 						</div>
 					</div>

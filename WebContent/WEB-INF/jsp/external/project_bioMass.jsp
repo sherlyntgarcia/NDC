@@ -21,9 +21,9 @@
 						</p>
 						<hr>
 					</div>
-					<div class = "span2">
-						<a class="btn btn-primary" href="<c:url value="/external" />"><i class = "icon-backward icon-white"></i> External Dashboard</a>
-					</div>
+					
+					<c:import url="../template/spgProjectsLink.jsp" />
+					
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
