@@ -1,15 +1,13 @@
 package com.ndc.app.dao.impl;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Projections;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -111,8 +109,18 @@ public class ChartDaoImpl implements ChartDao {
 	
 	@Override
 	public List<BondsIssued> generateBondsIssued() {
-		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_bonds_issued` WHERE id  in (select max(id) from ndc_tbl_bonds_issued group by year) order by year DESC LIMIT 4").addEntity(BondsIssued.class);
-		return (List<BondsIssued>) query.list();
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_bonds_issued` WHERE id  in (select max(id) from ndc_tbl_bonds_issued group by year) ORDER BY YEAR DESC LIMIT 4").addEntity(BondsIssued.class);
+		List<BondsIssued> l = (List<BondsIssued>) query.list();
+		
+		Collections.sort(l, new Comparator<BondsIssued>() {
+			@Override
+			public int compare(BondsIssued o1, BondsIssued o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -134,7 +142,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<BondMaturity> generateBondMaturity() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_bond_maturity` WHERE id  in (select max(id) from ndc_tbl_bond_maturity group by year) order by year DESC LIMIT 4").addEntity(BondMaturity.class);
-		return (List<BondMaturity>) query.list();
+		List<BondMaturity> l = (List<BondMaturity>) query.list();
+		
+		Collections.sort(l, new Comparator<BondMaturity>() {
+			@Override
+			public int compare(BondMaturity o1, BondMaturity o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -157,7 +175,18 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<PrincipalCouponPayments> generatePrincipalCouponPayments() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_principal_and_coupon_payments` WHERE id  in (select max(id) from ndc_tbl_principal_and_coupon_payments group by year) order by year DESC LIMIT 4").addEntity(PrincipalCouponPayments.class);
-		return (List<PrincipalCouponPayments>) query.list();
+		List<PrincipalCouponPayments> l = (List<PrincipalCouponPayments>) query.list();
+		
+		Collections.sort(l, new Comparator<PrincipalCouponPayments>() {
+			@Override
+			public int compare(PrincipalCouponPayments o1,
+					PrincipalCouponPayments o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -291,7 +320,18 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<NetLending> generateNetLending() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_net_lending` WHERE id  in (select max(id) from ndc_tbl_net_lending group by year) order by year DESC LIMIT 3").addEntity(NetLending.class);
-		return (List<NetLending>) query.list();
+		List<NetLending> l = (List<NetLending>) query.list();
+		
+		Collections.sort(l, new Comparator<NetLending>() {
+			@Override
+			public int compare(NetLending o1,
+					NetLending o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -346,7 +386,18 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<MaintenanceCost> generateMaintenanceCost() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_maintenance_cost` WHERE id  in (select max(id) from ndc_tbl_maintenance_cost group by year) order by year DESC LIMIT 3").addEntity(MaintenanceCost.class);
-		return (List<MaintenanceCost>) query.list();
+		List<MaintenanceCost> l = (List<MaintenanceCost>) query.list();
+		
+		Collections.sort(l, new Comparator<MaintenanceCost>() {
+			@Override
+			public int compare(MaintenanceCost o1,
+					MaintenanceCost o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -368,7 +419,18 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<SourcesFunds> generateSourcesFunds() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_sources_funds` WHERE id  in (select max(id) from ndc_tbl_sources_funds group by year) order by year DESC LIMIT 3").addEntity(SourcesFunds.class);
-		return (List<SourcesFunds>) query.list();
+		List<SourcesFunds> l = (List<SourcesFunds>) query.list();
+		
+		Collections.sort(l, new Comparator<SourcesFunds>() {
+			@Override
+			public int compare(SourcesFunds o1,
+					SourcesFunds o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -389,7 +451,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<StatusAssets> generateStatusAssets() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_status_assets` WHERE id  in (select max(id) from ndc_tbl_status_assets group by year) order by year DESC LIMIT 3").addEntity(StatusAssets.class);
-		return (List<StatusAssets>) query.list();
+		List<StatusAssets> l = (List<StatusAssets>) query.list();
+		
+		Collections.sort(l, new Comparator<StatusAssets>() {
+			@Override
+			public int compare(StatusAssets o1, StatusAssets o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
