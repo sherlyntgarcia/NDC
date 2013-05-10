@@ -1062,6 +1062,11 @@ public class ChartController {
 				piePlot.setLabelGenerator(labelGenerator);
 				piePlot.setOutlineVisible(false);
 				piePlot.setBackgroundPaint(Color.WHITE);
+				
+//				piePlot.setLabelFont(new Font("SansSerif", Font.PLAIN, 12));
+//				piePlot.setCircular(false);
+//				piePlot.setLabelGap(0.02);
+				
 				// piePlot.setLegendLabelGenerator(labelGenerator);
 
 				piePlot.setNoDataMessage("No data to display");
@@ -1625,11 +1630,17 @@ public class ChartController {
 				piePlot.setOutlineVisible(false);
 				piePlot.setBackgroundPaint(Color.WHITE);
 				piePlot.setNoDataMessage("No data to display");
-
+				
 				PiePlot plot3 = (PiePlot) chart.getPlot();
+				
 				// plot3.setForegroundAlpha(0.6f);
 				// plot3.setCircular(true);
-				// plot3.setSimpleLabels(true);
+				//plot3.setSimpleLabels(true);
+//				plot3.setOutlinePaint(new Color(0, 0, 0, 0));
+//				plot3.setLabelShadowPaint(new Color(0, 0, 0, 0));
+//				plot3.setLabelBackgroundPaint(new Color(0, 0, 0, 0));
+//				plot3.setLabelOutlinePaint(new Color(0, 0, 0, 0));
+				
 				plot3.setShadowXOffset(0);
 				plot3.setShadowYOffset(0);
 
