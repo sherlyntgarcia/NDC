@@ -102,7 +102,15 @@
 				
 						<div class="row-fluid">
 							<div class="span6">
-								<img alt="Occupancy is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/occupancy'" src="${pageContext.request.contextPath}/visualization/occupancypiechart/450/400" />
+								<div id="occupancyPieChartDiv"></div>
+						
+								<script>
+									$(document).ready(function() {
+										var url = "${pageContext.request.contextPath}/visualization/occupancypiechart";
+										
+										createOccupancyPieChart(url, 550, 400);
+									});
+								</script>
 							</div>
 							
 							<div class="span6">

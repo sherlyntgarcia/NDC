@@ -33,6 +33,7 @@
 	<script type="text/javascript" src="<c:url value="/resources/js/highcharts.src.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/resources/js/dashboard_default_options.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/resources/js/dashboard_fmg_scripts.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/resources/js/dashboard_amg_scripts.js"/>"></script>
 	
 	<script type="text/javascript">
 		$(function() {

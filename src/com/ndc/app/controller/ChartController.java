@@ -1167,64 +1167,21 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/occupancypiechart/{width}/{height}")
+	@RequestMapping(value = "/occupancypiechart")
 	public @ResponseBody
-	void generateOccupancyPieChart(
-			@PathVariable(value = "width") Integer width,
-			@PathVariable(value = "height") Integer height,
-			HttpServletResponse response) {
+	String generateOccupancyPieChart() {
 
+		JSONObject json = new JSONObject();
+		
 		try {
 
 			DefaultPieDataset dataset = new DefaultPieDataset();
 
 			Occupancy occupancy = chartService.getOccupancyChart();
-
-			if (occupancy != null) {
-				dataset.setValue("Occupied", occupancy.getOccupied());
-				dataset.setValue("Vacant", occupancy.getVacant());
-
-				JFreeChart chart = ChartFactory.createPieChart(
-						"NDC & l&l Bldg. Occupancy Rate", dataset, true, true,
-						true);
-
-				chart.setBorderVisible(false);
-
-				PiePlot piePlot = (PiePlot) chart.getPlot();
-				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-						"{0} - {2}");
-				labelGenerator.getPercentFormat().setMaximumFractionDigits(1);
-				piePlot.setLabelGenerator(labelGenerator);
-				// piePlot.setLegendLabelGenerator(labelGenerator);
-				piePlot.setSectionPaint(0, new Color(36, 90, 134));
-				piePlot.setSectionPaint(1, new Color(6, 202, 223));
-				piePlot.setNoDataMessage("No data to display");
-
-				LegendTitle legendTitle = chart.getLegend();
-				legendTitle.setPosition(RectangleEdge.RIGHT);
-
-				PiePlot plot3 = (PiePlot) chart.getPlot();
-				// plot3.setForegroundAlpha(0.6f);
-				// plot3.setCircular(true);
-				plot3.setSimpleLabels(true);
-				plot3.setShadowXOffset(0);
-				plot3.setShadowYOffset(0);
-
-				// legend = chart.getLegend();
-				// legend.setVisible(false);
-				plot3.setBackgroundPaint(Color.WHITE);
-				plot3.setOutlineVisible(false);
-
-				if (chart != null) {
-					final ChartRenderingInfo info = new ChartRenderingInfo(
-							new StandardEntityCollection());
-					response.setContentType("image/png");
-					OutputStream out = response.getOutputStream();
-
-					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-							info);
-				}
-
+			
+			if(occupancy != null) {
+				json.put("Occupied", occupancy.getOccupied());
+				json.put("Vacant", occupancy.getVacant());
 			}
 
 		} catch (Exception e) {
@@ -1235,6 +1192,8 @@ public class ChartController {
 			loggerUtil.log(auth, "ERROR WHILE DISPLAYING OCCUPANCY CHART");
 		}
 
+		return json.toString();
+		
 	}
 
 	@RequestMapping(value = "/netlendingbarchart/{width}/{height}")
