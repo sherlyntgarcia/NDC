@@ -12,6 +12,7 @@ import java.awt.geom.Rectangle2D;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -66,6 +67,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.google.gson.Gson;
 import com.ndc.app.AppHelper;
 import com.ndc.app.CustomCylinderRenderer;
 import com.ndc.app.MultipleMeterPlot;
@@ -1463,9 +1465,18 @@ public class ChartController {
 			
 			List<AgriAgraBonds> bondsList = chartService.generateAgriAgraBonds();
 			
+			List<Integer> years = new ArrayList<Integer>();
+			List<Double> amounts = new ArrayList<Double>();
+			
 			if(bondsList != null) {
-				json.put("bondsList", bondsList);
+				for(AgriAgraBonds a : bondsList) {
+					years.add(a.getYear());
+					amounts.add(a.getAmount());
+				}
 			}
+			
+			json.put("years", years);
+			json.put("amounts", amounts);
 
 //			if (bondsList != null && bondsList.size() > 0) {
 //				

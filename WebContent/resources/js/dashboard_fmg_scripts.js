@@ -173,9 +173,17 @@ function createAgriAgraBondsPieChart(url, width, height) {
 		success: function (data) {
 
 			var agriAgraBondsPieChart;
+			var years = data.years;
+			var amounts = data.amounts;
 			
+			var mySeries = [];
 			
-			   
+			for(var i=0; i<years.length; i++) {
+				mySeries.push([years[i], amounts[i]]);
+			}
+			
+			mySeries = prepare(mySeries);
+			
 			// Build the chart
 			agriAgraBondsPieChart = new Highcharts.Chart({
 				chart: {
@@ -188,7 +196,7 @@ function createAgriAgraBondsPieChart(url, width, height) {
 				},
 				tooltip: {
 					formatter: function() {
-						return '<span style="font-size:13px;">' +this.point.name+ '</span> <br/> <span style="font-size:13px">' +
+						return '<span style="font-size:13px;">' +this.point.x + '</span> <br/> <span style="font-size:13px">' +
 	                    			  this.percentage.toFixed(2) + '%</span> (<b>' + ReplaceNumberWithCommas(this.y) + '</b>)';
 	                },
 					backgroundColor: '#FFFFFF'
@@ -212,7 +220,7 @@ function createAgriAgraBondsPieChart(url, width, height) {
 							connectorPadding: 5,
 							distance: 30,
 							formatter: function() {
-								return '<span style="font-weight:bold;font-size:12px">'+ this.point.name +'</span>: <span style="font-size:12px">'+ this.percentage.toFixed(2) +' % </span>';
+								return '<span style="font-weight:bold;font-size:12px">'+ this.point.x +'</span>: <span style="font-size:12px">'+ this.percentage.toFixed(2) +' % </span>';
 							},
 							style: {
 								fontFamily: 'Tahoma, Arial, Helvetica, sans-serif'
@@ -222,11 +230,15 @@ function createAgriAgraBondsPieChart(url, width, height) {
 				},
 				series: [{
 					type: 'pie',
-					data: [{name: "Repair,Rehab,Restore", y: data.Repair}, 
-						   {name: "Farm to Market Roads", y: data.Rehab}
-						  ]
+					data: mySeries
 				}]
 			});
 		}
 	});	
 }
+
+function prepare(dataArray) {
+    return dataArray.map(function (item, index) {
+        return {x: item[0], y: item[1], myIndex: index};
+    });
+};
