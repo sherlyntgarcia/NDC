@@ -182,6 +182,9 @@ function createAgriAgraBondsPieChart(url, width, height) {
 				mySeries.push([years[i], amounts[i]]);
 			}
 			
+			//add unutilized
+			mySeries.push(["Unutilized", data.unutilized]);
+			
 			mySeries = prepare(mySeries);
 			
 			// Build the chart

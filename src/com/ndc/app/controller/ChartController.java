@@ -1467,16 +1467,20 @@ public class ChartController {
 			
 			List<Integer> years = new ArrayList<Integer>();
 			List<Double> amounts = new ArrayList<Double>();
+			double total = 0;
 			
 			if(bondsList != null) {
 				for(AgriAgraBonds a : bondsList) {
 					years.add(a.getYear());
 					amounts.add(a.getAmount());
+					
+					total += a.getAmount();
 				}
+				
+				json.put("years", years);
+				json.put("amounts", amounts);
+				json.put("unutilized", totalAgriAgraBonds - total);
 			}
-			
-			json.put("years", years);
-			json.put("amounts", amounts);
 
 //			if (bondsList != null && bondsList.size() > 0) {
 //				
