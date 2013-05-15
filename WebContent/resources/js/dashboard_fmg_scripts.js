@@ -158,3 +158,75 @@ function createLoanProceedsUtilizationPieChart(url, width, height) {
 		}
 	});	
 }
+
+function createAgriAgraBondsPieChart(url, width, height) {
+	
+	//Initialize the colors that will be used and make it gradient.
+	var colors = ['#C10000','#FF2222'];
+	
+	$.ajax({
+		type: "POST",
+		url: url,
+		dataType: "json",
+		cache: false,
+		error: function (jqXHR, textStatus, errorThrown) { },
+		success: function (data) {
+
+			var agriAgraBondsPieChart;
+			
+			
+			   
+			// Build the chart
+			agriAgraBondsPieChart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'agriAgraBondsPieChartDiv',
+					width: width,
+					height: height
+				},
+				title: {
+					text: '<b>Balance of NDC Agri Agra Bonds</b>'
+				},
+				tooltip: {
+					formatter: function() {
+						return '<span style="font-size:13px;">' +this.point.name+ '</span> <br/> <span style="font-size:13px">' +
+	                    			  this.percentage.toFixed(2) + '%</span> (<b>' + ReplaceNumberWithCommas(this.y) + '</b>)';
+	                },
+					backgroundColor: '#FFFFFF'
+				},
+				legend: {
+					align: 'right',
+					layout: 'vertical',
+					verticalAlign: 'middle',
+					itemMarginBottom: 5
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						borderWidth: 2,
+						showInLegend: false,
+						dataLabels: {
+							enabled: true,
+							color: '#000000',
+							connectorColor: '#000000',
+							connectorPadding: 5,
+							distance: 30,
+							formatter: function() {
+								return '<span style="font-weight:bold;font-size:12px">'+ this.point.name +'</span>: <span style="font-size:12px">'+ this.percentage.toFixed(2) +' % </span>';
+							},
+							style: {
+								fontFamily: 'Tahoma, Arial, Helvetica, sans-serif'
+							}
+						}
+					}
+				},
+				series: [{
+					type: 'pie',
+					data: [{name: "Repair,Rehab,Restore", y: data.Repair}, 
+						   {name: "Farm to Market Roads", y: data.Rehab}
+						  ]
+				}]
+			});
+		}
+	});	
+}

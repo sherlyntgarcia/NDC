@@ -81,7 +81,15 @@
 				
 				<div class="row-fluid">
 					<div class="span10 offset2">
-						<img alt="Agri Agra Bonds is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/agriAgraBonds'" src="${pageContext.request.contextPath}/visualization/agriagrabondspiechart/550/400" />
+						<div id="agriAgraBondsPieChartDiv"></div>
+						
+						<script>
+							$(document).ready(function() {
+								var url = "${pageContext.request.contextPath}/visualization/agriagrabondspiechart";
+								
+								createAgriAgraBondsPieChart(url, 550, 400);
+							});
+						</script>
 					</div>
 				</div>
 				

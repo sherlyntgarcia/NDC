@@ -1448,13 +1448,12 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/agriagrabondspiechart/{width}/{height}")
+	@RequestMapping(value = "/agriagrabondspiechart")
 	public @ResponseBody
-	void generateAgriAgraBondsPieChart(
-			@PathVariable(value = "width") Integer width,
-			@PathVariable(value = "height") Integer height,
-			HttpServletResponse response) {
-
+	String generateAgriAgraBondsPieChart() {
+		
+		JSONObject json = new JSONObject();
+		
 		try {
 
 			DefaultPieDataset dataset = new DefaultPieDataset();
@@ -1463,67 +1462,63 @@ public class ChartController {
 			Double unutilized = null;
 			
 			List<AgriAgraBonds> bondsList = chartService.generateAgriAgraBonds();
-
-			if (bondsList != null && bondsList.size() > 0) {
-				
-				double total = 0;
-				
-				for(AgriAgraBonds bond : bondsList) {
-					dataset.setValue(bond.getYear(),
-							bond.getAmount());
-					total += bond.getAmount();
-				}
-				
-				if (totalAgriAgraBonds != null) {
-					unutilized = totalAgriAgraBonds - total;
-				}
-
-				if (unutilized != null) {
-					dataset.setValue("Unutilized", unutilized);
-				}
-
-				JFreeChart chart = ChartFactory.createPieChart(
-						"Balance of NDC Agri-Agra Bonds", dataset, true, true,
-						true);
-
-
-				PiePlot piePlot = (PiePlot) chart.getPlot();
-				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-						"{0} = {1} ({2})");
-				labelGenerator.getPercentFormat().setMaximumFractionDigits(2);
-				piePlot.setLabelGenerator(labelGenerator);
-				piePlot.setLegendLabelGenerator(labelGenerator);
-				piePlot.setOutlineVisible(false);
-				piePlot.setBackgroundPaint(Color.WHITE);
-				piePlot.setNoDataMessage("No data to display");
-				
-				PiePlot plot3 = (PiePlot) chart.getPlot();
-				
-				// plot3.setForegroundAlpha(0.6f);
-				// plot3.setCircular(true);
-				//plot3.setSimpleLabels(true);
-//				plot3.setOutlinePaint(new Color(0, 0, 0, 0));
-//				plot3.setLabelShadowPaint(new Color(0, 0, 0, 0));
-//				plot3.setLabelBackgroundPaint(new Color(0, 0, 0, 0));
-//				plot3.setLabelOutlinePaint(new Color(0, 0, 0, 0));
-				
-				plot3.setShadowXOffset(0);
-				plot3.setShadowYOffset(0);
-
-				LegendTitle legend = chart.getLegend();
-				legend.setVisible(false);
-
-				if (chart != null) {
-					final ChartRenderingInfo info = new ChartRenderingInfo(
-							new StandardEntityCollection());
-					response.setContentType("image/png");
-					OutputStream out = response.getOutputStream();
-
-					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-							info);
-				}
-
+			
+			if(bondsList != null) {
+				json.put("bondsList", bondsList);
 			}
+
+//			if (bondsList != null && bondsList.size() > 0) {
+//				
+//				double total = 0;
+//				
+//				for(AgriAgraBonds bond : bondsList) {
+//					dataset.setValue(bond.getYear(),
+//							bond.getAmount());
+//					total += bond.getAmount();
+//				}
+//				
+//				if (totalAgriAgraBonds != null) {
+//					unutilized = totalAgriAgraBonds - total;
+//				}
+//
+//				if (unutilized != null) {
+//					dataset.setValue("Unutilized", unutilized);
+//				}
+//
+//				JFreeChart chart = ChartFactory.createPieChart(
+//						"Balance of NDC Agri-Agra Bonds", dataset, true, true,
+//						true);
+//
+//
+//				PiePlot piePlot = (PiePlot) chart.getPlot();
+//				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
+//						"{0} = {1} ({2})");
+//				labelGenerator.getPercentFormat().setMaximumFractionDigits(2);
+//				piePlot.setLabelGenerator(labelGenerator);
+//				piePlot.setLegendLabelGenerator(labelGenerator);
+//				piePlot.setOutlineVisible(false);
+//				piePlot.setBackgroundPaint(Color.WHITE);
+//				piePlot.setNoDataMessage("No data to display");
+//				
+//				PiePlot plot3 = (PiePlot) chart.getPlot();
+//				
+//				plot3.setShadowXOffset(0);
+//				plot3.setShadowYOffset(0);
+//
+//				LegendTitle legend = chart.getLegend();
+//				legend.setVisible(false);
+//
+//				if (chart != null) {
+//					final ChartRenderingInfo info = new ChartRenderingInfo(
+//							new StandardEntityCollection());
+//					response.setContentType("image/png");
+//					OutputStream out = response.getOutputStream();
+//
+//					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+//							info);
+//				}
+//
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1533,6 +1528,8 @@ public class ChartController {
 			loggerUtil.log(auth,
 					"ERROR WHILE DISPLAYING PIE CHART FOR AGRI-AGRA BONDS");
 		}
+		
+		return json.toString();
 
 	}
 
