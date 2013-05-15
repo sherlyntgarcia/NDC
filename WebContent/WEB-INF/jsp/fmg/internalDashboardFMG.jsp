@@ -4,6 +4,11 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 
+<script type="text/javascript" src="<c:url value="/resources/js/jquery-1.8.3.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/highcharts.src.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/dashboard_default_options.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/dashboard_fmg_scripts.js"/>"></script>
+
 <security:authorize access="!hasRole('FMG_STRATEGIC_USER') and !hasRole('FMG_OPERATIONAL_USER') and !hasRole('POWER_USER')" >
 	<c:redirect url="/dashboard" />
 </security:authorize>
@@ -41,7 +46,6 @@
 					<hr />
 					
 					<p>You can click the <span class="badge badge-important">graphs</span> to update.</p>
-					
 				</div>
 				
 				<div class="row-fluid">
@@ -88,7 +92,15 @@
 				
 				<div class="row-fluid">
 					<div class="span10 offset2">
-						<img alt="Nia Loan Proceeds Allocation is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/niaLoanProceedsAllocation'" src="${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart/550/400" />
+						<div id="loanProceedsAllocationPieChartDiv"></div>
+						
+						<script>
+							$(document).ready(function() {
+								var url = "${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart";
+								
+								createLoanProceedsAllocationPieChart(url, 550, 400);
+							});
+						</script>
 					</div>
 				</div>
 				

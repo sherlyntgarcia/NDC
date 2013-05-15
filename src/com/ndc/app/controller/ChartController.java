@@ -9,18 +9,16 @@ import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.geom.Rectangle2D;
-import java.io.IOException;
 import java.io.OutputStream;
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jettison.json.JSONObject;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartRenderingInfo;
 import org.jfree.chart.ChartUtilities;
@@ -34,7 +32,6 @@ import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.SubCategoryAxis;
 import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.entity.StandardEntityCollection;
-import org.jfree.chart.labels.CategoryItemLabelGenerator;
 import org.jfree.chart.labels.StandardCategoryItemLabelGenerator;
 import org.jfree.chart.labels.StandardCategoryToolTipGenerator;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
@@ -45,7 +42,6 @@ import org.jfree.chart.plot.MeterInterval;
 import org.jfree.chart.plot.MeterPlot;
 import org.jfree.chart.plot.PieLabelLinkStyle;
 import org.jfree.chart.plot.PiePlot;
-import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.chart.renderer.category.BarRenderer3D;
@@ -1010,103 +1006,38 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/loanproceedsallocationpiechart/{width}/{height}")
+	@RequestMapping(value = "/loanproceedsallocationpiechart")
 	public @ResponseBody
-	void generateLoanProceedsAllocationPieChart(
-			@PathVariable(value = "width") Integer width,
-			@PathVariable(value = "height") Integer height,
-			HttpServletResponse response) {
+	String generateLoanProceedsAllocationPieChart() {
+		
+		JSONObject json = new JSONObject();
 
 		try {
-
-			DefaultPieDataset dataset = new DefaultPieDataset();
-
-			NiaLoanProceedsAllocation allocation = chartService
-					.getLatestNiaLoanProceedsAllocation();
+			
+			NiaLoanProceedsAllocation allocation = 
+				chartService.getLatestNiaLoanProceedsAllocation();
 
 			if (allocation != null) {
-
-				dataset.setValue("CAR", allocation.getCar());
-				dataset.setValue("I", allocation.getRegion1());
-				dataset.setValue("ARIIP", allocation.getAriip());
-				dataset.setValue("II", allocation.getRegion2());
-				dataset.setValue("MARIIS", allocation.getMariis());
-				dataset.setValue("III", allocation.getRegion13());
-				dataset.setValue("UPRIIS", allocation.getUpriis());
-				dataset.setValue("IV", allocation.getRegion4());
-				dataset.setValue("V", allocation.getRegion5());
-				dataset.setValue("VI", allocation.getRegion6());
-				dataset.setValue("VII", allocation.getRegion7());
-				dataset.setValue("VIII", allocation.getRegion8());
-				dataset.setValue("IX", allocation.getRegion9());
-				dataset.setValue("X", allocation.getRegion10());
-				dataset.setValue("XI", allocation.getRegion11());
-				dataset.setValue("XII", allocation.getRegion12());
-				dataset.setValue("XIII", allocation.getRegion13());
-				dataset.setValue("ARMM", allocation.getArmm());
-				dataset.setValue("NCR", allocation.getNcr());
-
-				JFreeChart chart = ChartFactory.createPieChart(
-						"Loan proceeds allocation (per region)", dataset, true,
-						true, false);
-
-				chart.setBorderVisible(false);
-
-				LegendTitle legend = chart.getLegend();
-				legend.setPosition(RectangleEdge.RIGHT);
-
-				PiePlot piePlot = (PiePlot) chart.getPlot();
-				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-						"{0} - {2}");
-				// labelGenerator.getPercentFormat().setMaximumFractionDigits(2);
-				piePlot.setLabelGenerator(labelGenerator);
-				piePlot.setOutlineVisible(false);
-				piePlot.setBackgroundPaint(Color.WHITE);
 				
-//				piePlot.setLabelFont(new Font("SansSerif", Font.PLAIN, 12));
-//				piePlot.setCircular(false);
-//				piePlot.setLabelGap(0.02);
-				
-				// piePlot.setLegendLabelGenerator(labelGenerator);
-
-				piePlot.setNoDataMessage("No data to display");
-				piePlot.setSectionPaint(0, new Color(193, 0, 0));
-				piePlot.setSectionPaint(1, new Color(255, 34, 34));
-				piePlot.setSectionPaint(2, new Color(173, 31, 60));
-				piePlot.setSectionPaint(3, new Color(235, 141, 160));
-				piePlot.setSectionPaint(4, new Color(223, 112, 0));
-				piePlot.setSectionPaint(5, new Color(225, 160, 66));
-				piePlot.setSectionPaint(6, new Color(221, 243, 97));
-				piePlot.setSectionPaint(7, new Color(234, 228, 19));
-				piePlot.setSectionPaint(8, new Color(6, 202, 223));
-				piePlot.setSectionPaint(9, new Color(102, 236, 251));
-				piePlot.setSectionPaint(10, new Color(36, 90, 134));
-				piePlot.setSectionPaint(11, new Color(111, 169, 217));
-				piePlot.setSectionPaint(12, new Color(108, 40, 138));
-				piePlot.setSectionPaint(13, new Color(180, 107, 211));
-				piePlot.setSectionPaint(14, new Color(36, 134, 38));
-				piePlot.setSectionPaint(15, new Color(121, 219, 123));
-				piePlot.setSectionPaint(16, new Color(90, 116, 91));
-				piePlot.setSectionPaint(17, new Color(169, 188, 169));
-				piePlot.setSectionPaint(18, new Color(64, 0, 0));
-
-				PiePlot plot3 = (PiePlot) chart.getPlot();
-				// plot3.setForegroundAlpha(0.6f);
-				// plot3.setCircular(true);
-				// plot3.setSimpleLabels(true);
-				plot3.setShadowXOffset(0);
-				plot3.setShadowYOffset(0);
-
-				if (chart != null) {
-					final ChartRenderingInfo info = new ChartRenderingInfo(
-							new StandardEntityCollection());
-					response.setContentType("image/png");
-					OutputStream out = response.getOutputStream();
-
-					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-							info);
-				}
-
+				json.put("CAR", allocation.getCar());
+				json.put("I", allocation.getRegion1());
+				json.put("ARIIP", allocation.getAriip());
+				json.put("II", allocation.getRegion2());
+				json.put("MARIIS", allocation.getMariis());
+				json.put("III", allocation.getRegion13());
+				json.put("UPRIIS", allocation.getUpriis());
+				json.put("IV", allocation.getRegion4());
+				json.put("V", allocation.getRegion5());
+				json.put("VI", allocation.getRegion6());
+				json.put("VII", allocation.getRegion7());
+				json.put("VIII", allocation.getRegion8());
+				json.put("IX", allocation.getRegion9());
+				json.put("X", allocation.getRegion10());
+				json.put("XI", allocation.getRegion11());
+				json.put("XII", allocation.getRegion12());
+				json.put("XIII", allocation.getRegion13());
+				json.put("ARMM", allocation.getArmm());
+				json.put("NCR", allocation.getNcr());
 			}
 
 		} catch (Exception e) {
@@ -1114,11 +1045,11 @@ public class ChartController {
 
 			Authentication auth = SecurityContextHolder.getContext()
 					.getAuthentication();
-			loggerUtil
-					.log(auth,
-							"ERROR WHILE DISPLAYING PIE CHART FOR NIA LOAN PROCEEDS ALLOCATION");
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING PIE CHART FOR NIA LOAN PROCEEDS ALLOCATION");
 		}
-
+		
+		return json.toString();
 	}
 
 	@RequestMapping(value = "/loanproceedsutilizationpiechart/{width}/{height}")
