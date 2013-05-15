@@ -740,6 +740,8 @@
 		<script src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/jquery.colorbox.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/webapp.js"></script>
-		
+		<script src="${pageContext.request.contextPath}/resources/js/highcharts.src.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/dashboard_default_options.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/dashboard_fmg_scripts.js"></script>
 	</body>
 </html>
