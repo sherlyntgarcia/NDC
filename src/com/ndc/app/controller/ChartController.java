@@ -1052,13 +1052,12 @@ public class ChartController {
 		return json.toString();
 	}
 
-	@RequestMapping(value = "/loanproceedsutilizationpiechart/{width}/{height}")
+	@RequestMapping(value = "/loanproceedsutilizationpiechart")
 	public @ResponseBody
-	void generateLoanProceedsUtilizationPieChart(
-			@PathVariable(value = "width") Integer width,
-			@PathVariable(value = "height") Integer height,
-			HttpServletResponse response) {
+	String generateLoanProceedsUtilizationPieChart() {
 
+		JSONObject json = new JSONObject();
+		
 		try {
 
 			DefaultPieDataset dataset = new DefaultPieDataset();
@@ -1067,51 +1066,10 @@ public class ChartController {
 					.getLatestNiaLoanProceedsUtilization();
 
 			if (utilization != null) {
-
-				dataset.setValue("Repair, Rehabilitation and Restoration",
-						utilization.getRepairRehabRestore());
-				dataset.setValue("Rehabilitation of farm-to-market roads",
-						utilization.getFarmToMarketRoads());
-
-				JFreeChart chart = ChartFactory.createPieChart(
-						"Utilization of NIA Loan Proceeds", dataset, true,
-						true, false);
-
-				chart.setBorderVisible(false);
-
-				// LegendTitle legend = chart.getLegend();
-				// legend.setPosition(RectangleEdge.RIGHT);
-
-				PiePlot piePlot = (PiePlot) chart.getPlot();
-				piePlot.setOutlineVisible(false);
-				piePlot.setBackgroundPaint(Color.WHITE);
-				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-						"{2}");
-				// labelGenerator.getPercentFormat().setMaximumFractionDigits(2);
-				piePlot.setLabelGenerator(labelGenerator);
-				// piePlot.setLegendLabelGenerator(labelGenerator);
-
-				piePlot.setNoDataMessage("No data to display");
-
-				PiePlot plot3 = (PiePlot) chart.getPlot();
-				// plot3.setForegroundAlpha(0.6f);
-				// plot3.setCircular(true);
-				plot3.setSimpleLabels(true);
-				plot3.setSectionPaint(0, new Color(235, 141, 160));
-				plot3.setSectionPaint(1, new Color(108, 40, 138));
-				plot3.setShadowXOffset(0);
-				plot3.setShadowYOffset(0);
-
-				if (chart != null) {
-					final ChartRenderingInfo info = new ChartRenderingInfo(
-							new StandardEntityCollection());
-					response.setContentType("image/png");
-					OutputStream out = response.getOutputStream();
-
-					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-							info);
-				}
-
+				
+				json.put("Repair", utilization.getRepairRehabRestore());
+				json.put("Rehab", utilization.getFarmToMarketRoads());
+				
 			}
 
 		} catch (Exception e) {
@@ -1123,6 +1081,8 @@ public class ChartController {
 					.log(auth,
 							"ERROR WHILE DISPLAYING PIE CHART FOR NIA LOAN PROCEEDS UTILIZATION");
 		}
+		
+		return json.toString();
 
 	}
 
@@ -1498,31 +1458,6 @@ public class ChartController {
 		try {
 
 			DefaultPieDataset dataset = new DefaultPieDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(AgriAgraBonds.class);
-//
-//			AgriAgraBonds agriAgraBondsLatestYear = chartService
-//					.getAgriAgraBondsByYear(latestYear - 2);
-//			AgriAgraBonds agriAgraBondsLatestYear2 = chartService
-//					.getAgriAgraBondsByYear(latestYear - 1);
-//			AgriAgraBonds agriAgraBondsLatestYear3 = chartService
-//					.getAgriAgraBondsByYear(latestYear);
-//
-//			if (agriAgraBondsLatestYear != null) {
-//				dataset.setValue(agriAgraBondsLatestYear.getYear(),
-//						agriAgraBondsLatestYear.getAmount());
-//			}
-//
-//			if (agriAgraBondsLatestYear2 != null) {
-//				dataset.setValue(agriAgraBondsLatestYear2.getYear(),
-//						agriAgraBondsLatestYear2.getAmount());
-//			}
-//
-//			if (agriAgraBondsLatestYear3 != null) {
-//				dataset.setValue(agriAgraBondsLatestYear3.getYear(),
-//						agriAgraBondsLatestYear3.getAmount());
-//			}
 
 			Double totalAgriAgraBonds = chartService.getLatestAgriAgraBonds();
 			Double unutilized = null;

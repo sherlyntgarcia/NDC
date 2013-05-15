@@ -734,14 +734,10 @@
 			var contextPath = "${pageContext.request.contextPath}";
 		</script>
 		
-		<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/jquery.colorbox.js"></script>
 		<script src="${pageContext.request.contextPath}/resources/js/webapp.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/js/highcharts.src.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/js/dashboard_default_options.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/js/dashboard_fmg_scripts.js"></script>
 	</body>
 </html>
