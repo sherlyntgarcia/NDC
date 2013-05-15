@@ -65,7 +65,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<BalanceSheet> generateBalanceSheet() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_balance_sheet` WHERE id  in (select max(id) from ndc_tbl_balance_sheet group by year) order by year DESC LIMIT 3").addEntity(BalanceSheet.class);
-		return (List<BalanceSheet>) query.list();
+		List<BalanceSheet> l = (List<BalanceSheet>) query.list();
+		
+		Collections.sort(l, new Comparator<BalanceSheet>() {
+			@Override
+			public int compare(BalanceSheet o1, BalanceSheet o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -81,7 +91,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<IncomeStatement> generateIncomeStatement() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_income_statement` WHERE id  in (select max(id) from ndc_tbl_income_statement group by year) order by year DESC LIMIT 3").addEntity(IncomeStatement.class);
-		return (List<IncomeStatement>) query.list();
+		List<IncomeStatement> l = (List<IncomeStatement>) query.list();
+		
+		Collections.sort(l, new Comparator<IncomeStatement>() {
+			@Override
+			public int compare(IncomeStatement o1, IncomeStatement o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -485,7 +505,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<SpgIncomeStatement> generateSpgIncomeStatement() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_income_statement` WHERE id  in (select max(id) from ndc_tbl_spg_income_statement group by year) order by year DESC LIMIT 3").addEntity(SpgIncomeStatement.class);
-		return (List<SpgIncomeStatement>) query.list();
+		List<SpgIncomeStatement> l = (List<SpgIncomeStatement>) query.list();
+		
+		Collections.sort(l, new Comparator<SpgIncomeStatement>() {
+			@Override
+			public int compare(SpgIncomeStatement o1, SpgIncomeStatement o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
@@ -509,7 +539,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<SpgBalanceSheet> generateSpgBalanceSheet() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_balance_sheet` WHERE id  in (select max(id) from ndc_tbl_spg_balance_sheet group by year) order by year DESC LIMIT 3").addEntity(SpgBalanceSheet.class);
-		return (List<SpgBalanceSheet>) query.list();
+		List<SpgBalanceSheet> l = (List<SpgBalanceSheet>) query.list();
+		
+		Collections.sort(l, new Comparator<SpgBalanceSheet>() {
+			@Override
+			public int compare(SpgBalanceSheet o1, SpgBalanceSheet o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override
