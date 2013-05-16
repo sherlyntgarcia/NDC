@@ -572,7 +572,17 @@ public class ChartDaoImpl implements ChartDao {
 	@Override
 	public List<SpgCashFlow> generateSpgCashFlow() {
 		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_cash_flow` WHERE id  in (select max(id) from ndc_tbl_spg_cash_flow group by year) order by year DESC LIMIT 3").addEntity(SpgCashFlow.class);
-		return (List<SpgCashFlow>) query.list();
+		List<SpgCashFlow> l = (List<SpgCashFlow>) query.list();
+		
+		Collections.sort(l, new Comparator<SpgCashFlow>() {
+			@Override
+			public int compare(SpgCashFlow o1, SpgCashFlow o2) {
+				// TODO Auto-generated method stub
+				return o1.getYear().compareTo(o2.getYear());
+			}
+		});
+		
+		return l;
 	}
 
 	@Override

@@ -41,6 +41,7 @@
 							NOTE: 
 							<ul>
 								<li> Please enter the actual amount of value. </li>
+								<li> Data will apply for the year <b><c:out value="${spgIncomeStatement.year}" /></b>. </li>
 								<li> To prevent inaccurate data, do not use copy & paste feature while adding amounts. </li>
 							</ul>
 						</p>

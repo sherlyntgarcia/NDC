@@ -137,7 +137,7 @@ public class SPGController {
 	public String internalSPGIncomeStatement(Model model) {
 
 		SpgIncomeStatement spgIncomeStatement = new SpgIncomeStatement();
-		spgIncomeStatement.setYear(getCurrentYear());
+		spgIncomeStatement.setYear(getCurrentYear()-1);
 
 		model.addAttribute("spgIncomeStatement", spgIncomeStatement);
 	
@@ -195,7 +195,7 @@ public class SPGController {
 	public String internalSPGBalanceSheet(Model model) {
 
 		SpgBalanceSheet spgBalanceSheet = new SpgBalanceSheet();
-		spgBalanceSheet.setYear(getCurrentYear());
+		spgBalanceSheet.setYear(getCurrentYear()-1);
 
 		model.addAttribute("spgBalanceSheet", spgBalanceSheet);
 
@@ -253,7 +253,7 @@ public class SPGController {
 	public String internalSPGCashFlow(Model model) {
 
 		SpgCashFlow spgCashFlow = new SpgCashFlow();
-		spgCashFlow.setYear(getCurrentYear());
+		spgCashFlow.setYear(getCurrentYear()-1);
 
 		model.addAttribute("spgCashFlow", spgCashFlow);
 

@@ -46,21 +46,22 @@
 					<div class = "span8">
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class = "active"><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
+							  <li class = "active"><a href="#profile" data-toggle="tab">Profile</a></li>
 							  <li><a href="#graphs" data-toggle="tab">Shareholders</a></li>
 							  <li><a href="#financial" data-toggle="tab">Financial Performance</a></li>
+							  <li><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
 							</ul>
 						</div>
 						
 						<div class="tab-content">
 						
-						  <div class="tab-pane active" id="milestone">
+						  <div class="tab-pane active" id="profile">
 						  	<div class="row-fluid">
 						  		<div class="span12">
 						  			<p style="margin-left: 20px">
 							  			<c:choose>
-							  				<c:when test="${not empty spgSubCategory.milestone}">
-							  					${spgSubCategory.milestone}
+							  				<c:when test="${not empty spgSubCategory.profile}">
+							  					${spgSubCategory.profile}
 							  				</c:when>
 							  				
 							  				<c:otherwise>
@@ -109,7 +110,25 @@
 							  		<img alt="Cash Flow is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/SPG/cashFlow'" src="${pageContext.request.contextPath}/visualization/spgcashflowlinechart/450/400/${spgSubCategory.id}" />						  	
 							  	</div>
 						  	</div>
-						  </div>					 						  
+						  </div>
+						  
+						  <div class="tab-pane" id="milestone">
+						  	<div class="row-fluid">
+						  		<div class="span12">
+						  			<p style="margin-left: 20px">
+							  			<c:choose>
+							  				<c:when test="${not empty spgSubCategory.milestone}">
+							  					${spgSubCategory.milestone}
+							  				</c:when>
+							  				
+							  				<c:otherwise>
+							  					None
+							  				</c:otherwise>
+							  			</c:choose>
+							  		</p>
+						  		</div>
+						  	</div>
+						  </div>				 						  
 						</div>
 					</div>
 					

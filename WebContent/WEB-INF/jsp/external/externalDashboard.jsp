@@ -125,7 +125,7 @@
 											</c:choose>
 
 										<li>
-											<a href="${pageContext.request.contextPath}/external/disclosures" tabindex="-1">Disclosures</a></li>
+											<a href="${pageContext.request.contextPath}/external/disclosures" tabindex="-1">Project Disclosures</a></li>
 									</ul></li>
 								<li><a target="_blank"
 									href="${pageContext.request.contextPath}/resources/files/SUMMARY OF INVESTMENTS AND DIVIDENDS.xlsx"

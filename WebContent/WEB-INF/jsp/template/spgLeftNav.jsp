@@ -80,7 +80,7 @@
 		</li>
 		<li> <a href="<c:url value="/dashboard/internal/SPG/shareholders" />">Shareholders</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/SPG/upload" />">Upload File/s</a> </li>
-		<li> <a href="<c:url value="/dashboard/internal/SPG/disclosures" />">Disclosures</a> </li>
+		<li> <a href="<c:url value="/dashboard/internal/SPG/disclosures" />">Project Disclosures</a> </li>
 		<li class="dropdown-submenu"> 
 		
 			<a href="#" tabindex="-1" >Financial Performance</a>

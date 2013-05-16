@@ -35,7 +35,7 @@
 					<div class = "span8">
 						<div>
 							<ul class="nav nav-tabs">
-							  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+							  <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
 							  <li><a href="#share_holders" data-toggle="tab">Shareholders</a></li>
 							  <li><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
 							</ul>

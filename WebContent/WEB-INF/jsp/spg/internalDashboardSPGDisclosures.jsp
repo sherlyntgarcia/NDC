@@ -34,7 +34,7 @@
 			
 				<div class="row-fluid">
 					<div class="span12">
-						<p class="lead">Disclosure Files</p>
+						<p class="lead">Project Disclosures</p>
 						<hr />
 					</div>
 				</div>
