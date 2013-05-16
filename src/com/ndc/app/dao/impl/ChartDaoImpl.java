@@ -608,12 +608,10 @@ public class ChartDaoImpl implements ChartDao {
 		// TODO Auto-generated method stub
 		Integer latestYear = getLatestYearOfData(ActualIncomeExpense.class);
 
-		if (latestYear != null) {
+		if (latestYear != null) {	
 			Query query = sessionFactory.getCurrentSession()
 					.createSQLQuery(
-							"select * from ndc_tbl_actual_income_expense where year="
-									+ latestYear
-									+ " AND id in(select max(id) from ndc_tbl_actual_income_expense group by month) order by month asc")
+							"SELECT * FROM ndc_tbl_actual_income_expense WHERE id in (select max(id) from ndc_tbl_actual_income_expense group by year) order by year ASC")
 					.addEntity(ActualIncomeExpense.class);
 
 			return (List<ActualIncomeExpense>) query.list();

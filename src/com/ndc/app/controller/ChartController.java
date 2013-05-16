@@ -12,9 +12,11 @@ import java.awt.geom.Rectangle2D;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -67,7 +69,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.google.gson.Gson;
 import com.ndc.app.AppHelper;
 import com.ndc.app.CustomCylinderRenderer;
 import com.ndc.app.MultipleMeterPlot;
@@ -2498,6 +2499,8 @@ public class ChartController {
 					.getLatestProjectedActualIncome();
 			ProjectedActualIncome2 projectedActualIncome2 = chartService
 					.getLatestProjectedActualIncome2();
+			
+			Date currDate = null;
 
 			if (projectedActualIncome != null && projectedActualIncome2 != null) {
 
@@ -2505,6 +2508,8 @@ public class ChartController {
 						.getProjectedIncome().doubleValue()) * 100);
 
 				DefaultValueDataset data = new DefaultValueDataset();
+				
+				currDate = projectedActualIncome.getDateUpdated();
 
 				MeterPlot plot = new MeterPlot(data);
 				System.out.println("New Data: " + newData);
@@ -2517,15 +2522,6 @@ public class ChartController {
 				String monthString = AppHelper.convertIntegerToMonth(month);
 				
 				plot.setUnits("% of " + monthString + " " +  calendar.get(Calendar.YEAR));
-
-				// plot.addInterval(new MeterInterval("Good", new Range(0,
-				// 30),Color.lightGray, new BasicStroke(2.0f),new Color(0, 255,
-				// 0,
-				// 64)));
-				// plot.addInterval(new MeterInterval("Warning", new Range(30,
-				// 50),Color.lightGray, new BasicStroke(2.0f), new Color(255,
-				// 255,
-				// 0,64)));
 
 				// validate data if over 100
 				if (newData > 100) {
@@ -2570,8 +2566,11 @@ public class ChartController {
 				plot.setNoDataMessage("No data to display");
 				plot.setValueFont(new Font("Dialog", Font.BOLD, 18));
 
+				Calendar cal = Calendar.getInstance();
+				cal.setTime(currDate);
+
 				JFreeChart chart = new JFreeChart(
-						"Income:  Actual vs Budget as of " + monthString + " " + year,
+						"Income:  Actual vs Budget (last updated: " + AppHelper.convertIntegerToMonth(cal.get(Calendar.MONTH)) + " " + cal.get(Calendar.DAY_OF_MONTH) + ", " + cal.get(Calendar.YEAR) + ")",
 						JFreeChart.DEFAULT_TITLE_FONT, plot, true);
 
 				chart.getLegend().setVisible(false);
