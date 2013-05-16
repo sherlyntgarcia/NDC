@@ -50,7 +50,7 @@
 								<img alt="Projected Actual Income is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FAD/projectedActualIncome'" src="${pageContext.request.contextPath}/visualization/projectedactualincomechart/450/400" />
 						
 								<div class="form-inline" align = "center">
-									<button id="projectedActualIncomeExpenseChart" type="button" class="btn btn-primary">Show Projected Actual Income</button>
+									<button id="projectedActualIncomeExpenseChart" type="button" class="btn btn-primary">View Income</button>
 								</div>
 							</div>
 							

@@ -2637,7 +2637,7 @@ public class ChartController {
 
 				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
 						"", // X-Axis label
-						"",// Y-Axis label
+						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -2651,8 +2651,8 @@ public class ChartController {
 
 				BarRenderer renderer = (BarRenderer) plot.getRenderer();
 				renderer.setItemMargin(0.0);
-				renderer.setSeriesPaint(0, new Color(33, 188, 72));
-				renderer.setSeriesPaint(1, new Color(141, 235, 165));
+				renderer.setSeriesPaint(0, new Color(0, 100, 0));
+				renderer.setSeriesPaint(1, new Color(127, 255, 0));
 				// (BarRenderer(renderer)).setItemMargin(0.0);
 				chart.setBackgroundPaint(Color.WHITE);
 
@@ -2708,9 +2708,9 @@ public class ChartController {
 							year = expense.getYear();
 
 							dataset.addValue(expense.gettotalExpense(),
-									"Expense", newDate);
+									"Budget", newDate);
 							dataset.addValue(expense.gettotalIncome(),
-									"Income", newDate);
+									"Actual", newDate);
 
 						}
 					}
@@ -2719,7 +2719,7 @@ public class ChartController {
 							"Expense: Actual vs Budget as of " + newDate + " " + year, // chart
 							// title
 							"", // domain(x-axis) axis label
-							"", // range(y-axis) axis label
+							"Php ", // range(y-axis) axis label
 							dataset, // data
 							PlotOrientation.VERTICAL, // orientation
 							true, // include legend
@@ -3031,7 +3031,7 @@ public class ChartController {
 					JFreeChart chart = ChartFactory.createStackedBarChart3D(
 							"Collection Efficiency as of " + month + " " + year, // Title
 							"", // X-Axis label
-							"",// Y-Axis label
+							"Php ",// Y-Axis label
 							categoryDataset, // Dataset
 							PlotOrientation.HORIZONTAL, true, // Show legend
 							true, false);
@@ -3164,7 +3164,7 @@ public class ChartController {
 				JFreeChart chart = ChartFactory.createStackedBarChart(
 						"Budget Utilization as of " + month + " " + year, // Title
 						"", // X-Axis label
-						"",// Y-Axis label
+						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);

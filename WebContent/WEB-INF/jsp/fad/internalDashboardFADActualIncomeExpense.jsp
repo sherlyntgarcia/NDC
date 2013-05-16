@@ -110,7 +110,7 @@
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
 
-							<label>Total Expense</label>
+							<label>Actual Expense</label>
 							<div>
 								<spring:input path="totalExpense" class="span6"
 									constraint="number" placeholder="(e.g. 175000)" />
@@ -145,7 +145,7 @@
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
 
-							<label>Total Income</label>
+							<label>Actual Budget</label>
 							<div>
 								<spring:input path="totalIncome" class="span6"
 									constraint="number" placeholder="(e.g. 500000)" />
