@@ -85,6 +85,16 @@
 								<spring:select items="${months}" path="month" class="span6"
 									constraint="number" placeholder="Month..." />
 							</div>
+							
+						</div>
+						
+					</div>
+					
+					<hr />
+					
+					<div class="row-fluid">
+					
+						<div class="span6">
 
 							<label>Budget Advertising</label>
 							<div>
@@ -110,7 +120,7 @@
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
 
-							<label>Actual Expense</label>
+							<label>Total Budget</label>
 							<div>
 								<spring:input path="totalExpense" class="span6"
 									constraint="number" placeholder="(e.g. 175000)" />
@@ -145,7 +155,7 @@
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
 
-							<label>Actual Budget</label>
+							<label>Total Actual</label>
 							<div>
 								<spring:input path="totalIncome" class="span6"
 									constraint="number" placeholder="(e.g. 500000)" />
