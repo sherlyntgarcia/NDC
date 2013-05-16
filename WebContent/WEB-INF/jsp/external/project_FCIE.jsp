@@ -38,23 +38,23 @@
 						  			economic zone as expansion of the First Cavite Industrial Estate (FCIE).  
 						  		</p>
 						  	<ul class = 'list-style'>
-									<li>Target Beneficiaries</li>
+									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>Local and foreign manufacturers, local workers</li>
 										</ul>
-									<li>Project Budget</li>
+									<li><p class="para">Project Budget</p></li>
 										<ul>
 											<li>P550 Million including value of land</li>
 										</ul>
-									<li>NDC's Participation</li>
+									<li><p class="para">NDC's Participation</p></li>
 											<ul>
 												<li>NDC property as equity</li>
 											</ul>
-									<li>Project Timeline</li>
+									<li><p class="para">Project Timeline</p></li>
 											<ul>
 												<li>Not yet established</li>
 											</ul>	
-									<li>Project Status</li>
+									<li><p class="para">Project Status</p></li>
 											<ul>
 												<li>The project is now under evaluation. The implementation<br/> 
 													framework has been presented to the Management Committee <br/>

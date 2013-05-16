@@ -36,32 +36,36 @@
 						  <div class="tab-pane active" id="description" style = "margin-left: 5%">
 						  		The NDC School Building Program is a loan program extended to the Local Government Units (LGUs) for the <br/>
 						  			construction of school buildings. The basic terms of the loan are as follows:
-								<ul class = 'list-style'>
-									<li>Interest Rate - 7.4% per annum, fixed for the entire term of the loan, inclusive of VAT</li>
-									<li>Loan Maturity - 7 1/2 years inclusive of Grace Period</li>
-									<li>Grace Period - 6 months from the first loan drawdown</li>
-									<li>Collaterals:</li>
+						  		
+								<ul class='list-style'>
+									<li><span class="para">Interest Rate</span> - 7.4% per annum, fixed for the entire term of the loan, inclusive of VAT</li>
+									<li><span class="para">Loan Maturity</span> - 7 1/2 years inclusive of Grace Period</li>
+									<li><span class="para">Grace Period</span> - 6 months from the first loan drawdown</li>
+									<li><span class="para">Collaterals:</span></li>
 											<ul>
 												<li>Deed of Assignment of IRA with Hold-Out in favor of NDC to the extent of one (1)-month amortization.</li>
 												<li>Special Deposit Account with a maintaining balance equivalent to three (3) months amortization.</li>
 											</ul>
-									<li>Schedule of Loan Release - The loan release is based on a progress billing subject to compliance of LGU<br/> 
+									<li><span class="para">Schedule of Loan Release</span> - The loan release is based on a progress billing subject to compliance of LGU<br/> 
 										to the loan documentary requirements and milestones accomplishments. </li>
 						  		</ul>
+						  		
+						  		<hr />
+						  		
 						  		<ul class = 'list-style'>
-									<li>Target Beneficiaries</li>
+									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>School-aged children in public schools</li>
 										</ul>
-									<li>Project Budget</li>
+									<li><p class="para">Project Budget</p></li>
 										<ul>
 											<li>P100 Million</li>
 										</ul>
-									<li>NDC's Participation</li>
+									<li><p class="para">NDC's Participation</p></li>
 											<ul>
 												<li>NDC to provide the loan to the LGUs</li>
 											</ul>
-									<li>Project Timeline</li>
+									<li><p class="para">Project Timeline</p></li>
 											<ul>
 												<li>Program Start  - November 23, 2010</li>
 												<li>Program End   - Continuing activity until upon advise by the NDC Board/Management</li>

@@ -29,7 +29,6 @@
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
 							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>
-							  <li><a href="#intervension" data-toggle="tab">Issues/Needed Interventions</a></li>
 							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
 							</ul>
 						</div>
@@ -38,7 +37,7 @@
 						  <div class="tab-pane active" id="description" style = "margin-left: 5%">
 						  		The project will fund the establishment of a 2MW biomass-fired power generation project.  Initial target areas are those remote islands which experience intermittent supply of electricity such as Tablas Island, Romblon.
 								<ul class = 'list-style'>
-									<li>The key features of the project include the following:</li>
+									<li><p class="para">The key features of the project include the following:</p></li>
 									<ul>
 										<li>The proponent will use bamboo chips as feedstock for a gasification system for rural electricity.</li>
 										<li>Through gasification, carbon materials like bamboo chips are processed at high temperatures using controlled amounts of oxygen or steam to extract energy.</li>
@@ -47,7 +46,7 @@
 									</ul>
 						  		</ul>
 						  		<ul class = 'list-style'>
-									<li>Target Beneficiaries</li>
+									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>Electric power consumers of Tablas Island, Romblon</li>
 										</ul>															

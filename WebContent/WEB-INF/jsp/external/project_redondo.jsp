@@ -38,11 +38,11 @@
 						  		project via equity participation. The project will be located in the towns <br/>
 						  		of Subic & San Antonio in Zambales.  
 						  	<ul class = 'list-style'>
-									<li>Target Beneficiaries</li>
+									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>Electric power consumers of Olongapo City-Zambales area</li>
 										</ul>									
-									<li>Project Status</li>
+									<li><p class="para">Project Status</p></li>
 											<ul>
 												<li>The Preliminary Feasibility Study was already completed <br/>
 													obtaining information from satellite data.</li>

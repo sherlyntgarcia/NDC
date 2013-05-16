@@ -43,7 +43,7 @@
 <%-- 						</security:authorize> --%>
 					
 					</div>
-					<div class = "span8">
+					<div class = "span10">
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class = "active"><a href="#profile" data-toggle="tab">Profile</a></li>
@@ -84,7 +84,7 @@
 												var url = "${pageContext.request.contextPath}/visualization/shareholderspiechart";
 												var id = Number("${spgSubCategory.id}");
 												
-												createShareholdersPieChart(url, 750, 400, id);
+												createShareholdersPieChart(url, 850, 400, id);
 											});
 										</script>
 							  		</div>

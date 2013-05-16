@@ -31,7 +31,7 @@
 						<div class="tab-content">
 						  <div class="tab-pane active" id="description" style = "margin-left: 5%">
 						  		<ul>
-						  			<li>Food Exchange Terminal</li>
+						  			<li><p class="para">Food Exchange Terminal</p></li>
 						  			<ul>
 						  				<li>Development of the property into an economic zone for the<br/> 
 						  					establishment of a food exchange terminal in order to provide<br/>
@@ -39,20 +39,20 @@
 						  					fishermen. The facilities available in the food exchange terminal <br/>
 						  					will include the following:</li>
 						  				<ul>
-						  					<li><b>Trading Post.</b> To serve as display and auction/sales area <br/>
+						  					<li><span class="para">Trading Post.</span> To serve as display and auction/sales area <br/>
 						  						with physical structure facilities for trading and distribution <br/>
 						  						outlets. </li>
-						  					<li><b>Cold Storage Warehouse.</b> Temperature-controlled facility <br/>
+						  					<li><span class="para">Cold Storage Warehouse.</span> Temperature-controlled facility <br/>
 						  						for highly perishable high value products.</li>
-						  					<li><b>Food Processing Centers.</b> Cater to processors of meat, <br/>
+						  					<li><span class="para">Food Processing Centers.</span> Cater to processors of meat, <br/>
 						  						fruits, vegetables, halal foods, fish and other aquamarine products, <br/>
 						  						etc.</li>
-						  					<li><b>Technology/Business Incubation Center (TBI Center). </b> The <br/>
+						  					<li><span class="para">Technology/Business Incubation Center (TBI Center). </span> The <br/>
 						  						TBI Center will assist new enterprises through various support <br/>
 						  						facilities and services such as Information and Research Services, <br/>
 						  						Affordable Financing, Advisory Services on Business/Financial Planning, <br/>
 						  						Processing Facilities and Equipped Office Spaces.</li>
-						  					<li><b>Tourism Component.</b> Tourist attractions with concept similar <br/>
+						  					<li><span class="para">Tourism Component.</span> Tourist attractions with concept similar <br/>
 						  						to some of the world's best fresh markets such as the Tsukiji Market of <br/>
 						  						Japan, Rialto Markets of Italy, and Marche Provencal of France, where <br/>
 						  						shoppers can choose from range of fresh fruits, vegetables, fish, or <br/>
@@ -60,15 +60,15 @@
 						  						edges are lined with caf&eacute;s and souvenir shops.</li>
 						  				</ul>
 						  			</ul>
-						  			<li>Project Implementation</li>
+						  			<li><p class="para">Project Implementation</p></li>
 						  			<ul>
-						  				<li><u>Option 1: Long-Term Lease to Private Investor</u></li>
+						  				<li><span class="para"><u>Option 1: Long-Term Lease to Private Investor</u></span></li>
 						  				<ul>
 						  					<li>The property will be leased-out to a private investor on a long-term <br/>
 						  						basis. The private investor will develop the project and manage entire <br/>
 						  						operation. </li>
 						  				</ul>
-						  				<li><u>Option 2: Joint Venture with Private Investor</u></li>
+						  				<li><span class="para"><u>Option 2: Joint Venture with Private Investor</u></span></li>
 						  				<ul>
 						  					<li>The project can be implemented through a joint venture with a private <br/>
 							  					investor. NDC will contribute the land as its equity participation, while <br/>
@@ -76,7 +76,7 @@
 							  					initial working capital. The joint venture </li>
 						  				</ul>
 						  			</ul>
-						  			<li>Sources of Revenue</li>
+						  			<li><p class="para">Sources of Revenue</p></li>
 						  				<ul>
 						  					<li>The sources of revenue for the project will come from the lease rentals <br/>
 						  						from stalls and processing centers and cold storage facilities of the <br/>
@@ -86,24 +86,24 @@
 						  	</div>
 						  	<div class="tab-pane active" id="description" style = "margin-left: 5%">
 						  	<ul class = 'list-style'>
-									<li>Target Beneficiaries</li>
+									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>Local farmers, fishermen, traders, consumers of Davao City and Province <br/>
 												of Davao Oriental</li>
 										</ul>
-									<li>Project Budget</li>
+									<li><p class="para">Project Budget</p></li>
 										<ul>
 											<li>P1.0 Billion </li>
 										</ul>
-									<li>NDC's Participation</li>
+									<li><p class="para">NDC's Participation</p></li>
 											<ul>
 												<li>NDC property as equity with a fair Market Value of P80.40 Million</li>
 											</ul>
-									<li>Project Timeline</li>
+									<li><p class="para">Project Timeline</p></li>
 											<ul>
 												<li>Not yet established</li>
 											</ul>	
-									<li>Project Status</li>
+									<li><p class="para">Project Status</p></li>
 											<ul>
 												<li>On December 4, 2012, a meeting with Sen. Francis Pangilinan, <br/>
 													together with DTI Sec. Domingo, DA Sec. Alcala, DOT Sec. Jimenez and <br/>
@@ -114,7 +114,7 @@
 													City Agriculture Office to discuss the concept of the Davao Food <br/>
 													Exchange Terminal Project.</li>
 											</ul>	
-									<li>Next Steps</li>
+									<li><p class="para">Next Steps</p></li>
 											<ul>
 												<li>LGU to conduct a Master Plan for the property</li>
 												<li>NDC, in collaboration with DTI-Region XI, DOT-Region XI, DA-Region <br/>

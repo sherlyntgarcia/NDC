@@ -29,7 +29,6 @@
 						
 						<ul class="nav nav-tabs nav-stacked">
 							<li><a href="${pageContext.request.contextPath}/external/disclosures">Disclosure</a></li> <!-- pdf -->
-							<li><a href="#">Financial Performance</a></li> <!-- excel file -->
 						</ul>
 					</div>
 					<div class = "span8">
@@ -37,7 +36,6 @@
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
 							  <li><a href="#share_holders" data-toggle="tab">Shareholders</a></li>
-							  <li><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
 							</ul>
 						</div>
 						
@@ -85,26 +83,6 @@
 									<td><b>100.00%</b></td>
 								</tr>
 							</table>
-						  </div>						 
-						  <div class="tab-pane" id="milestone">
-						  	<p>
-						  		Prorata Preemptive Rights to Issuance of Unissued Common Shares and Re-Issuance of Common Treasury Shares
-						  		
-						  		<br/>
-									
-									<div style = "text-indent: 5%">
-										<i class = 'icon-ok'></i> NDC Preemptive Right = 6.55%  of outstanding common stock (or 10,802,709 shares of the Issue Shares)<br/>
-									</div>
-									
-									<div style = "text-indent: 5%">
-										at an issue price of P4.85 per share or and aggregate price of P52,393,137.65
-									</div>
-									
-									<br/>
-
-								Deadline of Availment: December 21, 2012
-						  		
-						  	</p>
 						  </div>
 						</div>
 					</div>
