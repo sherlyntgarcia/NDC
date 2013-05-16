@@ -471,8 +471,21 @@
 					
 					var id = $("select[name=months]").val();
 					var title = $("select[name=months] option[value=" + id + "]").attr("title");
-	
-					$("#actualIncomeExpenseModal .modal-body").html(" <img alt='Actual Income Expense is not available' src='" + contextPath + "/visualization/actualincomeexpensesubchart/" + id + "/550/400/" + title  + "' /> ");
+					
+					var html = "<div id='myCarousel' class='carousel slide'>";
+					html += "<div class='carousel-inner'>";
+					html += "<div class='active item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchone/" + id + "/550/400/" + title + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchtwo/" + id + "/550/400/" + title + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchthree/" + id + "/550/400/" + title + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfour/" + id + "/550/400/" + title + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfive/" + id + "/550/400/" + title + "' /> </div>";
+					html += "</div>";
+					html += "<a class='carousel-control left' href='#myCarousel' data-slide='prev'>&lsaquo;</a>";
+					html += "<a class='carousel-control right' href='#myCarousel' data-slide='next'>&rsaquo;</a>";
+					html += "</div>";
+					
+					$("#actualIncomeExpenseModal .modal-body").html( html );
+					
 					$("#actualIncomeExpenseModal").modal();
 					
 				});

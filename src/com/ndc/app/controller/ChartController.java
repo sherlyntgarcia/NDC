@@ -2599,9 +2599,9 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/actualincomeexpensesubchart/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchone/{id}/{width}/{height}/{title}")
 	public @ResponseBody
-	void generateActualIncomeExpenseSubChart(
+	void generateActualIncomeExpenseSubChartBatchOne(
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
@@ -2622,8 +2622,10 @@ public class ChartController {
 						"Actual", "Athletics");
 				categoryDataset.setValue(expense.getActualAuditing(), "Actual",
 						"Auditing");
-				categoryDataset.setValue(expense.getActualConsultancy(),
-						"Actual", "Consultancy");
+				categoryDataset.setValue(expense.getActualBoardExpenses(), "Actual",
+						"Board Expenses");
+				categoryDataset.setValue(expense.getActualChristmasAnniversary(), "Actual",
+						"Christmas and Anniversary");
 
 				// Enrollment in Masters level
 				categoryDataset.setValue(expense.getBudgetAdvertising(),
@@ -2632,8 +2634,348 @@ public class ChartController {
 						"Budget", "Athletics");
 				categoryDataset.setValue(expense.getBudgetAuditing(), "Budget",
 						"Auditing");
+				categoryDataset.setValue(expense.getBudgetBoardExpenses(), "Budget",
+						"Board Expenses");
+				categoryDataset.setValue(expense.getBudgetChristmasAnniversary(), "Budget",
+						"Christmas and Anniversary");
+			
+
+				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+						"", // X-Axis label
+						"Php ",// Y-Axis label
+						categoryDataset, // Dataset
+						PlotOrientation.VERTICAL, true, // Show legend
+						true, false);
+
+				CategoryPlot plot = chart.getCategoryPlot();
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
+						12));
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.createUpRotationLabelPositions(Math.PI,
+				// 6.0));
+
+				BarRenderer renderer = (BarRenderer) plot.getRenderer();
+				renderer.setItemMargin(0.0);
+				renderer.setSeriesPaint(0, new Color(0, 100, 0));
+				renderer.setSeriesPaint(1, new Color(127, 255, 0));
+				// (BarRenderer(renderer)).setItemMargin(0.0);
+				chart.setBackgroundPaint(Color.WHITE);
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+
+			Authentication auth = SecurityContextHolder.getContext()
+					.getAuthentication();
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING ACTUAL INCOME EXPENSE BAR CHART");
+		}
+
+	}
+	
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchtwo/{id}/{width}/{height}/{title}")
+	public @ResponseBody
+	void generateActualIncomeExpenseSubChartBatchTwo (
+			@PathVariable(value = "id") Long id,
+			@PathVariable(value = "width") Integer width,
+			@PathVariable(value = "height") Integer height,
+			@PathVariable(value = "title") String title,
+			HttpServletResponse response) {
+
+		try {
+
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+
+			ActualIncomeExpense expense = chartService
+					.getActualIncomeExpenseById(id);
+
+			if (expense != null) {
+				categoryDataset.setValue(expense.getActualCommunicationService(),
+						"Actual", "Communication Service");
+				categoryDataset.setValue(expense.getActualConsultancy(),
+						"Actual", "Consultancy");
+				categoryDataset.setValue(expense.getActualExtraordinary(), "Actual",
+						"Extraordinary and Misc.");
+				categoryDataset.setValue(expense.getActualJanitorial(), "Actual",
+						"Janitorial");
+				categoryDataset.setValue(expense.getActualLegal(), "Actual",
+						"Legal");
+
+				// Enrollment in Masters level
+				categoryDataset.setValue(expense.getBudgetCommunicationService(),
+						"Budget", "Communication Service");
 				categoryDataset.setValue(expense.getBudgetConsultancy(),
 						"Budget", "Consultancy");
+				categoryDataset.setValue(expense.getBudgetExtraordinary(), "Budget",
+						"Extraordinary and Misc.");
+				categoryDataset.setValue(expense.getBudgetJanitorial(), "Budget",
+						"Janitorial");
+				categoryDataset.setValue(expense.getBudgetLegal(), "Budget",
+						"Legal");
+			
+
+				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+						"", // X-Axis label
+						"Php ",// Y-Axis label
+						categoryDataset, // Dataset
+						PlotOrientation.VERTICAL, true, // Show legend
+						true, false);
+
+				CategoryPlot plot = chart.getCategoryPlot();
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
+						12));
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.createUpRotationLabelPositions(Math.PI,
+				// 6.0));
+
+				BarRenderer renderer = (BarRenderer) plot.getRenderer();
+				renderer.setItemMargin(0.0);
+				renderer.setSeriesPaint(0, new Color(0, 100, 0));
+				renderer.setSeriesPaint(1, new Color(127, 255, 0));
+				// (BarRenderer(renderer)).setItemMargin(0.0);
+				chart.setBackgroundPaint(Color.WHITE);
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+
+			Authentication auth = SecurityContextHolder.getContext()
+					.getAuthentication();
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING ACTUAL INCOME EXPENSE BAR CHART");
+		}
+
+	}
+	
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchthree/{id}/{width}/{height}/{title}")
+	public @ResponseBody
+	void generateActualIncomeExpenseSubChartBatchThree (
+			@PathVariable(value = "id") Long id,
+			@PathVariable(value = "width") Integer width,
+			@PathVariable(value = "height") Integer height,
+			@PathVariable(value = "title") String title,
+			HttpServletResponse response) {
+
+		try {
+
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+
+			ActualIncomeExpense expense = chartService
+					.getActualIncomeExpenseById(id);
+
+			if (expense != null) {
+				categoryDataset.setValue(expense.getActualLightWater(),
+						"Actual", "Light & Water");
+				categoryDataset.setValue(expense.getActualMeetings(),
+						"Actual", "Meetings");
+				categoryDataset.setValue(expense.getActualMemberships(), "Actual",
+						"Memberships");
+				categoryDataset.setValue(expense.getActualMessengerial(), "Actual",
+						"Messengerial");
+				categoryDataset.setValue(expense.getActualMisc(), "Actual",
+						"Misc");
+
+				// Enrollment in Masters level
+				categoryDataset.setValue(expense.getBudgetLightWater(),
+						"Budget", "Light & Water");
+				categoryDataset.setValue(expense.getBudgetMeetings(),
+						"Budget", "Meetings");
+				categoryDataset.setValue(expense.getBudgetMemberships(), "Budget",
+						"Memberships");
+				categoryDataset.setValue(expense.getBudgetMessengerial(), "Budget",
+						"Messengerial");
+				categoryDataset.setValue(expense.getBudgetMisc(), "Budget",
+						"Misc");
+
+				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+						"", // X-Axis label
+						"Php ",// Y-Axis label
+						categoryDataset, // Dataset
+						PlotOrientation.VERTICAL, true, // Show legend
+						true, false);
+
+				CategoryPlot plot = chart.getCategoryPlot();
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
+						12));
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.createUpRotationLabelPositions(Math.PI,
+				// 6.0));
+
+				BarRenderer renderer = (BarRenderer) plot.getRenderer();
+				renderer.setItemMargin(0.0);
+				renderer.setSeriesPaint(0, new Color(0, 100, 0));
+				renderer.setSeriesPaint(1, new Color(127, 255, 0));
+				// (BarRenderer(renderer)).setItemMargin(0.0);
+				chart.setBackgroundPaint(Color.WHITE);
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+
+			Authentication auth = SecurityContextHolder.getContext()
+					.getAuthentication();
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING ACTUAL INCOME EXPENSE BAR CHART");
+		}
+
+	}
+	
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchfour/{id}/{width}/{height}/{title}")
+	public @ResponseBody
+	void generateActualIncomeExpenseSubChartBatchFour (
+			@PathVariable(value = "id") Long id,
+			@PathVariable(value = "width") Integer width,
+			@PathVariable(value = "height") Integer height,
+			@PathVariable(value = "title") String title,
+			HttpServletResponse response) {
+
+		try {
+
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+
+			ActualIncomeExpense expense = chartService
+					.getActualIncomeExpenseById(id);
+
+			if (expense != null) {
+				categoryDataset.setValue(expense.getActualOtherMisc(),
+						"Actual", "Other Misc");
+				categoryDataset.setValue(expense.getActualRentals(),
+						"Actual", "Rentals");
+				categoryDataset.setValue(expense.getActualRepairFacilities(), "Actual",
+						"Repair of Facilities");
+				categoryDataset.setValue(expense.getActualRepairVehicles(), "Actual",
+						"Repair of Vehicles");
+				categoryDataset.setValue(expense.getActualSecurity(), "Actual",
+						"Security");
+
+				// Enrollment in Masters level
+				categoryDataset.setValue(expense.getBudgetOtherMisc(),
+						"Budget", "Other Misc");
+				categoryDataset.setValue(expense.getBudgetRentals(),
+						"Budget", "Rentals");
+				categoryDataset.setValue(expense.getBudgetRepairFacilities(), "Budget",
+						"Repair of Facilities");
+				categoryDataset.setValue(expense.getBudgetRepairVehicles(), "Budget",
+						"Repair of Vehicles");
+				categoryDataset.setValue(expense.getBudgetSecurity(), "Budget",
+						"Security");
+
+				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+						"", // X-Axis label
+						"Php ",// Y-Axis label
+						categoryDataset, // Dataset
+						PlotOrientation.VERTICAL, true, // Show legend
+						true, false);
+
+				CategoryPlot plot = chart.getCategoryPlot();
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
+						12));
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.createUpRotationLabelPositions(Math.PI,
+				// 6.0));
+
+				BarRenderer renderer = (BarRenderer) plot.getRenderer();
+				renderer.setItemMargin(0.0);
+				renderer.setSeriesPaint(0, new Color(0, 100, 0));
+				renderer.setSeriesPaint(1, new Color(127, 255, 0));
+				// (BarRenderer(renderer)).setItemMargin(0.0);
+				chart.setBackgroundPaint(Color.WHITE);
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+
+			Authentication auth = SecurityContextHolder.getContext()
+					.getAuthentication();
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING ACTUAL INCOME EXPENSE BAR CHART");
+		}
+
+	}
+	
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchfive/{id}/{width}/{height}/{title}")
+	public @ResponseBody
+	void generateActualIncomeExpenseSubChartBatchFive (
+			@PathVariable(value = "id") Long id,
+			@PathVariable(value = "width") Integer width,
+			@PathVariable(value = "height") Integer height,
+			@PathVariable(value = "title") String title,
+			HttpServletResponse response) {
+
+		try {
+
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+
+			ActualIncomeExpense expense = chartService
+					.getActualIncomeExpenseById(id);
+
+			if (expense != null) {
+				categoryDataset.setValue(expense.getActualSubscription(),
+						"Actual", "Subscription");
+				categoryDataset.setValue(expense.getActualSuppliesMaterials(),
+						"Actual", "Supplies & Materials");
+				categoryDataset.setValue(expense.getActualTaxes(), "Actual",
+						"Taxes");
+				categoryDataset.setValue(expense.getActualTraining(), "Actual",
+						"Training");
+				categoryDataset.setValue(expense.getActualTravelling(), "Actual",
+						"Travelling");
+
+				// Enrollment in Masters level
+				categoryDataset.setValue(expense.getBudgetSubscription(),
+						"Budget", "Subscription");
+				categoryDataset.setValue(expense.getBudgetSuppliesMaterials(),
+						"Budget", "Supplies & Materials");
+				categoryDataset.setValue(expense.getBudgetTaxes(), "Budget",
+						"Taxes");
+				categoryDataset.setValue(expense.getBudgetTraining(), "Budget",
+						"Training");
+				categoryDataset.setValue(expense.getBudgetTravelling(), "Budget",
+						"Travelling");
 
 				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
 						"", // X-Axis label
