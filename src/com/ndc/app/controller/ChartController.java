@@ -1089,74 +1089,81 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/shareholderspiechart/{width}/{height}/{id}")
+	@RequestMapping(value = "/shareholderspiechart/{id}")
 	public @ResponseBody
-	void generateShareholdersPieChart(
-			@PathVariable(value = "width") Integer width,
-			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "id") Long id,
-			HttpServletResponse response) {
+	String  generateShareholdersPieChart(@PathVariable(value = "id") Long id) {
 
+		JSONObject json = new JSONObject();
+		
 		try {
 
 			List<Shareholders> shareholders = chartService.getShareholdersByProjectId(id);
 
 			if (shareholders != null) {
 				
-				if(shareholders.size() != 0) {
-					
-					DefaultPieDataset dataset = new DefaultPieDataset();
-					
-					for (Shareholders sh : shareholders) {
-						if (sh != null) {
-							dataset.setValue(sh.getShareholders(), sh.getShares());
-						}
-					}
-	
-					JFreeChart chart = ChartFactory.createPieChart("Shareholders",
-							dataset, true, true, true);
-	
-					chart.setBorderVisible(false);
-	
-					PiePlot piePlot = (PiePlot) chart.getPlot();
-					StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-							"{0} - {2}");
-					labelGenerator.getPercentFormat().setMaximumFractionDigits(1);
-					piePlot.setLabelGenerator(labelGenerator);
-					// piePlot.setLegendLabelGenerator(labelGenerator);
-	
-					piePlot.setNoDataMessage("No data to display");
-	
-					LegendTitle legendTitle = chart.getLegend();
-					legendTitle.setPosition(RectangleEdge.RIGHT);
-	
-					PiePlot plot3 = (PiePlot) chart.getPlot();
-					// plot3.setForegroundAlpha(0.6f);
-					// plot3.setCircular(true);
-					plot3.setMaximumLabelWidth(0.17);
-					plot3.setLabelLinkStyle(PieLabelLinkStyle.CUBIC_CURVE);
-					// plot3.setLabelGap(20);
-					plot3.setShadowXOffset(0);
-					plot3.setShadowYOffset(0);
-	
-					// legend = chart.getLegend();
-					// legend.setVisible(false);
-					plot3.setBackgroundPaint(Color.WHITE);
-					plot3.setOutlineVisible(false);
-	
-					if (chart != null) {
-						final ChartRenderingInfo info = new ChartRenderingInfo(
-								new StandardEntityCollection());
-						response.setContentType("image/png");
-						OutputStream out = response.getOutputStream();
-	
-						ChartUtilities.writeChartAsPNG(out, chart, width, height,
-								info);
-					}	
+				List<String> shareholdersList = new ArrayList<String>();
+				List<Double> sharesList = new ArrayList<Double>();
+				
+				for(Shareholders sh : shareholders) {
+					shareholdersList.add(sh.getShareholders());
+					sharesList.add(sh.getShares());
+				}
+				
+				json.put("shareholdersList", shareholdersList);
+				json.put("sharesList", sharesList);
+				
+//				if(shareholders.size() != 0) {
+//					
+//					DefaultPieDataset dataset = new DefaultPieDataset();
+//					
+//					for (Shareholders sh : shareholders) {
+//						if (sh != null) {
+//							dataset.setValue(sh.getShareholders(), sh.getShares());
+//						}
+//					}
+//	
+//					JFreeChart chart = ChartFactory.createPieChart("Shareholders",
+//							dataset, true, true, true);
+//	
+//					chart.setBorderVisible(false);
+//	
+//					PiePlot piePlot = (PiePlot) chart.getPlot();
+//					StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
+//							"{0} - {2}");
+//					labelGenerator.getPercentFormat().setMaximumFractionDigits(1);
+//					piePlot.setLabelGenerator(labelGenerator);
+//					// piePlot.setLegendLabelGenerator(labelGenerator);
+//	
+//					piePlot.setNoDataMessage("No data to display");
+//	
+//					LegendTitle legendTitle = chart.getLegend();
+//					legendTitle.setPosition(RectangleEdge.RIGHT);
+//	
+//					PiePlot plot3 = (PiePlot) chart.getPlot();
+//					// plot3.setForegroundAlpha(0.6f);
+//					// plot3.setCircular(true);
+//					plot3.setMaximumLabelWidth(0.17);
+//					plot3.setLabelLinkStyle(PieLabelLinkStyle.CUBIC_CURVE);
+//					// plot3.setLabelGap(20);
+//					plot3.setShadowXOffset(0);
+//					plot3.setShadowYOffset(0);
+//	
+//					// legend = chart.getLegend();
+//					// legend.setVisible(false);
+//					plot3.setBackgroundPaint(Color.WHITE);
+//					plot3.setOutlineVisible(false);
+//	
+//					if (chart != null) {
+//						final ChartRenderingInfo info = new ChartRenderingInfo(
+//								new StandardEntityCollection());
+//						response.setContentType("image/png");
+//						OutputStream out = response.getOutputStream();
+//	
+//						ChartUtilities.writeChartAsPNG(out, chart, width, height,
+//								info);
+//					}	
 					
 				}
-
-			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1165,6 +1172,8 @@ public class ChartController {
 					.getAuthentication();
 			loggerUtil.log(auth, "ERROR WHILE DISPLAYING STOCK AREA CHART");
 		}
+		
+		return json.toString();
 
 	}
 
@@ -1441,59 +1450,6 @@ public class ChartController {
 				json.put("amounts", amounts);
 				json.put("unutilized", totalAgriAgraBonds - total);
 			}
-
-//			if (bondsList != null && bondsList.size() > 0) {
-//				
-//				double total = 0;
-//				
-//				for(AgriAgraBonds bond : bondsList) {
-//					dataset.setValue(bond.getYear(),
-//							bond.getAmount());
-//					total += bond.getAmount();
-//				}
-//				
-//				if (totalAgriAgraBonds != null) {
-//					unutilized = totalAgriAgraBonds - total;
-//				}
-//
-//				if (unutilized != null) {
-//					dataset.setValue("Unutilized", unutilized);
-//				}
-//
-//				JFreeChart chart = ChartFactory.createPieChart(
-//						"Balance of NDC Agri-Agra Bonds", dataset, true, true,
-//						true);
-//
-//
-//				PiePlot piePlot = (PiePlot) chart.getPlot();
-//				StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-//						"{0} = {1} ({2})");
-//				labelGenerator.getPercentFormat().setMaximumFractionDigits(2);
-//				piePlot.setLabelGenerator(labelGenerator);
-//				piePlot.setLegendLabelGenerator(labelGenerator);
-//				piePlot.setOutlineVisible(false);
-//				piePlot.setBackgroundPaint(Color.WHITE);
-//				piePlot.setNoDataMessage("No data to display");
-//				
-//				PiePlot plot3 = (PiePlot) chart.getPlot();
-//				
-//				plot3.setShadowXOffset(0);
-//				plot3.setShadowYOffset(0);
-//
-//				LegendTitle legend = chart.getLegend();
-//				legend.setVisible(false);
-//
-//				if (chart != null) {
-//					final ChartRenderingInfo info = new ChartRenderingInfo(
-//							new StandardEntityCollection());
-//					response.setContentType("image/png");
-//					OutputStream out = response.getOutputStream();
-//
-//					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-//							info);
-//				}
-//
-//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);

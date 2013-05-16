@@ -47,7 +47,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class = "active"><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
-							  <li><a href="#graphs" data-toggle="tab">Graphs</a></li>
+							  <li><a href="#graphs" data-toggle="tab">Shareholders</a></li>
 							  <li><a href="#financial" data-toggle="tab">Financial Performance</a></li>
 							</ul>
 						</div>
@@ -76,8 +76,16 @@
 						  	
 							  	<div class="row-fluid">
 							  		<div class="span12">
-								  		<!-- Generate SHAREHOLDERS CHART //-->
-								  		<img alt="Shareholders is not available" src="${pageContext.request.contextPath}/visualization/shareholderspiechart/800/450/${spgSubCategory.id}" />
+								  		<div id="shareholdersPieChartDiv"></div>
+							
+										<script>
+											$(document).ready(function() {
+												var url = "${pageContext.request.contextPath}/visualization/shareholderspiechart";
+												var id = Number("${spgSubCategory.id}");
+												
+												createShareholdersPieChart(url, 550, 400, id);
+											});
+										</script>
 							  		</div>
 							  	</div>
 						  	
