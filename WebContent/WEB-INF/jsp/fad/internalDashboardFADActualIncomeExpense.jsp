@@ -95,6 +95,9 @@
 					<div class="row-fluid">
 					
 						<div class="span6">
+						
+							<p class="lead"> Budget </p>
+							<hr />
 
 							<label>Budget Advertising</label>
 							<div>
@@ -119,10 +122,136 @@
 								<spring:input path="budgetConsultancy" class="span6"
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
+							
+							<label>Budget Board Expenses</label>
+							<div>
+								<spring:input path="budgetBoardExpenses" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Christmas and Anniversary</label>
+							<div>
+								<spring:input path="budgetChristmasAnniversary" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Communication Service</label>
+							<div>
+								<spring:input path="budgetCommunicationService" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Extraordinary and Miscellaneous Expense</label>
+							<div>
+								<spring:input path="budgetExtraordinary" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Janitorial Services</label>
+							<div>
+								<spring:input path="budgetJanitorial" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Legal Services</label>
+							<div>
+								<spring:input path="budgetLegal" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Light and Water</label>
+							<div>
+								<spring:input path="budgetLightWater" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Meetings/Planning and Conference</label>
+							<div>
+								<spring:input path="budgetMeetings" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Membership Dues and Contributions to Organizations</label>
+							<div>
+								<spring:input path="budgetMemberships" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Messengerial Services</label>
+							<div>
+								<spring:input path="budgetMessengerial" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Miscellaneous Other Services</label>
+							<div>
+								<spring:input path="budgetMisc" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Other Miscellaneous Expense</label>
+							<div>
+								<spring:input path="budgetOtherMisc" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Rentals and Storage Fees</label>
+							<div>
+								<spring:input path="budgetRentals" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Repair and Maintenance of Facilities</label>
+							<div>
+								<spring:input path="budgetRepairFacilities" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Repair and Maintenance of Vehicles</label>
+							<div>
+								<spring:input path="budgetRepairVehicles" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Security Services</label>
+							<div>
+								<spring:input path="budgetSecurity" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Subscription</label>
+							<div>
+								<spring:input path="budgetSubscription" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Supplies and Materials</label>
+							<div>
+								<spring:input path="budgetSuppliesMaterials" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Taxes, Insurance and Other Fees</label>
+							<div>
+								<spring:input path="budgetTaxes" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Training and Personnel Development</label>
+							<div>
+								<spring:input path="budgetTraining" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Travelling Expenses</label>
+							<div>
+								<spring:input path="budgetTravelling" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
 
 							<label>Total Budget</label>
 							<div>
-								<spring:input path="totalExpense" class="span6"
+								<spring:input readonly="true" path="totalExpense" class="span6"
 									constraint="number" placeholder="(e.g. 175000)" />
 							</div>
 						</div>
@@ -130,6 +259,8 @@
 
 						<div class="span6">
 
+							<p class="lead"> Actual </p>
+							<hr />
 
 							<label>Actual Advertising</label>
 							<div>
@@ -154,10 +285,136 @@
 								<spring:input path="actualConsultancy" class="span6"
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
+							
+							<label>Actual Board Expenses</label>
+							<div>
+								<spring:input path="actualBoardExpenses" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Christmas and Anniversary</label>
+							<div>
+								<spring:input path="actualChristmasAnniversary" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Communication Service</label>
+							<div>
+								<spring:input path="actualCommunicationService" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Extraordinary and Miscellaneous Expense</label>
+							<div>
+								<spring:input path="actualExtraordinary" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Janitorial Services</label>
+							<div>
+								<spring:input path="actualJanitorial" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Legal Services</label>
+							<div>
+								<spring:input path="actualLegal" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Light and Water</label>
+							<div>
+								<spring:input path="actualLightWater" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Meetings/Planning and Conference</label>
+							<div>
+								<spring:input path="actualMeetings" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Membership Dues and Contributions to Organizations</label>
+							<div>
+								<spring:input path="actualMemberships" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Messengerial Services</label>
+							<div>
+								<spring:input path="actualMessengerial" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Miscellaneous Other Services</label>
+							<div>
+								<spring:input path="actualMisc" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Other Miscellaneous Expense</label>
+							<div>
+								<spring:input path="actualOtherMisc" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Rentals and Storage Fees</label>
+							<div>
+								<spring:input path="actualRentals" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Repair and Maintenance of Facilities</label>
+							<div>
+								<spring:input path="actualRepairFacilities" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Repair and Maintenance of Vehicles</label>
+							<div>
+								<spring:input path="actualRepairVehicles" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Security Services</label>
+							<div>
+								<spring:input path="actualSecurity" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Subscription</label>
+							<div>
+								<spring:input path="actualSubscription" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Supplies and Materials</label>
+							<div>
+								<spring:input path="actualSuppliesMaterials" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Taxes, Insurance and Other Fees</label>
+							<div>
+								<spring:input path="actualTaxes" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Training and Personnel Development</label>
+							<div>
+								<spring:input path="actualTraining" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Travelling Expenses</label>
+							<div>
+								<spring:input path="actualTravelling" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
 
 							<label>Total Actual</label>
 							<div>
-								<spring:input path="totalIncome" class="span6"
+								<spring:input readonly="true" path="totalIncome" class="span6"
 									constraint="number" placeholder="(e.g. 500000)" />
 							</div>
 						</div>

@@ -221,6 +221,208 @@
 				});
 				//////////////////////////////////////////////////////
 				
+				/**** TOTAL ACTUAL ****/
+				$("input[name=actualAdvertising]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualAthletics]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualAuditing]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualBoardExpenses]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualChristmasAnniversary]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualCommunicationService]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualConsultancy]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualExtraordinary]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualJanitorial]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualLegal]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualLightWater]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualMeetings]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualMemberships]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualMessengerial]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualMisc]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualOtherMisc]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualRentals]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualRepairFacilities]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualRepairVehicles]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualSecurity]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualSubscription]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualSuppliesMaterials]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualTaxes]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualTraining]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualTravelling]").keyup(function() {
+					getTotalActual();
+				});
+				
+				/**** TOTAL BUDGET ****/
+				$("input[name=budgetAdvertising]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetAthletics]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetAuditing]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetBoardExpenses]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetChristmasAnniversary]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetCommunicationService]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetConsultancy]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetExtraordinary]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetJanitorial]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetLegal]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetLightWater]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetMeetings]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetMemberships]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetMessengerial]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetMisc]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetOtherMisc]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetRentals]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetRepairFacilities]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetRepairVehicles]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetSecurity]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetSubscription]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetSuppliesMaterials]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetTaxes]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetTraining]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetTravelling]").keyup(function() {
+					getTotalBudget();
+				});
+				
 				$(".viewNotif").click(function() {
 					
 					var groupName = $(this).attr("groupId");
@@ -563,6 +765,82 @@
 				var total = projectedDividend + projectedInterest + projectedRental + projectedGainOnSale + projectedOtherIncome;
 				
 				$("#projectedIncome").val(total);
+				
+			}
+			
+			/**** TOTAL BUDGET ****/
+			function getTotalBudget() {
+				
+				var budgetAdvertising = Number($("#budgetAdvertising").val());
+				var budgetAthletics = Number($("#budgetAthletics").val());
+				var budgetAuditing = Number($("#budgetAuditing").val());
+				var budgetConsultancy = Number($("#budgetConsultancy").val());
+				var budgetBoardExpenses = Number($("#budgetBoardExpenses").val());
+				var budgetChristmasAnniversary = Number($("#budgetChristmasAnniversary").val());
+				var budgetCommunicationService = Number($("#budgetCommunicationService").val());
+				var budgetExtraordinary = Number($("#budgetExtraordinary").val());
+				var budgetJanitorial = Number($("#budgetJanitorial").val());
+				var budgetLegal = Number($("#budgetLegal").val());
+				var budgetLightWater = Number($("#budgetLightWater").val());
+				var budgetMeetings = Number($("#budgetMeetings").val());
+				var budgetMemberships = Number($("#budgetMemberships").val());
+				var budgetMessengerial = Number($("#budgetMessengerial").val());
+				var budgetMisc = Number($("#budgetMisc").val());
+				var budgetOtherMisc = Number($("#budgetOtherMisc").val());
+				var budgetRentals = Number($("#budgetRentals").val());
+				var budgetRepairFacilities = Number($("#budgetRepairFacilities").val());
+				var budgetRepairVehicles = Number($("#budgetRepairVehicles").val());
+				var budgetSecurity = Number($("#budgetSecurity").val());
+				var budgetSubscription = Number($("#budgetSubscription").val());
+				var budgetSuppliesMaterials = Number($("#budgetSuppliesMaterials").val());
+				var budgetTaxes = Number($("#budgetTaxes").val());
+				var budgetTraining = Number($("#budgetTraining").val());
+				var budgetTravelling = Number($("#budgetTravelling").val());
+				
+				var total = budgetAdvertising + budgetAthletics + budgetAuditing + budgetConsultancy + budgetBoardExpenses + budgetChristmasAnniversary + 
+					budgetCommunicationService + budgetExtraordinary + budgetJanitorial + budgetLegal + budgetLightWater + budgetMeetings + budgetMemberships + 
+					budgetMessengerial + budgetMisc + budgetOtherMisc + budgetRentals + budgetRepairFacilities + budgetRepairVehicles + budgetSecurity + 
+					budgetSubscription + budgetSuppliesMaterials + budgetTaxes + budgetTraining + budgetTravelling;
+
+				$("#totalExpense").val(total);
+				
+			}
+			
+			/**** TOTAL BUDGET ****/
+			function getTotalActual() {
+				
+				var actualAdvertising = Number($("#actualAdvertising").val());
+				var actualAthletics = Number($("#actualAthletics").val());
+				var actualAuditing = Number($("#actualAuditing").val());
+				var actualConsultancy = Number($("#actualConsultancy").val());
+				var actualBoardExpenses = Number($("#actualBoardExpenses").val());
+				var actualChristmasAnniversary = Number($("#actualChristmasAnniversary").val());
+				var actualCommunicationService = Number($("#actualCommunicationService").val());
+				var actualExtraordinary = Number($("#actualExtraordinary").val());
+				var actualJanitorial = Number($("#actualJanitorial").val());
+				var actualLegal = Number($("#actualLegal").val());
+				var actualLightWater = Number($("#actualLightWater").val());
+				var actualMeetings = Number($("#actualMeetings").val());
+				var actualMemberships = Number($("#actualMemberships").val());
+				var actualMessengerial = Number($("#actualMessengerial").val());
+				var actualMisc = Number($("#actualMisc").val());
+				var actualOtherMisc = Number($("#actualOtherMisc").val());
+				var actualRentals = Number($("#actualRentals").val());
+				var actualRepairFacilities = Number($("#actualRepairFacilities").val());
+				var actualRepairVehicles = Number($("#actualRepairVehicles").val());
+				var actualSecurity = Number($("#actualSecurity").val());
+				var actualSubscription = Number($("#actualSubscription").val());
+				var actualSuppliesMaterials = Number($("#actualSuppliesMaterials").val());
+				var actualTaxes = Number($("#actualTaxes").val());
+				var actualTraining = Number($("#actualTraining").val());
+				var actualTravelling = Number($("#actualTravelling").val());
+				
+				var total = actualAdvertising + actualAthletics + actualAuditing + actualConsultancy + actualBoardExpenses + actualChristmasAnniversary + 
+				    actualCommunicationService + actualExtraordinary + actualJanitorial + actualLegal + actualLightWater + actualMeetings + actualMemberships + 
+				    actualMessengerial + actualMisc + actualOtherMisc + actualRentals + actualRepairFacilities + actualRepairVehicles + actualSecurity + 
+				    actualSubscription + actualSuppliesMaterials + actualTaxes + actualTraining + actualTravelling;
+
+				$("#totalIncome").val(total);
 				
 			}
 			
