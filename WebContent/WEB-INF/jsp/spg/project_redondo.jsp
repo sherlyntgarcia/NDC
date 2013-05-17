@@ -15,7 +15,7 @@
 				<div class="row-fluid">	
 					<div>
 						<p class="lead">
-							FCIE Expansion Project
+							Redondo Wind Power Project
 						</p>
 						<hr>
 					</div>
@@ -25,45 +25,31 @@
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
-<!-- 							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li> -->
+							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>					  							  
+							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
 							</ul>
 						</div>
 						
 						<div class="tab-content">
 						  <div class="tab-pane active" id="description" style = "margin-left: 5%">
-						  		<p>
-						  			The project involves the development of the NDC-owned 19.17 hectares<br/>
-						  			property located in Lankaan II, Dasmari&ntilde;as, Cavite into an industrial<br/> 
-						  			economic zone as expansion of the First Cavite Industrial Estate (FCIE).  
-						  		</p>
+						  		Wind power electric generation project with a capacity of 50MW (2MW <br/>
+						  		each @ 25 Windmill Turbine Generators). The project is being proposed <br/>
+						  		by the Pan Energy Corporation wherein NDC was invited to invest into the <br/>
+						  		project via equity participation. The project will be located in the towns <br/>
+						  		of Subic & San Antonio in Zambales.  
 						  	<ul class = 'list-style'>
 									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
-											<li>Local and foreign manufacturers, local workers</li>
-										</ul>
-									<li><p class="para">Project Budget</p></li>
-										<ul>
-											<li>P550 Million including value of land</li>
-										</ul>
-									<li><p class="para">NDC's Participation</p></li>
-											<ul>
-												<li>NDC property as equity</li>
-											</ul>
-									<li><p class="para">Project Timeline</p></li>
-											<ul>
-												<li>Not yet established</li>
-											</ul>	
+											<li>Electric power consumers of Olongapo City-Zambales area</li>
+										</ul>									
 									<li><p class="para">Project Status</p></li>
 											<ul>
-												<li>The project is now under evaluation. The implementation<br/> 
-													framework has been presented to the Management Committee <br/>
-													on Nov. 9, 2012. The project will be implemented in a <br/>
-													joint venture with the private sector, wherein, NDC will<br/>
-													contribute the property, while the private partner will <br/>
-													shoulder the development cost.</li>
-												<li>The ManCom has approved the hiring of a consultant to update<br/>
-													the old Feasibility Study of the Project </li>
+												<li>The Preliminary Feasibility Study was already completed <br/>
+													obtaining information from satellite data.</li>
+												<li>Start of the Final Feasibility Study awaits permits from <br/>
+												LGU and DENR for the installation of Met-Mast, an instrumentation <br/>
+												use to measure wind speed, pressure, direction, temperature, etc. </li>
+												<li>On-going securing necessary permits to install the Met-Mast</li>
 											</ul>																
 						  		</ul>						  		 
 						  </div>						 						  
@@ -75,6 +61,14 @@
 						  					<ul>
 												<li>Contact No.: 8404838 loc. 277</li>
 												<li>Mobile No.: 09182535547</li>
+											</ul>
+						  			</ul>	
+						  			<li>Client Contact Person</li>
+						  			<ul>
+						  				<li>Pan Energy Corporation</li>
+						  					<ul>
+												<li>Tel. No.: (632)7063270</li>
+												<li>Mobile No.: 09175298844</li>
 											</ul>
 						  			</ul>						 
 										</ul>

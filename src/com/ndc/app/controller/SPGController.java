@@ -452,6 +452,41 @@ public class SPGController {
 		return "spg/spgExistingTemplate";
 		
 	}
+	
+	@RequestMapping(value="/project_ndcSchool")
+	public String ndcSchool(Model model) {
+		return "spg/project_ndcSchool";
+	}
+	
+	@RequestMapping(value="/project_FCIE")
+	public String FCIE(Model model) {
+		return "spg/project_FCIE";
+	}
+	
+	@RequestMapping(value="/project_foodExchange")
+	public String foodExchange(Model model) {
+		return "spg/project_foodExchange";
+	}
+	
+	@RequestMapping(value="/project_mini-hydro")
+	public String miniHydro(Model model) {
+		return "spg/project_mini-hydro";
+	}
+	
+	@RequestMapping(value="/project_redondo")
+	public String redondo(Model model) {
+		return "spg/project_redondo";
+	}
+	
+	@RequestMapping(value="/project_biomass")
+	public String biomass(Model model) {
+		return "spg/project_bioMass";
+	}
+	
+	@RequestMapping(value="/project_rubberProcessing")
+	public String rubberProcessing(Model model) {
+		return "spg/project_rubberProcessing";
+	}
 
 	@ModelAttribute("title")
 	public String getTitle() {

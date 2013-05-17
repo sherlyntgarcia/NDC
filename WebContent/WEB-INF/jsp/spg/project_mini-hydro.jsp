@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
-<!-- 							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li> -->
+							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
 							</ul>
 						</div>
 						

@@ -49,14 +49,14 @@
 										<li class="dropdown-submenu">
 											<a href="#" tabindex="-1">New</a>
 											<ul class="dropdown-menu">
-												<li><a href="#" style="font-weight: bold">Projects
+												<li><a href="#" style="font-weight: bold;font-size:18px">Projects
 														for Implementation</a>
 													<ul class="dropdown-submenu">
 														<li><a
 															href="<c:url value="/external/project_ndcSchool" />">NDC
 																School Building Program</a></li>
 													</ul></li>
-												<li><a href="#" style="font-weight: bold">Projects
+												<li><a href="#" style="font-weight: bold;font-size:18px">Projects
 														Under Evaluation</a>
 													<ul class="dropdown-submenu">
 														<li><a
@@ -69,7 +69,7 @@
 															href="<c:url value="/external/project_mini-hydro"/>">Mini-Hydro
 																Projects</a></li>
 													</ul></li>
-												<li><a href="#" style="font-weight: bold">Projects
+												<li><a href="#" style="font-weight: bold;font-size:18px">Projects
 														Identified</a>
 													<ul class="dropdown-submenu">
 														<li><a

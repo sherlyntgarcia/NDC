@@ -9,25 +9,25 @@
 			<a href="#" tabindex="-1" >New</a>
 			<ul class="dropdown-menu">
 				<li>
-					<a href = "#" style="font-weight:bold">Projects for Implementation</a>
+					<a href = "#" style="font-weight:bold;font-size:18px">Projects for Implementation</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/external/project_ndcSchool" />">NDC School Building Program</a></li>												
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_ndcSchool" />">NDC School Building Program</a></li>												
 					</ul>
 				</li>
 				<li>
-					<a href = "#" style="font-weight:bold">Projects Under Evaluation</a>
+					<a href = "#" style="font-weight:bold;font-size:18px">Projects Under Evaluation</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/external/project_FCIE"/>">FCIE Expansion Project</a></li>
-						<li><a href = "<c:url value="/external/project_foodExchange"/>">Davao Food Exchange Terminal</a></li>
-						<li><a href = "<c:url value="/external/project_mini-hydro"/>">Mini-Hydro Projects</a></li>												
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_FCIE"/>">FCIE Expansion Project</a></li>
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_foodExchange"/>">Davao Food Exchange Terminal</a></li>
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_mini-hydro"/>">Mini-Hydro Projects</a></li>												
 					</ul>
 				</li>	
 				<li>
-					<a href = "#" style="font-weight:bold">Projects Identified</a>
+					<a href = "#" style="font-weight:bold;font-size:18px">Projects Identified</a>
 					<ul class="dropdown-submenu">
-						<li><a href = "<c:url value="/external/project_redondo"/>">Redondo Wind Power Project</a></li>	
-						<li><a href = "<c:url value="/external/project_biomass"/>">Biomass Development Project</a></li>
-						<li><a href = "<c:url value="/external/project_rubberProcessing"/>">Mindanao Rubber Processing Plant</a></li>													
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_redondo"/>">Redondo Wind Power Project</a></li>	
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_biomass"/>">Biomass Development Project</a></li>
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_rubberProcessing"/>">Mindanao Rubber Processing Plant</a></li>													
 					</ul>
 				</li>											
 			</ul>
