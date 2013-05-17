@@ -43,6 +43,15 @@
 								<li> Please enter the actual amount of value. </li>
 								<li> Data will apply for the year <b><c:out value="${spgCashFlow.year}" /></b>. </li>
 								<li> To prevent inaccurate data, do not use copy & paste feature while adding amounts. </li>
+								<li>
+									<p> Currency: </p>
+									<ul>
+										<li> ASEAN Bintulu - Malaysian Ringgit(RM) </li>
+										<li> ASEAN PT Aceh Fertilizer - Indonesian Rupiah(IDR) </li>
+										<li> ASEAN Potash - Thai Baht(THB) </li>
+										<li> Others - Philippines Peso(PHP) </li>
+									</ul>
+								</li>
 							</ul>
 						</p>
 				</div>

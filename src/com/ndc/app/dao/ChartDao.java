@@ -29,6 +29,7 @@ import com.ndc.app.model.SourcesFunds;
 import com.ndc.app.model.SpgBalanceSheet;
 import com.ndc.app.model.SpgCashFlow;
 import com.ndc.app.model.SpgIncomeStatement;
+import com.ndc.app.model.SpgSubCategory;
 import com.ndc.app.model.StatusAssets;
 
 public interface ChartDao {

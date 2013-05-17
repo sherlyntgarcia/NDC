@@ -12,7 +12,6 @@ import java.awt.geom.Rectangle2D;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
 import java.text.FieldPosition;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -37,14 +36,11 @@ import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.entity.StandardEntityCollection;
 import org.jfree.chart.labels.StandardCategoryItemLabelGenerator;
 import org.jfree.chart.labels.StandardCategoryToolTipGenerator;
-import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.DatasetRenderingOrder;
 import org.jfree.chart.plot.DialShape;
 import org.jfree.chart.plot.MeterInterval;
 import org.jfree.chart.plot.MeterPlot;
-import org.jfree.chart.plot.PieLabelLinkStyle;
-import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.chart.renderer.category.BarRenderer3D;
@@ -98,8 +94,10 @@ import com.ndc.app.model.SourcesFunds;
 import com.ndc.app.model.SpgBalanceSheet;
 import com.ndc.app.model.SpgCashFlow;
 import com.ndc.app.model.SpgIncomeStatement;
+import com.ndc.app.model.SpgSubCategory;
 import com.ndc.app.model.StatusAssets;
 import com.ndc.app.service.ChartService;
+import com.ndc.app.service.SpgService;
 import com.ndc.app.util.LoggerUtil;
 
 @Controller
@@ -109,6 +107,10 @@ public class ChartController {
 	@Autowired
 	@Qualifier("chartService")
 	private ChartService chartService;
+	
+	@Autowired
+	@Qualifier("spgService")
+	private SpgService spgService;
 
 	@Autowired
 	private LoggerUtil loggerUtil;
@@ -1947,27 +1949,10 @@ public class ChartController {
 			
 			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement();
 
-//			if (spgIncomeStatementLatestYear != null) {
-//				dataset2.addValue(
-//						spgIncomeStatementLatestYear.getProfitMargin(),
-//						"Profit Margin", spgIncomeStatementLatestYear.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear2 != null) {
-//				dataset2.addValue(
-//						spgIncomeStatementLatestYear2.getProfitMargin(),
-//						"Profit Margin",
-//						spgIncomeStatementLatestYear2.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear3 != null) {
-//				dataset2.addValue(
-//						spgIncomeStatementLatestYear3.getProfitMargin(),
-//						"Profit Margin",
-//						spgIncomeStatementLatestYear3.getYear());
-//			}
-
 			if(incomeStatements != null && incomeStatements.size() > 0) {
+				
+				SpgSubCategory category = spgService.getSubCategoryById(id);
+				String currency = category.getCurrency();
 				
 				for(SpgIncomeStatement incomeStatement : incomeStatements) {
 					dataset1.setValue(incomeStatement.getNetIncome(),
@@ -1980,7 +1965,7 @@ public class ChartController {
 				JFreeChart chart = ChartFactory.createBarChart(
 						"Income Statement", // Title
 						"", // X-Axis label
-						"RM Millions",// Y-Axis label
+						currency,// Y-Axis label
 						dataset1, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -2147,6 +2132,9 @@ public class ChartController {
 
 			if(balanceSheets != null && balanceSheets.size() > 0) {
 				
+				SpgSubCategory category = spgService.getSubCategoryById(id);
+				String currency = category.getCurrency();
+				
 				for(SpgBalanceSheet sheet : balanceSheets) {
 					dataset1.setValue(sheet.getTotalAssets(),
 					"Total Assets", sheet.getYear());
@@ -2159,7 +2147,7 @@ public class ChartController {
 				// create the chart...
 				JFreeChart chart = ChartFactory.createBarChart("Balance Sheet", // Title
 						"", // X-Axis label
-						"RM Millions",// Y-Axis label
+						currency,// Y-Axis label
 						dataset1, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -2338,6 +2326,9 @@ public class ChartController {
 
 			if(cashFlows != null && cashFlows.size() > 0) {
 				
+				SpgSubCategory category = spgService.getSubCategoryById(id);
+				String currency = category.getCurrency();
+				
 				for(SpgCashFlow cashFlow : cashFlows) {
 					dataset.addValue(cashFlow.getOperatingActivities(),
 					"Operating Activities", cashFlow.getYear());
@@ -2350,7 +2341,7 @@ public class ChartController {
 				JFreeChart chart = ChartFactory.createLineChart("Cash Flow", // chart
 																				// title
 						"", // domain(x-axis) axis label
-						"RM Millions", // range(y-axis) axis label
+						currency, // range(y-axis) axis label
 						dataset, // data
 						PlotOrientation.VERTICAL, // orientation
 						true, // include legend

@@ -24,6 +24,7 @@ public class SpgSubCategory implements java.io.Serializable {
 	private SpgCategory spgCategory;
 	private String profile;
 	private String milestone;
+	private String currency;
 	
 	@Id
 	@GeneratedValue(strategy=IDENTITY)
@@ -82,6 +83,15 @@ public class SpgSubCategory implements java.io.Serializable {
 
 	public void setMilestone(String milestone) {
 		this.milestone = milestone;
+	}
+
+	@Column(name="CURRENCY")
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
 	}
 	
 }
