@@ -49,7 +49,20 @@
 					</div>
 					
 					<div class="span6">
-						<img alt="Bond Maturity is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/bondMaturity'" src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart/450/400" />
+						<div id="myCarousel" class="carousel slide">
+						  <!-- Carousel items -->
+						  <div class="carousel-inner">
+						    <div class="active item">
+						    	<img alt="Bond Maturity is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/bondMaturity'" src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart/450/400" />
+						    </div>
+						    <div class="item">
+						    	<img alt="Bond Maturity is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/bondMaturity'" src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart2/450/400" />
+						    </div>
+						  </div>
+						  <!-- Carousel nav -->
+						  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+						</div>
 					</div>
 				</div>
 				

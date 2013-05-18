@@ -398,52 +398,6 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(BondMaturity.class);
-//
-//			BondMaturity bondMaturityLatestYear = chartService
-//					.getBondMaturityByYear(latestYear - 2);
-//			BondMaturity bondMaturityLatestYear2 = chartService
-//					.getBondMaturityByYear(latestYear - 1);
-//			BondMaturity bondMaturityLatestYear3 = chartService
-//					.getBondMaturityByYear(latestYear);
-//
-//			if (bondMaturityLatestYear != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear.getAmountIssued() / 1000000,
-//						"Term of the Bond", bondMaturityLatestYear.getYear());
-//			}
-//
-//			if (bondMaturityLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear2.getAmountIssued() / 1000000,
-//						"Term of the Bond", bondMaturityLatestYear2.getYear());
-//			}
-//
-//			if (bondMaturityLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear3.getAmountIssued() / 1000000,
-//						"Term of the Bond", bondMaturityLatestYear3.getYear());
-//			}
-//
-//			if (bondMaturityLatestYear != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear.getBondPayment() / 1000000,
-//						"Bond Payment", bondMaturityLatestYear.getYear());
-//			}
-//
-//			if (bondMaturityLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear2.getBondPayment() / 1000000,
-//						"Bond Payment", bondMaturityLatestYear2.getYear());
-//			}
-//
-//			if (bondMaturityLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						bondMaturityLatestYear3.getBondPayment() / 1000000,
-//						"Bond Payment", bondMaturityLatestYear3.getYear());
-//			}
 			
 			List<BondMaturity> bondMaturities = chartService.generateBondMaturity();
 
@@ -451,16 +405,91 @@ public class ChartController {
 				
 				for(BondMaturity bm : bondMaturities) {
 					categoryDataset.setValue(
-						bm.getAmountIssued() / 1000000,
+						bm.getBondPayment(),
 						"Term of the Bond", bm.getYear());
-					categoryDataset.setValue(
-							bm.getBondPayment() / 1000000,
-							"Maturity(Years)", bm.getYear());
+//					categoryDataset.setValue(
+//						bm.getAmountIssued(),
+//						"Maturity(Years)", bm.getYear());
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity", // Title
-						"Years", // X-Axis label
-						"Issuance (Billions)",// Y-Axis label
+						"Year of Issuance", // X-Axis label
+						"Maturity(Years)",// Y-Axis label
+						categoryDataset, // Dataset
+						PlotOrientation.HORIZONTAL, true, // Show legend
+						true, false);
+
+				CategoryPlot plot = chart.getCategoryPlot();
+				
+				plot.setBackgroundPaint(Color.WHITE);
+				plot.setRangeGridlinePaint(Color.BLACK);
+				plot.setRangeGridlineStroke(new BasicStroke(0.5f,
+						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
+
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
+						12));
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.createUpRotationLabelPositions(Math.PI,
+				// 6.0));
+
+				BarRenderer renderer = (BarRenderer) plot.getRenderer();
+				renderer.setItemMargin(0.0);
+				renderer.setSeriesPaint(0, new Color(23, 94, 6));
+				renderer.setSeriesPaint(1, new Color(112, 242, 79));
+				// (BarRenderer(renderer)).setItemMargin(0.0);
+
+				plot.setNoDataMessage("No data to display");
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+
+			Authentication auth = SecurityContextHolder.getContext()
+					.getAuthentication();
+			loggerUtil.log(auth,
+					"ERROR WHILE DISPLAYING BAR CHART FOR BOND MATURITY");
+		}
+
+	}
+	
+	@RequestMapping(value = "/bondmaturitybarchart2/{width}/{height}")
+	public @ResponseBody
+	void generateBondMaturityBarChart2(
+			@PathVariable(value = "width") Integer width,
+			@PathVariable(value = "height") Integer height,
+			HttpServletResponse response) {
+
+		try {
+
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+			
+			List<BondMaturity> bondMaturities = chartService.generateBondMaturity();
+
+			if (bondMaturities != null && bondMaturities.size() > 0) {
+				
+				for(BondMaturity bm : bondMaturities) {
+//					categoryDataset.setValue(
+//						bm.getBondPayment(),
+//						"Term of the Bond", bm.getYear());
+					categoryDataset.setValue(
+						bm.getAmountIssued(),
+						"Bond Payment", bm.getYear());
+				}
+
+				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity", // Title
+						"Year of Issuance", // X-Axis label
+						"Amount Issued (Php)",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.HORIZONTAL, true, // Show legend
 						true, false);
