@@ -119,7 +119,6 @@
     
     <style type="text/css">
       body {
-        padding-top: 10%;
         padding-bottom: 40px;
         background-color: #c6fdc4;
         font-family: vrinda;
@@ -194,7 +193,10 @@
 
 <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top"
+	<!-- scrollbar -->
+	<a href="#" class="scrollup">Scroll</a>
+
+	<div class="navbar navbar-inverse"
 		style="background: #27b357; margin-top: -2px">
 		<img onclick="window.open('http://www.ndc.gov.ph')"
 			src="${pageContext.request.contextPath}/resources/img/NDC2.png"
