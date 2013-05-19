@@ -27,7 +27,6 @@
                         <div class="carousel-inner">
 						<div class = "active item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondsissuedbarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
-						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart2/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/economicimpactcategoryplot/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/principalcouponpaymentsbarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/nialoancollectionbarchart/400/400" /></div>
@@ -51,11 +50,6 @@
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-1">
 		                                        <img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
-		                                </a>
-		                        </li>
-		                        <li class="span2">
-		                                <a class="thumbnail" id="carousel-selector-2">
-		                                        <img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart2/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                        <li class="span2">
