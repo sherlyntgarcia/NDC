@@ -1,6 +1,8 @@
 package com.ndc.app;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -72,6 +74,13 @@ public class AppHelper {
 			month = "December";
 		
 		return month;
+	}
+	
+	public static String convertDateToString(Date currentDate) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(currentDate);
+		
+		return convertIntegerToMonth(cal.get(Calendar.MONTH)) + " " + cal.get(Calendar.DAY_OF_MONTH) + ", " + cal.get(Calendar.YEAR);
 	}
 	
 	public static Map<Integer, String> getMonths() {

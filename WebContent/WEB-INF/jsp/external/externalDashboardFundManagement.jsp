@@ -27,13 +27,11 @@
                         <div class="carousel-inner">
 						<div class = "active item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondsissuedbarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
+						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart2/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/economicimpactcategoryplot/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/principalcouponpaymentsbarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/nialoancollectionbarchart/400/400" /></div>
 						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/netlendingbarchart/400/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
-						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart/450/400" /></div>
-						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/agriagrabondspiechart/450/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');"/></div>
-						<div class = "item" align = "center"><img src="${pageContext.request.contextPath}/visualization/loanproceedsutilizationpiechart/450/400" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" /></div>
 					</div>
 					
 					<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -42,7 +40,7 @@
 			
 			</div>
 			
-		<div class="span6">
+			<div class="span6">
 		        <!-- Bottom switcher of slider -->
 		                <ul class="thumbnails">
 		                        <li class="span2">
@@ -57,41 +55,68 @@
 		                        </li>
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-2">
-		                                        <img src="${pageContext.request.contextPath}/visualization/economicimpactcategoryplot/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
+		                                        <img src="${pageContext.request.contextPath}/visualization/bondmaturitybarchart2/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-3">
-		                                        <img src="${pageContext.request.contextPath}/visualization/principalcouponpaymentsbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
+		                                        <img src="${pageContext.request.contextPath}/visualization/economicimpactcategoryplot/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-4">
-		                                        <img src="${pageContext.request.contextPath}/visualization/nialoancollectionbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
+		                                        <img src="${pageContext.request.contextPath}/visualization/principalcouponpaymentsbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-5">
-		                                        <img src="${pageContext.request.contextPath}/visualization/netlendingbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
+		                                        <img src="${pageContext.request.contextPath}/visualization/nialoancollectionbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                        <li class="span2">
 		                                <a class="thumbnail" id="carousel-selector-6">
-		                                        <img src="${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart/700/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');"  class = "thumb"/>
-		                                </a>
-		                        </li>
-		                        <li class="span2">
-		                                <a class="thumbnail" id="carousel-selector-7">
-		                                        <img src="${pageContext.request.contextPath}/visualization/agriagrabondspiechart/700/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
-		                                </a>
-		                        </li>
-		                        <li class="span2">
-		                                <a class="thumbnail" id="carousel-selector-8">
-		                                        <img src="${pageContext.request.contextPath}/visualization/loanproceedsutilizationpiechart/700/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
+		                                        <img src="${pageContext.request.contextPath}/visualization/netlendingbarchart/650/350" onerror="$(this).attr('src','${pageContext.request.contextPath}/resources/img/err.png');" class = "thumb" />
 		                                </a>
 		                        </li>
 		                </ul>
 		        </div>
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span6">
+				<div id="loanProceedsAllocationPieChartDiv"></div>
+				<script>
+					$(document).ready(function() {
+						var url = "${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart";
+									
+						createLoanProceedsAllocationPieChart(url, 550, 400);
+					});
+				</script>
+			</div>
+			
+			<div class="span6">
+				<div id="agriAgraBondsPieChartDiv"></div>
+				<script>
+					$(document).ready(function() {
+						var url = "${pageContext.request.contextPath}/visualization/agriagrabondspiechart";
+									
+						createAgriAgraBondsPieChart(url, 550, 400);
+					});
+				</script>
+			</div>
+		</div>
+		
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="loanProceedsUtilizationPieChartDiv"></div>
+				<script>
+					$(document).ready(function() {
+						var url = "${pageContext.request.contextPath}/visualization/loanproceedsutilizationpiechart";
+									
+						createLoanProceedsUtilizationPieChart(url, 550, 400);
+					});
+				</script>
+			</div>
 		</div>
 	</div>
 </div>

@@ -403,6 +403,8 @@ public class ChartController {
 
 			if (bondMaturities != null && bondMaturities.size() > 0) {
 				
+				Date currDate = null;
+				
 				for(BondMaturity bm : bondMaturities) {
 					categoryDataset.setValue(
 						bm.getBondPayment(),
@@ -410,9 +412,10 @@ public class ChartController {
 //					categoryDataset.setValue(
 //						bm.getAmountIssued(),
 //						"Maturity(Years)", bm.getYear());
+					currDate = bm.getDateUpdated();
 				}
 
-				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity", // Title
+				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity(" + AppHelper.convertDateToString(currDate) + ")", // Title
 						"Year of Issuance", // X-Axis label
 						"Maturity(Years)",// Y-Axis label
 						categoryDataset, // Dataset
@@ -548,50 +551,24 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset defaultcategorydataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(BondsIssued.class);
-//
-//			BondsIssued bondsIssuedLatestYear = chartService
-//					.getBondsIssuedByYear(latestYear);
-//			BondsIssued bondsIssuedLatestYear2 = chartService
-//					.getBondsIssuedByYear(latestYear - 1);
-//			BondsIssued bondsIssuedLatestYear3 = chartService
-//					.getBondsIssuedByYear(latestYear - 2);
-//			
-//			if (bondsIssuedLatestYear3 != null) {
-//				defaultcategorydataset.addValue(
-//						bondsIssuedLatestYear3.getAmount() / 1000000, "S1",
-//						bondsIssuedLatestYear3.getYear());
-//			}
-//			
-//			if (bondsIssuedLatestYear2 != null) {
-//				defaultcategorydataset.addValue(
-//						bondsIssuedLatestYear2.getAmount() / 1000000, "S1",
-//						bondsIssuedLatestYear2.getYear());
-//			}
-//
-//			if (bondsIssuedLatestYear != null) {
-//				defaultcategorydataset.addValue(
-//						bondsIssuedLatestYear.getAmount() / 1000000, "S1",
-//						bondsIssuedLatestYear.getYear());
-//			}
-			
 			List<BondsIssued> bondsIssuedList = chartService.generateBondsIssued();
-			
 
 			if (bondsIssuedList != null && bondsIssuedList.size() > 0) {
+				
+				Date currDate = null;
 				
 				for(BondsIssued bi : bondsIssuedList) {
 					defaultcategorydataset.addValue(
 							bi.getAmount() / 1000000, "S1",
 							bi.getYear());
+					
+					currDate = bi.getDateUpdated();
 				}
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Bonds Issued", // chart title
+						"Bonds Issued(" + AppHelper.convertDateToString(currDate) + ")", // chart title
 						"Issuance", // domain axis label
-						"Millions", // range axis label
+						"Millions (Php)", // range axis label
 						defaultcategorydataset, // data
 						PlotOrientation.VERTICAL, // orientation
 						false, // include legend
@@ -605,18 +582,18 @@ public class ChartController {
 				categoryplot.setRangeGridlinePaint(Color.BLACK);
 				categoryplot.setRangeGridlineStroke(new BasicStroke(0.5f,
 						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
-				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer(
-						apaint);
-				customcylinderrenderer
-						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
-								GradientPaintTransformType.CENTER_HORIZONTAL));
-				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
-				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
-						0.3F));
-				customcylinderrenderer
-						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
-
-				categoryplot.setRenderer(customcylinderrenderer);
+//				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer(
+//						apaint);
+//				customcylinderrenderer
+//						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
+//								GradientPaintTransformType.CENTER_HORIZONTAL));
+//				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
+//				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
+//						0.3F));
+//				customcylinderrenderer
+//						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
+//
+//				categoryplot.setRenderer(customcylinderrenderer);
 				categoryplot.setNoDataMessage("No data to display");
 
 				if (chart != null) {
@@ -675,14 +652,15 @@ public class ChartController {
 					.getLatestEconomicImpact();
 
 			if (economicImpact != null) {
-
+				
+				Date currDate = economicImpact.getDateUpdated();
 				categoryDataset.setValue(economicImpact.getRehabilitated(),
 						"S1", "Rehabilitated irrigation system");
 				categoryDataset.setValue(economicImpact.getRestored(), "S1",
 						"Restored irrigable areas");
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Economic Impact", // Title
+						"Economic Impact of NIA Loan(" + AppHelper.convertDateToString(currDate) + ")", // Title
 						"", // X-Axis label
 						"Hectares",// Y-Axis label
 						categoryDataset, // Dataset
@@ -750,89 +728,11 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(PrincipalCouponPayments.class);
-//
-//			PrincipalCouponPayments couponPaymentsLatestYear = chartService
-//					.getPrincipalCouponPaymentsByYear(latestYear - 2);
-//			PrincipalCouponPayments couponPaymentsLatestYear2 = chartService
-//					.getPrincipalCouponPaymentsByYear(latestYear - 1);
-//			PrincipalCouponPayments couponPaymentsLatestYear3 = chartService
-//					.getPrincipalCouponPaymentsByYear(latestYear);
-//
-//			if (couponPaymentsLatestYear != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear.getBondIssued(),
-//						"Bond Issued", couponPaymentsLatestYear.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear2.getBondIssued(),
-//						"Bond Issued", couponPaymentsLatestYear2.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear3.getBondIssued(),
-//						"Bond Issued", couponPaymentsLatestYear3.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear.getBondPayment(),
-//						"Bond Payment", couponPaymentsLatestYear.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear2.getBondPayment(),
-//						"Bond Payment", couponPaymentsLatestYear2.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear3.getBondPayment(),
-//						"Bond Payment", couponPaymentsLatestYear3.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear != null) {
-//				categoryDataset.setValue(couponPaymentsLatestYear.getCoupon(),
-//						"Coupon", couponPaymentsLatestYear.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear2 != null) {
-//				categoryDataset.setValue(couponPaymentsLatestYear2.getCoupon(),
-//						"Coupon", couponPaymentsLatestYear2.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear3 != null) {
-//				categoryDataset.setValue(couponPaymentsLatestYear3.getCoupon(),
-//						"Coupon", couponPaymentsLatestYear3.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear.getCouponPayment(),
-//						"Coupon Payment", couponPaymentsLatestYear.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear2.getCouponPayment(),
-//						"Coupon Payment", couponPaymentsLatestYear2.getYear());
-//			}
-//
-//			if (couponPaymentsLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						couponPaymentsLatestYear3.getCouponPayment(),
-//						"Coupon Payment", couponPaymentsLatestYear3.getYear());
-//			}
-			
 			List<PrincipalCouponPayments> couponPayments = chartService.generatePrincipalCouponPayments();
 
 			if (couponPayments != null && couponPayments.size() > 0) {
+				
+				Date currDate = null;
 				
 				for(PrincipalCouponPayments cp : couponPayments) {
 					categoryDataset.setValue(
@@ -847,12 +747,14 @@ public class ChartController {
 					categoryDataset.setValue(
 							cp.getCouponPayment(),
 							"Coupon Payment", cp.getYear());
+					
+					currDate = cp.getDateUpdated();
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Principal and Coupon Payments", // Title
+						"Principal and Coupon Payments(" + AppHelper.convertDateToString(currDate) + ")", // Title
 						"Issuance", // X-Axis label
-						"Millions",// Y-Axis label
+						"Millions (Php)",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -933,6 +835,8 @@ public class ChartController {
 					.getLatestNiaLoanCollection();
 
 			if (niaLoanCollection != null) {
+				
+				Date currDate = niaLoanCollection.getDateUpdated();
 
 				result.addValue(niaLoanCollection.getPrincipalCollection(),
 						"Collection", "Principal");
@@ -944,9 +848,9 @@ public class ChartController {
 						"Loan Receivable", "Interest");
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Collection of NIA Loan", // Title
+						"Collection of NIA Loan(" + AppHelper.convertDateToString(currDate) + ")", // Title
 						"Collection of NIA Loan", // X-Axis label
-						"in millions",// Y-Axis label
+						"Millions (Php)",// Y-Axis label
 						result, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -1246,93 +1150,12 @@ public class ChartController {
 
 		try {
 
-			DefaultCategoryDataset result = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(NetLending.class);
-//
-//			NetLending netLendingLatestYear = chartService
-//					.getNetLendingByYear(latestYear - 2);
-//			NetLending netLendingLatestYear2 = chartService
-//					.getNetLendingByYear(latestYear - 1);
-//			NetLending netLendingLatestYear3 = chartService
-//					.getNetLendingByYear(latestYear);
-//
-//			if (netLendingLatestYear != null) {
-//				result.addValue(netLendingLatestYear.getBondIssued(),
-//						"NDC Payment (bond_percent)",
-//						netLendingLatestYear.getYear());
-//			}
-//
-//			if (netLendingLatestYear2 != null) {
-//				result.addValue(netLendingLatestYear2.getBondIssued(),
-//						"NDC Payment (bond_percent)",
-//						netLendingLatestYear2.getYear());
-//			}
-//
-//			if (netLendingLatestYear3 != null) {
-//				result.addValue(netLendingLatestYear3.getBondIssued(),
-//						"NDC Payment (bond_percent)",
-//						netLendingLatestYear3.getYear());
-//			}
-//
-//			if (netLendingLatestYear != null) {
-//				result.addValue(netLendingLatestYear.getBondNetLending(),
-//						"NDC Payment (coupon_percent)",
-//						netLendingLatestYear.getYear());
-//			}
-//
-//			if (netLendingLatestYear2 != null) {
-//				result.addValue(netLendingLatestYear2.getBondNetLending(),
-//						"NDC Payment (coupon_percent)",
-//						netLendingLatestYear2.getYear());
-//			}
-//
-//			if (netLendingLatestYear3 != null) {
-//				result.addValue(netLendingLatestYear3.getBondNetLending(),
-//						"NDC Payment (coupon_percent)",
-//						netLendingLatestYear3.getYear());
-//			}
-//
-//			if (netLendingLatestYear != null) {
-//				result.addValue(netLendingLatestYear.getCoupon(),
-//						"NDC Lending (bond_percent)",
-//						netLendingLatestYear.getYear());
-//			}
-//
-//			if (netLendingLatestYear2 != null) {
-//				result.addValue(netLendingLatestYear2.getCoupon(),
-//						"NDC Lending (bond_percent)",
-//						netLendingLatestYear2.getYear());
-//			}
-//
-//			if (netLendingLatestYear3 != null) {
-//				result.addValue(netLendingLatestYear3.getCoupon(),
-//						"NDC Lending (bond_percent)",
-//						netLendingLatestYear3.getYear());
-//			}
-//
-//			if (netLendingLatestYear != null) {
-//				result.addValue(netLendingLatestYear.getCouponNetLending(),
-//						"NDC Lending (coupon_percent)",
-//						netLendingLatestYear.getYear());
-//			}
-//
-//			if (netLendingLatestYear2 != null) {
-//				result.addValue(netLendingLatestYear2.getCouponNetLending(),
-//						"NDC Lending (coupon_percent)",
-//						netLendingLatestYear2.getYear());
-//			}
-//
-//			if (netLendingLatestYear3 != null) {
-//				result.addValue(netLendingLatestYear3.getCouponNetLending(),
-//						"NDC Lending (coupon_percent)",
-//						netLendingLatestYear3.getYear());
-//			}
-			
+			DefaultCategoryDataset result = new DefaultCategoryDataset();	
 			List<NetLending> netLendings = chartService.generateNetLending();
 
 			if (netLendings != null && netLendings.size() > 0) {
+				
+				Date currDate = null;
 				
 				for(NetLending nl : netLendings) {
 					result.addValue(nl.getBondIssued(),
@@ -1347,12 +1170,14 @@ public class ChartController {
 					result.addValue(nl.getCouponNetLending(),
 					"NDC Lending (coupon_percent)",
 					nl.getYear());
+					
+					currDate = nl.getDateUpdated();
 				}
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Net Lending", // Title
+						"Net Lending(" + AppHelper.convertDateToString(currDate) + ")", // Title
 						"", // X-Axis label
-						"in millions",// Y-Axis label
+						"Millions (Php)",// Y-Axis label
 						result, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
@@ -1369,7 +1194,7 @@ public class ChartController {
 				renderer.setItemMargin(0.0);
 
 				// change color here
-				Paint p1 = new Color(90, 145, 154);
+				Paint p1 = new Color(48, 29, 255);
 				Paint p2 = new Color(135, 186, 205);
 
 				renderer.setSeriesPaint(0, p1);
@@ -1470,13 +1295,18 @@ public class ChartController {
 			double total = 0;
 			
 			if(bondsList != null) {
+				
+				Date currDate = null;
+				
 				for(AgriAgraBonds a : bondsList) {
 					years.add(a.getYear());
 					amounts.add(a.getAmount());
 					
 					total += a.getAmount();
+					currDate = a.getDateUpdated();
 				}
 				
+				json.put("dateUpdated", AppHelper.convertDateToString(currDate));
 				json.put("years", years);
 				json.put("amounts", amounts);
 				json.put("unutilized", totalAgriAgraBonds - total);
@@ -2542,11 +2372,8 @@ public class ChartController {
 				plot.setNoDataMessage("No data to display");
 				plot.setValueFont(new Font("Dialog", Font.BOLD, 18));
 
-				Calendar cal = Calendar.getInstance();
-				cal.setTime(currDate);
-
 				JFreeChart chart = new JFreeChart(
-						"Income:  Actual vs Budget (last updated: " + AppHelper.convertIntegerToMonth(cal.get(Calendar.MONTH)) + " " + cal.get(Calendar.DAY_OF_MONTH) + ", " + cal.get(Calendar.YEAR) + ")",
+						"Income:  Actual vs Budget(" + AppHelper.convertDateToString(currDate) + ")",
 						JFreeChart.DEFAULT_TITLE_FONT, plot, true);
 
 				chart.getLegend().setVisible(false);
@@ -3551,6 +3378,8 @@ public class ChartController {
 			final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
 			if (pdstfrates != null) {
+				
+				Date currDate = null;
 
 				if (pdstfrates.size() != 0) {
 
@@ -3582,11 +3411,13 @@ public class ChartController {
 									newDate);
 							dataset.addValue(newAvg.getMonth1Avg(), "1 Month",
 									newDate);
+							
+							currDate = newAvg.getDateUpdated();
 						}
 					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
-							"2012 PDST-F Rates", // chart title
+							"2012 PDST-F Rates(" + AppHelper.convertDateToString(currDate)+ ")", // chart title
 							"", // domain(x-axis) axis label
 							"", // range(y-axis) axis label
 							dataset, // data
