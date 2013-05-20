@@ -1340,10 +1340,10 @@ public class ChartController {
 			if (maintenanceCosts != null && maintenanceCosts.size() > 0) {
 				
 				for(MaintenanceCost mc : maintenanceCosts) {
+					double partialTotal = mc.getDuesFees() + mc.getRpt() + mc.getSecurity();
 					dataset.addValue(mc.getMarketValue(), "Market Value", mc.getYear());
-					dataset.addValue(mc.getRpt(), "RPT", mc.getYear());
-					dataset.addValue(mc.getSecurity(), "Security", mc.getYear());
-					dataset.addValue(mc.getDuesFees(), "Dues/Fees", mc.getYear());
+					dataset.addValue(partialTotal, "Maintenance Cost", mc.getYear());
+					System.out.println("Partial total for year " + mc.getYear() + ": " + partialTotal);
 				}
 
 				JFreeChart chart = ChartFactory.createLineChart(

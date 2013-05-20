@@ -98,9 +98,11 @@
 																		<ul class="dropdown-menu">
 																			<c:forEach var="subcategory"
 																				items="${spgCategory.subCategories}">
-																				<li><a
-																					href="<c:url value="/external/existing/${subcategory.id}" />">${subcategory.name}</a>
-																				</li>
+																				<c:if test="${subcategory.id ne 10 and subcategory.id ne 11 and subcategory.id ne 12 and subcategory.id ne 13}">
+																					<li><a
+																						href="<c:url value="/external/existing/${subcategory.id}" />">${subcategory.name}</a>
+																					</li>
+																				</c:if>
 																			</c:forEach>
 																		</ul>
 																	</c:when>
