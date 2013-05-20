@@ -81,7 +81,7 @@
 				
 				<div class="row-fluid">
 					<div class="span10 offset2">
-						<div id="agriAgraBondsPieChartDiv"></div>
+						<div id="agriAgraBondsPieChartDiv" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/FMG/agriAgraBonds'"></div>
 						
 						<script>
 							$(document).ready(function() {
