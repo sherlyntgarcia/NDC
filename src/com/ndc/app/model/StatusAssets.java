@@ -25,9 +25,6 @@ public class StatusAssets implements java.io.Serializable {
 	@NotNull(message="For Sale/Lease is required")
 	private Double forSaleLease;
 	
-	@NotNull(message="For Negotiated Sale is required")
-	private Double negotiatedSale;
-	
 	@NotNull(message="For CMP is required")
 	private Double forCmp;
 	
@@ -40,8 +37,8 @@ public class StatusAssets implements java.io.Serializable {
 	@NotNull(message="For Titling is required")
 	private Double forTitling;
 	
-	@NotNull(message="Issuance of Second ODCT is required")
-	private Double issuanceOfSecondOdct;
+//	@NotNull(message="Issuance of Second ODCT is required")
+//	private Double issuanceOfSecondOdct;
 	
 	@NotNull(message="With Jv is required")
 	private Double withJv;
@@ -162,24 +159,6 @@ public class StatusAssets implements java.io.Serializable {
 
 	public void setWithJv(Double withJv) {
 		this.withJv = withJv;
-	}
-
-	@Column(name="NEGOTIATED_SALE")
-	public Double getNegotiatedSale() {
-		return negotiatedSale;
-	}
-
-	public void setNegotiatedSale(Double negotiatedSale) {
-		this.negotiatedSale = negotiatedSale;
-	}
-
-	@Column(name="ISSUANCE_OF_SECOND_ODCT")
-	public Double getIssuanceOfSecondOdct() {
-		return issuanceOfSecondOdct;
-	}
-
-	public void setIssuanceOfSecondOdct(Double issuanceOfSecondOdct) {
-		this.issuanceOfSecondOdct = issuanceOfSecondOdct;
 	}
 	
 }

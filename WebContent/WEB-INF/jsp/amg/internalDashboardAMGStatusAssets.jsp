@@ -86,11 +86,6 @@
 							<spring:input path="forSaleLease" class="span6" constraint="number" placeholder="(e.g. 30)" />
 						</div>
 						
-						<label>For Negotiated Sale</label>
-						<div>
-							<spring:input path="negotiatedSale" class="span6" constraint="number" placeholder="(e.g. 30)" />
-						</div>
-						
 						<label>For CMP</label>
 						<div>
 							<spring:input path="forCmp" class="span6" constraint="number" placeholder="(e.g. 30)" />
@@ -110,14 +105,9 @@
 							<spring:input path="forRelocationSurvey" class="span6" constraint="number" placeholder="(e.g. 20)" />
 						</div>
 						
-						<label>For Titling</label>
+						<label>For Titling/Issuance of ODCT</label>
 						<div>
 							<spring:input path="forTitling" class="span6" constraint="number" placeholder="(e.g. 15)" />
-						</div>
-						
-						<label>Issuance of Second ODCT</label>
-						<div>
-							<spring:input path="issuanceOfSecondOdct" class="span6" constraint="number" placeholder="(e.g. 30)" />
 						</div>
 						
 						<label>With Joint Venture Agreement</label>

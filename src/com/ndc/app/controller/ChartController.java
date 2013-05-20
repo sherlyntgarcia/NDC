@@ -1335,62 +1335,6 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(MaintenanceCost.class);
-//
-//			MaintenanceCost maintenanceCostLatestYear = chartService
-//					.getMaintenaneCostByYear(latestYear - 2);
-//			MaintenanceCost maintenanceCostLatestYear2 = chartService
-//					.getMaintenaneCostByYear(latestYear - 1);
-//			MaintenanceCost maintenanceCostLatestYear3 = chartService
-//					.getMaintenaneCostByYear(latestYear);
-//
-//			if (maintenanceCostLatestYear != null) {
-//				dataset.addValue(maintenanceCostLatestYear.getMarketValue(),
-//						"Market Value", maintenanceCostLatestYear.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear2 != null) {
-//				dataset.addValue(maintenanceCostLatestYear2.getMarketValue(),
-//						"Market Value", maintenanceCostLatestYear2.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear3 != null) {
-//				dataset.addValue(maintenanceCostLatestYear3.getMarketValue(),
-//						"Market Value", maintenanceCostLatestYear3.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear != null) {
-//				dataset.addValue(maintenanceCostLatestYear.getRpt(), "RPT",
-//						maintenanceCostLatestYear.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear2 != null) {
-//				dataset.addValue(maintenanceCostLatestYear2.getRpt(), "RPT",
-//						maintenanceCostLatestYear2.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear3 != null) {
-//				dataset.addValue(maintenanceCostLatestYear3.getRpt(), "RPT",
-//						maintenanceCostLatestYear3.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear != null) {
-//				dataset.addValue(maintenanceCostLatestYear.getSecurity(),
-//						"Security", maintenanceCostLatestYear.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear2 != null) {
-//				dataset.addValue(maintenanceCostLatestYear2.getSecurity(),
-//						"Security", maintenanceCostLatestYear2.getYear());
-//			}
-//
-//			if (maintenanceCostLatestYear3 != null) {
-//				dataset.addValue(maintenanceCostLatestYear3.getSecurity(),
-//						"Security", maintenanceCostLatestYear3.getYear());
-//			}
-			
 			List<MaintenanceCost> maintenanceCosts = chartService.generateMaintenanceCost();
 
 			if (maintenanceCosts != null && maintenanceCosts.size() > 0) {
@@ -1399,18 +1343,18 @@ public class ChartController {
 					dataset.addValue(mc.getMarketValue(), "Market Value", mc.getYear());
 					dataset.addValue(mc.getRpt(), "RPT", mc.getYear());
 					dataset.addValue(mc.getSecurity(), "Security", mc.getYear());
+					dataset.addValue(mc.getDuesFees(), "Dues/Fees", mc.getYear());
 				}
 
 				JFreeChart chart = ChartFactory.createLineChart(
 						"Maintenance Cost", // chart
-											// title
 						"", // domain(x-axis) axis label
-						"in millions", // range(y-axis) axis label
+						"Millions(Php)", // range(y-axis) axis label
 						dataset, // data
 						PlotOrientation.VERTICAL, // orientation
 						true, // include legend
 						true, // tooltips
-						false // urls
+						true // urls
 						);
 
 				LegendTitle legend = chart.getLegend();
@@ -1664,8 +1608,6 @@ public class ChartController {
 							"Under Lease", asset.getYear());
 					categoryDataset.setValue(asset.getForSaleLease(),
 							"For Sale/Lease", asset.getYear());
-					categoryDataset.setValue(asset.getNegotiatedSale(),
-							"For Negotiated Sale", asset.getYear());
 					categoryDataset.setValue(asset.getForCmp(), "For CMP",
 							asset.getYear());
 					categoryDataset.setValue(asset.getWithCourtCase(),
@@ -1673,9 +1615,7 @@ public class ChartController {
 					categoryDataset.setValue(asset.getForRelocationSurvey(),
 							"For Relocation Survey", asset.getYear());
 					categoryDataset.setValue(asset.getForTitling(),
-							"For Titling", asset.getYear());
-					categoryDataset.setValue(asset.getIssuanceOfSecondOdct(),
-							"Issuance of Second ODCT", asset.getYear());
+							"For Titling/Issuance of ODCT", asset.getYear());
 					categoryDataset.setValue(asset.getWithJv(), "With JV",
 							asset.getYear());
 					categoryDataset.setValue(
@@ -1684,7 +1624,7 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Status of Assets", // Title
+						"Status of Assets(as of " + AppHelper.convertDateToString(new Date()) + ")", // Title
 						"", // X-Axis label
 						"no. of properties",// Y-Axis label
 						categoryDataset, // Dataset
