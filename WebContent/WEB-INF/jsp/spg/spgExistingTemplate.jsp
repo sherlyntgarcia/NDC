@@ -84,7 +84,7 @@
 												var url = "${pageContext.request.contextPath}/visualization/shareholderspiechart";
 												var id = Number("${spgSubCategory.id}");
 												
-												createShareholdersPieChart(url, 850, 400, id);
+												createShareholdersPieChart(url, 900, 400, id);
 											});
 										</script>
 							  		</div>

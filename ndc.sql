@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 20, 2013 at 04:48 AM
+-- Generation Time: May 20, 2013 at 11:55 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_logs` (
   `access_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=74 ;
 
 --
 -- Dumping data for table `ndc_tbl_logs`
@@ -410,7 +410,42 @@ INSERT INTO `ndc_tbl_logs` (`id`, `logged_by`, `access_time`, `description`) VAL
 (35, 'jonathan', '2013-05-20 01:49:40', 'ADDED NEW SHAREHOLDER'),
 (36, 'jonathan', '2013-05-20 01:49:55', 'ADDED NEW SHAREHOLDER'),
 (37, 'jonathan', '2013-05-20 01:50:11', 'ADDED NEW SHAREHOLDER'),
-(38, 'jonathan', '2013-05-20 01:50:29', 'ADDED NEW SHAREHOLDER');
+(38, 'jonathan', '2013-05-20 01:50:29', 'ADDED NEW SHAREHOLDER'),
+(39, 'randy', '2013-05-20 04:04:06', 'ADDED NEW MAINTENANCE COST'),
+(40, 'randy', '2013-05-20 04:07:24', 'ADDED NEW MAINTENANCE COST'),
+(41, 'randy', '2013-05-20 04:08:05', 'ADDED NEW MAINTENANCE COST'),
+(42, 'randy', '2013-05-20 05:36:48', 'ADDED NEW STATUS OF ASSETS'),
+(43, 'jonathan', '2013-05-20 08:23:46', 'ADDED NEW SHAREHOLDER'),
+(44, 'jonathan', '2013-05-20 08:24:12', 'ADDED NEW SHAREHOLDER'),
+(45, 'jonathan', '2013-05-20 08:29:14', 'ADDED NEW SHAREHOLDER'),
+(46, 'jonathan', '2013-05-20 08:29:33', 'ADDED NEW SHAREHOLDER'),
+(47, 'jonathan', '2013-05-20 08:29:52', 'ADDED NEW SHAREHOLDER'),
+(48, 'jonathan', '2013-05-20 08:30:20', 'ADDED NEW SHAREHOLDER'),
+(49, 'jonathan', '2013-05-20 09:31:47', 'ADDED NEW SHAREHOLDER'),
+(50, 'jonathan', '2013-05-20 09:32:09', 'ADDED NEW SHAREHOLDER'),
+(51, 'jonathan', '2013-05-20 09:32:33', 'ADDED NEW SHAREHOLDER'),
+(52, 'jonathan', '2013-05-20 09:32:56', 'ADDED NEW SHAREHOLDER'),
+(53, 'jonathan', '2013-05-20 09:33:15', 'ADDED NEW SHAREHOLDER'),
+(54, 'jonathan', '2013-05-20 09:33:32', 'ADDED NEW SHAREHOLDER'),
+(55, 'jonathan', '2013-05-20 09:33:53', 'ADDED NEW SHAREHOLDER'),
+(56, 'jonathan', '2013-05-20 09:34:14', 'ADDED NEW SHAREHOLDER'),
+(57, 'jonathan', '2013-05-20 09:34:31', 'ADDED NEW SHAREHOLDER'),
+(58, 'jonathan', '2013-05-20 09:36:00', 'ADDED NEW SHAREHOLDER'),
+(59, 'jonathan', '2013-05-20 09:37:31', 'ADDED NEW SHAREHOLDER'),
+(60, 'jonathan', '2013-05-20 09:39:06', 'ADDED NEW SHAREHOLDER'),
+(61, 'jonathan', '2013-05-20 09:39:54', 'ADDED NEW SHAREHOLDER'),
+(62, 'jonathan', '2013-05-20 09:43:07', 'ADDED NEW SHAREHOLDER'),
+(63, 'jonathan', '2013-05-20 09:43:28', 'ADDED NEW SHAREHOLDER'),
+(64, 'jonathan', '2013-05-20 09:43:48', 'ADDED NEW SHAREHOLDER'),
+(65, 'jonathan', '2013-05-20 09:44:06', 'ADDED NEW SHAREHOLDER'),
+(66, 'jonathan', '2013-05-20 09:44:24', 'ADDED NEW SHAREHOLDER'),
+(67, 'jonathan', '2013-05-20 09:44:40', 'ADDED NEW SHAREHOLDER'),
+(68, 'jonathan', '2013-05-20 09:44:54', 'ADDED NEW SHAREHOLDER'),
+(69, 'jonathan', '2013-05-20 09:45:06', 'ADDED NEW SHAREHOLDER'),
+(70, 'jonathan', '2013-05-20 09:49:44', 'ADDED NEW SHAREHOLDER'),
+(71, 'jonathan', '2013-05-20 09:50:02', 'ADDED NEW SHAREHOLDER'),
+(72, 'jonathan', '2013-05-20 09:50:22', 'ADDED NEW SHAREHOLDER'),
+(73, 'jonathan', '2013-05-20 09:50:39', 'ADDED NEW SHAREHOLDER');
 
 -- --------------------------------------------------------
 
@@ -428,14 +463,16 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_maintenance_cost` (
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `ndc_tbl_maintenance_cost`
 --
 
 INSERT INTO `ndc_tbl_maintenance_cost` (`id`, `market_value`, `rpt`, `duesfees`, `security`, `date_updated`, `updated_by`, `year`) VALUES
-(1, 4198818748, 13573742.08, 1503151.96, 15077836.2, '2013-05-08 01:55:35', 'randy', 2013);
+(2, 4752740930, 13334094.71, 3450542.38, 11919371.82, '2013-05-20 04:04:06', 'randy', 2010),
+(3, 5406729350, 10807097.58, 3450542.38, 12837697.35, '2013-05-20 04:07:24', 'randy', 2011),
+(4, 5089681387.5, 11485082.3, 3504290.38, 13561938.53, '2013-05-20 04:08:04', 'randy', 2012);
 
 -- --------------------------------------------------------
 
@@ -589,7 +626,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_notifications` (
   `triggered_by` varchar(255) NOT NULL,
   `visible` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=161 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=301 ;
 
 --
 -- Dumping data for table `ndc_tbl_notifications`
@@ -755,7 +792,147 @@ INSERT INTO `ndc_tbl_notifications` (`id`, `user_id`, `message`, `ndc_group`, `d
 (157, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
 (158, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
 (159, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
-(160, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1);
+(160, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
+(161, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:06', 'randy', 1),
+(162, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
+(163, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
+(164, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
+(165, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
+(166, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
+(167, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
+(168, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
+(169, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
+(170, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
+(171, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
+(172, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
+(173, 3, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
+(174, 4, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
+(175, 5, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
+(176, 6, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
+(177, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
+(178, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
+(179, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
+(180, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
+(181, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
+(182, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
+(183, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
+(184, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
+(185, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
+(186, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
+(187, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
+(188, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
+(189, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:33', 'jonathan', 1),
+(190, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:33', 'jonathan', 1),
+(191, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:34', 'jonathan', 1),
+(192, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:34', 'jonathan', 1),
+(193, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
+(194, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
+(195, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
+(196, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
+(197, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
+(198, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
+(199, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
+(200, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
+(201, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
+(202, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
+(203, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
+(204, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
+(205, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
+(206, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
+(207, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
+(208, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
+(209, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
+(210, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
+(211, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
+(212, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
+(213, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
+(214, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
+(215, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
+(216, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
+(217, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
+(218, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
+(219, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
+(220, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
+(221, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
+(222, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
+(223, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
+(224, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
+(225, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
+(226, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
+(227, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
+(228, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
+(229, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
+(230, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
+(231, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
+(232, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
+(233, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
+(234, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
+(235, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
+(236, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
+(237, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
+(238, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
+(239, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
+(240, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:01', 'jonathan', 1),
+(241, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
+(242, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
+(243, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
+(244, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
+(245, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
+(246, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
+(247, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
+(248, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
+(249, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
+(250, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
+(251, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
+(252, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
+(253, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
+(254, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
+(255, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
+(256, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
+(257, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
+(258, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
+(259, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
+(260, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
+(261, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
+(262, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
+(263, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
+(264, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
+(265, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
+(266, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
+(267, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
+(268, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
+(269, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
+(270, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
+(271, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
+(272, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
+(273, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
+(274, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
+(275, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
+(276, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
+(277, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
+(278, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
+(279, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
+(280, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
+(281, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
+(282, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
+(283, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
+(284, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
+(285, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
+(286, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
+(287, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
+(288, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
+(289, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
+(290, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
+(291, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
+(292, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
+(293, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
+(294, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
+(295, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
+(296, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
+(297, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
+(298, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
+(299, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
+(300, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1);
 
 -- --------------------------------------------------------
 
@@ -814,7 +991,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_particulars` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=52 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=65 ;
 
 --
 -- Dumping data for table `ndc_tbl_particulars`
@@ -871,7 +1048,20 @@ INSERT INTO `ndc_tbl_particulars` (`id`, `name`, `date_updated`, `updated_by`) V
 (48, 'Josephine A. Batiller', '2013-04-15 02:32:12', 'jonathan'),
 (49, 'Philippine Associated Smelting and Refining Corporation (PASAR)', '2013-04-15 02:32:12', 'jonathan'),
 (50, 'Philippine Phosphate Fertilizer Corporation (PHILPHOS)', '2013-04-15 02:32:12', 'jonathan'),
-(51, 'Others', '2013-04-15 02:32:12', 'jonathan');
+(51, 'Others', '2013-04-15 02:32:12', 'jonathan'),
+(52, 'Republic Glass Holdings Corp.', '2013-05-20 09:37:00', 'jonathan'),
+(53, 'Foresight Realty and Development Corp.', '2013-05-20 09:36:36', 'jonathan'),
+(54, 'Raul Anthony Concepcion', '2013-05-20 09:38:13', 'jonathan'),
+(55, 'Gavinsburg Investment, Inc.', '2013-05-20 09:39:36', 'jonathan'),
+(56, 'Frabelle Fishing Corp.', '2013-05-20 09:40:19', 'jonathan'),
+(57, 'Kenrick Teng', '2013-05-20 09:40:34', 'jonathan'),
+(58, 'Bryan G. Teng', '2013-05-20 09:40:54', 'jonathan'),
+(59, 'Migada Holdings, Inc.', '2013-05-20 09:41:29', 'jonathan'),
+(60, 'Queen Mother Prime Holdings, Inc.', '2013-05-20 09:41:53', 'jonathan'),
+(61, 'Intxausti, Inc.', '2013-05-20 09:42:07', 'jonathan'),
+(62, 'Serico, Inc.', '2013-05-20 09:42:15', 'jonathan'),
+(63, 'First Georgetown Ventures, Inc.', '2013-05-20 09:42:37', 'jonathan'),
+(64, 'Tomen', '2013-05-20 09:49:16', 'jonathan');
 
 -- --------------------------------------------------------
 
@@ -1037,7 +1227,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_shareholders` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=70 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
 
 --
 -- Dumping data for table `ndc_tbl_shareholders`
@@ -1068,11 +1258,6 @@ INSERT INTO `ndc_tbl_shareholders` (`id`, `shareholders`, `shares`, `project_id`
 (22, 'Dacon Corporation', 16030085, 6, '2013-04-15 02:35:34', 'jonathan'),
 (23, 'National Development Company', 11364658, 6, '2013-04-15 02:35:34', 'jonathan'),
 (24, 'Others', 27022510, 6, '2013-04-15 02:35:34', 'jonathan'),
-(30, 'RCP Holdings, Inc.', 62.78, 14, '2013-04-15 02:35:34', 'jonathan'),
-(31, 'National Development Company', 33, 14, '2013-04-15 02:35:34', 'jonathan'),
-(32, 'Alsons Devt & Investment Corp.', 2.2, 14, '2013-04-15 02:35:34', 'jonathan'),
-(33, 'Toyota Tsusho Corporations', 1.01, 14, '2013-04-15 02:35:34', 'jonathan'),
-(34, 'Mino Yogyo Co., Ltd.', 1.01, 14, '2013-04-15 02:35:34', 'jonathan'),
 (35, 'National Development Company', 599996, 8, '2013-04-15 02:35:34', 'jonathan'),
 (36, 'Philippine Exporters Confederation, Inc.', 299998, 8, '2013-04-15 02:35:34', 'jonathan'),
 (37, 'MEDCO Holdings, Inc.', 299998, 8, '2013-04-15 02:35:34', 'jonathan'),
@@ -1107,7 +1292,37 @@ INSERT INTO `ndc_tbl_shareholders` (`id`, `shareholders`, `shares`, `project_id`
 (66, 'MA Jimenez, Inc.', 1779635, 7, '2013-05-20 01:49:40', 'jonathan'),
 (67, 'Philippine Clean Energy', 1466962, 7, '2013-05-20 01:49:55', 'jonathan'),
 (68, 'Bronzeoak Investment Holdings, Inc.', 1274391, 7, '2013-05-20 01:50:11', 'jonathan'),
-(69, 'Manila Clean Energy', 1783717, 7, '2013-05-20 01:50:29', 'jonathan');
+(69, 'Manila Clean Energy', 1783717, 7, '2013-05-20 01:50:29', 'jonathan'),
+(70, 'National Development Company', 21974, 12, '2013-05-20 08:23:46', 'jonathan'),
+(71, 'Chevron Philippines Petroleum Co., Inc.', 14649, 12, '2013-05-20 08:24:12', 'jonathan'),
+(73, 'Philippine Associated Smelting and Refining Corporation (PASAR)', 400, 16, '2013-05-20 08:29:33', 'jonathan'),
+(74, 'National Development Company', 200, 16, '2013-05-20 08:29:52', 'jonathan'),
+(75, 'Philippine Phosphate Fertilizer Corporation (PHILPHOS)', 400, 16, '2013-05-20 08:30:20', 'jonathan'),
+(76, 'ICCP Holdings Corp.', 189438334, 9, '2013-05-20 09:31:46', 'jonathan'),
+(77, 'ICCP Land Management, Inc.', 9166666, 9, '2013-05-20 09:32:09', 'jonathan'),
+(78, 'Philamlife', 83948333, 9, '2013-05-20 09:32:33', 'jonathan'),
+(79, 'Perf Realty Corp.', 27984000, 9, '2013-05-20 09:32:55', 'jonathan'),
+(80, 'Fremont Investor, Inc. (Bechtel Family)', 50368999, 9, '2013-05-20 09:33:15', 'jonathan'),
+(81, 'National Development Company', 28474100, 9, '2013-05-20 09:33:32', 'jonathan'),
+(82, 'Panay Electric Company', 36000000, 9, '2013-05-20 09:33:53', 'jonathan'),
+(83, 'Valmora Investment and Management Corporation', 20000000, 9, '2013-05-20 09:34:14', 'jonathan'),
+(84, 'ICCP Managers, Inc.', 7718132, 9, '2013-05-20 09:34:31', 'jonathan'),
+(85, 'Republic Glass Holdings Corp.', 47241454, 9, '2013-05-20 09:36:00', 'jonathan'),
+(86, 'Foresight Realty and Development Corp.', 20619000, 9, '2013-05-20 09:37:31', 'jonathan'),
+(87, 'Raul Anthony Concepcion', 1030950, 9, '2013-05-20 09:39:06', 'jonathan'),
+(88, 'Gavinsburg Investment, Inc.', 20500000, 9, '2013-05-20 09:39:54', 'jonathan'),
+(89, 'Frabelle Fishing Corp.', 10309278, 9, '2013-05-20 09:43:07', 'jonathan'),
+(90, 'Kenrick Teng', 2061856, 9, '2013-05-20 09:43:28', 'jonathan'),
+(91, 'Bryan G. Teng', 2061856, 9, '2013-05-20 09:43:48', 'jonathan'),
+(92, 'Migada Holdings, Inc.', 4132712, 9, '2013-05-20 09:44:06', 'jonathan'),
+(93, 'Queen Mother Prime Holdings, Inc.', 7216495, 9, '2013-05-20 09:44:24', 'jonathan'),
+(94, 'Intxausti, Inc.', 10927835, 9, '2013-05-20 09:44:40', 'jonathan'),
+(95, 'Serico, Inc.', 10500000, 9, '2013-05-20 09:44:54', 'jonathan'),
+(96, 'First Georgetown Ventures, Inc.', 10300000, 9, '2013-05-20 09:45:06', 'jonathan'),
+(97, 'National Development Company', 4328932.08, 14, '2013-05-20 09:49:44', 'jonathan'),
+(98, 'Alsons Devt & Investment Corp.', 5273426.35, 14, '2013-05-20 09:50:02', 'jonathan'),
+(99, 'Mino Yogyo Co., Ltd.', 2407148.6, 14, '2013-05-20 09:50:22', 'jonathan'),
+(100, 'Tomen', 1108468.97, 14, '2013-05-20 09:50:39', 'jonathan');
 
 -- --------------------------------------------------------
 
@@ -1384,20 +1599,18 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_status_assets` (
   `for_titling` double NOT NULL,
   `with_jv` double NOT NULL,
   `for_project_development` double NOT NULL,
-  `negotiated_sale` double NOT NULL,
-  `issuance_of_second_odct` double NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ndc_tbl_status_assets`
 --
 
-INSERT INTO `ndc_tbl_status_assets` (`id`, `under_lease`, `for_sale_lease`, `for_cmp`, `with_court_case`, `for_relocation_survey`, `for_titling`, `with_jv`, `for_project_development`, `negotiated_sale`, `issuance_of_second_odct`, `date_updated`, `updated_by`, `year`) VALUES
-(1, 12, 16, 8, 4, 3, 5, 1, 3, 5, 1, '2013-05-08 02:02:59', 'randy', 2013);
+INSERT INTO `ndc_tbl_status_assets` (`id`, `under_lease`, `for_sale_lease`, `for_cmp`, `with_court_case`, `for_relocation_survey`, `for_titling`, `with_jv`, `for_project_development`, `date_updated`, `updated_by`, `year`) VALUES
+(2, 12, 19, 10, 4, 3, 6, 1, 3, '2013-05-20 05:23:21', 'randy', 2012);
 
 -- --------------------------------------------------------
 
