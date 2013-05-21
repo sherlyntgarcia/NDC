@@ -720,6 +720,9 @@
 				$(".groupNuevaecija").colorbox({rel:'groupNuevaecija', transition:"none", width:"75%", height:"90%"});
 				$(".groupAntipolo").colorbox({rel:'groupAntipolo', transition:"none", width:"75%", height:"90%"});
 				$(".groupLaguna").colorbox({rel:'groupLaguna', transition:"none", width:"75%", height:"90%"});
+				$(".groupAlasAsinBataan").colorbox({rel:'groupAlasAsinBataan', transition:"none", width:"75%", height:"90%"});
+				$(".groupBiaanBataan").colorbox({rel:'groupBiaanBataan', transition:"none", width:"75%", height:"90%"});
+				$(".groupMabucoBataan").colorbox({rel:'groupMabucoBataan', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});

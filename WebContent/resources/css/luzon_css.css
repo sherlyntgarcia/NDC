@@ -45,6 +45,21 @@ div.fixed#cavite {
 	margin-top: 235px;
 }
 
+div.fixed#alasasinbataan {
+	margin-left: 160px;
+	margin-top: 220px;
+}
+
+div.fixed#biaanbataan {
+	margin-left: 150px;
+	margin-top: 190px;
+}
+
+div.fixed#mabucobataan {
+	margin-left: 160px;
+	margin-top: 200px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -78,4 +93,19 @@ div.projectTitle#manila {
 div.projectTitle#cavite {
 	margin-left: -20px;
 	margin-top: 235px;
+}
+
+div.projectTitle#biaanbataan {
+	margin-left: -20px;
+	margin-top: 260px;
+}
+
+div.projectTitle#mabucobataan {
+	margin-left: -20px;
+	margin-top: 285px;
+}
+
+div.projectTitle#alasasinbataan {
+	margin-left: -20px;
+	margin-top: 305px;
 }
