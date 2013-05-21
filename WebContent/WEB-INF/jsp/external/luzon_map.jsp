@@ -125,6 +125,61 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/mabucobataan/ct2_image.png" class="groupMabucoBataan" title="San Pedro St. / Inner View of the Prop."></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="barrancamandaluyong">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/barrancamandaluyong/site_image.png" class="groupBarrancaMandaluyong" title="Location & Vicinity Map">Bo. Barranca, Mandaluyong</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/barrancamandaluyong/ct1_image.png" class="groupBarrancaMandaluyong" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/barrancamandaluyong/ct2_image.png" class="groupBarrancaMandaluyong" title="Certificate of Title"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/barrancamandaluyong/ct3_image.png" class="groupBarrancaMandaluyong" title="Certificate of Title (Cont.)"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="mcarthurtarlac">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/mcarthurtarlac/site_image.png" class="groupMcArthurTarlac" title="Location & Vicinity Map">Mc Arthur Highway, Tarlac City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/mcarthurtarlac/ct1_image.png" class="groupMcArthurTarlac" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/mcarthurtarlac/ct2_image.png" class="groupMcArthurTarlac" title="Pictures (Cont.)"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="tordesillasmakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/site_image.png" class="groupTordesillasMakati" title="Location & Vicinity Map">Tordesillas St., Salcedo Vill., Makati City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/ct1_image.png" class="groupTordesillasMakati" title="Along Tordesillas Makati"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/ct2_image.png" class="groupTordesillasMakati" title="Along Soliman Street"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/ct3_image.png" class="groupTordesillasMakati" title="Certificate of Title"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/ct4_image.png" class="groupTordesillasMakati" title="Certificate of Title (Cont.)"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tordesillasmakati/ct5_image.png" class="groupTordesillasMakati" title="Certificate of Title (Cont.)"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="northaveqc">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/northavequezoncity/site_image.png" class="groupNorthAveQc" title="Site Image">North Ave., Quezon City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/northavequezoncity/ct1_image.png" class="groupNorthAveQc" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/northavequezoncity/ct2_image.png" class="groupNorthAveQc" title="Certificate of Title"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/northavequezoncity/ct3_image.png" class="groupNorthAveQc" title="Certificate of Title (Cont.)"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="shawblvdpasig">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/shawblvdpasig/site_image.png" class="groupShawBlvdPasig" title="Site Image">Shaw Blvd., Bagong Ilog, Pasig City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/shawblvdpasig/ct1_image.png" class="groupShawBlvdPasig" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/shawblvdpasig/ct2_image.png" class="groupShawBlvdPasig" title="Certificate of Title"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/shawblvdpasig/ct3_image.png" class="groupShawBlvdPasig" title="Certificate of Title (Cont.)"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/shawblvdpasig/ct4_image.png" class="groupShawBlvdPasig" title="Certificate of Title (Cont.)"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="angellinaomalate">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/angellinaomalate/site_image.png" class="groupAngelLinaoMalate" title="Site Image">Angel Linao St., Malate Dist. Manila</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/angellinaomalate/ct1_image.png" class="groupAngelLinaoMalate" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="tandangkutyorizal">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/tandangkutyorizal/site_image.png" class="groupTandangKutyoRizal" title="Site Image">Brgy. Tandang Kutyo, Tanay, Rizal</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tandangkutyorizal/ct1_image.png" class="groupTandangKutyoRizal" title="View of Prop. on a Vantage Point"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/tandangkutyorizal/ct2_image.png" class="groupTandangKutyoRizal" title="Vicinity within the existing Brgy. Road"></a>
+					</div>
+				</div>
 			
 			<div id="isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sanfernandopampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
@@ -137,6 +192,13 @@
 			<div id="alasasinbataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
 			<div id="biaanbataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
 			<div id="mabucobataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
+			<div id="barrancamandaluyong" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="mcarthurtarlac" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="tordesillasmakati" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="northaveqc" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="shawblvdpasig" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="angellinaomalate" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
+			<div id="tandangkutyorizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

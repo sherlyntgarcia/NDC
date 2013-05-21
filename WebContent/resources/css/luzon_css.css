@@ -60,6 +60,41 @@ div.fixed#mabucobataan {
 	margin-top: 200px;
 }
 
+div.fixed#barrancamandaluyong {
+	margin-left: 185px;
+	margin-top: 200px;
+}
+
+div.fixed#mcarthurtarlac {
+	margin-left: 170px;
+	margin-top: 160px;
+}
+
+div.fixed#tordesillasmakati {
+	margin-left: 195px;
+	margin-top: 215px;
+}
+
+div.fixed#northaveqc {
+	margin-left: 195px;
+	margin-top: 223px;
+}
+
+div.fixed#shawblvdpasig {
+	margin-left: 190px;
+	margin-top: 230px;
+}
+
+div.fixed#angellinaomalate {
+	margin-left: 190px;
+	margin-top: 220px;
+}
+
+div.fixed#tandangkutyorizal {
+	margin-left: 200px;
+	margin-top: 215px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -108,4 +143,39 @@ div.projectTitle#mabucobataan {
 div.projectTitle#alasasinbataan {
 	margin-left: -20px;
 	margin-top: 305px;
+}
+
+div.projectTitle#barrancamandaluyong {
+	margin-left: 330px;
+	margin-top: 168px;
+}
+
+div.projectTitle#mcarthurtarlac {
+	margin-left: 300px;
+	margin-top: 110px;
+}
+
+div.projectTitle#tordesillasmakati {
+	margin-left: 450px;
+	margin-top: 235px;
+}
+
+div.projectTitle#northaveqc {
+	margin-left: 450px;
+	margin-top: 255px;
+}
+
+div.projectTitle#shawblvdpasig {
+	margin-left: 450px;
+	margin-top: 275px;
+}
+
+div.projectTitle#angellinaomalate {
+	margin-left: 450px;
+	margin-top: 295px;
+}
+
+div.projectTitle#tandangkutyorizal {
+	margin-left: 450px;
+	margin-top: 315px;
 }

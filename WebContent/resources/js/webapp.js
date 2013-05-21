@@ -723,6 +723,13 @@
 				$(".groupAlasAsinBataan").colorbox({rel:'groupAlasAsinBataan', transition:"none", width:"75%", height:"90%"});
 				$(".groupBiaanBataan").colorbox({rel:'groupBiaanBataan', transition:"none", width:"75%", height:"90%"});
 				$(".groupMabucoBataan").colorbox({rel:'groupMabucoBataan', transition:"none", width:"75%", height:"90%"});
+				$(".groupBarrancaMandaluyong").colorbox({rel:'groupBarrancaMandaluyong', transition:"none", width:"75%", height:"90%"});
+				$(".groupMcArthurTarlac").colorbox({rel:'groupMcArthurTarlac', transition:"none", width:"75%", height:"90%"});
+				$(".groupTordesillasMakati").colorbox({rel:'groupTordesillasMakati', transition:"none", width:"75%", height:"90%"});
+				$(".groupNorthAveQc").colorbox({rel:'groupNorthAveQc', transition:"none", width:"75%", height:"90%"});
+				$(".groupShawBlvdPasig").colorbox({rel:'groupShawBlvdPasig', transition:"none", width:"75%", height:"90%"});
+				$(".groupAngelLinaoMalate").colorbox({rel:'groupAngelLinaoMalate', transition:"none", width:"75%", height:"90%"});
+				$(".groupTandangKutyoRizal").colorbox({rel:'groupTandangKutyoRizal', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
