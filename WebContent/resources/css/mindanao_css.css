@@ -25,6 +25,21 @@ div.fixed#cotabato {
 	margin-top: 218px;
 }
 
+div.fixed#fortichbukidnon {
+	margin-left: 255px;
+	margin-top: 190px;
+}
+
+div.fixed#langihanbutuan {
+	margin-left: 285px;
+	margin-top: 155px;
+}
+
+div.fixed#talakagbukidnon {
+	margin-left: 275px;
+	margin-top: 200px;
+}
+
 div.projectTitle#iligan {
 	margin-left: 0px;
 	margin-top: 150px;
@@ -43,4 +58,19 @@ div.projectTitle#davao {
 div.projectTitle#cotabato {
 	margin-left: 0px;
 	margin-top: 210px;
+}
+
+div.projectTitle#fortichbukidnon {
+	margin-left: 380px;
+	margin-top: 260px;
+}
+
+div.projectTitle#langihanbutuan {
+	margin-left: 380px;
+	margin-top: 280px;
+}
+
+div.projectTitle#talakagbukidnon {
+	margin-left: 380px;
+	margin-top: 300px;
 }

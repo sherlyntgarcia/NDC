@@ -15,58 +15,92 @@
 				<a href = "<c:url value = "/dashboard/tactical/"/>" class = 'btn btn-primary'><i class = "icon icon-backward icon-white"></i> Back</a>
 			</security:authorize>
 			<div class="container" id = "mcontainer">
-				<div style="margin-left:-200px; position: absolute;">
+				<div style="margin-left:-300px; position: absolute;">
 					<ul style="list-style:none;">
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - Lease/Sale</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/nego.png"></div><div style="margin-left: 35px; height: 35px;"> - Negiotiated Sale</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/bid.png"></div><div style="margin-left: 35px; height: 35px;"> - Sale Thru Public Bidding</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - Project Development</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png"></div><div style="margin-left: 35px; height: 35px;"> - Under Lease</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - For Sale/Lease</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forcmp.png"></div><div style="margin-left: 35px; height: 35px;"> - For CMP</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withcourt.png"></div><div style="margin-left: 35px; height: 35px;"> - With Court Cases</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forreloc.png"></div><div style="margin-left: 35px; height: 35px;"> - For Relocation Survey</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png"></div><div style="margin-left: 35px; height: 35px;"> - For Titling</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withjoint.png"></div><div style="margin-left: 35px; height: 35px;"> - With Joint Venture</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - For Project Development</div></li>
 					</ul>
 				</div>
 				<div class="projectTitle" id="iligan">
-				<div><a href="${pageContext.request.contextPath}/resources/img/sites/iligan/site_image.PNG" class="groupIligan">Poblacion, Iligan City</a></div>
-				<div style="display:none">
-					<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/map_image.PNG" class="groupIligan" title="Map Image"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/ct1_image.PNG" class="groupIligan" title="Certificate of Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/ct2_image.PNG" class="groupIligan" title="Certificate of Title"></a>
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/iligan/site_image.PNG" class="groupIligan">Poblacion, Iligan City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/map_image.PNG" class="groupIligan" title="Map Image"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/ct1_image.PNG" class="groupIligan" title="Certificate of Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/iligan/ct2_image.PNG" class="groupIligan" title="Certificate of Title"></a>
+					</div>
 				</div>
-			</div>
-			<div class="projectTitle" id="zamboanga">
-				<div><a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/site_image.png" class="groupZamboanga">Campo Islam, Zamboanga City</a></div>
-				<div style="display:none">
-					<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/map_image.png" class="groupZamboanga" title="Map Image"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/ct1_image.png" class="groupZamboanga" title="Certificate of Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/ct2_image.png" class="groupZamboanga" title="Certificate of Title"></a>
+				<div class="projectTitle" id="zamboanga">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/site_image.png" class="groupZamboanga">Campo Islam, Zamboanga City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/map_image.png" class="groupZamboanga" title="Map Image"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/ct1_image.png" class="groupZamboanga" title="Certificate of Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/ct2_image.png" class="groupZamboanga" title="Certificate of Title"></a>
+					</div>
 				</div>
-			</div>
-			<div class="projectTitle" id="davao">
-				<div><a href="${pageContext.request.contextPath}/resources/img/sites/davao/site_image.PNG" class="groupDavao">Toril, Davao City</a></div>
-				<div style="display:none;">
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/map_image.PNG" class="groupDavao" title="Map Image"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct1_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct2_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct3_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct4_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct5_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct6_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct7_image.png" class="groupDavao" title="Certificate Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct8_image.png" class="groupDavao" title="Certificate Title"></a>
+				<div class="projectTitle" id="davao">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/davao/site_image.PNG" class="groupDavao">Toril, Davao City</a></div>
+					<div style="display:none;">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/map_image.PNG" class="groupDavao" title="Map Image"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct1_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct2_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct3_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct4_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct5_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct6_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct7_image.png" class="groupDavao" title="Certificate Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct8_image.png" class="groupDavao" title="Certificate Title"></a>
+					</div>
 				</div>
-			</div>
-			<div class="projectTitle" id="cotabato">
-				<div><a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/site_image.PNG" class="groupCotabato" title="Site Image">Parang, Cotabato</a></div>
-				<div style="display:none">
-					<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/map_image.PNG" class="groupCotabato" title="Map Image"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct1_image.png" class="groupCotabato" title="Certificate of Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct2_image.png" class="groupCotabato" title="Certificate of Title"></a>
-					<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct3_image.png" class="groupCotabato" title="Certificate of Title"></a>
+				<div class="projectTitle" id="cotabato">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/site_image.PNG" class="groupCotabato" title="Site Image">Parang, Cotabato</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/map_image.PNG" class="groupCotabato" title="Map Image"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct1_image.png" class="groupCotabato" title="Certificate of Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct2_image.png" class="groupCotabato" title="Certificate of Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/ct3_image.png" class="groupCotabato" title="Certificate of Title"></a>
+					</div>
 				</div>
-			</div>
+				<div class="projectTitle" id="fortichbukidnon">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/site_image.png" class="groupFortichBukidnon" title="Site Image">Manolo Fortich and Libona, Bukidnon</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct1_image.png" class="groupFortichBukidnon" title="Site Image (Cont.)"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct2_image.png" class="groupFortichBukidnon" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct3_image.png" class="groupFortichBukidnon" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct4_image.png" class="groupFortichBukidnon" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct5_image.png" class="groupFortichBukidnon" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/fortichbukidnon/ct6_image.png" class="groupFortichBukidnon" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="langihanbutuan">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/langihanbutuan/site_image.png" class="groupLangihanButuan" title="Site Image">Langihan District, Butuan City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/langihanbutuan/ct1_image.png" class="groupLangihanButuan" title="Site Image (Cont.)"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/langihanbutuan/ct2_image.png" class="groupLangihanButuan" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/langihanbutuan/ct3_image.png" class="groupLangihanButuan" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/langihanbutuan/ct4_image.png" class="groupLangihanButuan" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="talakagbukidnon">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/talakagbukidnon/site_image.png" class="groupTalakagBukidnon" title="Site Image">Talakag, Bukidnon City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/talakagbukidnon/ct1_image.png" class="groupTalakagBukidnon" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/talakagbukidnon/ct2_image.png" class="groupTalakagBukidnon" title="Certificate of Title"></a>
+					</div>
+				</div>
 		
-			<div id="iligan" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="zamboanga" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="davao" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="cotabato" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/bid.png" /></a></div>
+				<div id="iligan" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+				<div id="zamboanga" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+				<div id="davao" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+				<div id="cotabato" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+				<div id="fortichbukidnon" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+				<div id="langihanbutuan" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+				<div id="talakagbukidnon" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			</div> <!-- /container -->
 			
 		</div>
