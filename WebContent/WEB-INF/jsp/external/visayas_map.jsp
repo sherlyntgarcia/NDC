@@ -15,12 +15,16 @@
 				<a href = "<c:url value = "/dashboard/tactical/"/>" class = 'btn btn-primary'><i class = "icon icon-backward icon-white"></i> Back</a>
 			</security:authorize>
 			<div class="container" id = "vcontainer">
-				<div style="margin-left:-200px; position: absolute;">
+				<div style="margin-left:-300px; position: absolute;">
 					<ul style="list-style:none;">
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - Lease/Sale</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/nego.png"></div><div style="margin-left: 35px; height: 35px;"> - Negiotiated Sale</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/bid.png"></div><div style="margin-left: 35px; height: 35px;"> - Sale Thru Public Bidding</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - Project Development</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png"></div><div style="margin-left: 35px; height: 35px;"> - Under Lease</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - For Sale/Lease</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forcmp.png"></div><div style="margin-left: 35px; height: 35px;"> - For CMP</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withcourt.png"></div><div style="margin-left: 35px; height: 35px;"> - With Court Cases</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forreloc.png"></div><div style="margin-left: 35px; height: 35px;"> - For Relocation Survey</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png"></div><div style="margin-left: 35px; height: 35px;"> - For Titling</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withjoint.png"></div><div style="margin-left: 35px; height: 35px;"> - With Joint Venture</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - For Project Development</div></li>
 					</ul>
 				</div>
 				
@@ -45,13 +49,22 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/cebu/sambag/map_image.PNG" class="groupCebu2" title="Certificate Title"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="rizalbacolod">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/site_image.png" class="groupRizalBacolod">Cor Lacson & Rizal Sts Bacolod City</a></div>
+					<div style="display:none;">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/ct1_image.png" class="groupRizalBacolod" title="Along Lacson & Rizal St."></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/ct2_image.png" class="groupRizalBacolod" title="Corner View"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/ct3_image.png" class="groupRizalBacolod" title="Certificate of Title"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/ct4_image.png" class="groupRizalBacolod" title="Certificate Title (Cont.)"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/rizalbacolod/ct5_image.png" class="groupRizalBacolod" title="Certificate Title (Cont.)"></a>
+					</div>
+				</div>
 			
-			<div id="sambagcebu" class="fixed">
-					<a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/bid.png" /></a>
+				<div id="sambagcebu" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+				<div id="guadalupecebu" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+				<div id="rizalbacolod" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			
 			</div>
-			<div id="guadalupecebu" class="fixed">
-					<a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/nego.png" /></a></div>
-			</div> <!-- /container -->
 			
 		</div>
 	

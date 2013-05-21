@@ -732,6 +732,7 @@
 				$(".groupTandangKutyoRizal").colorbox({rel:'groupTandangKutyoRizal', transition:"none", width:"75%", height:"90%"});
 				$(".groupBonotLegazpi").colorbox({rel:'groupBonotLegazpi', transition:"none", width:"75%", height:"90%"});
 				$(".groupMalhacanBulacan").colorbox({rel:'groupMalhacanBulacan', transition:"none", width:"75%", height:"90%"});
+				$(".groupRizalBacolod").colorbox({rel:'groupRizalBacolod', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
