@@ -180,6 +180,20 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/tandangkutyorizal/ct2_image.png" class="groupTandangKutyoRizal" title="Vicinity within the existing Brgy. Road"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="bonotlegazpi">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/site_image.png" class="groupBonotLegazpi" title="Site Image">Brgy. Bonot, Legazpi City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/ct1_image.png" class="groupBonotLegazpi" title="View from the Road Lot"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/ct2_image.png" class="groupBonotLegazpi" title="Vicinity Penaranda St. Ext."></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="malhacanbulacan">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/site_image.png" class="groupMalhacanBulacan" title="Site Image">Brgy. Malhacan, Meycauayan, Bulacan</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct1_image.png" class="groupMalhacanBulacan" title="Subject Prop. with Dilapidated Structures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct2_image.png" class="groupMalhacanBulacan" title="View from the Fronting Road"></a>
+					</div>
+				</div>
 			
 			<div id="isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sanfernandopampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
@@ -199,6 +213,8 @@
 			<div id="shawblvdpasig" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="angellinaomalate" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="tandangkutyorizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div>
+			<div id="bonotlegazpi" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+			<div id="malhacanbulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

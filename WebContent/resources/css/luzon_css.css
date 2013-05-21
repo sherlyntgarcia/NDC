@@ -95,6 +95,16 @@ div.fixed#tandangkutyorizal {
 	margin-top: 215px;
 }
 
+div.fixed#bonotlegazpi {
+	margin-left: 385px;
+	margin-top: 290px;
+}
+
+div.fixed#malhacanbulacan {
+	margin-left: 185px;
+	margin-top: 240px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -178,4 +188,14 @@ div.projectTitle#angellinaomalate {
 div.projectTitle#tandangkutyorizal {
 	margin-left: 450px;
 	margin-top: 315px;
+}
+
+div.projectTitle#bonotlegazpi {
+	margin-left: 450px;
+	margin-top: 335px;
+}
+
+div.projectTitle#malhacanbulacan {
+	margin-left: 450px;
+	margin-top: 355px;
 }

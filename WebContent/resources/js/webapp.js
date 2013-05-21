@@ -730,6 +730,8 @@
 				$(".groupShawBlvdPasig").colorbox({rel:'groupShawBlvdPasig', transition:"none", width:"75%", height:"90%"});
 				$(".groupAngelLinaoMalate").colorbox({rel:'groupAngelLinaoMalate', transition:"none", width:"75%", height:"90%"});
 				$(".groupTandangKutyoRizal").colorbox({rel:'groupTandangKutyoRizal', transition:"none", width:"75%", height:"90%"});
+				$(".groupBonotLegazpi").colorbox({rel:'groupBonotLegazpi', transition:"none", width:"75%", height:"90%"});
+				$(".groupMalhacanBulacan").colorbox({rel:'groupMalhacanBulacan', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
