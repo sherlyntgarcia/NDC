@@ -20,6 +20,16 @@ div.fixed#rizalbacolod {
 	margin-top: 244px;
 }
 
+div.fixed#bantayancebu {
+	margin-left: 180px;
+	margin-top: 190px;
+}
+
+div.fixed#poblacionbacolod {
+	margin-left: 190px;
+	margin-top: 240px;
+}
+
 div.projectTitle#guadalupecebu {
 	margin-left: -30px;
 	margin-top: 270px;
@@ -33,4 +43,14 @@ div.projectTitle#sambagcebu {
 div.projectTitle#rizalbacolod {
 	margin-left: 335px;
 	margin-top: 265px;
+}
+
+div.projectTitle#bantayancebu {
+	margin-left: -85px;
+	margin-top: 290px;
+}
+
+div.projectTitle#poblacionbacolod {
+	margin-left: 335px;
+	margin-top: 285px;
 }

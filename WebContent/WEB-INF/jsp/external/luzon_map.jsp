@@ -195,26 +195,26 @@
 					</div>
 				</div>
 			
-			<div id="isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="sanfernandopampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="angelespampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="antipolo" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="nuevaecija" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="alasasinbataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
-			<div id="biaanbataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
-			<div id="mabucobataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
-			<div id="barrancamandaluyong" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-			<div id="mcarthurtarlac" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-			<div id="tordesillasmakati" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-			<div id="northaveqc" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-			<div id="shawblvdpasig" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-			<div id="angellinaomalate" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
-			<div id="tandangkutyorizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div>
-			<div id="bonotlegazpi" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
-			<div id="malhacanbulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="angelespampanga" title="Sto. Domingo, Angeles City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="manila" title="Beata St., Pandacan, Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="antipolo" title="San Jose, Antipolo" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="laguna" title="Sta. Rosa, Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="nuevaecija" title="Bongabon, Nueva Ecija" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="cavite" title="Humayao, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="alasasinbataan" title="Alas-asin, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
+			<div id="biaanbataan" title="Brgy. Bia-an, Mariveles Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
+			<div id="mabucobataan" title="San Pedro St., Brgy. Mabuco, Hermosa, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div>
+			<div id="barrancamandaluyong" title="Bo. Barranca Mandaluyong" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="mcarthurtarlac" title="Mc Arthur Highway, Tarlac City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="tordesillasmakati" title="Tordesillas St., Salcedo Village, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="northaveqc" title="North Ave., Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="shawblvdpasig" title="Shaw Blvd., Bagong Ilog, Pasig City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="angellinaomalate" title="Angel Linao St., Malate Dist. Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
+			<div id="tandangkutyorizal" title="Brgy. Tandang Kutyo, Tanay, Rizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div>
+			<div id="bonotlegazpi" title="Brgy. Bonot, Legazpi City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>
