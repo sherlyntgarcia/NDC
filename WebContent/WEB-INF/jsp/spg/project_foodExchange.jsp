@@ -116,10 +116,7 @@
 											</ul>	
 									<li><p class="para">Next Steps</p></li>
 											<ul>
-												<li>LGU to conduct a Master Plan for the property</li>
-												<li>NDC, in collaboration with DTI-Region XI, DOT-Region XI, DA-Region <br/>
-													XI and LGU-Davao City, will submit a concept paper to Sen. Francis <br/>
-													Pangilinan to be presented during the meeting on January 4, 2013.</li>
+												<li> NDC to build out the conduct of Master Planning and Feasibility Study of the project. </li>
 											</ul>																
 						  		</ul>						  		 
 						  </div>						 						  

@@ -175,6 +175,11 @@ public class PublicController {
 		return "external/project_rubberProcessing";
 	}
 	
+	@RequestMapping(value="/project_irrigationToPower")
+	public String irrigationToPower(Model model) {
+		return "external/project_irrigationToPower";
+	}
+	
 	@RequestMapping(value="/submit")
 	public String submitFeedback(HttpServletRequest request, RedirectAttributes attr) {
 		

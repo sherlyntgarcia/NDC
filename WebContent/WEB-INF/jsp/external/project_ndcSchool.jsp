@@ -81,15 +81,16 @@
 						  			deposit at DBP, Board of Regents approval, financial standing.</li>
 						  		<li>NDC received Letter of Interest from PSU on October 10, 2012 requesting a loan for the construction of <br/>
 						  			25 classrooms.</li>
-						  		<li>NDC still awaits response to NDC's letter of Oct. 2, 2012. The response will be sent after the meeting<br/>
-						  			of the Board of Regents in December 2012.</li>
+						  		<li>NDC will amend the guidelines of the School Building Program to include State Universities and Colleges (SUCs) 
+						  			as eligible borrowers.</li>
 						  	</ul>
 						  </div>
 						   <div class="tab-pane" id="intervension" style = "margin-left: 5%">
 						  	<ul>
 						  		<li>The LGUs are not keen on availing of the Program due to the proposed initiative of the DepEd to construct<br/> 
 						  			classrooms through Public-Private-Partnership (PPP).</li>
-						  		<li>PSU proposed loan to be directly paid by the school not by LGU. Issue on the collateral to be settled first.</li>						  		
+						  		<li>SUCs are not allowed to obtain loan under the current approvals of the Program. Hence, there is a need to amend 
+						  			the Program Guidelines. </li>						  		
 						  	</ul>
 						  </div>
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">

@@ -487,6 +487,11 @@ public class SPGController {
 	public String rubberProcessing(Model model) {
 		return "spg/project_rubberProcessing";
 	}
+	
+	@RequestMapping(value="/project_irrigationToPower")
+	public String irrigationToPower(Model model) {
+		return "spg/project_irrigationToPower";
+	}
 
 	@ModelAttribute("title")
 	public String getTitle() {

@@ -19,7 +19,8 @@
 					<ul class="dropdown-submenu">
 						<li><a href = "<c:url value="/dashboard/internal/SPG/project_FCIE"/>">FCIE Expansion Project</a></li>
 						<li><a href = "<c:url value="/dashboard/internal/SPG/project_foodExchange"/>">Davao Food Exchange Terminal</a></li>
-						<li><a href = "<c:url value="/dashboard/internal/SPG/project_mini-hydro"/>">Mini-Hydro Projects</a></li>												
+						<li><a href = "<c:url value="/dashboard/internal/SPG/project_mini-hydro"/>">Mini-Hydro Projects</a></li>	
+<%-- 						<li><a href = "<c:url value="/dashboard/internal/SPG/project_irrigationToPower"/>">Irrigation to Power Projects</a></li>											 --%>
 					</ul>
 				</li>	
 				<li>
