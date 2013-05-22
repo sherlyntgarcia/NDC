@@ -87,7 +87,7 @@
 							$(document).ready(function() {
 								var url = "${pageContext.request.contextPath}/visualization/agriagrabondspiechart";
 								
-								createAgriAgraBondsPieChart(url, 550, 400);
+								createAgriAgraBondsPieChart(url, 600, 400);
 							});
 						</script>
 					</div>
@@ -101,7 +101,7 @@
 							$(document).ready(function() {
 								var url = "${pageContext.request.contextPath}/visualization/loanproceedsallocationpiechart";
 								
-								createLoanProceedsAllocationPieChart(url, 550, 400);
+								createLoanProceedsAllocationPieChart(url, 600, 400);
 							});
 						</script>
 					</div>
@@ -115,7 +115,7 @@
 							$(document).ready(function() {
 								var url = "${pageContext.request.contextPath}/visualization/loanproceedsutilizationpiechart";
 								
-								createLoanProceedsUtilizationPieChart(url, 550, 400);
+								createLoanProceedsUtilizationPieChart(url, 600, 400);
 							});
 						</script>
 					</div>

@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <c:import url="../template/header.jsp" />
 <div class = "admin-home">
@@ -42,47 +43,28 @@
 						<div class="tab-content">
 						  <div class="tab-pane active" id="profile">
 						  	<p>
-						  		${spgSubCategory.profile}
+						  		<c:set var="newLineChar" value="\\n" />
+								<c:set var="newLineHtml" value="<br />" />
+								<c:set var="profile" value="${spgSubCategory.profile}" />
+							  					
+							  	<c:out value="${fn:replace(profile, newLineChar, newLineHtml )}" escapeXml="false"/>
 						  	</p>
 						  </div>
 						  <div class="tab-pane" id="share_holders">
-						  	<table class="table table-striped">
-								<tr>
-									<th>Shareholders</th>
-									<th>Shares</th>
-									<th>Percentage</th>
-								</tr>
-								<tr>
-									<td>Philippines</td>
-									<td>28,600</td>
-									<td>9.53%</td>
-								</tr>
-								<tr>
-									<td>Malaysia</td>
-									<td>212,000</td>
-									<td>70.67%</td>
-								</tr>
-								<tr>
-									<td>Indonesia</td>
-									<td>28,600</td>
-									<td>9.53%</td>
-								</tr>
-								<tr>
-									<td>Thailand</td>
-									<td>28,600</td>
-									<td>9.53%</td>
-								</tr>
-								<tr>
-									<td>Singapore</td>
-									<td>2,200</td>
-									<td>0.73%</td>
-								</tr>
-								<tr>
-									<td><b>TOTAL</b></td>
-									<td><b>300,000</b></td>
-									<td><b>100.00%</b></td>
-								</tr>
-							</table>
+						  		<div class="row-fluid">
+							  		<div class="span12">
+								  		<div id="shareholdersPieChartDiv"></div>
+							
+										<script>
+											$(document).ready(function() {
+												var url = "${pageContext.request.contextPath}/visualization/shareholderspiechart";
+												var id = Number("${spgSubCategory.id}");
+												
+												createShareholdersPieChart(url, 900, 400, id);
+											});
+										</script>
+							  		</div>
+							  	</div>
 						  </div>
 						</div>
 					</div>

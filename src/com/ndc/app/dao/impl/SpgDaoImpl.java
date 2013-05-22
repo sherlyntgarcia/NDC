@@ -34,6 +34,15 @@ public class SpgDaoImpl implements SpgDao {
 		
 		return query.list();
 	}
+	
+	@Override
+	public List<SpgSubCategory> getSubCategories() {
+		// TODO Auto-generated method stub
+		String str = "from SpgSubCategory s ORDER BY s.id";
+		Query query = sessionFactory.getCurrentSession().createQuery(str);
+		
+		return query.list();
+	}
 
 	@Override
 	public SpgSubCategory getSubCategoryById(Long id) {

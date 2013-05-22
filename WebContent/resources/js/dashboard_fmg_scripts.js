@@ -195,7 +195,7 @@ function createAgriAgraBondsPieChart(url, width, height) {
 					height: height
 				},
 				title: {
-					text: '<b>Balance of NDC Agri Agra Bonds(' + data.dateUpdated + ')</b>'
+					text: '<p style="font-weight:bold">Balance of NDC Agri Agra Bonds</p> <br /> <p style="font-weight:bold">' + data.dateUpdated + '</p>'
 				},
 				tooltip: {
 					formatter: function() {
@@ -224,7 +224,7 @@ function createAgriAgraBondsPieChart(url, width, height) {
 							distance: 30,
 							formatter: function() {
 								return '<span style="font-size:13px;">' +this.point.x + '</span> <br/> <span style="font-size:13px">' +
-                  			  this.percentage.toFixed(2) + '%</span> (<b>' + abbrNum(this.y,2) + '</b>)';
+                  			  this.percentage.toFixed(2) + '%</span> (<b>P' + abbrNum(this.y,2) + '</b>)';
 							},
 							style: {
 								fontFamily: 'Tahoma, Arial, Helvetica, sans-serif'

@@ -10,6 +10,7 @@ public interface SpgService {
 	
 	public List<SpgCategory> getAll();
 	public List<SpgCategory> getCategories();
+	public List<SpgSubCategory> getSubCategories();
 	public SpgSubCategory getSubCategoryById(Long id);
 	public SpgCategory getCategoryByName(String name);
 	public List<SpgParticulars> getAllParticulars();

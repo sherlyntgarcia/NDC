@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <c:import url="../template/header.jsp" />
 <div class = "admin-home">
@@ -61,9 +62,13 @@
 						  			<p style="margin-left: 20px">
 							  			<c:choose>
 							  				<c:when test="${not empty spgSubCategory.profile}">
-							  					${spgSubCategory.profile}
+							  					<c:set var="newLineChar" value="\\n" />
+												<c:set var="newLineHtml" value="<br />" />
+												<c:set var="profile" value="${spgSubCategory.profile}" />
+							  					
+							  					<c:out value="${fn:replace(profile, newLineChar, newLineHtml )}" escapeXml="false"/>
 							  				</c:when>
-							  				
+							  					
 							  				<c:otherwise>
 							  					None
 							  				</c:otherwise>

@@ -83,7 +83,21 @@
 <!-- 										</ul> -->
 <!-- 									</ul> -->
 <!-- 								</ul> -->
-								None
+								<ul>
+									<li> Client Contact Person </li>
+									<ul>
+										<li> SATURNINO H. MEJIA (President) </li>
+										<ul>
+											<li> Contact No.: 8404856 </li>
+										</ul>
+										
+										<li> RUFINO A. MALANYAON (Estate Manager) </li>
+										<ul>
+											<li> Contact No.: (046) 4021001/003 </li>
+											<li> Mobile No.: 09053378831 </li>
+										</ul>
+									</ul>
+								</ul>
 							</div>
 						</div>
 					</div>

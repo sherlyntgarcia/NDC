@@ -47,11 +47,11 @@
 									<c:when test="${not empty spgCategory.subCategories}">
 										<ul class="dropdown-menu">
 											<c:forEach var="subcategory" items="${spgCategory.subCategories}">
-												<c:if test="${subcategory.id ne 10 and subcategory.id ne 11 and subcategory.id ne 12 and subcategory.id ne 13}">
+<%-- 												<c:if test="${subcategory.id ne 10 and subcategory.id ne 11 and subcategory.id ne 12 and subcategory.id ne 13 and subcategory.id ne 15 and subcategory.id ne 16}"> --%>
 												<li>
 													<a href="<c:url value="/dashboard/internal/SPG/existing/${subcategory.id}" />">${subcategory.name}</a>
 												</li>
-												</c:if>
+<%-- 												</c:if> --%>
 											</c:forEach>
 										</ul>
 									</c:when>

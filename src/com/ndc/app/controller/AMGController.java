@@ -22,8 +22,10 @@ import com.ndc.app.GroupHelper;
 import com.ndc.app.model.MaintenanceCost;
 import com.ndc.app.model.Notification;
 import com.ndc.app.model.Occupancy;
+import com.ndc.app.model.Shareholders;
 import com.ndc.app.model.SourcesFunds;
 import com.ndc.app.model.SpgCategory;
+import com.ndc.app.model.SpgSubCategory;
 import com.ndc.app.model.StatusAssets;
 import com.ndc.app.model.User;
 import com.ndc.app.service.ChartService;
@@ -297,6 +299,62 @@ public class AMGController {
 		return "redirect:/dashboard/internal/AMG/statusAssets";
 
 	}
+	
+	@RequestMapping(value = "/shareholders")
+	public String internalAMGShareholders(Model model) {
+
+		Shareholders shareholders = new Shareholders();
+		model.addAttribute("shareholders", shareholders);
+
+		model.addAttribute("particulars", spgService.getAllParticulars());
+
+		return "amg/internalDashboardAMGShareholders";
+
+	}
+	
+	@RequestMapping(value = "/shareholders", method = RequestMethod.POST)
+	public String internalAMGShareholders(@Valid Shareholders shareholders,
+			BindingResult bindingResult, Model model, RedirectAttributes attr) {
+
+		if (bindingResult.hasErrors()) {
+			return "amg/internalDashboardAMGShareholders";
+		}
+
+		// add & log
+		try {
+
+			chartService.addShareholders(shareholders);
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ADDED NEW SHAREHOLDER");
+
+			// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			Notification notification = new Notification();
+			notification.setGroup(GroupHelper.AMG);
+			notification.setMessage("Updated 'Shareholder'");
+
+			List<User> usersNotified = userService.getTacticalUsers();
+
+			if (usersNotified != null) {
+				for (User u : usersNotified) {
+					notification.setUserId(u.getId());
+					notifierService.addNotification(notification);
+				}
+			}
+			// /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			attr.addFlashAttribute("success",
+					PropertiesUtil.getProperty("success.shareholder.add"));
+
+		} catch (Exception e) {
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ERROR WHILE ADDING SHAREHOLDER");
+			attr.addFlashAttribute("error",
+					PropertiesUtil.getProperty("error.shareholder.add"));
+		}
+
+		return "redirect:/dashboard/internal/AMG/shareholders";
+
+	}
 
 	@ModelAttribute("title")
 	public String getTitle() {
@@ -324,9 +382,14 @@ public class AMGController {
 		return cal.get(Calendar.MONTH);
 	}
 	
-	@ModelAttribute("realEstateCategory")
-	public SpgCategory getCategory() {
-		return spgService.getCategoryByName("REAL ESTATE");
+//	@ModelAttribute("realEstateCategory")
+//	public SpgCategory getCategory() {
+//		return spgService.getCategoryByName("REAL ESTATE");
+//	}
+	
+	@ModelAttribute("spgSubCategories")
+	public List<SpgSubCategory> getSubCategories() {
+		return spgService.getSubCategories();
 	}
 
 }

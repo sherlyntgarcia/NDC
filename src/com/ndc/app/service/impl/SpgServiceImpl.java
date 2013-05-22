@@ -33,6 +33,13 @@ public class SpgServiceImpl implements SpgService {
 		// TODO Auto-generated method stub
 		return spgDao.getCategories();
 	}
+	
+	@Override
+	@Transactional
+	public List<SpgSubCategory> getSubCategories() {
+		// TODO Auto-generated method stub
+		return spgDao.getSubCategories();
+	}
 
 	@Override
 	@Transactional

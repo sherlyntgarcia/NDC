@@ -415,7 +415,7 @@ public class ChartController {
 					currDate = bm.getDateUpdated();
 				}
 
-				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity(" + AppHelper.convertDateToString(currDate) + ")", // Title
+				JFreeChart chart = ChartFactory.createBarChart("Bond Maturity\n" + AppHelper.convertDateToString(currDate), // Title
 						"Year of Issuance", // X-Axis label
 						"Maturity(Years)",// Y-Axis label
 						categoryDataset, // Dataset
@@ -566,7 +566,7 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Bonds Issued(" + AppHelper.convertDateToString(currDate) + ")", // chart title
+						"Bonds Issued\n" + AppHelper.convertDateToString(currDate), // chart title
 						"Issuance", // domain axis label
 						"Millions (Php)", // range axis label
 						defaultcategorydataset, // data
@@ -582,18 +582,18 @@ public class ChartController {
 				categoryplot.setRangeGridlinePaint(Color.BLACK);
 				categoryplot.setRangeGridlineStroke(new BasicStroke(0.5f,
 						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
-//				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer(
-//						apaint);
-//				customcylinderrenderer
-//						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
-//								GradientPaintTransformType.CENTER_HORIZONTAL));
-//				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
-//				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
-//						0.3F));
-//				customcylinderrenderer
-//						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
-//
-//				categoryplot.setRenderer(customcylinderrenderer);
+				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer(
+						apaint);
+				customcylinderrenderer
+						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
+								GradientPaintTransformType.CENTER_HORIZONTAL));
+				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
+				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
+						0.3F));
+				customcylinderrenderer
+						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
+
+				categoryplot.setRenderer(customcylinderrenderer);
 				categoryplot.setNoDataMessage("No data to display");
 
 				if (chart != null) {
@@ -621,19 +621,19 @@ public class ChartController {
 
 	private static Paint[] createPaint() {
 
-		Color DARK_RED = Color.decode("#151B8D");
+		Color DARK_RED = Color.decode("#B22222");
 
 		Paint apaint[] = new Paint[5];
 		apaint[0] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.BLUE);
+				Color.RED);
 		apaint[1] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.BLUE);
+				Color.RED);
 		apaint[2] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.BLUE);
+				Color.RED);
 		apaint[3] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.BLUE);
+				Color.RED);
 		apaint[4] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.BLUE);
+				Color.RED);
 		return apaint;
 	}
 
@@ -660,7 +660,7 @@ public class ChartController {
 						"Restored irrigable areas");
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Economic Impact of NIA Loan(" + AppHelper.convertDateToString(currDate) + ")", // Title
+						"Economic Impact of NIA Loan\n" + AppHelper.convertDateToString(currDate), // Title
 						"", // X-Axis label
 						"Hectares",// Y-Axis label
 						categoryDataset, // Dataset
@@ -752,7 +752,7 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Principal and Coupon Payments(" + AppHelper.convertDateToString(currDate) + ")", // Title
+						"Principal and Coupon Payments\n" + AppHelper.convertDateToString(currDate), // Title
 						"Issuance", // X-Axis label
 						"Millions (Php)",// Y-Axis label
 						categoryDataset, // Dataset
@@ -760,7 +760,7 @@ public class ChartController {
 						true, false);
 
 				LegendTitle legend = chart.getLegend();
-				legend.setPosition(RectangleEdge.RIGHT);
+				legend.setPosition(RectangleEdge.BOTTOM);
 
 				CategoryPlot plot = chart.getCategoryPlot();
 				plot.setBackgroundPaint(Color.WHITE);
@@ -848,7 +848,7 @@ public class ChartController {
 						"Loan Receivable", "Interest");
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Collection of NIA Loan(" + AppHelper.convertDateToString(currDate) + ")", // Title
+						"Collection of NIA Loan\n" + AppHelper.convertDateToString(currDate), // Title
 						"Collection of NIA Loan", // X-Axis label
 						"Millions (Php)",// Y-Axis label
 						result, // Dataset
@@ -1175,7 +1175,7 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createStackedBarChart3D(
-						"Net Lending(" + AppHelper.convertDateToString(currDate) + ")", // Title
+						"Net Lending\n" + AppHelper.convertDateToString(currDate), // Title
 						"", // X-Axis label
 						"Millions (Php)",// Y-Axis label
 						result, // Dataset
@@ -1624,7 +1624,7 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Status of Assets(as of " + AppHelper.convertDateToString(new Date()) + ")", // Title
+						"Status of Assets\nas of " + AppHelper.convertDateToString(new Date()), // Title
 						"", // X-Axis label
 						"no. of properties",// Y-Axis label
 						categoryDataset, // Dataset
@@ -2313,7 +2313,7 @@ public class ChartController {
 				plot.setValueFont(new Font("Dialog", Font.BOLD, 18));
 
 				JFreeChart chart = new JFreeChart(
-						"Income:  Actual vs Budget(" + AppHelper.convertDateToString(currDate) + ")",
+						"Income:  Actual vs Budget\n" + AppHelper.convertDateToString(currDate),
 						JFreeChart.DEFAULT_TITLE_FONT, plot, true);
 
 				chart.getLegend().setVisible(false);
@@ -2800,7 +2800,7 @@ public class ChartController {
 					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
-							"Expense: Actual vs Budget as of " + newDate + " " + year, // chart
+							"Expense: Actual vs Budget\nas of " + newDate + " " + year, // chart
 							// title
 							"", // domain(x-axis) axis label
 							"Php ", // range(y-axis) axis label
@@ -2825,14 +2825,13 @@ public class ChartController {
 					plot.setNoDataMessage("No data to display");
 
 					// Change Legend Plot
-					/*
-					 * LegendItemCollection chartLegend = new
-					 * LegendItemCollection(); Shape shape = new Rectangle(10,
-					 * 10); chartLegend.add(new LegendItem("label1", null, null,
-					 * null, shape, Color.red)); chartLegend.add(new
-					 * LegendItem("label2", null, null, null, shape,
-					 * Color.blue)); plot.setFixedLegendItems(chartLegend);
-					 */
+					
+//					 LegendItemCollection chartLegend = new
+//					 LegendItemCollection(); Shape shape = new Rectangle(10,
+//					 10); chartLegend.add(new LegendItem("label1", null, null,
+//					 null, shape, Color.red)); chartLegend.add(new
+//					 LegendItem("label2", null, null, null, shape,
+//					 Color.blue)); plot.setFixedLegendItems(chartLegend);
 
 					// CUSTOMIZE DOMAIN AXIS
 					final CategoryAxis domainAxis = (CategoryAxis) plot
@@ -2878,8 +2877,10 @@ public class ChartController {
 					// Shape cross2 = ShapeUtilities.createRegularCross(4, 1);
 					// renderer.setSeriesShape(0, shapes[2]);
 					// renderer.setSeriesShape(1, new Point2D.Double(10, 20));
-					// renderer.setSeriesPaint(0, Color.RED);
-					// renderer.setSeriesPaint(1, Color.GREEN);
+//					 renderer.setSeriesPaint(0, Color.);
+//					 renderer.setSeriesPaint(1, Color.GREEN);
+					renderer.setSeriesPaint(0, new Color(127, 255, 0));
+					renderer.setSeriesPaint(1, new Color(0, 100, 0));
 					// renderer.setSeriesPaint(2, Color.YELLOW);
 					// renderer.setSeriesPaint(3, Color.GREEN);
 					// renderer.setSeriesPaint(4, Color.ORANGE);
@@ -3113,7 +3114,7 @@ public class ChartController {
 							"Amount Billed", "Current");
 
 					JFreeChart chart = ChartFactory.createStackedBarChart3D(
-							"Collection Efficiency as of " + month + " " + year, // Title
+							"Collection Efficiency\nas of " + month + " " + year, // Title
 							"", // X-Axis label
 							"Php ",// Y-Axis label
 							categoryDataset, // Dataset
@@ -3246,7 +3247,7 @@ public class ChartController {
 			if(buPersonalServices != null || buMooe != null || buCapitalExpenditures != null) {
 				
 				JFreeChart chart = ChartFactory.createStackedBarChart(
-						"Budget Utilization as of " + month + " " + year, // Title
+						"Budget Utilization\nas of " + month + " " + year, // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
@@ -3357,7 +3358,7 @@ public class ChartController {
 					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
-							"2012 PDST-F Rates(" + AppHelper.convertDateToString(currDate)+ ")", // chart title
+							"2012 PDST-F Rates\n" + AppHelper.convertDateToString(currDate), // chart title
 							"", // domain(x-axis) axis label
 							"", // range(y-axis) axis label
 							dataset, // data

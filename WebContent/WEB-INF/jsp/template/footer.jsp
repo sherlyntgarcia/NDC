@@ -582,7 +582,7 @@
 		</div>
 		
 		<!-- Actual Income vs Actual Expense MODAL -->
-		<div id="actualIncomeExpenseModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="actualIncomeExpenseModalLabel" aria-hidden="true">
+		<div id="actualIncomeExpenseModal" style="width:1300px;height:500px;margin-left:-650px" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="actualIncomeExpenseModalLabel" aria-hidden="true">
 			
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
