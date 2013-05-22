@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>					  							  
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
 						
@@ -48,14 +48,14 @@
 												<li>Mobile No.: 09178192975</li>
 											</ul>
 						  			</ul>	
-						  			<li>Client Contact Person</li>
-						  			<ul>
-						  				<li>DR. SITTI AMINA M. JAIN </li>
-						  					<ul>
-												<li>DTI-IX Assistant Regional Director /</li>
-												<li>DTI National Rubber Industry Cluster Manager</li>
-											</ul>
-						  			</ul>						 
+<!-- 						  			<li>Client Contact Person</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>DR. SITTI AMINA M. JAIN </li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>DTI-IX Assistant Regional Director /</li> -->
+<!-- 												<li>DTI National Rubber Industry Cluster Manager</li> -->
+<!-- 											</ul> -->
+<!-- 						  			</ul>						  -->
 										</ul>
 									</ul>
 								</ul>

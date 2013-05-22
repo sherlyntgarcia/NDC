@@ -29,7 +29,7 @@
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>
 							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
 						
@@ -66,18 +66,18 @@
 												<li>Mobile No.: 09178192975</li>
 											</ul>
 						  			</ul>
-						  		<li>Client Contact Person</li>
-					  				<ul>
-						  				<li>MIGUEL Z. PATOLOT, Chairman</li>
-						  					<ul>
-												<li>Primary Biomass Energy Development, Inc.<br/>
-													Unit 3104, Antel Global Corporate Center<br/>
-													No. 3 Julia Vargas Ave., Ortigas Center<br/>
-													Pasig City
-												</li>
+<!-- 						  		<li>Client Contact Person</li> -->
+<!-- 					  				<ul> -->
+<!-- 						  				<li>MIGUEL Z. PATOLOT, Chairman</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Primary Biomass Energy Development, Inc.<br/> -->
+<!-- 													Unit 3104, Antel Global Corporate Center<br/> -->
+<!-- 													No. 3 Julia Vargas Ave., Ortigas Center<br/> -->
+<!-- 													Pasig City -->
+<!-- 												</li> -->
 												
-											</ul>
-									</ul>
+<!-- 											</ul> -->
+<!-- 									</ul> -->
 								</ul>
 							</div>
 						</div>

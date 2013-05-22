@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>					  							  
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
 						
@@ -63,14 +63,14 @@
 												<li>Mobile No.: 09182535547</li>
 											</ul>
 						  			</ul>	
-						  			<li>Client Contact Person</li>
-						  			<ul>
-						  				<li>Pan Energy Corporation</li>
-						  					<ul>
-												<li>Tel. No.: (632)7063270</li>
-												<li>Mobile No.: 09175298844</li>
-											</ul>
-						  			</ul>						 
+<!-- 						  			<li>Client Contact Person</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>Pan Energy Corporation</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Tel. No.: (632)7063270</li> -->
+<!-- 												<li>Mobile No.: 09175298844</li> -->
+<!-- 											</ul> -->
+<!-- 						  			</ul>						  -->
 										</ul>
 									</ul>
 								</ul>

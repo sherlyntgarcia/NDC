@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
-<!-- 							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li> -->
+							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
 						
@@ -101,14 +101,14 @@
 												<li>Contact No.: 8404838 loc. 257</li>
 												<li>Mobile No.:  09175822467</li>
 											</ul>
-									<li>Client Contact Person</li>
-						  			<ul>
-										<li>JOB JACOB A. GONZALES, Project Manager</li>
-										<ul>
-											<li>Tel. No.:  7897662</li>
-											<li>Mobile No. 09175822467</li>
-										</ul>						  												
-						  			</ul>						 
+<!-- 									<li>Client Contact Person</li> -->
+<!-- 						  			<ul> -->
+<!-- 										<li>JOB JACOB A. GONZALES, Project Manager</li> -->
+<!-- 										<ul> -->
+<!-- 											<li>Tel. No.:  7897662</li> -->
+<!-- 											<li>Mobile No. 09175822467</li> -->
+<!-- 										</ul>						  												 -->
+<!-- 						  			</ul>						  -->
 									</ul>
 							</div>
 						</div>

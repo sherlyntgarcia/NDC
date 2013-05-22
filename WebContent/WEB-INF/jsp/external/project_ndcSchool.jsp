@@ -28,7 +28,7 @@
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
 							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>
 <!-- 							  <li><a href="#intervension" data-toggle="tab">Issues/Needed Interventions</a></li> -->
-							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
 						
@@ -95,25 +95,25 @@
 						  </div>
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
-<!-- 						  		<li>Account Officer</li> -->
-<!-- 						  			<ul> -->
-<!-- 						  				<li>JONATHAN C. EUGENIO</li> -->
-<!-- 						  					<ul> -->
-<!-- 												<li>Contact No.: 8404838 loc. 277</li> -->
-<!-- 												<li>Mobile No.: 09182535547</li> -->
-<!-- 											</ul> -->
-<!-- 						  			</ul> -->
-						  		<li>Client Contact Person</li>
+						  		<li>Account Officer</li>
 						  			<ul>
-						  				<li>Current Loan Applicant</li>
-						  				<ul>
-							  				<li>Palawan State University</li>
-							  					<ul>
-													<li>Contact No.: (048)4332379</li>
-													<li>Mobile No.: 09177247658</li>
-												</ul>
-										</ul>
-									</ul>
+						  				<li>JONATHAN C. EUGENIO</li>
+						  					<ul>
+												<li>Contact No.: 8404838 loc. 277</li>
+												<li>Mobile No.: 09182535547</li>
+											</ul>
+						  			</ul>
+<!-- 						  		<li>Client Contact Person</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>Current Loan Applicant</li> -->
+<!-- 						  				<ul> -->
+<!-- 							  				<li>Palawan State University</li> -->
+<!-- 							  					<ul> -->
+<!-- 													<li>Contact No.: (048)4332379</li> -->
+<!-- 													<li>Mobile No.: 09177247658</li> -->
+<!-- 												</ul> -->
+<!-- 										</ul> -->
+<!-- 									</ul> -->
 								</ul>
 							</div>
 						</div>

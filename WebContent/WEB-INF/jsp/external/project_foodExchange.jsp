@@ -24,7 +24,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
-<!-- 							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li> -->
+							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
 							</ul>
 						</div>
 						
@@ -129,26 +129,26 @@
 												<li>Contact No.: 8404838 loc. 277</li>
 												<li>Mobile No.: 09182535547</li>
 											</ul>
-									<li>Client Contact Person</li>
-						  			<ul>
-						  				<li>Davao City LGU</li>
-						  					<ul>
-												<li>LEONARDO R. AVILA, OIC City Agriculture  </li>
-												<ul>
-													<li>Contact No.: (082)2286385</li>
-												</ul>
-											</ul>
-										<li>DTI Region XI</li>
-						  					<ul>
-												<li>MR. TEOLULO T. PASAWA, Provincial Director</li>
-												<ul>
-													<li>Address: Department of Trade and Industry <br/>
-														Davao City Field Office Mintrade Building, <br/>
-														Monteverde cor. Sales Sts., Davao City, <br/>
-														Philippines 8000</li>
-													<li>Mobile No.: 09177054633</li>
-												</ul>
-											</ul>
+<!-- 									<li>Client Contact Person</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>Davao City LGU</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>LEONARDO R. AVILA, OIC City Agriculture  </li> -->
+<!-- 												<ul> -->
+<!-- 													<li>Contact No.: (082)2286385</li> -->
+<!-- 												</ul> -->
+<!-- 											</ul> -->
+<!-- 										<li>DTI Region XI</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>MR. TEOLULO T. PASAWA, Provincial Director</li> -->
+<!-- 												<ul> -->
+<!-- 													<li>Address: Department of Trade and Industry <br/> -->
+<!-- 														Davao City Field Office Mintrade Building, <br/> -->
+<!-- 														Monteverde cor. Sales Sts., Davao City, <br/> -->
+<!-- 														Philippines 8000</li> -->
+<!-- 													<li>Mobile No.: 09177054633</li> -->
+<!-- 												</ul> -->
+<!-- 											</ul> -->
 										
 						  			</ul>						 
 									</ul>
