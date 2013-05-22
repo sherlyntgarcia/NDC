@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>					  							  
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
 						
@@ -55,14 +55,14 @@
 						  </div>						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
-						  		<li>Account Officer</li>
-						  			<ul>
-						  				<li>JONATHAN C. EUGENIO</li>
-						  					<ul>
-												<li>Contact No.: 8404838 loc. 277</li>
-												<li>Mobile No.: 09182535547</li>
-											</ul>
-						  			</ul>	
+<!-- 						  		<li>Account Officer</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>JONATHAN C. EUGENIO</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Contact No.: 8404838 loc. 277</li> -->
+<!-- 												<li>Mobile No.: 09182535547</li> -->
+<!-- 											</ul> -->
+<!-- 						  			</ul>	 -->
 						  			<li>Client Contact Person</li>
 						  			<ul>
 						  				<li>Pan Energy Corporation</li>

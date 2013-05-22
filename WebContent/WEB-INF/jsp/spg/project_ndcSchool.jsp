@@ -28,7 +28,7 @@
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
 							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>
 							  <li><a href="#intervension" data-toggle="tab">Issues/Needed Interventions</a></li>
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Client Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
 						
@@ -95,14 +95,14 @@
 						  </div>
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
-						  		<li>Account Officer</li>
-						  			<ul>
-						  				<li>JONATHAN C. EUGENIO</li>
-						  					<ul>
-												<li>Contact No.: 8404838 loc. 277</li>
-												<li>Mobile No.: 09182535547</li>
-											</ul>
-						  			</ul>
+<!-- 						  		<li>Account Officer</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>JONATHAN C. EUGENIO</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Contact No.: 8404838 loc. 277</li> -->
+<!-- 												<li>Mobile No.: 09182535547</li> -->
+<!-- 											</ul> -->
+<!-- 						  			</ul> -->
 						  		<li>Client Contact Person</li>
 						  			<ul>
 						  				<li>Current Loan Applicant</li>

@@ -26,7 +26,7 @@
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
 						
@@ -94,13 +94,13 @@
 						  </div>						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
-						  		<li>Account Officer</li>
-						  			<ul>
-						  				<li>RYAN J. MACAILING</li>
-						  					<ul>
-												<li>Contact No.: 8404838 loc. 257</li>
-												<li>Mobile No.:  09175822467</li>
-											</ul>
+<!-- 						  		<li>Account Officer</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>RYAN J. MACAILING</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Contact No.: 8404838 loc. 257</li> -->
+<!-- 												<li>Mobile No.:  09175822467</li> -->
+<!-- 											</ul> -->
 									<li>Client Contact Person</li>
 						  			<ul>
 										<li>JOB JACOB A. GONZALES, Project Manager</li>

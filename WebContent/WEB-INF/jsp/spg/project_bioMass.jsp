@@ -29,7 +29,7 @@
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>
 							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>
-							  <li><a href="#contact" data-toggle="tab">Account Officer / Contact Person</a></li>
+							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
 						
@@ -58,14 +58,14 @@
 						  </div>						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
-						  		<li>Account Officer</li>
-						  			<ul>
-						  				<li>ROMMEL R. SERRANO</li>
-						  					<ul>
-												<li>Contact No.: 8404838 loc. 256</li>
-												<li>Mobile No.: 09178192975</li>
-											</ul>
-						  			</ul>
+<!-- 						  		<li>Account Officer</li> -->
+<!-- 						  			<ul> -->
+<!-- 						  				<li>ROMMEL R. SERRANO</li> -->
+<!-- 						  					<ul> -->
+<!-- 												<li>Contact No.: 8404838 loc. 256</li> -->
+<!-- 												<li>Mobile No.: 09178192975</li> -->
+<!-- 											</ul> -->
+<!-- 						  			</ul> -->
 						  		<li>Client Contact Person</li>
 					  				<ul>
 						  				<li>MIGUEL Z. PATOLOT, Chairman</li>
