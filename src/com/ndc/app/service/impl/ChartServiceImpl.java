@@ -461,9 +461,9 @@ public class ChartServiceImpl implements ChartService {
 	
 	@Override
 	@Transactional
-	public List<SpgIncomeStatement> generateSpgIncomeStatement() {
+	public List<SpgIncomeStatement> generateSpgIncomeStatement(Long projectId) {
 		// TODO Auto-generated method stub
-		return chartDao.generateSpgIncomeStatement();
+		return chartDao.generateSpgIncomeStatement(projectId);
 	}
 
 	@Override
@@ -487,9 +487,9 @@ public class ChartServiceImpl implements ChartService {
 	
 	@Override
 	@Transactional
-	public List<SpgBalanceSheet> generateSpgBalanceSheet() {
+	public List<SpgBalanceSheet> generateSpgBalanceSheet(Long projectId) {
 		// TODO Auto-generated method stub
-		return chartDao.generateSpgBalanceSheet();
+		return chartDao.generateSpgBalanceSheet(projectId);
 	}
 
 	@Override
@@ -512,9 +512,9 @@ public class ChartServiceImpl implements ChartService {
 	
 	@Override
 	@Transactional
-	public List<SpgCashFlow> generateSpgCashFlow() {
+	public List<SpgCashFlow> generateSpgCashFlow(Long projectId) {
 		// TODO Auto-generated method stub
-		return chartDao.generateSpgCashFlow();
+		return chartDao.generateSpgCashFlow(projectId);
 	}
 
 	@Override

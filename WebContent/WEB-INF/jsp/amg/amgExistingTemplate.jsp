@@ -24,13 +24,8 @@
 				
 				<div class="row-fluid">
 					<div class="span12">
-						<security:authorize access="!hasRole('SPG_STRATEGIC_USER') and !hasRole('SPG_OPERATIONAL_USER') and !hasRole('AMG_STRATEGIC_USER') and !hasRole('AMG_OPERATIONAL_USER') and !hasRole('POWER_USER')" >
+						<security:authorize access="!hasRole('AMG_STRATEGIC_USER') and !hasRole('AMG_OPERATIONAL_USER') and !hasRole('POWER_USER')" >
 							<a class="btn btn-primary" href="<c:url value="/external" />"><i class = "icon-backward icon-white"></i> External Dashboard</a>
-						</security:authorize>
-						
-						<!-- for SPG users -->
-						<security:authorize access="hasRole('SPG_STRATEGIC_USER') or hasRole('SPG_OPERATIONAL_USER')" >
-							<a class="btn btn-primary" href="<c:url value="/dashboard/internal/SPG" />"><i class = "icon-backward icon-white"></i> Internal Dashboard</a>
 						</security:authorize>
 						
 						<!-- for AMG users -->
@@ -101,19 +96,19 @@
 						  <div class="tab-pane" id="financial">
 						  	<div class="row-fluid">
 							  	<div class = "span12">
-							  		<img alt="Income Statement is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/SPG/incomeStatement'" src="${pageContext.request.contextPath}/visualization/spgincomestatementbarlinechart/450/400/${spgSubCategory.id}" />
+							  		<img alt="Income Statement is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/incomeStatement'" src="${pageContext.request.contextPath}/visualization/spgincomestatementbarlinechart/450/400/${spgSubCategory.id}" />
 							  	</div>
 						  	</div>
 						  	
 						  	<div class="row-fluid">
 							  	<div class = "span12">
-							  		<img alt="Balance Sheet is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/SPG/balanceSheet'" src="${pageContext.request.contextPath}/visualization/spgbalancesheetbarlinechart/450/400/${spgSubCategory.id}" />
+							  		<img alt="Balance Sheet is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/balanceSheet'" src="${pageContext.request.contextPath}/visualization/spgbalancesheetbarlinechart/450/400/${spgSubCategory.id}" />
 						  		</div>
 					  		</div>
 					  		
 					  		<div class="row-fluid">
 							  	<div class = "span12">
-							  		<img alt="Cash Flow is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/SPG/cashFlow'" src="${pageContext.request.contextPath}/visualization/spgcashflowlinechart/450/400/${spgSubCategory.id}" />						  	
+							  		<img alt="Cash Flow is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/cashFlow'" src="${pageContext.request.contextPath}/visualization/spgcashflowlinechart/450/400/${spgSubCategory.id}" />						  	
 							  	</div>
 						  	</div>
 						  </div>

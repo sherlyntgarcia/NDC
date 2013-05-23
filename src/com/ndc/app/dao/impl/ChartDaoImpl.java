@@ -503,8 +503,8 @@ public class ChartDaoImpl implements ChartDao {
 	}
 	
 	@Override
-	public List<SpgIncomeStatement> generateSpgIncomeStatement() {
-		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_income_statement` WHERE id  in (select max(id) from ndc_tbl_spg_income_statement group by year) order by year DESC LIMIT 3").addEntity(SpgIncomeStatement.class);
+	public List<SpgIncomeStatement> generateSpgIncomeStatement(Long projectId) {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_income_statement` WHERE project_id = " + projectId + " GROUP BY YEAR ORDER BY YEAR DESC LIMIT 3").addEntity(SpgIncomeStatement.class);
 		List<SpgIncomeStatement> l = (List<SpgIncomeStatement>) query.list();
 		
 		Collections.sort(l, new Comparator<SpgIncomeStatement>() {
@@ -537,8 +537,8 @@ public class ChartDaoImpl implements ChartDao {
 	}
 	
 	@Override
-	public List<SpgBalanceSheet> generateSpgBalanceSheet() {
-		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_balance_sheet` WHERE id  in (select max(id) from ndc_tbl_spg_balance_sheet group by year) order by year DESC LIMIT 3").addEntity(SpgBalanceSheet.class);
+	public List<SpgBalanceSheet> generateSpgBalanceSheet(Long projectId) {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_balance_sheet` WHERE project_id = " + projectId + " GROUP BY YEAR ORDER BY YEAR DESC LIMIT 3").addEntity(SpgBalanceSheet.class);
 		List<SpgBalanceSheet> l = (List<SpgBalanceSheet>) query.list();
 		
 		Collections.sort(l, new Comparator<SpgBalanceSheet>() {
@@ -570,8 +570,8 @@ public class ChartDaoImpl implements ChartDao {
 	}
 	
 	@Override
-	public List<SpgCashFlow> generateSpgCashFlow() {
-		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_cash_flow` WHERE id  in (select max(id) from ndc_tbl_spg_cash_flow group by year) order by year DESC LIMIT 3").addEntity(SpgCashFlow.class);
+	public List<SpgCashFlow> generateSpgCashFlow(Long projectId) {
+		Query query = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `ndc_tbl_spg_cash_flow` WHERE project_id = " + projectId + " GROUP BY YEAR ORDER BY YEAR DESC LIMIT 3").addEntity(SpgCashFlow.class);
 		List<SpgCashFlow> l = (List<SpgCashFlow>) query.list();
 		
 		Collections.sort(l, new Comparator<SpgCashFlow>() {

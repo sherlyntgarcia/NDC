@@ -4,7 +4,7 @@
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 
-<security:authorize access="!hasRole('SPG_STRATEGIC_USER') and !hasRole('SPG_OPERATIONAL_USER') and !hasRole('POWER_USER')" >
+<security:authorize access="!hasRole('AMG_STRATEGIC_USER') and !hasRole('AMG_OPERATIONAL_USER') and !hasRole('POWER_USER')" >
 	<c:redirect url="/dashboard" />
 </security:authorize>
 
@@ -16,7 +16,7 @@
 			
 			<div class="row-fluid">
 				<div class="span12">
-					<label class="label label-info" style="padding:10px;font-size:15px">Internal Dashboard (SPG)</label> 
+					<label class="label label-info" style="padding:10px;font-size:15px">Internal Dashboard (AMG)</label> 
 				</div>
 			</div>
 			
@@ -26,7 +26,7 @@
 	
 			<div class="span3">
 			
-				<c:import url="../template/spgLeftNav.jsp" />
+				<c:import url="../template/amgLeftNav.jsp" />
 			
 			</div>
 			
@@ -84,14 +84,10 @@
 							<div>
 								<spring:select path="projectId" class="span4">
 									<c:choose>
-										<c:when test="${not empty spgCategories}">
-											<c:forEach var="c" items="${spgCategories}">
-												<c:if test="${not empty c.subCategories}">
-													<c:forEach var="s" items="${c.subCategories}">
-														<c:if test="${s.id ne 10 and s.id ne 11 and s.id ne 12 and s.id ne 13 and s.id ne 15 and s.id ne 16}">
-															<spring:option value="${s.id}">${s.name}</spring:option>
-														</c:if>
-													</c:forEach>
+										<c:when test="${not empty spgSubCategories}">
+											<c:forEach var="s" items="${spgSubCategories}">
+												<c:if test="${s.id eq 10 or s.id eq 11 or s.id eq 12 or s.id eq 13 or s.id eq 15 or s.id eq 16}">
+													<spring:option value="${s.id}">${s.name}</spring:option>
 												</c:if>
 											</c:forEach>
 										</c:when>
@@ -124,7 +120,7 @@
 							
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary"><i class="icon icon-download-alt icon-white"></i> Save changes</button>
-								<a href="${pageContext.request.contextPath}/dashboard/internal/SPG" class="btn">Go back</a>
+								<a href="${pageContext.request.contextPath}/dashboard/internal/AMG" class="btn">Go back</a>
 							</div>
 						
 						</spring:form>

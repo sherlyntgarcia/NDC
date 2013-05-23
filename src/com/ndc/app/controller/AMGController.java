@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -24,7 +25,10 @@ import com.ndc.app.model.Notification;
 import com.ndc.app.model.Occupancy;
 import com.ndc.app.model.Shareholders;
 import com.ndc.app.model.SourcesFunds;
+import com.ndc.app.model.SpgBalanceSheet;
+import com.ndc.app.model.SpgCashFlow;
 import com.ndc.app.model.SpgCategory;
+import com.ndc.app.model.SpgIncomeStatement;
 import com.ndc.app.model.SpgSubCategory;
 import com.ndc.app.model.StatusAssets;
 import com.ndc.app.model.User;
@@ -353,6 +357,200 @@ public class AMGController {
 		}
 
 		return "redirect:/dashboard/internal/AMG/shareholders";
+
+	}
+	
+	@RequestMapping(value="/existing/{id}", method=RequestMethod.GET)
+	public String displayAMGProject(@PathVariable(value="id") Long id, Model model) {
+		
+		try {
+			if(id != null) {
+				SpgSubCategory spgSubCategory = spgService.getSubCategoryById(id);
+				
+				if(spgSubCategory == null)
+					return "error/exceptionView";
+				
+				model.addAttribute("spgSubCategory", spgSubCategory);
+				model.addAttribute("shareholders", chartService.getShareholdersByProjectId(spgSubCategory.getId()));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+			return "error/exceptionView";
+		}
+		
+		return "amg/amgExistingTemplate";
+		
+	}
+	
+	@RequestMapping(value = "/incomeStatement")
+	public String internalAMGIncomeStatement(Model model) {
+
+		SpgIncomeStatement spgIncomeStatement = new SpgIncomeStatement();
+		spgIncomeStatement.setYear(getCurrentYear()-1);
+
+		model.addAttribute("spgIncomeStatement", spgIncomeStatement);
+	
+		return "amg/internalDashboardAMGIncomeStatement";
+
+	}
+	
+	@RequestMapping(value = "/incomeStatement", method = RequestMethod.POST)
+	public String internalAMGIncomeStatement(
+			@Valid SpgIncomeStatement spgIncomeStatement,
+			BindingResult bindingResult, Model model, RedirectAttributes attr) {
+
+		if (bindingResult.hasErrors()) {
+			return "amg/internalDashboardAMGIncomeStatement";
+		}
+
+		// add & log
+		try {
+
+			chartService.addSpgIncomeStatement(spgIncomeStatement);
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ADDED NEW SPG INCOME STATEMENT");
+
+			// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			Notification notification = new Notification();
+			notification.setGroup(GroupHelper.AMG);
+			notification.setMessage("Updated 'Income Statement'");
+
+			List<User> usersNotified = userService.getTacticalUsers();
+
+			if (usersNotified != null) {
+				for (User u : usersNotified) {
+					notification.setUserId(u.getId());
+					notifierService.addNotification(notification);
+				}
+			}
+			// /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			attr.addFlashAttribute("success", PropertiesUtil
+					.getProperty("success.spgincomestatement.add"));
+
+		} catch (Exception e) {
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(),
+					"ERROR WHILE ADDING SPG INCOME STATEMENT");
+			attr.addFlashAttribute("error",
+					PropertiesUtil.getProperty("error.spgincomestatement.add"));
+		}
+
+		return "redirect:/dashboard/internal/AMG/incomeStatement";
+
+	}
+	
+	@RequestMapping(value = "/balanceSheet")
+	public String internalAMGBalanceSheet(Model model) {
+
+		SpgBalanceSheet spgBalanceSheet = new SpgBalanceSheet();
+		spgBalanceSheet.setYear(getCurrentYear()-1);
+
+		model.addAttribute("spgBalanceSheet", spgBalanceSheet);
+
+		return "amg/internalDashboardAMGBalanceSheet";
+
+	}
+
+	@RequestMapping(value = "/balanceSheet", method = RequestMethod.POST)
+	public String internalAMGBalanceSheet(
+			@Valid SpgBalanceSheet spgBalanceSheet,
+			BindingResult bindingResult, Model model, RedirectAttributes attr) {
+
+		if (bindingResult.hasErrors()) {
+			return "amg/internalDashboardAMGBalanceSheet";
+		}
+
+		// add & log
+		try {
+
+			chartService.addSpgBalanceSheet(spgBalanceSheet);
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ADDED NEW SPG BALANCE SHEET");
+
+			// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			Notification notification = new Notification();
+			notification.setGroup(GroupHelper.AMG);
+			notification.setMessage("Updated 'Balance Sheet'");
+
+			List<User> usersNotified = userService.getTacticalUsers();
+
+			if (usersNotified != null) {
+				for (User u : usersNotified) {
+					notification.setUserId(u.getId());
+					notifierService.addNotification(notification);
+				}
+			}
+			// /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			attr.addFlashAttribute("success",
+					PropertiesUtil.getProperty("success.spgbalancesheet.add"));
+
+		} catch (Exception e) {
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(),
+					"ERROR WHILE ADDING SPG BALANCE SHEET");
+			attr.addFlashAttribute("error",
+					PropertiesUtil.getProperty("error.spgbalancesheet.add"));
+		}
+
+		return "redirect:/dashboard/internal/AMG/balanceSheet";
+
+	}
+	
+	@RequestMapping(value = "/cashFlow")
+	public String internalAMGCashFlow(Model model) {
+
+		SpgCashFlow spgCashFlow = new SpgCashFlow();
+		spgCashFlow.setYear(getCurrentYear()-1);
+
+		model.addAttribute("spgCashFlow", spgCashFlow);
+
+		return "amg/internalDashboardAMGCashFlow";
+
+	}
+
+	@RequestMapping(value = "/cashFlow", method = RequestMethod.POST)
+	public String internalAMGCashFlow(@Valid SpgCashFlow spgCashFlow,
+			BindingResult bindingResult, Model model, RedirectAttributes attr) {
+
+		if (bindingResult.hasErrors()) {
+			return "amg/internalDashboardAMGCashFlow";
+		}
+
+		// add & log
+		try {
+
+			chartService.addSpgCashFlow(spgCashFlow);
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ADDED NEW SPG CASH FLOW");
+
+			// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			Notification notification = new Notification();
+			notification.setGroup(GroupHelper.AMG);
+			notification.setMessage("Updated 'Cash Flow'");
+
+			List<User> usersNotified = userService.getTacticalUsers();
+
+			if (usersNotified != null) {
+				for (User u : usersNotified) {
+					notification.setUserId(u.getId());
+					notifierService.addNotification(notification);
+				}
+			}
+			// /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			attr.addFlashAttribute("success",
+					PropertiesUtil.getProperty("success.spgcashflow.add"));
+
+		} catch (Exception e) {
+			loggerUtil.log(SecurityContextHolder.getContext()
+					.getAuthentication(), "ERROR WHILE ADDING SPG CASH FLOW");
+			attr.addFlashAttribute("error",
+					PropertiesUtil.getProperty("error.spgcashflow.add"));
+		}
+
+		return "redirect:/dashboard/internal/AMG/cashFlow";
 
 	}
 

@@ -1700,53 +1700,11 @@ public class ChartController {
 
 		try {
 
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(SpgIncomeStatement.class);
-//
-//			SpgIncomeStatement spgIncomeStatementLatestYear = chartService
-//					.getSpgIncomeStatementByYear(latestYear - 2, id);
-//			SpgIncomeStatement spgIncomeStatementLatestYear2 = chartService
-//					.getSpgIncomeStatementByYear(latestYear - 1, id);
-//			SpgIncomeStatement spgIncomeStatementLatestYear3 = chartService
-//					.getSpgIncomeStatementByYear(latestYear, id);
-//
-//			if (spgIncomeStatementLatestYear != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear.getRevenue(),
-//						"Revenue", spgIncomeStatementLatestYear.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear2 != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear2.getRevenue(),
-//						"Revenue", spgIncomeStatementLatestYear2.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear3 != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear3.getRevenue(),
-//						"Revenue", spgIncomeStatementLatestYear3.getYear());
-//			}
-//
-//			// Enrollment in Masters level
-//			// dataset1.setValue(257701 / 1000, "Net Income", "2008");
-//			if (spgIncomeStatementLatestYear != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear.getNetIncome(),
-//						"Net Income", spgIncomeStatementLatestYear.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear2 != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear2.getNetIncome(),
-//						"Net Income", spgIncomeStatementLatestYear2.getYear());
-//			}
-//
-//			if (spgIncomeStatementLatestYear3 != null) {
-//				dataset1.setValue(spgIncomeStatementLatestYear3.getNetIncome(),
-//						"Net Income", spgIncomeStatementLatestYear3.getYear());
-//			}
-
 			// dataset for line graph
 			DefaultCategoryDataset dataset1 = new DefaultCategoryDataset();
 			final DefaultCategoryDataset dataset2 = new DefaultCategoryDataset();
 			
-			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement();
+			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement(id);
 
 			if(incomeStatements != null && incomeStatements.size() > 0) {
 				
@@ -1927,7 +1885,7 @@ public class ChartController {
 //						"Debt to Assets", spgBalanceSheetLatestYear3.getYear());
 //			}
 
-			List<SpgBalanceSheet> balanceSheets = chartService.generateSpgBalanceSheet();
+			List<SpgBalanceSheet> balanceSheets = chartService.generateSpgBalanceSheet(id);
 
 			if(balanceSheets != null && balanceSheets.size() > 0) {
 				
@@ -2121,7 +2079,7 @@ public class ChartController {
 //						spgCashFlowLatestYear3.getYear());
 //			}
 			
-			List<SpgCashFlow> cashFlows = chartService.generateSpgCashFlow();
+			List<SpgCashFlow> cashFlows = chartService.generateSpgCashFlow(id);
 
 			if(cashFlows != null && cashFlows.size() > 0) {
 				

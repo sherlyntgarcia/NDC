@@ -99,15 +99,15 @@ public interface ChartService {
 	
 	public SpgIncomeStatement getSpgIncomeStatementByYear(Integer year, Long projectId);
 	public void addSpgIncomeStatement(SpgIncomeStatement spgIncomeStatement) throws Exception;
-	public List<SpgIncomeStatement> generateSpgIncomeStatement();
+	public List<SpgIncomeStatement> generateSpgIncomeStatement(Long projectId);
 	
 	public SpgBalanceSheet getSpgBalanceSheetByYear(Integer year, Long projectId);
 	public void addSpgBalanceSheet(SpgBalanceSheet spgBalanceSheet) throws Exception;
-	public List<SpgBalanceSheet> generateSpgBalanceSheet();
+	public List<SpgBalanceSheet> generateSpgBalanceSheet(Long projectId);
 	
 	public SpgCashFlow getSpgCashFlowByYear(Integer year, Long projectId);
 	public void addSpgCashFlow(SpgCashFlow spgCashFlow) throws Exception;
-	public List<SpgCashFlow> generateSpgCashFlow();
+	public List<SpgCashFlow> generateSpgCashFlow(Long projectId);
 	
 	public ProjectedActualIncome getLatestProjectedActualIncome();
 	public void addProjectedActualIncome(ProjectedActualIncome projectedActualIncome) throws Exception;

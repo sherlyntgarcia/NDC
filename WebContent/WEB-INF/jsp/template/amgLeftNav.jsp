@@ -15,6 +15,20 @@
 		
 		<security:authorize access="${username eq 'vel'}">
 			<li> <a href="<c:url value="/dashboard/internal/AMG/shareholders" />">Shareholders</a> </li>
+			<li class="dropdown-submenu"> 
+				<a href="#" tabindex="-1" >Financial Performance</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href = "<c:url value="/dashboard/internal/AMG/incomeStatement" />">Income Statement</a>												
+					</li>	
+					<li>
+						<a href = "<c:url value="/dashboard/internal/AMG/balanceSheet" />">Balance Sheet</a>												
+					</li>
+					<li>
+						<a href = "<c:url value="/dashboard/internal/AMG/cashFlow" />">Cash Flow</a>												
+					</li>									
+				</ul>
+			</li>
 		</security:authorize>
 		
 		<li> <a href="<c:url value="/external" />">Go to External Dashboard</a> </li>
@@ -36,7 +50,7 @@
 								<!-- display only limited subcategories -->
 								<c:if test="${sub.id eq 10 or sub.id eq 11 or sub.id eq 12 or sub.id eq 13 or sub.id eq 15 or sub.id eq 16}">
 									<li>
-										<a href="<c:url value="/dashboard/internal/SPG/existing/${sub.id}" />">${sub.name}</a>
+										<a href="<c:url value="/dashboard/internal/AMG/existing/${sub.id}" />">${sub.name}</a>
 									</li>
 								</c:if>
 							</c:forEach>							

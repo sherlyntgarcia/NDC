@@ -88,7 +88,9 @@
 											<c:forEach var="c" items="${spgCategories}">
 												<c:if test="${not empty c.subCategories}">
 													<c:forEach var="s" items="${c.subCategories}">
-														<spring:option value="${s.id}">${s.name}</spring:option>
+														<c:if test="${s.id ne 10 and s.id ne 11 and s.id ne 12 and s.id ne 13 and s.id ne 15 and s.id ne 16}">
+															<spring:option value="${s.id}">${s.name}</spring:option>
+														</c:if>
 													</c:forEach>
 												</c:if>
 											</c:forEach>
