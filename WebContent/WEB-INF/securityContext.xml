@@ -38,7 +38,7 @@
     	<intercept-url pattern="/dashboard/internal/FAD/GetMooe" access="hasRole('TACTICAL_USER') or hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
     	<intercept-url pattern="/dashboard/internal/FAD/GetCapitalExpenditures" access="hasRole('TACTICAL_USER') or hasRole('FAD_STRATEGIC_USER') or hasRole('FAD_OPERATIONAL_USER') or hasRole('POWER_USER')" />
     	
-<!--     	<intercept-url pattern="/dashboard/internal/SPG/existing/11" access="principal.username eq 'vel'" /> -->
+<!--     	<intercept-url pattern="/dashboard/internal/SPG/balanceSheet" access="principal.username eq 'vel'" /> -->
 <!--     	<intercept-url pattern="/dashboard/internal/SPG/existing/12" access="principal.username eq 'vel'" /> -->
 <!--     	<intercept-url pattern="/dashboard/internal/SPG/existing/13" access="principal.username eq 'vel'" /> -->
     	
