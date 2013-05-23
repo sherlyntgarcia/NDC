@@ -646,6 +646,15 @@ public class ChartDaoImpl implements ChartDao {
 
 		return (ActualIncomeExpense) query.uniqueResult();
 	}
+	
+	@Override
+	public ActualIncomeExpense getLatestActualIncomeExpense() {
+		// TODO Auto-generated method stub
+		Query query = sessionFactory.getCurrentSession().createQuery("from ActualIncomeExpense a ORDER BY a.id DESC LIMIT 1");
+		query.setMaxResults(1);
+		
+		return (ActualIncomeExpense) query.uniqueResult();
+	}
 
 	@Override
 	public ProjectedActualIncome2 getLatestProjectedActualIncome2() {

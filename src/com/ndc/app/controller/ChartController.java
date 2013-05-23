@@ -125,55 +125,6 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(BalanceSheet.class);
-//
-//			// logic
-//			BalanceSheet balanceSheetLatestYear = chartService
-//					.getBalanceSheetByYear(latestYear - 2);
-//
-//			if (balanceSheetLatestYear != null) {
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear.getTotalAssets(),
-//						balanceSheetLatestYear.getYear(), "TOTAL ASSETS");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear.getTotalLiabilities(),
-//						balanceSheetLatestYear.getYear(), "TOTAL LIABILITIES");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear.getTotalEquity(),
-//						balanceSheetLatestYear.getYear(), "EQUITY");
-//			}
-//
-//			BalanceSheet balanceSheetLatestYear2 = chartService
-//					.getBalanceSheetByYear(latestYear - 1);
-//
-//			if (balanceSheetLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear2.getTotalAssets(),
-//						balanceSheetLatestYear2.getYear(), "TOTAL ASSETS");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear2.getTotalLiabilities(),
-//						balanceSheetLatestYear2.getYear(), "TOTAL LIABILITIES");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear2.getTotalEquity(),
-//						balanceSheetLatestYear2.getYear(), "EQUITY");
-//			}
-//
-//			BalanceSheet balanceSheetLatestYear3 = chartService
-//					.getBalanceSheetByYear(latestYear);
-//
-//			if (balanceSheetLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear3.getTotalAssets(),
-//						balanceSheetLatestYear3.getYear(), "TOTAL ASSETS");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear3.getTotalLiabilities(),
-//						balanceSheetLatestYear3.getYear(), "TOTAL LIABILITIES");
-//				categoryDataset.setValue(
-//						balanceSheetLatestYear3.getTotalEquity(),
-//						balanceSheetLatestYear3.getYear(), "EQUITY");
-//			}
 			
 			List<BalanceSheet> balanceSheets = chartService.generateBalanceSheet();
 
@@ -571,7 +522,7 @@ public class ChartController {
 						"Millions (Php)", // range axis label
 						defaultcategorydataset, // data
 						PlotOrientation.VERTICAL, // orientation
-						false, // include legend
+						false, // inclfude legend
 						true, // tooltips
 						false // urls
 						);
@@ -582,19 +533,25 @@ public class ChartController {
 				categoryplot.setRangeGridlinePaint(Color.BLACK);
 				categoryplot.setRangeGridlineStroke(new BasicStroke(0.5f,
 						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
-				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer(
-						apaint);
-				customcylinderrenderer
-						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
-								GradientPaintTransformType.CENTER_HORIZONTAL));
-				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
-				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
-						0.3F));
-				customcylinderrenderer
-						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
-
-				categoryplot.setRenderer(customcylinderrenderer);
+//				CustomCylinderRenderer customcylinderrenderer = new CustomCylinderRenderer();
+//				customcylinderrenderer
+//						.setGradientPaintTransformer(new StandardGradientPaintTransformer(
+//								GradientPaintTransformType.CENTER_HORIZONTAL));
+//				customcylinderrenderer.setBaseOutlinePaint(Color.gray);
+//				customcylinderrenderer.setBaseOutlineStroke(new BasicStroke(
+//						0.3F));
+//				customcylinderrenderer
+//						.setBaseToolTipGenerator(new StandardCategoryToolTipGenerator());
+//
+//				categoryplot.setRenderer(customcylinderrenderer);
 				categoryplot.setNoDataMessage("No data to display");
+				
+				GroupedStackedBarRenderer renderer = new GroupedStackedBarRenderer();
+				
+				Paint p1 = new Color(30, 144, 255);
+				renderer.setSeriesPaint(0, p1);
+				
+				categoryplot.setRenderer(renderer);
 
 				if (chart != null) {
 					final ChartRenderingInfo info = new ChartRenderingInfo(
@@ -621,19 +578,11 @@ public class ChartController {
 
 	private static Paint[] createPaint() {
 
-		Color DARK_RED = Color.decode("#B22222");
+		Color DARK_RED = Color.decode("#66CDAA");
 
-		Paint apaint[] = new Paint[5];
+		Paint apaint[] = new Paint[1];
 		apaint[0] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.RED);
-		apaint[1] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.RED);
-		apaint[2] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.RED);
-		apaint[3] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.RED);
-		apaint[4] = new GradientPaint(0.0F, 0.0F, DARK_RED, 0.0F, 0.0F,
-				Color.RED);
+				Color.BLUE);
 		return apaint;
 	}
 
@@ -1701,9 +1650,7 @@ public class ChartController {
 		try {
 
 			// dataset for line graph
-			DefaultCategoryDataset dataset1 = new DefaultCategoryDataset();
-			final DefaultCategoryDataset dataset2 = new DefaultCategoryDataset();
-			
+			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement(id);
 
 			if(incomeStatements != null && incomeStatements.size() > 0) {
@@ -1712,81 +1659,51 @@ public class ChartController {
 				String currency = category.getCurrency();
 				
 				for(SpgIncomeStatement incomeStatement : incomeStatements) {
-					dataset1.setValue(incomeStatement.getNetIncome(),
+					categoryDataset.setValue(incomeStatement.getNetIncome(),
 							"Net Income", incomeStatement.getYear());
-					dataset2.addValue(incomeStatement.getProfitMargin(),
-							"Profit Margin", incomeStatement.getYear());
+					categoryDataset.addValue(incomeStatement.getRevenue(),
+							"Revenue", incomeStatement.getYear());
 				}
 				
-				// create the chart...
 				JFreeChart chart = ChartFactory.createBarChart(
 						"Income Statement", // Title
 						"", // X-Axis label
 						currency,// Y-Axis label
-						dataset1, // Dataset
+						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
 
-				chart.setBackgroundPaint(Color.white);
-
-				final CategoryPlot plot = chart.getCategoryPlot();
-				plot.setBackgroundPaint(new Color(0xEE, 0xEE, 0xFF));
-				plot.setDomainAxisLocation(AxisLocation.BOTTOM_OR_RIGHT);
+				CategoryPlot plot = chart.getCategoryPlot();
+				plot.getRenderer().setSeriesPaint(0, new Color(0, 204, 143));
+				plot.getRenderer().setSeriesPaint(1, new Color(51, 51, 204));
+				plot.getRenderer().setSeriesPaint(2, new Color(255, 111, 111));
 				plot.setBackgroundPaint(Color.WHITE);
 				plot.setRangeGridlinePaint(Color.BLACK);
 				plot.setRangeGridlineStroke(new BasicStroke(0.5f,
-						BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
+						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
 
 				plot.setNoDataMessage("No data to display");
 
-				plot.setDataset(1, dataset2);
-				plot.mapDatasetToRangeAxis(1, 1);
+				CategoryAxis domainAxis = plot.getDomainAxis();
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions
+				// .createUpRotationLabelPositions(Math.PI / 6.0));
+				domainAxis.setMaximumCategoryLabelLines(10);
 
-				final CategoryAxis domainAxis = plot.getDomainAxis();
-				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.DOWN_45);
-
-				// final ValueAxis axis1 = new NumberAxis("RM Millions");
-				// plot.setRangeAxis(1, axis1);
-
-				final ValueAxis axis2 = new NumberAxis("");
-				plot.setRangeAxis(1, axis2);
-
-				// //last part edited
-				// NumberAxis rangeAxis1 = (NumberAxis) plot.getRangeAxis(1);
-				// rangeAxis1.setNumberFormatOverride(new DecimalFormat() {
-				// @Override
-				// public StringBuffer format(double number, StringBuffer
-				// toAppendTo, FieldPosition pos) {
-				// return new StringBuffer(String.format("%.1f",
-				// number/1000000));
-				// }
-				// });
-				// /////////////////////
-
-				// last part edited
-				NumberAxis rangeAxis2 = (NumberAxis) plot.getRangeAxis(1);
-				rangeAxis2.setNumberFormatOverride(new DecimalFormat() {
-					@Override
-					public StringBuffer format(double number,
-							StringBuffer toAppendTo, FieldPosition pos) {
-						return new StringBuffer(String.format("%.1f", number))
-								.append("%");
-					}
-				});
-				// ////////////////////
-
-				final LineAndShapeRenderer renderer2 = new LineAndShapeRenderer();
-				renderer2
-						.setToolTipGenerator(new StandardCategoryToolTipGenerator());
-
-				renderer2.setSeriesPaint(0, Color.BLACK);
-
-				BarRenderer renderer3 = (BarRenderer) plot.getRenderer();
-				renderer3.setSeriesPaint(0, new Color(46, 106, 19));
-				renderer3.setSeriesPaint(1, new Color(126, 224, 84));
-
-				plot.setRenderer(1, renderer2);
-				plot.setDatasetRenderingOrder(DatasetRenderingOrder.FORWARD);
+				// change the auto tick unit selection to integer units only...
+				final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+				rangeAxis.setStandardTickUnits(NumberAxis
+						.createIntegerTickUnits());
+				// rangeAxis.setAxisLineVisible(false);
+//				rangeAxis.setNumberFormatOverride(new DecimalFormat() {
+//					@Override
+//					public StringBuffer format(double number,
+//							StringBuffer toAppendTo, FieldPosition pos) {
+//
+//						return new StringBuffer(String.format("%.1f",
+//								number / 1000000));
+//
+//					}
+//				});
 
 				if (chart != null) {
 					final ChartRenderingInfo info = new ChartRenderingInfo(
@@ -1821,70 +1738,8 @@ public class ChartController {
 
 			DefaultCategoryDataset dataset1 = new DefaultCategoryDataset();
 
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(SpgBalanceSheet.class);
-//
-//			SpgBalanceSheet spgBalanceSheetLatestYear = chartService
-//					.getSpgBalanceSheetByYear(latestYear - 2, id);
-//			SpgBalanceSheet spgBalanceSheetLatestYear2 = chartService
-//					.getSpgBalanceSheetByYear(latestYear - 1, id);
-//			SpgBalanceSheet spgBalanceSheetLatestYear3 = chartService
-//					.getSpgBalanceSheetByYear(latestYear, id);
-//
-//			if (spgBalanceSheetLatestYear != null) {
-//				dataset1.setValue(spgBalanceSheetLatestYear.getTotalAssets(),
-//						"Total Assets", spgBalanceSheetLatestYear.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear2 != null) {
-//				dataset1.setValue(spgBalanceSheetLatestYear2.getTotalAssets(),
-//						"Total Assets", spgBalanceSheetLatestYear2.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear3 != null) {
-//				dataset1.setValue(spgBalanceSheetLatestYear3.getTotalAssets(),
-//						"Total Assets", spgBalanceSheetLatestYear3.getYear());
-//			}
-
-//			if (spgBalanceSheetLatestYear != null) {
-//				dataset1.setValue(
-//						spgBalanceSheetLatestYear.getTotalLiabilities(),
-//						"Total Liabilities",
-//						spgBalanceSheetLatestYear.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear2 != null) {
-//				dataset1.setValue(
-//						spgBalanceSheetLatestYear2.getTotalLiabilities(),
-//						"Total Liabilities",
-//						spgBalanceSheetLatestYear2.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear3 != null) {
-//				dataset1.setValue(
-//						spgBalanceSheetLatestYear3.getTotalLiabilities(),
-//						"Total Liabilities",
-//						spgBalanceSheetLatestYear3.getYear());
-//			}
-
 			// dataset for line graph
 			final DefaultCategoryDataset dataset2 = new DefaultCategoryDataset();
-
-//			if (spgBalanceSheetLatestYear != null) {
-//				dataset2.addValue(spgBalanceSheetLatestYear.getDebtToAssets(),
-//						"Debt to Assets", spgBalanceSheetLatestYear.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear2 != null) {
-//				dataset2.addValue(spgBalanceSheetLatestYear2.getDebtToAssets(),
-//						"Debt to Assets", spgBalanceSheetLatestYear2.getYear());
-//			}
-//
-//			if (spgBalanceSheetLatestYear3 != null) {
-//				dataset2.addValue(spgBalanceSheetLatestYear3.getDebtToAssets(),
-//						"Debt to Assets", spgBalanceSheetLatestYear3.getYear());
-//			}
-
 			List<SpgBalanceSheet> balanceSheets = chartService.generateSpgBalanceSheet(id);
 
 			if(balanceSheets != null && balanceSheets.size() > 0) {
@@ -2299,13 +2154,12 @@ public class ChartController {
 
 	}
 
-	@RequestMapping(value = "/actualincomeexpensesubchartbatchone/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchone/{id}/{width}/{height}")
 	public @ResponseBody
 	void generateActualIncomeExpenseSubChartBatchOne(
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "title") String title,
 			HttpServletResponse response) {
 
 		try {
@@ -2340,7 +2194,7 @@ public class ChartController {
 						"Christmas and Anniversary");
 			
 
-				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
@@ -2384,13 +2238,12 @@ public class ChartController {
 
 	}
 	
-	@RequestMapping(value = "/actualincomeexpensesubchartbatchtwo/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchtwo/{id}/{width}/{height}")
 	public @ResponseBody
 	void generateActualIncomeExpenseSubChartBatchTwo (
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "title") String title,
 			HttpServletResponse response) {
 
 		try {
@@ -2425,7 +2278,7 @@ public class ChartController {
 						"Legal");
 			
 
-				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
@@ -2469,13 +2322,12 @@ public class ChartController {
 
 	}
 	
-	@RequestMapping(value = "/actualincomeexpensesubchartbatchthree/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchthree/{id}/{width}/{height}")
 	public @ResponseBody
 	void generateActualIncomeExpenseSubChartBatchThree (
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "title") String title,
 			HttpServletResponse response) {
 
 		try {
@@ -2509,7 +2361,7 @@ public class ChartController {
 				categoryDataset.setValue(expense.getBudgetMisc(), "Budget",
 						"Misc");
 
-				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
@@ -2553,13 +2405,12 @@ public class ChartController {
 
 	}
 	
-	@RequestMapping(value = "/actualincomeexpensesubchartbatchfour/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchfour/{id}/{width}/{height}")
 	public @ResponseBody
 	void generateActualIncomeExpenseSubChartBatchFour (
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "title") String title,
 			HttpServletResponse response) {
 
 		try {
@@ -2593,7 +2444,7 @@ public class ChartController {
 				categoryDataset.setValue(expense.getBudgetSecurity(), "Budget",
 						"Security");
 
-				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset
@@ -2637,13 +2488,12 @@ public class ChartController {
 
 	}
 	
-	@RequestMapping(value = "/actualincomeexpensesubchartbatchfive/{id}/{width}/{height}/{title}")
+	@RequestMapping(value = "/actualincomeexpensesubchartbatchfive/{id}/{width}/{height}")
 	public @ResponseBody
 	void generateActualIncomeExpenseSubChartBatchFive (
 			@PathVariable(value = "id") Long id,
 			@PathVariable(value = "width") Integer width,
 			@PathVariable(value = "height") Integer height,
-			@PathVariable(value = "title") String title,
 			HttpServletResponse response) {
 
 		try {
@@ -2677,7 +2527,7 @@ public class ChartController {
 				categoryDataset.setValue(expense.getBudgetTravelling(), "Budget",
 						"Travelling");
 
-				JFreeChart chart = ChartFactory.createBarChart3D(title, // Title
+				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
 						"Php ",// Y-Axis label
 						categoryDataset, // Dataset

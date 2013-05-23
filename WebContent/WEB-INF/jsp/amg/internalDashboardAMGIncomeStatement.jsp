@@ -109,14 +109,14 @@
 								<spring:input path="netIncome" class="span3" placeholder="(e.g. 2000000)" constraint="number" />
 							</div>
 							
-							<label>Profit Margin</label>
-							<div>
-								<spring:select path="profitMargin" class="span3">
-									<c:forEach varStatus="i" begin="1" end="100" step="1">
-										<spring:option value="${i.count}">${i.count} %</spring:option>
-									</c:forEach>
-								</spring:select>
-							</div>
+<!-- 							<label>Profit Margin</label> -->
+<!-- 							<div> -->
+<%-- 								<spring:select path="profitMargin" class="span3"> --%>
+<%-- 									<c:forEach varStatus="i" begin="1" end="100" step="1"> --%>
+<%-- 										<spring:option value="${i.count}">${i.count} %</spring:option> --%>
+<%-- 									</c:forEach> --%>
+<%-- 								</spring:select> --%>
+<!-- 							</div> -->
 							
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary"><i class="icon icon-download-alt icon-white"></i> Save changes</button>

@@ -117,6 +117,7 @@ public interface ChartDao {
 	public List<ActualIncomeExpense> getActualIncomeExpense();
 	public void addActualIncomeExpense (ActualIncomeExpense actualincomeexpense) throws Exception;
 	public ActualIncomeExpense getActualIncomeExpenseById(Long id);
+	public ActualIncomeExpense getLatestActualIncomeExpense();
 	
 	public List<CollectionEfficiency> getCollectionEfficiency();
 	public void addCollectionEfficiency(CollectionEfficiency collectionefficiency) throws Exception;

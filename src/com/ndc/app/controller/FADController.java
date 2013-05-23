@@ -663,11 +663,20 @@ public class FADController {
 	@RequestMapping(value = "/actualIncomeExpense")
 	public String internalFADActualIncomeExpense(Model model) {
 
-		ActualIncomeExpense ai = new ActualIncomeExpense();
-		ai.setYear(getCurrentYear());
+		
+		ActualIncomeExpense ai = chartService.getLatestActualIncomeExpense();
+		
+		if(ai != null) {
+			model.addAttribute("actualIncomeExpense", ai);
+			ai.setYear(getCurrentYear());
+		} else {
+			ActualIncomeExpense ai2 = new ActualIncomeExpense();
+			model.addAttribute("actualIncomeExpense", ai2);
+			ai2.setYear(getCurrentYear());
+		}
 
 		model.addAttribute("months", AppHelper.getMonths());
-		model.addAttribute("actualIncomeExpense", ai);
+		
 
 		return "fad/internalDashboardFADActualIncomeExpense";
 

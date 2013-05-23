@@ -567,6 +567,13 @@ public class ChartServiceImpl implements ChartService {
 		// TODO Auto-generated method stub
 		return chartDao.getActualIncomeExpenseById(id);
 	}
+	
+	@Override
+	@Transactional
+	public ActualIncomeExpense getLatestActualIncomeExpense() {
+		// TODO Auto-generated method stub
+		return chartDao.getLatestActualIncomeExpense();
+	}
 
 	@Override
 	@Transactional

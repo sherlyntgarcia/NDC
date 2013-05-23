@@ -487,11 +487,11 @@
 					
 					var html = "<div id='myCarousel' class='carousel slide'>";
 					html += "<div class='carousel-inner'>";
-					html += "<div class='active item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchone/" + id + "/1200/400/" + title + "' /> </div>";
-					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchtwo/" + id + "/1200/400/" + title + "' /> </div>";
-					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchthree/" + id + "/1200/400/" + title + "' /> </div>";
-					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfour/" + id + "/1200/400/" + title + "' /> </div>";
-					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfive/" + id + "/1200/400/" + title + "' /> </div>";
+					html += "<div class='active item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchone/" + id + "/1200/400" + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchtwo/" + id + "/1200/400" + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchthree/" + id + "/1200/400" + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfour/" + id + "/1200/400" + "' /> </div>";
+					html += "<div class='item'> <img src='" + contextPath + "/visualization/actualincomeexpensesubchartbatchfive/" + id + "/1200/400" + "' /> </div>";
 					html += "</div>";
 					html += "<a class='carousel-control left' href='#myCarousel' data-slide='prev'>&lsaquo;</a>";
 					html += "<a class='carousel-control right' href='#myCarousel' data-slide='next'>&rsaquo;</a>";
