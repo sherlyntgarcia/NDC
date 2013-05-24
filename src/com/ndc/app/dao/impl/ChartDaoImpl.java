@@ -621,10 +621,19 @@ public class ChartDaoImpl implements ChartDao {
 		if (latestYear != null) {	
 			Query query = sessionFactory.getCurrentSession()
 					.createSQLQuery(
-							"SELECT * FROM ndc_tbl_actual_income_expense WHERE id in (select max(id) from ndc_tbl_actual_income_expense group by year) order by year ASC")
+							"SELECT * FROM ndc_tbl_actual_income_expense WHERE id in (select max(id) from ndc_tbl_actual_income_expense group by year) order by id DESC")
 					.addEntity(ActualIncomeExpense.class);
-
-			return (List<ActualIncomeExpense>) query.list();
+			
+			List<ActualIncomeExpense> l = (List<ActualIncomeExpense>) query.list();
+			Collections.sort(l, new Comparator<ActualIncomeExpense>() {
+				@Override
+				public int compare(ActualIncomeExpense o1, ActualIncomeExpense o2) {
+					// TODO Auto-generated method stub
+					return o1.getYear().compareTo(o2.getYear());
+				}
+			});
+			
+			return l;
 		}
 
 		return null;

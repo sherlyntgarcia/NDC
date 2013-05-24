@@ -115,11 +115,10 @@
 							
 							<label>Debt to Assets</label>
 							<div>
-								<spring:select path="debtToAssets" class="span3">
-									<c:forEach varStatus="i" begin="1" end="100" step="1">
-										<spring:option value="${i.count}">${i.count} %</spring:option>
-									</c:forEach>
-								</spring:select>
+								<div class="input-append">
+								  <spring:input class="span3" path="debtToAssets" placeholder="(e.g. 10)" constraint="number" />
+								  <span class="add-on">%</span>
+								</div>
 							</div>
 							
 							<div class="form-actions">

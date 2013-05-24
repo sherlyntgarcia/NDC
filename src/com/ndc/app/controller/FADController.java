@@ -667,6 +667,34 @@ public class FADController {
 		ActualIncomeExpense ai = chartService.getLatestActualIncomeExpense();
 		
 		if(ai != null) {
+			
+			ai.setActualAdvertising(null);
+			ai.setActualAthletics(null);
+			ai.setActualAuditing(null);
+			ai.setActualBoardExpenses(null);
+			ai.setActualChristmasAnniversary(null);
+			ai.setActualCommunicationService(null);
+			ai.setActualConsultancy(null);
+			ai.setActualExtraordinary(null);
+			ai.setActualJanitorial(null);
+			ai.setActualLegal(null);
+			ai.setActualLightWater(null);
+			ai.setActualMeetings(null);
+			ai.setActualMemberships(null);
+			ai.setActualMessengerial(null);
+			ai.setActualMisc(null);
+			ai.setActualOtherMisc(null);
+			ai.setActualRentals(null);
+			ai.setActualRepairFacilities(null);
+			ai.setActualRepairVehicles(null);
+			ai.setActualSecurity(null);
+			ai.setActualSubscription(null);
+			ai.setActualSuppliesMaterials(null);
+			ai.setActualTaxes(null);
+			ai.setActualTraining(null);
+			ai.setActualTravelling(null);
+			ai.settotalIncome(null);
+			
 			model.addAttribute("actualIncomeExpense", ai);
 			ai.setYear(getCurrentYear());
 		} else {

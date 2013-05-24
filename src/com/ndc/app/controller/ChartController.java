@@ -1753,7 +1753,7 @@ public class ChartController {
 					dataset1.setValue(sheet.getTotalLiabilities(),
 							"Total Liabilities",sheet.getYear());
 					dataset2.addValue(sheet.getDebtToAssets(),
-							"Debt to Assets", sheet.getYear());
+							"% Debt to Assets", sheet.getYear());
 				}
 				
 				// create the chart...
@@ -1995,15 +1995,15 @@ public class ChartController {
 				rangeAxis.setAutoRangeIncludesZero(true);
 				// rangeAxis.setVerticalTickLabels(true);
 				// rangeAxis.setAutoTickUnitSelection(rootPaneCheckingEnabled);
-				rangeAxis.setNumberFormatOverride(new DecimalFormat() {
-					@Override
-					public StringBuffer format(double number,
-							StringBuffer toAppendTo, FieldPosition pos) {
-
-						return new StringBuffer(String.format("%.1f",
-								number / 1000000));
-					}
-				});
+//				rangeAxis.setNumberFormatOverride(new DecimalFormat() {
+//					@Override
+//					public StringBuffer format(double number,
+//							StringBuffer toAppendTo, FieldPosition pos) {
+//
+//						return new StringBuffer(String.format("%.1f",
+//								number / 1000000));
+//					}
+//				});
 
 				// CUSTOMIZE THE RENDERER
 				final LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot
@@ -2600,9 +2600,9 @@ public class ChartController {
 							year = expense.getYear();
 
 							dataset.addValue(expense.gettotalExpense(),
-									"Budget", newDate);
+									"Budget", newDate + " " + year);
 							dataset.addValue(expense.gettotalIncome(),
-									"Actual", newDate);
+									"Actual", newDate + " " + year);
 
 						}
 					}

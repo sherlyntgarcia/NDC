@@ -252,7 +252,7 @@
 							<label>Total Budget</label>
 							<div>
 								<spring:input readonly="true" path="totalExpense" class="span6"
-									constraint="number" placeholder="(e.g. 175000)" />
+									constraint="number" />
 							</div>
 						</div>
 						<!-- Column Separator -->
@@ -415,7 +415,7 @@
 							<label>Total Actual</label>
 							<div>
 								<spring:input readonly="true" path="totalIncome" class="span6"
-									constraint="number" placeholder="(e.g. 500000)" />
+									constraint="number" />
 							</div>
 						</div>
 

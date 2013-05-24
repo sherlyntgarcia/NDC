@@ -483,7 +483,7 @@
 				$("#viewExpenses").click(function() {
 					
 					var id = $("select[name=months]").val();
-					var title = $("select[name=months] option[value=" + id + "]").attr("title");
+//					var title = $("select[name=months] option[value=" + id + "]").attr("title");
 					
 					var html = "<div id='myCarousel' class='carousel slide'>";
 					html += "<div class='carousel-inner'>";
@@ -755,7 +755,7 @@
 				$("form input[type=text],input[type=password]").attr("required", "required");
 				
 				//make some fields numeric only
-				$('input[constraint=number]').keypress(validateNumber);
+				//$('input[constraint=number]').keypress(validateNumber);
 				
 // 				//dynamically add input when mmoe expenses is clicked,
 // 				$("input[id=mooeExpenses]").click(function() {

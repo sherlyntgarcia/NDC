@@ -31,7 +31,6 @@ public class SpgBalanceSheet implements java.io.Serializable {
 	private Double totalLiabilities;
 	
 	@NotNull(message="Debt to Assets is required")
-	@Range(max=100, message="Debt to Assets can only have a maximum value of 100")
 	private Double debtToAssets;
 	
 	private Integer year;
