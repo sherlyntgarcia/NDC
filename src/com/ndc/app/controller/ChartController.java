@@ -125,10 +125,9 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
-			
 			List<BalanceSheet> balanceSheets = chartService.generateBalanceSheet();
 
-			if (balanceSheets != null && balanceSheets.size() > 0) {
+//			if (balanceSheets != null && balanceSheets.size() > 0) {
 				
 				for(BalanceSheet bs : balanceSheets) {
 					categoryDataset.setValue(
@@ -191,7 +190,7 @@ public class ChartController {
 					ChartUtilities.writeChartAsPNG(out, chart, width, height,
 							info);
 				}
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -213,47 +212,9 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset defaultcategorydataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(IncomeStatement.class);
-//
-//			IncomeStatement incomeStatementLatestYear = chartService
-//					.getIncomeStatementByYear(latestYear - 2);
-//			IncomeStatement incomeStatementLatestYear2 = chartService
-//					.getIncomeStatementByYear(latestYear - 1);
-//			IncomeStatement incomeStatementLatestYear3 = chartService
-//					.getIncomeStatementByYear(latestYear);
-//
-//			if (incomeStatementLatestYear != null) {
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear.getOperatingIncome(),
-//						"Income", incomeStatementLatestYear.getYear());
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear.getDividend(), "Dividend",
-//						incomeStatementLatestYear.getYear());
-//			}
-//
-//			if (incomeStatementLatestYear2 != null) {
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear2.getOperatingIncome(),
-//						"Income", incomeStatementLatestYear2.getYear());
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear2.getDividend(), "Dividend",
-//						incomeStatementLatestYear2.getYear());
-//			}
-//
-//			if (incomeStatementLatestYear3 != null) {
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear3.getOperatingIncome(),
-//						"Income", incomeStatementLatestYear3.getYear());
-//				defaultcategorydataset.addValue(
-//						incomeStatementLatestYear3.getDividend(), "Dividend",
-//						incomeStatementLatestYear3.getYear());
-//			}
-			
 			List<IncomeStatement> incomeStatements = chartService.generateIncomeStatement();
 
-			if (incomeStatements != null && incomeStatements.size() > 0) {
+//			if (incomeStatements != null && incomeStatements.size() > 0) {
 				
 				for(IncomeStatement is : incomeStatements) {
 					defaultcategorydataset.addValue(
@@ -327,7 +288,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -352,10 +313,9 @@ public class ChartController {
 			
 			List<BondMaturity> bondMaturities = chartService.generateBondMaturity();
 
-			if (bondMaturities != null && bondMaturities.size() > 0) {
+//			if (bondMaturities != null && bondMaturities.size() > 0) {
 				
 				Date currDate = null;
-				
 				for(BondMaturity bm : bondMaturities) {
 					categoryDataset.setValue(
 						bm.getBondPayment(),
@@ -404,7 +364,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -430,7 +390,7 @@ public class ChartController {
 			
 			List<BondMaturity> bondMaturities = chartService.generateBondMaturity();
 
-			if (bondMaturities != null && bondMaturities.size() > 0) {
+//			if (bondMaturities != null && bondMaturities.size() > 0) {
 				
 				for(BondMaturity bm : bondMaturities) {
 //					categoryDataset.setValue(
@@ -479,7 +439,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -504,7 +464,7 @@ public class ChartController {
 			DefaultCategoryDataset defaultcategorydataset = new DefaultCategoryDataset();
 			List<BondsIssued> bondsIssuedList = chartService.generateBondsIssued();
 
-			if (bondsIssuedList != null && bondsIssuedList.size() > 0) {
+//			if (bondsIssuedList != null && bondsIssuedList.size() > 0) {
 				
 				Date currDate = null;
 				
@@ -563,7 +523,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -600,7 +560,7 @@ public class ChartController {
 			EconomicImpact economicImpact = chartService
 					.getLatestEconomicImpact();
 
-			if (economicImpact != null) {
+//			if (economicImpact != null) {
 				
 				Date currDate = economicImpact.getDateUpdated();
 				categoryDataset.setValue(economicImpact.getRehabilitated(),
@@ -654,7 +614,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -679,7 +639,7 @@ public class ChartController {
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 			List<PrincipalCouponPayments> couponPayments = chartService.generatePrincipalCouponPayments();
 
-			if (couponPayments != null && couponPayments.size() > 0) {
+//			if (couponPayments != null && couponPayments.size() > 0) {
 				
 				Date currDate = null;
 				
@@ -755,7 +715,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -783,7 +743,7 @@ public class ChartController {
 			NiaLoanCollection niaLoanCollection = chartService
 					.getLatestNiaLoanCollection();
 
-			if (niaLoanCollection != null) {
+//			if (niaLoanCollection != null) {
 				
 				Date currDate = niaLoanCollection.getDateUpdated();
 
@@ -880,7 +840,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -993,59 +953,8 @@ public class ChartController {
 					sharesList.add(sh.getShares());
 				}
 				
-				json.put("shareholdersList", shareholdersList);
-				json.put("sharesList", sharesList);
-				
-//				if(shareholders.size() != 0) {
-//					
-//					DefaultPieDataset dataset = new DefaultPieDataset();
-//					
-//					for (Shareholders sh : shareholders) {
-//						if (sh != null) {
-//							dataset.setValue(sh.getShareholders(), sh.getShares());
-//						}
-//					}
-//	
-//					JFreeChart chart = ChartFactory.createPieChart("Shareholders",
-//							dataset, true, true, true);
-//	
-//					chart.setBorderVisible(false);
-//	
-//					PiePlot piePlot = (PiePlot) chart.getPlot();
-//					StandardPieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(
-//							"{0} - {2}");
-//					labelGenerator.getPercentFormat().setMaximumFractionDigits(1);
-//					piePlot.setLabelGenerator(labelGenerator);
-//					// piePlot.setLegendLabelGenerator(labelGenerator);
-//	
-//					piePlot.setNoDataMessage("No data to display");
-//	
-//					LegendTitle legendTitle = chart.getLegend();
-//					legendTitle.setPosition(RectangleEdge.RIGHT);
-//	
-//					PiePlot plot3 = (PiePlot) chart.getPlot();
-//					// plot3.setForegroundAlpha(0.6f);
-//					// plot3.setCircular(true);
-//					plot3.setMaximumLabelWidth(0.17);
-//					plot3.setLabelLinkStyle(PieLabelLinkStyle.CUBIC_CURVE);
-//					// plot3.setLabelGap(20);
-//					plot3.setShadowXOffset(0);
-//					plot3.setShadowYOffset(0);
-//	
-//					// legend = chart.getLegend();
-//					// legend.setVisible(false);
-//					plot3.setBackgroundPaint(Color.WHITE);
-//					plot3.setOutlineVisible(false);
-//	
-//					if (chart != null) {
-//						final ChartRenderingInfo info = new ChartRenderingInfo(
-//								new StandardEntityCollection());
-//						response.setContentType("image/png");
-//						OutputStream out = response.getOutputStream();
-//	
-//						ChartUtilities.writeChartAsPNG(out, chart, width, height,
-//								info);
-//					}	
+					json.put("shareholdersList", shareholdersList);
+					json.put("sharesList", sharesList);
 					
 				}
 
@@ -1102,7 +1011,7 @@ public class ChartController {
 			DefaultCategoryDataset result = new DefaultCategoryDataset();	
 			List<NetLending> netLendings = chartService.generateNetLending();
 
-			if (netLendings != null && netLendings.size() > 0) {
+//			if (netLendings != null && netLendings.size() > 0) {
 				
 				Date currDate = null;
 				
@@ -1212,7 +1121,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1286,7 +1195,7 @@ public class ChartController {
 			DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 			List<MaintenanceCost> maintenanceCosts = chartService.generateMaintenanceCost();
 
-			if (maintenanceCosts != null && maintenanceCosts.size() > 0) {
+//			if (maintenanceCosts != null && maintenanceCosts.size() > 0) {
 				
 				for(MaintenanceCost mc : maintenanceCosts) {
 					double partialTotal = mc.getDuesFees() + mc.getRpt() + mc.getSecurity();
@@ -1374,7 +1283,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1396,62 +1305,9 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(SourcesFunds.class);
-//
-//			SourcesFunds sourcesFundsLatestYear = chartService
-//					.getSourcesFundsByYear(latestYear - 2);
-//			SourcesFunds sourcesFundsLatestYear2 = chartService
-//					.getSourcesFundsByYear(latestYear - 1);
-//			SourcesFunds sourcesFundsLatestYear3 = chartService
-//					.getSourcesFundsByYear(latestYear);
-//
-//			if (sourcesFundsLatestYear != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear.getProjectedSourcesOfFunds(),
-//						"Projected Sources of Funds",
-//						sourcesFundsLatestYear.getYear());
-//			}
-//
-//			if (sourcesFundsLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear2.getProjectedSourcesOfFunds(),
-//						"Projected Sources of Funds",
-//						sourcesFundsLatestYear2.getYear());
-//			}
-//
-//			if (sourcesFundsLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear3.getProjectedSourcesOfFunds(),
-//						"Projected Sources of Funds",
-//						sourcesFundsLatestYear3.getYear());
-//			}
-//
-//			if (sourcesFundsLatestYear != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear.getProjectedUsesOfFunds(),
-//						"Projected Uses of Funds",
-//						sourcesFundsLatestYear.getYear());
-//			}
-//
-//			if (sourcesFundsLatestYear2 != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear2.getProjectedUsesOfFunds(),
-//						"Projected Uses of Funds",
-//						sourcesFundsLatestYear2.getYear());
-//			}
-//
-//			if (sourcesFundsLatestYear3 != null) {
-//				categoryDataset.setValue(
-//						sourcesFundsLatestYear3.getProjectedUsesOfFunds(),
-//						"Projected Uses of Funds",
-//						sourcesFundsLatestYear3.getYear());
-//			}
-			
 			List<SourcesFunds> sourcesFunds = chartService.generateSourcesFunds();
 
-			if (sourcesFunds != null && sourcesFunds.size() > 0) {
+//			if (sourcesFunds != null && sourcesFunds.size() > 0) {
 				
 				for(SourcesFunds sf : sourcesFunds) {
 					categoryDataset.setValue(
@@ -1522,7 +1378,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1550,7 +1406,7 @@ public class ChartController {
 			//StatusAssets statusAssets = chartService.getLatestStatusAssets();	
 			List<StatusAssets> assets = chartService.generateStatusAssets();
 
-			if (assets != null && assets.size() > 0) {
+//			if (assets != null && assets.size() > 0) {
 				
 				for(StatusAssets asset : assets) {
 					categoryDataset.setValue(asset.getUnderLease(),
@@ -1626,7 +1482,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1648,12 +1504,14 @@ public class ChartController {
 			HttpServletResponse response) {
 
 		try {
+			
+			JFreeChart chart = null;
 
 			// dataset for line graph
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement(id);
 
-			if(incomeStatements != null && incomeStatements.size() > 0) {
+//			if(incomeStatements != null && incomeStatements.size() > 0) {
 				
 				SpgSubCategory category = spgService.getSubCategoryById(id);
 				String currency = category.getCurrency();
@@ -1665,7 +1523,7 @@ public class ChartController {
 							"Revenue", incomeStatement.getYear());
 				}
 				
-				JFreeChart chart = ChartFactory.createBarChart(
+				chart = ChartFactory.createBarChart(
 						"Income Statement", // Title
 						"", // X-Axis label
 						currency,// Y-Axis label
@@ -1705,15 +1563,17 @@ public class ChartController {
 //					}
 //				});
 
-				if (chart != null) {
-					final ChartRenderingInfo info = new ChartRenderingInfo(
-							new StandardEntityCollection());
-					response.setContentType("image/png");
-					OutputStream out = response.getOutputStream();
+				
+//			}
+			
+			if (chart != null) {
+				final ChartRenderingInfo info = new ChartRenderingInfo(
+						new StandardEntityCollection());
+				response.setContentType("image/png");
+				OutputStream out = response.getOutputStream();
 
-					ChartUtilities.writeChartAsPNG(out, chart, width, height,
-							info);
-				}
+				ChartUtilities.writeChartAsPNG(out, chart, width, height,
+						info);
 			}
 
 		} catch (Exception e) {
@@ -1742,7 +1602,7 @@ public class ChartController {
 			final DefaultCategoryDataset dataset2 = new DefaultCategoryDataset();
 			List<SpgBalanceSheet> balanceSheets = chartService.generateSpgBalanceSheet(id);
 
-			if(balanceSheets != null && balanceSheets.size() > 0) {
+//			if(balanceSheets != null && balanceSheets.size() > 0) {
 				
 				SpgSubCategory category = spgService.getSubCategoryById(id);
 				String currency = category.getCurrency();
@@ -1840,7 +1700,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -1863,80 +1723,9 @@ public class ChartController {
 		try {
 
 			DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
-//			Integer latestYear = chartService
-//					.getLatestYearOfData(SpgCashFlow.class);
-//
-//			SpgCashFlow spgCashFlowLatestYear = chartService
-//					.getSpgCashFlowByYear(latestYear - 2, id);
-//			SpgCashFlow spgCashFlowLatestYear2 = chartService
-//					.getSpgCashFlowByYear(latestYear - 1, id);
-//			SpgCashFlow spgCashFlowLatestYear3 = chartService
-//					.getSpgCashFlowByYear(latestYear, id);
-//
-//			if (spgCashFlowLatestYear != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear.getOperatingActivities(),
-//						"Operating Activities", spgCashFlowLatestYear.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear2 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear2.getOperatingActivities(),
-//						"Operating Activities",
-//						spgCashFlowLatestYear2.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear3 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear3.getOperatingActivities(),
-//						"Operating Activities",
-//						spgCashFlowLatestYear3.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear.getInvestingActivities(),
-//						"Investing Activities", spgCashFlowLatestYear.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear2 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear2.getInvestingActivities(),
-//						"Investing Activities",
-//						spgCashFlowLatestYear2.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear3 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear3.getInvestingActivities(),
-//						"Investing Activities",
-//						spgCashFlowLatestYear3.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear.getFinancingActivities(),
-//						"Financing Activities", spgCashFlowLatestYear.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear2 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear2.getFinancingActivities(),
-//						"Financing Activities",
-//						spgCashFlowLatestYear2.getYear());
-//			}
-//
-//			if (spgCashFlowLatestYear3 != null) {
-//				dataset.addValue(
-//						spgCashFlowLatestYear3.getFinancingActivities(),
-//						"Financing Activities",
-//						spgCashFlowLatestYear3.getYear());
-//			}
-			
 			List<SpgCashFlow> cashFlows = chartService.generateSpgCashFlow(id);
 
-			if(cashFlows != null && cashFlows.size() > 0) {
+//			if(cashFlows != null && cashFlows.size() > 0) {
 				
 				SpgSubCategory category = spgService.getSubCategoryById(id);
 				String currency = category.getCurrency();
@@ -2032,7 +1821,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2061,7 +1850,7 @@ public class ChartController {
 			
 			Date currDate = null;
 
-			if (projectedActualIncome != null && projectedActualIncome2 != null) {
+//			if (projectedActualIncome != null && projectedActualIncome2 != null) {
 
 				Double newData = (projectedActualIncome.getactualIncome().doubleValue() / (projectedActualIncome2
 						.getProjectedIncome().doubleValue()) * 100);
@@ -2142,7 +1931,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2169,7 +1958,7 @@ public class ChartController {
 			ActualIncomeExpense expense = chartService
 					.getActualIncomeExpenseById(id);
 
-			if (expense != null) {
+//			if (expense != null) {
 				categoryDataset.setValue(expense.getActualAdvertising(),
 						"Actual", "Advertising");
 				categoryDataset.setValue(expense.getActualAthletics(),
@@ -2202,6 +1991,7 @@ public class ChartController {
 						true, false);
 
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				CategoryAxis domainAxis = plot.getDomainAxis();
 				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
 						12));
@@ -2225,7 +2015,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2253,7 +2043,7 @@ public class ChartController {
 			ActualIncomeExpense expense = chartService
 					.getActualIncomeExpenseById(id);
 
-			if (expense != null) {
+//			if (expense != null) {
 				categoryDataset.setValue(expense.getActualCommunicationService(),
 						"Actual", "Communication Service");
 				categoryDataset.setValue(expense.getActualConsultancy(),
@@ -2286,6 +2076,7 @@ public class ChartController {
 						true, false);
 
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				CategoryAxis domainAxis = plot.getDomainAxis();
 				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
 						12));
@@ -2309,7 +2100,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2337,7 +2128,7 @@ public class ChartController {
 			ActualIncomeExpense expense = chartService
 					.getActualIncomeExpenseById(id);
 
-			if (expense != null) {
+//			if (expense != null) {
 				categoryDataset.setValue(expense.getActualLightWater(),
 						"Actual", "Light & Water");
 				categoryDataset.setValue(expense.getActualMeetings(),
@@ -2369,6 +2160,7 @@ public class ChartController {
 						true, false);
 
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				CategoryAxis domainAxis = plot.getDomainAxis();
 				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
 						12));
@@ -2392,7 +2184,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2420,7 +2212,7 @@ public class ChartController {
 			ActualIncomeExpense expense = chartService
 					.getActualIncomeExpenseById(id);
 
-			if (expense != null) {
+//			if (expense != null) {
 				categoryDataset.setValue(expense.getActualOtherMisc(),
 						"Actual", "Other Misc");
 				categoryDataset.setValue(expense.getActualRentals(),
@@ -2452,6 +2244,7 @@ public class ChartController {
 						true, false);
 
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				CategoryAxis domainAxis = plot.getDomainAxis();
 				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
 						12));
@@ -2475,7 +2268,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2503,7 +2296,7 @@ public class ChartController {
 			ActualIncomeExpense expense = chartService
 					.getActualIncomeExpenseById(id);
 
-			if (expense != null) {
+//			if (expense != null) {
 				categoryDataset.setValue(expense.getActualSubscription(),
 						"Actual", "Subscription");
 				categoryDataset.setValue(expense.getActualSuppliesMaterials(),
@@ -2535,6 +2328,7 @@ public class ChartController {
 						true, false);
 
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				CategoryAxis domainAxis = plot.getDomainAxis();
 				domainAxis.setTickLabelFont(new Font("sansSerif", Font.PLAIN,
 						12));
@@ -2558,7 +2352,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2587,7 +2381,7 @@ public class ChartController {
 			// Double dividendData = (projectedActualIncome.getactualDividend()
 			// / projectedActualIncome.getprojectedDividend()) * 100;
 
-			if (actualIncomeExpense != null) {
+//			if (actualIncomeExpense != null) {
 				
 				String newDate = null;
 				int year = 0;
@@ -2733,7 +2527,7 @@ public class ChartController {
 
 					}
 				}
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2760,7 +2554,7 @@ public class ChartController {
 			ProjectedActualIncome2 projectedActualIncome2 = chartService
 					.getLatestProjectedActualIncome2();
 
-			if (projectedActualIncome != null && projectedActualIncome2 != null) {
+//			if (projectedActualIncome != null && projectedActualIncome2 != null) {
 
 				Double dividendData = (projectedActualIncome
 						.getactualDividend().doubleValue() / (projectedActualIncome2
@@ -2857,7 +2651,7 @@ public class ChartController {
 							info);
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2882,9 +2676,9 @@ public class ChartController {
 			List<CollectionEfficiency> collectionEfficiency = chartService
 					.getCollectionEfficiency();
 
-			if (collectionEfficiency != null) {
-
-				if (collectionEfficiency.size() != 0) {
+//			if (collectionEfficiency != null) {
+//
+//				if (collectionEfficiency.size() != 0) {
 
 					DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 
@@ -2966,9 +2760,9 @@ public class ChartController {
 								height, info);
 					}
 
-				}
-
-			}
+//				}
+//
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2998,35 +2792,35 @@ public class ChartController {
 
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 			
-			if(buPersonalServices != null) {
+//			if(buPersonalServices != null) {
 				categoryDataset.setValue(buPersonalServices.getActualPersonalServices(),
 						"Actual", "Personal Services");
-			}
+//			}
 			
-			if(buMooe != null) {
+//			if(buMooe != null) {
 				categoryDataset.setValue(buMooe.getActualMooe(),
 						"Actual", "MOOE");
-			}
+//			}
 			
-			if(buCapitalExpenditures != null) {
+//			if(buCapitalExpenditures != null) {
 				categoryDataset.setValue(buCapitalExpenditures.getActualCapitalExpenditures(),
 						"Actual", "Capital Expenditures");
-			}
+//			}
 			
-			if(buPersonalServices != null) {
+//			if(buPersonalServices != null) {
 				categoryDataset.setValue(buPersonalServices.getBudgetPersonalServices() - buPersonalServices.getActualPersonalServices(),
 								"Unutilized", "Personal Services");
-			}
+//			}
 			
-			if(buMooe != null) {
+//			if(buMooe != null) {
 				categoryDataset.setValue(buMooe.getBudgetMooe() - buMooe.getActualMooe(), 
 						"Unutilized", "MOOE");
-			}
+//			}
 			
-			if(buCapitalExpenditures != null) {
+//			if(buCapitalExpenditures != null) {
 				categoryDataset.setValue(buCapitalExpenditures.getBudgetCapitalExpenditures() - buCapitalExpenditures.getActualCapitalExpenditures(),
 						"Unutilized", "Capital Expenditures");
-			}
+//			}
 			
 			int m1 = buCapitalExpenditures.getMonth();
 			int m2 = buMooe.getMonth();
@@ -3063,6 +2857,7 @@ public class ChartController {
 						true, false);
 	
 				CategoryPlot plot = chart.getCategoryPlot();
+				plot.setNoDataMessage("No data to display");
 				plot.setBackgroundPaint(Color.WHITE);
 				plot.setRangeGridlinePaint(Color.BLACK);
 				plot.setRangeGridlineStroke(new BasicStroke(0.5f,
@@ -3126,14 +2921,14 @@ public class ChartController {
 
 			final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
-			if (pdstfrates != null) {
+//			if (pdstfrates != null) {
 				
 				Date currDate = null;
 
-				if (pdstfrates.size() != 0) {
+//				if (pdstfrates.size() != 0) {
 
 					for (PdstFRates newAvg : pdstfrates) {
-						if (newAvg != null) {
+//						if (newAvg != null) {
 							String newDate = AppHelper.convertIntegerToMonth(newAvg.getMonth());
 
 							dataset.addValue(newAvg.getYear25Avg(), "25 Years",
@@ -3162,8 +2957,8 @@ public class ChartController {
 									newDate);
 							
 							currDate = newAvg.getDateUpdated();
-						}
-					}
+//						}
+//					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
 							"2012 PDST-F Rates\n" + AppHelper.convertDateToString(currDate), // chart title
@@ -3237,7 +3032,7 @@ public class ChartController {
 
 				}
 
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -3322,6 +3117,7 @@ public class ChartController {
 			chart.setBackgroundPaint(Color.white);
 
 	        final CategoryPlot plot = (CategoryPlot) chart.getPlot();
+	        plot.setNoDataMessage("No data to display");
 	        plot.setBackgroundPaint(Color.white);
 	        plot.setRangeGridlinePaint(Color.black);
 
