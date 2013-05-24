@@ -19,7 +19,7 @@ public class MaintenanceCost implements java.io.Serializable {
 
 	private Long id;
 	
-	@NotNull(message="Market Value is required")
+	@NotNull(message="Revenue on Properties is required")
 	private Double marketValue;
 	
 	@NotNull(message="Rpt is required")

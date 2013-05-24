@@ -1199,7 +1199,7 @@ public class ChartController {
 				
 				for(MaintenanceCost mc : maintenanceCosts) {
 					double partialTotal = mc.getDuesFees() + mc.getRpt() + mc.getSecurity();
-					dataset.addValue(mc.getMarketValue(), "Market Value", mc.getYear());
+					dataset.addValue(mc.getMarketValue(), "Revenue on Properties", mc.getYear());
 					dataset.addValue(partialTotal, "Maintenance Cost", mc.getYear());
 					System.out.println("Partial total for year " + mc.getYear() + ": " + partialTotal);
 				}
@@ -1216,11 +1216,12 @@ public class ChartController {
 						);
 
 				LegendTitle legend = chart.getLegend();
-				legend.setPosition(RectangleEdge.RIGHT);
+				legend.setPosition(RectangleEdge.BOTTOM);
 
 				// set chart background
 				chart.setBackgroundPaint(Color.white);
-
+				chart.setTitle(new org.jfree.chart.title.TextTitle("Maintenance Cost", new java.awt.Font("Arial", java.awt.Font.BOLD, 25)));
+						  
 				// set plot specifications
 				final CategoryPlot plot = chart.getCategoryPlot();
 				plot.setBackgroundPaint(Color.WHITE);
@@ -1238,7 +1239,7 @@ public class ChartController {
 				// customize domain label position
 				domainAxis.setCategoryLabelPositions(CategoryLabelPositions
 						.createUpRotationLabelPositions(Math.PI / 6.0));
-
+				
 				// CUSTOMIZE RANGE AXIS
 				final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
 				rangeAxis.setStandardTickUnits(NumberAxis
@@ -1429,15 +1430,17 @@ public class ChartController {
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
-						"Status of Assets\nas of " + AppHelper.convertDateToString(new Date()), // Title
+						"", // Title
 						"", // X-Axis label
 						"no. of properties",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
+				
+				chart.setTitle(new org.jfree.chart.title.TextTitle("Status of Assets\nas of " + AppHelper.convertDateToString(new Date()), new java.awt.Font("Arial", java.awt.Font.BOLD, 25)));
 
 				LegendTitle legend = chart.getLegend();
-				legend.setPosition(RectangleEdge.RIGHT);
+				legend.setPosition(RectangleEdge.BOTTOM);
 
 				CategoryPlot plot = chart.getCategoryPlot();
 				plot.setBackgroundPaint(Color.WHITE);

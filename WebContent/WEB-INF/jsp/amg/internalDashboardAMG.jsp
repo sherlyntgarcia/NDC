@@ -37,6 +37,7 @@
 						<ul class="nav nav-tabs">
 						  <li class="active"><a href="#amgTab1" data-toggle="tab"> Philippine Map </a></li>
 						  <li><a href="#amgTab2" data-toggle="tab"> Dashboard </a></li>
+						  <li><a href="#amgTab3" data-toggle="tab"> Guidelines/Policies of Disposal/Lease </a></li>
 						</ul>
 					</div>
 				</div>
@@ -101,26 +102,27 @@
 						<hr />
 				
 						<div class="row-fluid">
-							<div class="span6">
+							<div class="span12">
 								<div id="occupancyPieChartDiv"></div>
 						
 								<script>
 									$(document).ready(function() {
 										var url = "${pageContext.request.contextPath}/visualization/occupancypiechart";
 										
-										createOccupancyPieChart(url, 550, 400);
+										createOccupancyPieChart(url, 850, 400);
 									});
 								</script>
 							</div>
 							
-							<div class="span6">
-								<img alt="Maintenance Cost is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/maintenanceCost'" src="${pageContext.request.contextPath}/visualization/maintenancecostlinechart/450/400" />
-							</div>
+							
 						</div>
 				
 						<div class="row-fluid">
+<!-- 							<div class="span6"> -->
+<%-- 								<img alt="Sources Funds is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/sourcesFunds'" src="${pageContext.request.contextPath}/visualization/sourcesfundsbarchart/450/400" /> --%>
+<!-- 							</div> -->
 							<div class="span6">
-								<img alt="Sources Funds is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/sourcesFunds'" src="${pageContext.request.contextPath}/visualization/sourcesfundsbarchart/450/400" />
+								<img alt="Maintenance Cost is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/AMG/maintenanceCost'" src="${pageContext.request.contextPath}/visualization/maintenancecostlinechart/450/400" />
 							</div>
 							
 							<div class="span6">
@@ -128,6 +130,10 @@
 							</div>
 						</div>
 					
+					</div>
+					
+					<div class="tab-pane" id="amgTab3">
+						None
 					</div>
 					
 				</div>

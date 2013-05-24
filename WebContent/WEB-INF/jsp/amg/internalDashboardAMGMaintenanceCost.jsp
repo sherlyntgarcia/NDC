@@ -73,7 +73,7 @@
 								<spring:input path="year" class="span3" readonly="true" />
 							</div>
 							
-							<label>Market Value</label>
+							<label>Revenue on Properties</label>
 							<div>
 								<spring:input path="marketValue" class="span3" constraint="number" placeholder="(e.g. 200000)" />
 							</div>

@@ -25,7 +25,7 @@ function createOccupancyPieChart(url, width, height) {
 					height: height
 				},
 				title: {
-					text: '<b>NDC & I&I Bldg. Occupancy Rate</b>'
+					text: '<p style="font-weight:bold;font-size:23px;font-family:Arial">NDC & I&I Bldg. Occupancy Rate</p>'
 				},
 				tooltip: {
 					formatter: function() {
