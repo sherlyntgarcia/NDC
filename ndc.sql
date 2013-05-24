@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 23, 2013 at 05:08 AM
+-- Generation Time: May 24, 2013 at 08:34 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_actual_income_expense` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `ndc_tbl_actual_income_expense`
@@ -366,14 +366,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_logs` (
   `access_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `ndc_tbl_logs`
---
-
-INSERT INTO `ndc_tbl_logs` (`id`, `logged_by`, `access_time`, `description`) VALUES
-(1, 'vel', '2013-05-22 09:08:11', 'ADDED NEW SHAREHOLDER');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -554,7 +547,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_notifications` (
   `triggered_by` varchar(255) NOT NULL,
   `visible` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=305 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=381 ;
 
 --
 -- Dumping data for table `ndc_tbl_notifications`
@@ -864,7 +857,83 @@ INSERT INTO `ndc_tbl_notifications` (`id`, `user_id`, `message`, `ndc_group`, `d
 (301, 3, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
 (302, 4, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
 (303, 5, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
-(304, 6, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1);
+(304, 6, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
+(305, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
+(306, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
+(307, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
+(308, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:20', 'jonathan', 1),
+(309, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
+(310, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
+(311, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
+(312, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
+(313, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
+(314, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
+(315, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
+(316, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
+(317, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
+(318, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
+(319, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
+(320, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
+(321, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:07', 'jonathan', 1),
+(322, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
+(323, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
+(324, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
+(325, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
+(326, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
+(327, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
+(328, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
+(329, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
+(330, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
+(331, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
+(332, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
+(333, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
+(334, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
+(335, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
+(336, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
+(337, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
+(338, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
+(339, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
+(340, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
+(341, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
+(342, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
+(343, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
+(344, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
+(345, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
+(346, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
+(347, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
+(348, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
+(349, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
+(350, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
+(351, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
+(352, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
+(353, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
+(354, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
+(355, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
+(356, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
+(357, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
+(358, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
+(359, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
+(360, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
+(361, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
+(362, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
+(363, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
+(364, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
+(365, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
+(366, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
+(367, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
+(368, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
+(369, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
+(370, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
+(371, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
+(372, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
+(373, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
+(374, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
+(375, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
+(376, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
+(377, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:07', 'lay', 1),
+(378, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:07', 'lay', 1),
+(379, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:08', 'lay', 1),
+(380, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:08', 'lay', 1);
 
 -- --------------------------------------------------------
 
@@ -1205,17 +1274,7 @@ INSERT INTO `ndc_tbl_shareholders` (`id`, `shareholders`, `shares`, `project_id`
 (47, 'GE Lighting Phils., Inc.', 90064, 10, '2013-04-15 02:35:34', 'jonathan'),
 (48, 'Others', 63, 10, '2013-04-15 02:35:34', 'jonathan'),
 (49, 'National Development Company', 79995, 15, '2013-04-15 02:35:34', 'jonathan'),
-(50, 'Ma. Lourdes F. Rebueno', 1, 15, '2013-04-15 02:35:34', 'jonathan'),
-(51, 'Saturnino H. Mejia', 1, 15, '2013-04-15 02:35:34', 'jonathan'),
-(52, 'Lilia L. Arce', 1, 15, '2013-04-15 02:35:34', 'jonathan'),
-(53, 'Rhoel Z. Mabazza', 1, 15, '2013-04-15 02:35:34', 'jonathan'),
-(54, 'Josephine A. Batiller', 1, 15, '2013-04-15 02:35:34', 'jonathan'),
 (55, 'National Development Company', 9995, 17, '2013-04-15 02:35:34', 'jonathan'),
-(56, 'Lilia L. Arce', 1, 17, '2013-04-15 02:35:34', 'jonathan'),
-(57, 'Saturnino H. Mejia', 1, 17, '2013-04-15 02:35:34', 'jonathan'),
-(58, 'Ma. Lourdes F. Rebueno', 1, 17, '2013-04-15 02:35:34', 'jonathan'),
-(59, 'Rhoel Z. Mabazza', 1, 17, '2013-04-15 02:35:34', 'jonathan'),
-(60, 'Ma. Christina D. De Castro', 1, 17, '2013-04-15 02:35:34', 'jonathan'),
 (61, 'National Development Company', 2117500, 7, '2013-05-20 01:48:07', 'jonathan'),
 (62, 'Bronzeoak Philippines, Inc.', 806988, 7, '2013-05-20 01:48:26', 'jonathan'),
 (63, 'Bronzeoak Clean Energy, Inc.', 6852723, 7, '2013-05-20 01:48:47', 'jonathan'),
@@ -1296,7 +1355,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_spg_balance_sheet` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `ndc_tbl_spg_balance_sheet`
@@ -1335,7 +1394,12 @@ INSERT INTO `ndc_tbl_spg_balance_sheet` (`id`, `project_id`, `total_assets`, `to
 (30, 16, 69630907, 62477934, 89.7, 'jonathan', '2013-04-15 02:36:47', 2011),
 (31, 15, 60811883, 2494806, 4.1, 'jonathan', '2013-04-15 02:36:47', 2009),
 (32, 15, 59191772, 2342806, 3.96, 'jonathan', '2013-04-15 02:36:47', 2010),
-(33, 15, 59357960, 2302806, 3.9, 'jonathan', '2013-04-15 02:36:47', 2011);
+(33, 15, 59357960, 2302806, 3.9, 'jonathan', '2013-04-15 02:36:47', 2011),
+(34, 5, 337131016.5, 193448860, 57.38, 'jonathan', '2013-05-24 02:44:36', 2011),
+(35, 5, 381782591.5, 172520448.94, 45.19, 'jonathan', '2013-05-24 02:45:45', 2010),
+(36, 5, 318780441, 184717933, 57.95, 'jonathan', '2013-05-24 02:46:33', 2009),
+(37, 7, 2986608628, 3423944586, 114.64, 'jonathan', '2013-05-24 02:58:21', 2011),
+(38, 7, 2996114772, 3147179497, 105.04, 'jonathan', '2013-05-24 02:59:19', 2010);
 
 -- --------------------------------------------------------
 
@@ -1353,7 +1417,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_spg_cash_flow` (
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `ndc_tbl_spg_cash_flow`
@@ -1392,7 +1456,12 @@ INSERT INTO `ndc_tbl_spg_cash_flow` (`id`, `project_id`, `operating_activities`,
 (30, 16, 4076776, -3303181, 0, '2013-04-15 02:37:07', 'jonathan', 2011),
 (31, 15, -907492, 1006725, 0, '2013-04-15 02:37:07', 'jonathan', 2009),
 (32, 15, -836171, 52436879, 0, '2013-04-15 02:37:07', 'jonathan', 2010),
-(33, 15, -54552, 0, 0, '2013-04-15 02:37:07', 'jonathan', 2011);
+(33, 15, -54552, 0, 0, '2013-04-15 02:37:07', 'jonathan', 2011),
+(34, 5, -2104527, -4462761, -20698918, '2013-05-24 02:48:22', 'jonathan', 2011),
+(35, 5, 72057939.62, -2738192.87, -12222438.37, '2013-05-24 02:49:04', 'jonathan', 2010),
+(36, 5, 13430002, -7934611, 10133970, '2013-05-24 02:49:35', 'jonathan', 2009),
+(37, 7, 115881896, -39507415, 3750782, '2013-05-24 03:00:18', 'jonathan', 2011),
+(38, 7, 29462149, -16048349, 92909, '2013-05-24 03:00:46', 'jonathan', 2010);
 
 -- --------------------------------------------------------
 
@@ -1430,51 +1499,54 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_spg_income_statement` (
   `project_id` bigint(20) NOT NULL,
   `revenue` double NOT NULL,
   `net_income` double NOT NULL,
-  `profit_margin` double NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `ndc_tbl_spg_income_statement`
 --
 
-INSERT INTO `ndc_tbl_spg_income_statement` (`id`, `project_id`, `revenue`, `net_income`, `profit_margin`, `date_updated`, `updated_by`, `year`) VALUES
-(1, 1, 700388, 164249, 33.5, '2013-04-15 02:37:27', 'jonathan', 2009),
-(2, 1, 513239, 65957, 18.9, '2013-04-15 02:37:27', 'jonathan', 2010),
-(3, 1, 652663, 205144, 45.7, '2013-04-15 02:37:27', 'jonathan', 2011),
-(4, 6, 11943.7, 1846, 21.7, '2013-04-15 02:37:27', 'jonathan', 2009),
-(5, 6, 22897.8, 3952, 30, '2013-04-15 02:37:27', 'jonathan', 2010),
-(6, 6, 25813.6, 6031.1, 35.3, '2013-04-15 02:37:27', 'jonathan', 2011),
-(7, 8, 110398620, 1993213, 2.6, '2013-04-15 02:37:27', 'jonathan', 2009),
-(8, 8, 135798151, 15892033, 12.1, '2013-04-15 02:37:27', 'jonathan', 2010),
-(9, 8, 127334325, -1329201, -1.3, '2013-04-15 02:37:27', 'jonathan', 2011),
-(10, 9, 902806208, 83334998, 89.6, '2013-04-15 02:37:27', 'jonathan', 2009),
-(11, 9, 677573396, 58717920, 89.9, '2013-04-15 02:37:27', 'jonathan', 2010),
-(12, 9, 1484743648, 429563731, 67, '2013-04-15 02:37:27', 'jonathan', 2011),
-(13, 12, 23982025, 437698, 1.6, '2013-04-15 02:37:27', 'jonathan', 2009),
-(14, 12, 34534428, 23352699, 94.4, '2013-04-15 02:37:27', 'jonathan', 2010),
-(15, 12, 17718418, 9523856, 74.2, '2013-04-15 02:37:27', 'jonathan', 2011),
-(16, 11, 3566627, 2092812, 29.9, '2013-04-15 02:37:27', 'jonathan', 2009),
-(17, 11, 3660681, 1850102, 63.6, '2013-04-15 02:37:27', 'jonathan', 2010),
-(18, 11, 3624800, 1710709, 64, '2013-04-15 02:37:27', 'jonathan', 2011),
-(19, 13, 397532, 62685, 21.4, '2013-04-15 02:37:27', 'jonathan', 2009),
-(20, 13, 397532, 50714, 17.1, '2013-04-15 02:37:27', 'jonathan', 2010),
-(21, 13, 8313858, -720532, -6.8, '2013-04-15 02:37:27', 'jonathan', 2011),
-(22, 10, 695522, 64404, 12.9, '2013-04-15 02:37:27', 'jonathan', 2009),
-(23, 10, 695522, 53625, 10.6, '2013-04-15 02:37:27', 'jonathan', 2010),
-(24, 10, 13748946, 9535407, 98.1, '2013-04-15 02:37:27', 'jonathan', 2011),
-(25, 17, 649931, -100413, -15.4, '2013-04-15 02:37:27', 'jonathan', 2009),
-(26, 17, 597047, -2778511, -464.1, '2013-04-15 02:37:27', 'jonathan', 2010),
-(27, 17, 527455, -1912332, -361.2, '2013-04-15 02:37:27', 'jonathan', 2011),
-(28, 16, 0, 0, 0, '2013-04-15 02:37:27', 'jonathan', 2009),
-(29, 16, 127171115, 8738775, 28.7, '2013-04-15 02:37:27', 'jonathan', 2010),
-(30, 16, 126711894, 4338094, 29.3, '2013-04-15 02:37:27', 'jonathan', 2011),
-(31, 15, 2018848, 1092399, 54.1, '2013-04-15 02:37:27', 'jonathan', 2009),
-(32, 15, 1459202, 457009, 31.3, '2013-04-15 02:37:27', 'jonathan', 2010),
-(33, 15, 1329731, 383795, 28.9, '2013-04-15 02:37:27', 'jonathan', 2011);
+INSERT INTO `ndc_tbl_spg_income_statement` (`id`, `project_id`, `revenue`, `net_income`, `date_updated`, `updated_by`, `year`) VALUES
+(1, 1, 700388, 164249, '2013-04-15 02:37:27', 'jonathan', 2009),
+(2, 1, 513239, 65957, '2013-04-15 02:37:27', 'jonathan', 2010),
+(3, 1, 652663, 205144, '2013-04-15 02:37:27', 'jonathan', 2011),
+(4, 6, 11943.7, 1846, '2013-04-15 02:37:27', 'jonathan', 2009),
+(5, 6, 22897.8, 3952, '2013-04-15 02:37:27', 'jonathan', 2010),
+(6, 6, 25813.6, 6031.1, '2013-04-15 02:37:27', 'jonathan', 2011),
+(7, 8, 110398620, 1993213, '2013-04-15 02:37:27', 'jonathan', 2009),
+(8, 8, 135798151, 15892033, '2013-04-15 02:37:27', 'jonathan', 2010),
+(9, 8, 127334325, -1329201, '2013-04-15 02:37:27', 'jonathan', 2011),
+(10, 9, 902806208, 83334998, '2013-04-15 02:37:27', 'jonathan', 2009),
+(11, 9, 677573396, 58717920, '2013-04-15 02:37:27', 'jonathan', 2010),
+(12, 9, 1484743648, 429563731, '2013-04-15 02:37:27', 'jonathan', 2011),
+(13, 12, 23982025, 437698, '2013-04-15 02:37:27', 'jonathan', 2009),
+(14, 12, 34534428, 23352699, '2013-04-15 02:37:27', 'jonathan', 2010),
+(15, 12, 17718418, 9523856, '2013-04-15 02:37:27', 'jonathan', 2011),
+(16, 11, 3566627, 2092812, '2013-04-15 02:37:27', 'jonathan', 2009),
+(17, 11, 3660681, 1850102, '2013-04-15 02:37:27', 'jonathan', 2010),
+(18, 11, 3624800, 1710709, '2013-04-15 02:37:27', 'jonathan', 2011),
+(19, 13, 397532, 62685, '2013-04-15 02:37:27', 'jonathan', 2009),
+(20, 13, 397532, 50714, '2013-04-15 02:37:27', 'jonathan', 2010),
+(21, 13, 8313858, -720532, '2013-04-15 02:37:27', 'jonathan', 2011),
+(22, 10, 695522, 64404, '2013-04-15 02:37:27', 'jonathan', 2009),
+(23, 10, 695522, 53625, '2013-04-15 02:37:27', 'jonathan', 2010),
+(24, 10, 13748946, 9535407, '2013-04-15 02:37:27', 'jonathan', 2011),
+(25, 17, 649931, -100413, '2013-04-15 02:37:27', 'jonathan', 2009),
+(26, 17, 597047, -2778511, '2013-04-15 02:37:27', 'jonathan', 2010),
+(27, 17, 527455, -1912332, '2013-04-15 02:37:27', 'jonathan', 2011),
+(28, 16, 0, 0, '2013-04-15 02:37:27', 'jonathan', 2009),
+(29, 16, 127171115, 8738775, '2013-04-15 02:37:27', 'jonathan', 2010),
+(30, 16, 126711894, 4338094, '2013-04-15 02:37:27', 'jonathan', 2011),
+(31, 15, 2018848, 1092399, '2013-04-15 02:37:27', 'jonathan', 2009),
+(32, 15, 1459202, 457009, '2013-04-15 02:37:27', 'jonathan', 2010),
+(33, 15, 1329731, 383795, '2013-04-15 02:37:27', 'jonathan', 2011),
+(35, 5, 38815875, -34713327, '2013-05-24 02:41:07', 'jonathan', 2011),
+(36, 5, 113440010.51, 73830821.57, '2013-05-24 02:41:41', 'jonathan', 2010),
+(37, 7, 1030682808, -286271233, '2013-05-24 02:54:51', 'jonathan', 2011),
+(38, 7, 509626568, -496216771, '2013-05-24 02:55:23', 'jonathan', 2010);
 
 -- --------------------------------------------------------
 
