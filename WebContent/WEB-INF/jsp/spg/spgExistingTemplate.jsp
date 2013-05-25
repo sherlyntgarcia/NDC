@@ -51,6 +51,11 @@
 							  <li class = "active"><a href="#profile" data-toggle="tab">Profile</a></li>
 							  <li><a href="#graphs" data-toggle="tab">Shareholders</a></li>
 							  <li><a href="#financial" data-toggle="tab">Financial Performance</a></li>
+							  
+							  <c:if test="${spgSubCategory.id eq 10 or spgSubCategory.id eq 11 or spgSubCategory.id eq 12 or spgSubCategory.id eq 13 or spgSubCategory.id eq 16 or spgSubCategory.id eq 17}">
+							  	<li><a href="#maps" data-toggle="tab">Maps</a></li>
+							  </c:if>
+							
 							  <li><a href="#milestone" data-toggle="tab">Milestone Alerts</a></li>
 							</ul>
 						</div>
@@ -115,6 +120,26 @@
 							  	<div class = "span12">
 							  		<img alt="Cash Flow is not available" onclick="window.location.href='${pageContext.request.contextPath}/dashboard/internal/SPG/cashFlow'" src="${pageContext.request.contextPath}/visualization/spgcashflowlinechart/450/400/${spgSubCategory.id}" />						  	
 							  	</div>
+						  	</div>
+						  </div>
+						  
+						  <div class="tab-pane" id="maps">
+						  	<div class="row-fluid">
+						  		<div class="span12">
+						  			<c:choose>
+							  			<c:when test="${spgSubCategory.id eq 12}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/blcmap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 16}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/lidemap.png" />
+							  			</c:when>
+							  			
+							  			<c:otherwise>
+							  				Map to be uploaded
+							  			</c:otherwise>
+						  			</c:choose>
+						  		</div>
 						  	</div>
 						  </div>
 						  

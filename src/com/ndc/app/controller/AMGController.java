@@ -553,6 +553,21 @@ public class AMGController {
 		return "redirect:/dashboard/internal/AMG/cashFlow";
 
 	}
+	
+	@RequestMapping(value="/luzon")
+	public String internalAMGLuzon(Model model) {
+		return "amg/luzon_map";
+	}
+	
+	@RequestMapping(value="/visayas")
+	public String internallAMGVisayas(Model model) {
+		return "amg/visayas_map";
+	}
+	
+	@RequestMapping(value="/mindanao")
+	public String internalAMGMindanao(Model model) {
+		return "amg/mindanao_map";
+	}
 
 	@ModelAttribute("title")
 	public String getTitle() {
