@@ -105,6 +105,16 @@ div.fixed#malhacanbulacan {
 	margin-top: 240px;
 }
 
+div.fixed#sandionisiopque {
+	margin-left: 195px;
+	margin-top: 195px;
+}
+
+div.fixed#delmonteqc {
+	margin-left: 195px;
+	margin-top: 230px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -198,4 +208,14 @@ div.projectTitle#bonotlegazpi {
 div.projectTitle#malhacanbulacan {
 	margin-left: 450px;
 	margin-top: 355px;
+}
+
+div.projectTitle#sandionisiopque {
+	margin-left: 450px;
+	margin-top: 375px;
+}
+
+div.projectTitle#delmonteqc {
+	margin-left: 450px;
+	margin-top: 395px;
 }

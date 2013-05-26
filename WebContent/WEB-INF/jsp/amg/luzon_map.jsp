@@ -14,13 +14,8 @@
 			<div class="container" id = "container">
 				<div style="margin-left:-300px; position: absolute;">
 					<ul style="list-style:none;">
-<%-- 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - Lease/Sale</div></li> --%>
-<%-- 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/nego.png"></div><div style="margin-left: 35px; height: 35px;"> - Negiotiated Sale</div></li> --%>
-<%-- 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/bid.png"></div><div style="margin-left: 35px; height: 35px;"> - Sale Thru Public Bidding</div></li> --%>
-<%-- 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - Project Development</div></li> --%>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png"></div><div style="margin-left: 35px; height: 35px;"> - Under Lease</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png"></div><div style="margin-left: 35px; height: 35px;"> - For Sale/Lease</div></li>
-<%-- 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forcmp.png"></div><div style="margin-left: 35px; height: 35px;"> - For CMP</div></li> --%>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withcourt.png"></div><div style="margin-left: 35px; height: 35px;"> - With Court Cases</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/forreloc.png"></div><div style="margin-left: 35px; height: 35px;"> - For Relocation Survey</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png"></div><div style="margin-left: 35px; height: 35px;"> - For Titling</div></li>
@@ -191,6 +186,20 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct2_image.png" class="groupMalhacanBulacan" title="View from the Fronting Road"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="sandionisiopque">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/site_image.png" class="groupSanDionisioPque" title="Site Image">San Dionisio, Paranaque</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct1_image.png" class="groupSanDionisioPque" title="Subject Prop. with Dilapidated Structures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct2_image.png" class="groupSanDionisioPque" title="View from the Fronting Road"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="delmonteqc">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/site_image.png" class="groupDelMonteQc" title="Site Image">San Francisco Del Monte, Quezon City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct1_image.png" class="groupDelMonteQc" title="Subject Prop. with Dilapidated Structures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct2_image.png" class="groupDelMonteQc" title="View from the Fronting Road"></a>
+					</div>
+				</div>
 			
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
@@ -200,9 +209,6 @@
 			<div id="laguna" title="Sta. Rosa, Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="nuevaecija" title="Bongabon, Nueva Ecija" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="cavite" title="Humayao, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-<%-- 			<div id="alasasinbataan" title="Alas-asin, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div> --%>
-<%-- 			<div id="biaanbataan" title="Brgy. Bia-an, Mariveles Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div> --%>
-<%-- 			<div id="mabucobataan" title="San Pedro St., Brgy. Mabuco, Hermosa, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forcmp.png" /></a></div> --%>
 			<div id="alasasinbataan" title="Alas-asin, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="biaanbataan" title="Brgy. Bia-an, Mariveles Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="mabucobataan" title="San Pedro St., Brgy. Mabuco, Hermosa, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -215,6 +221,8 @@
 			<div id="tandangkutyorizal" title="Brgy. Tandang Kutyo, Tanay, Rizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div>
 			<div id="bonotlegazpi" title="Brgy. Bonot, Legazpi City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+			<div id="sandionisiopque" title="San Dionisio, Paranaque" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
+			<div id="delmonteqc" title="San Francisco Del Monte, Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>
