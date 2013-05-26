@@ -186,6 +186,13 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct2_image.png" class="groupMalhacanBulacan" title="View from the Fronting Road"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="onedtimakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a>
+					</div>
+				</div>
 	
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -203,10 +210,7 @@
 			<div id="tordesillasmakati" title="Tordesillas St., Salcedo Village, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="northaveqc" title="North Ave., Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="shawblvdpasig" title="Shaw Blvd., Bagong Ilog, Pasig City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-<%-- 			<div id="angellinaomalate" title="Angel Linao St., Malate Dist. Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div> --%>
-<%-- 			<div id="tandangkutyorizal" title="Brgy. Tandang Kutyo, Tanay, Rizal" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/forreloc.png" /></a></div> --%>
-<%-- 			<div id="bonotlegazpi" title="Brgy. Bonot, Legazpi City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div> --%>
-<%-- 			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div> --%>
+			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

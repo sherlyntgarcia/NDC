@@ -115,6 +115,11 @@ div.fixed#delmonteqc {
 	margin-top: 230px;
 }
 
+div.fixed#onedtimakati {
+	margin-left: 200px;
+	margin-top: 195px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -218,4 +223,9 @@ div.projectTitle#sandionisiopque {
 div.projectTitle#delmonteqc {
 	margin-left: 450px;
 	margin-top: 395px;
+}
+
+div.projectTitle#onedtimakati {
+	margin-left: 450px;
+	margin-top: 415px;
 }

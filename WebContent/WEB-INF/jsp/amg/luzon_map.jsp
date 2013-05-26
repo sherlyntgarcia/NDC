@@ -200,6 +200,13 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct2_image.png" class="groupDelMonteQc" title="View from the Fronting Road"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="onedtimakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a>
+					</div>
+				</div>
 			
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
@@ -223,6 +230,7 @@
 			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			<div id="sandionisiopque" title="San Dionisio, Paranaque" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="delmonteqc" title="San Francisco Del Monte, Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>
