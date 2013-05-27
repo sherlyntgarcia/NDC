@@ -25,7 +25,8 @@
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
+							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
+							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>				  							  
 							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
@@ -80,18 +81,23 @@
 									<li><p class="para">Project Timeline</p></li>
 											<ul>
 												<li>Not yet established</li>
-											</ul>	
-									<li><p class="para">Project Status</p></li>
-											<ul>
-												<li>November 7, 2012, NIA and PNOC RC signed the memorandum of agreement to establish and operate hydropower plants projects within the existing irrigation systems.</li>
-												<li>November 7, 2012, DOE and DA signed the memorandum of understanding to express support and assistance to the recently formed cooperation of its attached agencies to establish and operated hydropower plants.</li>
-											</ul>	
-									<li><p class="para">Next Steps</p></li>
-											<ul>
-												<li>Installation of equipment to pilot sites which would determine its power potential.</li>
 											</ul>																
 						  		</ul>						  		 
-						  </div>						 						  
+						  </div>		
+						  
+						  <div class="tab-pane" id="status" style = "margin-left: 5%">
+						  	<p class="lead"> Project Status </p>
+						  	<ul>
+								<li>November 7, 2012, NIA and PNOC RC signed the memorandum of agreement to establish and operate hydropower plants projects within the existing irrigation systems.</li>
+								<li>November 7, 2012, DOE and DA signed the memorandum of understanding to express support and assistance to the recently formed cooperation of its attached agencies to establish and operated hydropower plants.</li>
+							</ul>
+							
+							<p class="lead"> Next Steps </p>
+							<ul>
+								<li>Installation of equipment to pilot sites which would determine its power potential.</li>
+							</ul>
+						  </div>
+						  				 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
 <!-- 						  		<li>Account Officer</li> -->

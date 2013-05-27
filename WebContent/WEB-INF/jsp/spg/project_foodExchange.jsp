@@ -23,7 +23,8 @@
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
+							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
+							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>				  							  
 							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
@@ -84,6 +85,11 @@
 						  				</ul>
 						  		</ul>
 						  	</div>
+						  	
+						  	<div class="tab-pane" id="status" style = "margin-left: 5%">
+							  	None
+						  	</div>
+						  
 						  	<div class="tab-pane active" id="description" style = "margin-left: 5%">
 						  	<ul class = 'list-style'>
 									<li><p class="para">Target Beneficiaries</p></li>

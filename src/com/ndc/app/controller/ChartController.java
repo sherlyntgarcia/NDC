@@ -1582,6 +1582,7 @@ public class ChartController {
 				// last part edited
 				NumberAxis rangeAxis2 = (NumberAxis) plot.getRangeAxis(1);
 				rangeAxis2.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+				rangeAxis2.setRange(0, 100);
 				rangeAxis2.setNumberFormatOverride(new DecimalFormat() {
 					@Override
 					public StringBuffer format(double number,
@@ -1706,6 +1707,7 @@ public class ChartController {
 				// last part edited
 				NumberAxis rangeAxis2 = (NumberAxis) plot.getRangeAxis(1);
 				rangeAxis2.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+				rangeAxis2.setRange(0, 100);
 				rangeAxis2.setNumberFormatOverride(new DecimalFormat() {
 					@Override
 					public StringBuffer format(double number,

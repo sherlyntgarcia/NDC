@@ -54,20 +54,20 @@
 											<ul>
 												<li>Not yet established</li>
 											</ul>	
-									<li><p class="para">Project Status</p></li>
-											<ul>
-												<li>The project is now under evaluation. The implementation framework has been presented to the Management Committee
-													on Nov. 9, 2012. The project will be implemented in a joint venture with the private sector, wherein, NDC will
-													contribute the property, while the private partner will shoulder the development cost.</li>
-												<li>The feasibility study of the project done in year 2000 will be updated.</li>
-											</ul>	
-									<li><p class="para">Next Steps</p></li>
-											<ul>
-												<li> To meet with the Local Government Unit of Dasmarinas, Cavite to seek endorsement 
-													of the Project.</li>
-												<li> To enter into an agreement with FCIE, Inc. for the development of the property 
-													as an expansion of FCIE.
-											</ul>															
+<!-- 									<li><p class="para">Project Status</p></li> -->
+<!-- 											<ul> -->
+<!-- 												<li>The project is now under evaluation. The implementation framework has been presented to the Management Committee -->
+<!-- 													on Nov. 9, 2012. The project will be implemented in a joint venture with the private sector, wherein, NDC will -->
+<!-- 													contribute the property, while the private partner will shoulder the development cost.</li> -->
+<!-- 												<li>The feasibility study of the project done in year 2000 will be updated.</li> -->
+<!-- 											</ul>	 -->
+<!-- 									<li><p class="para">Next Steps</p></li> -->
+<!-- 											<ul> -->
+<!-- 												<li> To meet with the Local Government Unit of Dasmarinas, Cavite to seek endorsement  -->
+<!-- 													of the Project.</li> -->
+<!-- 												<li> To enter into an agreement with FCIE, Inc. for the development of the property  -->
+<!-- 													as an expansion of FCIE. -->
+<!-- 											</ul>															 -->
 						  		</ul>						  		 
 						  </div>						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">

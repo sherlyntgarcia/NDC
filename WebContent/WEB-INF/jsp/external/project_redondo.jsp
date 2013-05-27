@@ -36,21 +36,22 @@
 						  		each @ 25 Windmill Turbine Generators). The project is being proposed <br/>
 						  		by the Pan Energy Corporation wherein NDC was invited to invest into the <br/>
 						  		project via equity participation. The project will be located in the towns <br/>
-						  		of Subic & San Antonio in Zambales.  
-						  	<ul class = 'list-style'>
+						  		of Subic & San Antonio in Zambales.
+						  		  
+						  	<ul style="margin-top:20px" class = 'list-style'>
 									<li><p class="para">Target Beneficiaries</p></li>
 										<ul>
 											<li>Electric power consumers of Olongapo City-Zambales area</li>
 										</ul>									
-									<li><p class="para">Project Status</p></li>
-											<ul>
-												<li>The Preliminary Feasibility Study was already completed <br/>
-													obtaining information from satellite data.</li>
-												<li>Start of the Final Feasibility Study awaits permits from <br/>
-												LGU and DENR for the installation of Met-Mast, an instrumentation <br/>
-												use to measure wind speed, pressure, direction, temperature, etc. </li>
-												<li>On-going securing necessary permits to install the Met-Mast</li>
-											</ul>																
+<!-- 									<li><p class="para">Project Status</p></li> -->
+<!-- 											<ul> -->
+<!-- 												<li>The Preliminary Feasibility Study was already completed <br/> -->
+<!-- 													obtaining information from satellite data.</li> -->
+<!-- 												<li>Start of the Final Feasibility Study awaits permits from <br/> -->
+<!-- 												LGU and DENR for the installation of Met-Mast, an instrumentation <br/> -->
+<!-- 												use to measure wind speed, pressure, direction, temperature, etc. </li> -->
+<!-- 												<li>On-going securing necessary permits to install the Met-Mast</li> -->
+<!-- 											</ul>																 -->
 						  		</ul>						  		 
 						  </div>						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">

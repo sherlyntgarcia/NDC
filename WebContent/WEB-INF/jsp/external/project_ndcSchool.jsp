@@ -37,16 +37,16 @@
 						  		The NDC School Building Program is a loan program extended to the Local Government Units (LGUs) for the <br/>
 						  			construction of school buildings. The basic terms of the loan are as follows:
 						  		
-								<ul class='list-style'>
-									<li><span class="para">Interest Rate</span> - 7.4% per annum, fixed for the entire term of the loan, inclusive of VAT</li>
-									<li><span class="para">Loan Maturity</span> - 7 1/2 years inclusive of Grace Period</li>
-									<li><span class="para">Grace Period</span> - 6 months from the first loan drawdown</li>
-									<li><span class="para">Collaterals:</span></li>
+								<ul style="margin-top:20px;margin-left:60px" class='list-style'>
+									<li style="list-style-type:lower-alpha"><span class="para">Interest Rate</span> - 7.4% per annum, fixed for the entire term of the loan, inclusive of VAT</li>
+									<li style="list-style-type:lower-alpha"><span class="para">Loan Maturity</span> - 7 1/2 years inclusive of Grace Period</li>
+									<li style="list-style-type:lower-alpha"><span class="para">Grace Period</span> - 6 months from the first loan drawdown</li>
+									<li style="list-style-type:lower-alpha"><span class="para">Collaterals:</span></li>
 											<ul>
 												<li>Deed of Assignment of IRA with Hold-Out in favor of NDC to the extent of one (1)-month amortization.</li>
 												<li>Special Deposit Account with a maintaining balance equivalent to three (3) months amortization.</li>
 											</ul>
-									<li><span class="para">Schedule of Loan Release</span> - The loan release is based on a progress billing subject to compliance of LGU<br/> 
+									<li style="list-style-type:lower-alpha"><span class="para">Schedule of Loan Release</span> - The loan release is based on a progress billing subject to compliance of LGU<br/> 
 										to the loan documentary requirements and milestones accomplishments. </li>
 						  		</ul>
 						  		

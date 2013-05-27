@@ -25,7 +25,8 @@
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>					  							  
+							  <li class="active"><a href="#description" data-toggle="tab">Project Description/Concept</a></li>	
+							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>				  							  
 							  <li><a href="#contact" data-toggle="tab">Client Contact Person</a></li>
 							</ul>
 						</div>
@@ -37,7 +38,12 @@
 								The project intends to set-up a modern rubber processing plant that produces 8 to 10 MT of processed-rubber for 8-hour operation. The processing plant will produce semi-processed rubber technically graded as a SPR 20 and SPR 5. The proposed project will also enhance the quality and sustain the supply of rubber for future business opportunities and export market share.
 								Total Existing Rubber Area: 21,754 hectares					  			
 					  		</p>				  		 
-						  </div>						 						  
+						  </div>
+						  
+						  <div class="tab-pane" id="status" style = "margin-left: 5%">
+						  	None
+						  </div>
+						  						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
 <!-- 						  		<li>Account Officer</li> -->

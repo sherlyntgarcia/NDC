@@ -81,15 +81,15 @@
 											<ul>
 												<li>Not yet established</li>
 											</ul>	
-									<li><p class="para">Project Status</p></li>
-											<ul>
-												<li>November 7, 2012, NIA and PNOC RC signed the memorandum of agreement to establish and operate hydropower plants projects within the existing irrigation systems.</li>
-												<li>November 7, 2012, DOE and DA signed the memorandum of understanding to express support and assistance to the recently formed cooperation of its attached agencies to establish and operated hydropower plants.</li>
-											</ul>	
-									<li><p class="para">Next Steps</p></li>
-											<ul>
-												<li>Installation of equipment to pilot sites which would determine its power potential.</li>
-											</ul>																
+<!-- 									<li><p class="para">Project Status</p></li> -->
+<!-- 											<ul> -->
+<!-- 												<li>November 7, 2012, NIA and PNOC RC signed the memorandum of agreement to establish and operate hydropower plants projects within the existing irrigation systems.</li> -->
+<!-- 												<li>November 7, 2012, DOE and DA signed the memorandum of understanding to express support and assistance to the recently formed cooperation of its attached agencies to establish and operated hydropower plants.</li> -->
+<!-- 											</ul>	 -->
+<!-- 									<li><p class="para">Next Steps</p></li> -->
+<!-- 											<ul> -->
+<!-- 												<li>Installation of equipment to pilot sites which would determine its power potential.</li> -->
+<!-- 											</ul>																 -->
 						  		</ul>						  		 
 						  </div>						 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">

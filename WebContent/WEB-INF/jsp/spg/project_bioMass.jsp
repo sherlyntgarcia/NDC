@@ -54,6 +54,7 @@
 						  		<span class="label label-important">Note</span> Individual construction schedules shall be available upon submission of an LGU availee. 
 						  </div>						 
 						  <div class="tab-pane" id="status" style = "margin-left: 5%">
+						  	<p class="lead"> Project Status </p>
 						  	The proponent submitted the project proposal to other private investors.  Their approval is expected by February 2013.  Local technology partners are also being invited to participate in the project. 
 						  </div>						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
