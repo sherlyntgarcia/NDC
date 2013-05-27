@@ -110,7 +110,7 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit" style = "background: lightgreen">
         <h1><img src = "${pageContext.request.contextPath}/resources/img/NDC2.png" style = "width: 25%; margin-top: -5%; margin-left: -4%;"></h1>
-        <p>Welcome to NDC's Business Strategic Dashboard!</p>
+        <p>Welcome to NDC's Strategic Business Dashboard!</p>
         <p><a class="btn btn-inverse" href="<c:url value="/external" />"><i class="icon icon-hand-right icon-white"></i> Visit our external dashboard!</a></p>
 		<img src = "${pageContext.request.contextPath}/resources/img/iso_t.png/" style="float:right; width: 11%; margin-top: -22%; margin-right: -45px;">
       </div>

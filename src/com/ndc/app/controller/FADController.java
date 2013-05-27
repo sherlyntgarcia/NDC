@@ -668,32 +668,32 @@ public class FADController {
 		
 		if(ai != null) {
 			
-			ai.setActualAdvertising(null);
-			ai.setActualAthletics(null);
-			ai.setActualAuditing(null);
-			ai.setActualBoardExpenses(null);
-			ai.setActualChristmasAnniversary(null);
-			ai.setActualCommunicationService(null);
-			ai.setActualConsultancy(null);
-			ai.setActualExtraordinary(null);
-			ai.setActualJanitorial(null);
-			ai.setActualLegal(null);
-			ai.setActualLightWater(null);
-			ai.setActualMeetings(null);
-			ai.setActualMemberships(null);
-			ai.setActualMessengerial(null);
-			ai.setActualMisc(null);
-			ai.setActualOtherMisc(null);
-			ai.setActualRentals(null);
-			ai.setActualRepairFacilities(null);
-			ai.setActualRepairVehicles(null);
-			ai.setActualSecurity(null);
-			ai.setActualSubscription(null);
-			ai.setActualSuppliesMaterials(null);
-			ai.setActualTaxes(null);
-			ai.setActualTraining(null);
-			ai.setActualTravelling(null);
-			ai.settotalIncome(null);
+			ai.setActualAdvertising(0.0);
+			ai.setActualAthletics(0.0);
+			ai.setActualAuditing(0.0);
+			ai.setActualBoardExpenses(0.0);
+			ai.setActualChristmasAnniversary(0.0);
+			ai.setActualCommunicationService(0.0);
+			ai.setActualConsultancy(0.0);
+			ai.setActualExtraordinary(0.0);
+			ai.setActualJanitorial(0.0);
+			ai.setActualLegal(0.0);
+			ai.setActualLightWater(0.0);
+			ai.setActualMeetings(0.0);
+			ai.setActualMemberships(0.0);
+			ai.setActualMessengerial(0.0);
+			ai.setActualMisc(0.0);
+			ai.setActualOtherMisc(0.0);
+			ai.setActualRentals(0.0);
+			ai.setActualRepairFacilities(0.0);
+			ai.setActualRepairVehicles(0.0);
+			ai.setActualSecurity(0.0);
+			ai.setActualSubscription(0.0);
+			ai.setActualSuppliesMaterials(0.0);
+			ai.setActualTaxes(0.0);
+			ai.setActualTraining(0.0);
+			ai.setActualTravelling(0.0);
+			ai.settotalIncome(0.0);
 			
 			model.addAttribute("actualIncomeExpense", ai);
 			ai.setYear(getCurrentYear());

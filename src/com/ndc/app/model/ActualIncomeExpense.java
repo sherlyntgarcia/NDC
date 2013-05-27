@@ -100,6 +100,12 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	@NotNull(message="Actual Travelling Expenses is required")
 	private Double actualTravelling;
 	
+	@NotNull(message="Actual Donations is required")
+	private Double actualDonations;
+	
+	@NotNull(message="Actual Rewards is required")
+	private Double actualRewards;
+	
 	@NotNull(message="Budget Advertising is required")
 	private Double budgetAdvertising;
 	
@@ -174,6 +180,12 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	
 	@NotNull(message="Budget Travelling Expenses is required")
 	private Double budgetTravelling;
+	
+	@NotNull(message="Budget Donations is required")
+	private Double budgetDonations;
+	
+	@NotNull(message="Budget Rewards is required")
+	private Double budgetRewards;
 	
 	private Integer year;
 	private Integer month;
@@ -507,6 +519,24 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	public void setActualTravelling(Double actualTravelling) {
 		this.actualTravelling = actualTravelling;
 	}
+	
+	@Column(name="ACTUAL_DONATIONS")
+	public Double getActualDonations() {
+		return actualDonations;
+	}
+
+	public void setActualDonations(Double actualDonations) {
+		this.actualDonations = actualDonations;
+	}
+
+	@Column(name="ACTUAL_REWARDS")
+	public Double getActualRewards() {
+		return actualRewards;
+	}
+
+	public void setActualRewards(Double actualRewards) {
+		this.actualRewards = actualRewards;
+	}
 
 	@Column(name="BUDGET_BOARD_EXPENSES")
 	public Double getBudgetBoardExpenses() {
@@ -695,6 +725,24 @@ public class ActualIncomeExpense implements java.io.Serializable {
 
 	public void setBudgetTravelling(Double budgetTravelling) {
 		this.budgetTravelling = budgetTravelling;
+	}
+	
+	@Column(name="BUDGET_DONATIONS")
+	public Double getBudgetDonations() {
+		return budgetDonations;
+	}
+
+	public void setBudgetDonations(Double budgetDonations) {
+		this.budgetDonations = budgetDonations;
+	}
+
+	@Column(name="BUDGET_REWARDS")
+	public Double getBudgetRewards() {
+		return budgetRewards;
+	}
+
+	public void setBudgetRewards(Double budgetRewards) {
+		this.budgetRewards = budgetRewards;
 	}
 	
 }

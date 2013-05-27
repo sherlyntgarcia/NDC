@@ -116,12 +116,6 @@
 								<spring:input path="budgetAuditing" class="span6"
 									constraint="number" placeholder="(e.g. 200000)" />
 							</div>
-
-							<label>Budget Consultancy</label>
-							<div>
-								<spring:input path="budgetConsultancy" class="span6"
-									constraint="number" placeholder="(e.g. 150000)" />
-							</div>
 							
 							<label>Budget Board Expenses</label>
 							<div>
@@ -138,6 +132,18 @@
 							<label>Budget Communication Service</label>
 							<div>
 								<spring:input path="budgetCommunicationService" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+
+							<label>Budget Consultancy</label>
+							<div>
+								<spring:input path="budgetConsultancy" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
+							<label>Budget Donations</label>
+							<div>
+								<spring:input path="budgetDonations" class="span6"
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
 							
@@ -213,6 +219,12 @@
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
 							
+							<label>Budget Rewards & Other Claims</label>
+							<div>
+								<spring:input path="budgetRewards" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
 							<label>Budget Security Services</label>
 							<div>
 								<spring:input path="budgetSecurity" class="span6"
@@ -279,12 +291,6 @@
 								<spring:input path="actualAuditing" class="span6"
 									constraint="number" placeholder="(e.g. 75000)" />
 							</div>
-
-							<label>Actual Consultancy</label>
-							<div>
-								<spring:input path="actualConsultancy" class="span6"
-									constraint="number" placeholder="(e.g. 80000)" />
-							</div>
 							
 							<label>Actual Board Expenses</label>
 							<div>
@@ -301,6 +307,18 @@
 							<label>Actual Communication Service</label>
 							<div>
 								<spring:input path="actualCommunicationService" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+
+							<label>Actual Consultancy</label>
+							<div>
+								<spring:input path="actualConsultancy" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Donations</label>
+							<div>
+								<spring:input path="actualDonations" class="span6"
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
 							
@@ -373,6 +391,12 @@
 							<label>Actual Repair and Maintenance of Vehicles</label>
 							<div>
 								<spring:input path="actualRepairVehicles" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Rewards & Other Claims</label>
+							<div>
+								<spring:input path="actualRewards" class="span6"
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
 							

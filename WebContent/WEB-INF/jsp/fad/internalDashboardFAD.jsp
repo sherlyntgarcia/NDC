@@ -62,7 +62,7 @@
 								<c:choose>
 									<c:when test="${not empty expenses}">
 										<div class="form-inline" style="margin-top:10px">
-											<select name="months">
+											<select name="months" title="This will only display the list of data available on the graph above">
 												<c:forEach var="expense" items="${expenses}">
 													<c:if test="${not empty expense}">
 														<c:set var="month" value="${expense.month}" />

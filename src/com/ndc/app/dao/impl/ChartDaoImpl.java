@@ -619,9 +619,14 @@ public class ChartDaoImpl implements ChartDao {
 		Integer latestYear = getLatestYearOfData(ActualIncomeExpense.class);
 
 		if (latestYear != null) {	
+//			Query query = sessionFactory.getCurrentSession()
+//					.createSQLQuery(
+//							"SELECT * FROM ndc_tbl_actual_income_expense WHERE id in (select max(id) from ndc_tbl_actual_income_expense group by year) order by id DESC")
+//					.addEntity(ActualIncomeExpense.class);
+			
 			Query query = sessionFactory.getCurrentSession()
 					.createSQLQuery(
-							"SELECT * FROM ndc_tbl_actual_income_expense WHERE id in (select max(id) from ndc_tbl_actual_income_expense group by year) order by id DESC")
+							"SELECT * FROM ndc_tbl_actual_income_expense WHERE year=" + latestYear + " AND id in (select max(id) from ndc_tbl_actual_income_expense group by month) order by month ASC")
 					.addEntity(ActualIncomeExpense.class);
 			
 			List<ActualIncomeExpense> l = (List<ActualIncomeExpense>) query.list();
@@ -688,11 +693,15 @@ public class ChartDaoImpl implements ChartDao {
 
 		if (latestYear != null) {
 
+//			Query query = sessionFactory.getCurrentSession().createSQLQuery(
+//							"select * from ndc_tbl_collection_efficiency where year="
+//									+ latestYear
+//									+ " AND id in(select max(id) from ndc_tbl_collection_efficiency group by month)")
+//					.addEntity(CollectionEfficiency.class);
+			
 			Query query = sessionFactory.getCurrentSession().createSQLQuery(
-							"select * from ndc_tbl_collection_efficiency where year="
-									+ latestYear
-									+ " AND id in(select max(id) from ndc_tbl_collection_efficiency group by month)")
-					.addEntity(CollectionEfficiency.class);
+					"select * from ndc_tbl_collection_efficiency where year=" + latestYear)
+			.addEntity(CollectionEfficiency.class);
 
 			return (List<CollectionEfficiency>) query.list();
 

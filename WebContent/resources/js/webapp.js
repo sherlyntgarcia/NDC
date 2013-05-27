@@ -263,6 +263,10 @@
 					getTotalActual();
 				});
 				
+				$("input[name=actualDonations]").keyup(function() {
+					getTotalActual();
+				});
+				
 				$("input[name=actualExtraordinary]").keyup(function() {
 					getTotalActual();
 				});
@@ -308,6 +312,10 @@
 				});
 				
 				$("input[name=actualRepairVehicles]").keyup(function() {
+					getTotalActual();
+				});
+				
+				$("input[name=actualRewards]").keyup(function() {
 					getTotalActual();
 				});
 				
@@ -364,6 +372,10 @@
 					getTotalBudget();
 				});
 				
+				$("input[name=budgetDonations]").keyup(function() {
+					getTotalBudget();
+				});
+				
 				$("input[name=budgetExtraordinary]").keyup(function() {
 					getTotalBudget();
 				});
@@ -409,6 +421,10 @@
 				});
 				
 				$("input[name=budgetRepairVehicles]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetRewards]").keyup(function() {
 					getTotalBudget();
 				});
 				
@@ -824,6 +840,7 @@
 				var budgetBoardExpenses = Number($("#budgetBoardExpenses").val());
 				var budgetChristmasAnniversary = Number($("#budgetChristmasAnniversary").val());
 				var budgetCommunicationService = Number($("#budgetCommunicationService").val());
+				var budgetDonations = Number($("#budgetDonations").val());
 				var budgetExtraordinary = Number($("#budgetExtraordinary").val());
 				var budgetJanitorial = Number($("#budgetJanitorial").val());
 				var budgetLegal = Number($("#budgetLegal").val());
@@ -836,6 +853,7 @@
 				var budgetRentals = Number($("#budgetRentals").val());
 				var budgetRepairFacilities = Number($("#budgetRepairFacilities").val());
 				var budgetRepairVehicles = Number($("#budgetRepairVehicles").val());
+				var budgetRewards = Number($("#budgetRewards").val());
 				var budgetSecurity = Number($("#budgetSecurity").val());
 				var budgetSubscription = Number($("#budgetSubscription").val());
 				var budgetSuppliesMaterials = Number($("#budgetSuppliesMaterials").val());
@@ -843,9 +861,9 @@
 				var budgetTraining = Number($("#budgetTraining").val());
 				var budgetTravelling = Number($("#budgetTravelling").val());
 				
-				var total = budgetAdvertising + budgetAthletics + budgetAuditing + budgetConsultancy + budgetBoardExpenses + budgetChristmasAnniversary + 
+				var total = budgetAdvertising + budgetAthletics + budgetAuditing + budgetConsultancy + budgetBoardExpenses + budgetChristmasAnniversary + budgetDonations +
 					budgetCommunicationService + budgetExtraordinary + budgetJanitorial + budgetLegal + budgetLightWater + budgetMeetings + budgetMemberships + 
-					budgetMessengerial + budgetMisc + budgetOtherMisc + budgetRentals + budgetRepairFacilities + budgetRepairVehicles + budgetSecurity + 
+					budgetMessengerial + budgetMisc + budgetOtherMisc + budgetRentals + budgetRepairFacilities + budgetRepairVehicles + budgetRewards + budgetSecurity + 
 					budgetSubscription + budgetSuppliesMaterials + budgetTaxes + budgetTraining + budgetTravelling;
 
 				$("#totalExpense").val(total);
@@ -862,6 +880,7 @@
 				var actualBoardExpenses = Number($("#actualBoardExpenses").val());
 				var actualChristmasAnniversary = Number($("#actualChristmasAnniversary").val());
 				var actualCommunicationService = Number($("#actualCommunicationService").val());
+				var actualDonations = Number($("#actualDonations").val());
 				var actualExtraordinary = Number($("#actualExtraordinary").val());
 				var actualJanitorial = Number($("#actualJanitorial").val());
 				var actualLegal = Number($("#actualLegal").val());
@@ -874,6 +893,7 @@
 				var actualRentals = Number($("#actualRentals").val());
 				var actualRepairFacilities = Number($("#actualRepairFacilities").val());
 				var actualRepairVehicles = Number($("#actualRepairVehicles").val());
+				var actualRewards = Number($("#actualRewards").val());
 				var actualSecurity = Number($("#actualSecurity").val());
 				var actualSubscription = Number($("#actualSubscription").val());
 				var actualSuppliesMaterials = Number($("#actualSuppliesMaterials").val());
@@ -882,8 +902,8 @@
 				var actualTravelling = Number($("#actualTravelling").val());
 				
 				var total = actualAdvertising + actualAthletics + actualAuditing + actualConsultancy + actualBoardExpenses + actualChristmasAnniversary + 
-				    actualCommunicationService + actualExtraordinary + actualJanitorial + actualLegal + actualLightWater + actualMeetings + actualMemberships + 
-				    actualMessengerial + actualMisc + actualOtherMisc + actualRentals + actualRepairFacilities + actualRepairVehicles + actualSecurity + 
+				    actualCommunicationService + actualDonations + actualExtraordinary + actualJanitorial + actualLegal + actualLightWater + actualMeetings + actualMemberships + 
+				    actualMessengerial + actualMisc + actualOtherMisc + actualRentals + actualRepairFacilities + actualRepairVehicles + actualRewards + actualSecurity + 
 				    actualSubscription + actualSuppliesMaterials + actualTaxes + actualTraining + actualTravelling;
 
 				$("#totalIncome").val(total);
