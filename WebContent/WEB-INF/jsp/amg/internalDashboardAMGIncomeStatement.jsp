@@ -118,6 +118,12 @@
 <%-- 								</spring:select> --%>
 <!-- 							</div> -->
 							
+							<label>Profit Margin</label>
+							<div class="input-append">
+							  <input class="span2" id="profitMargin" placeholder="(e.g. 10)" type="text">
+							  <span class="add-on">%</span>
+							</div>
+							
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary"><i class="icon icon-download-alt icon-white"></i> Save changes</button>
 								<a href="${pageContext.request.contextPath}/dashboard/internal/AMG" class="btn">Go back</a>

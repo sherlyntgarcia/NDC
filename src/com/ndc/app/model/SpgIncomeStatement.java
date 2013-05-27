@@ -30,9 +30,9 @@ public class SpgIncomeStatement implements java.io.Serializable {
 	@NotNull(message="Net Income is required")
 	private Double netIncome;
 	
-//	@NotNull(message="Profit Margin is required")
-//	@Range(max=100,message="Profit Margin can only have a maximum value of 100")
-//	private Double profitMargin;
+	@NotNull(message="Profit Margin is required")
+	@Range(max=100,message="Profit Margin can only have a maximum value of 100")
+	private Double profitMargin;
 	
 	private Integer year;
 	private Date dateUpdated;
@@ -67,14 +67,14 @@ public class SpgIncomeStatement implements java.io.Serializable {
 		this.netIncome = netIncome;
 	}
 
-//	@Column(name="PROFIT_MARGIN")
-//	public Double getProfitMargin() {
-//		return profitMargin;
-//	}
-//
-//	public void setProfitMargin(Double profitMargin) {
-//		this.profitMargin = profitMargin;
-//	}
+	@Column(name="PROFIT_MARGIN")
+	public Double getProfitMargin() {
+		return profitMargin;
+	}
+
+	public void setProfitMargin(Double profitMargin) {
+		this.profitMargin = profitMargin;
+	}
 
 	@Column(name="YEAR")
 	public Integer getYear() {

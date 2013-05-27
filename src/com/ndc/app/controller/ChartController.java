@@ -1512,6 +1512,8 @@ public class ChartController {
 
 			// dataset for line graph
 			DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+			final DefaultCategoryDataset dataset2 = new DefaultCategoryDataset();
+			
 			List<SpgIncomeStatement> incomeStatements = chartService.generateSpgIncomeStatement(id);
 
 //			if(incomeStatements != null && incomeStatements.size() > 0) {
@@ -1520,10 +1522,12 @@ public class ChartController {
 				String currency = category.getCurrency();
 				
 				for(SpgIncomeStatement incomeStatement : incomeStatements) {
-					categoryDataset.setValue(incomeStatement.getNetIncome(),
-							"Net Income", incomeStatement.getYear());
 					categoryDataset.addValue(incomeStatement.getRevenue(),
 							"Revenue", incomeStatement.getYear());
+					categoryDataset.setValue(incomeStatement.getNetIncome(),
+							"Net Income", incomeStatement.getYear());
+					dataset2.addValue(incomeStatement.getProfitMargin(),
+							"% Profit Margin", incomeStatement.getYear());
 				}
 				
 				chart = ChartFactory.createBarChart(
@@ -1534,50 +1538,81 @@ public class ChartController {
 						PlotOrientation.VERTICAL, true, // Show legend
 						true, false);
 
-				CategoryPlot plot = chart.getCategoryPlot();
-				plot.getRenderer().setSeriesPaint(0, new Color(0, 204, 143));
-				plot.getRenderer().setSeriesPaint(1, new Color(51, 51, 204));
-				plot.getRenderer().setSeriesPaint(2, new Color(255, 111, 111));
+				chart.setBackgroundPaint(Color.white);
+
+				final CategoryPlot plot = chart.getCategoryPlot();
+				plot.setBackgroundPaint(new Color(0xEE, 0xEE, 0xFF));
+				plot.setDomainAxisLocation(AxisLocation.BOTTOM_OR_RIGHT);
 				plot.setBackgroundPaint(Color.WHITE);
 				plot.setRangeGridlinePaint(Color.BLACK);
 				plot.setRangeGridlineStroke(new BasicStroke(0.5f,
-						BasicStroke.CAP_ROUND, BasicStroke.CAP_ROUND));
+						BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 
 				plot.setNoDataMessage("No data to display");
 
-				CategoryAxis domainAxis = plot.getDomainAxis();
-				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions
-				// .createUpRotationLabelPositions(Math.PI / 6.0));
-				domainAxis.setMaximumCategoryLabelLines(10);
+				plot.setDataset(1, dataset2);
+				plot.mapDatasetToRangeAxis(1, 1);
 
-				// change the auto tick unit selection to integer units only...
-				final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
-				rangeAxis.setStandardTickUnits(NumberAxis
-						.createIntegerTickUnits());
-				// rangeAxis.setAxisLineVisible(false);
-//				rangeAxis.setNumberFormatOverride(new DecimalFormat() {
-//					@Override
-//					public StringBuffer format(double number,
-//							StringBuffer toAppendTo, FieldPosition pos) {
-//
-//						return new StringBuffer(String.format("%.1f",
-//								number / 1000000));
-//
-//					}
-//				});
+				final CategoryAxis domainAxis = plot.getDomainAxis();
+				// domainAxis.setCategoryLabelPositions(CategoryLabelPositions.DOWN_45);
 
+				// final ValueAxis axis1 = new NumberAxis("RM Millions");
+				// plot.setRangeAxis(1, axis1);
+
+				final ValueAxis axis2 = new NumberAxis("");
+				plot.setRangeAxis(1, axis2);
+
+				// //last part edited
+				// NumberAxis rangeAxis1 = (NumberAxis) plot.getRangeAxis(1);
+				// rangeAxis1.setNumberFormatOverride(new DecimalFormat() {
+				// @Override
+				// public StringBuffer format(double number, StringBuffer
+				// toAppendTo, FieldPosition pos) {
+				// return new StringBuffer(String.format("%.1f",
+				// number/1000000));
+				// }
+				// });
+				// /////////////////////
 				
-//			}
-			
-			if (chart != null) {
-				final ChartRenderingInfo info = new ChartRenderingInfo(
-						new StandardEntityCollection());
-				response.setContentType("image/png");
-				OutputStream out = response.getOutputStream();
+				//NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis(0);
+				// rangeAxis2.setNumberFormatOverride(new DecimalFormat());
+				//rangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+				
 
-				ChartUtilities.writeChartAsPNG(out, chart, width, height,
-						info);
-			}
+				// last part edited
+				NumberAxis rangeAxis2 = (NumberAxis) plot.getRangeAxis(1);
+				rangeAxis2.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+				rangeAxis2.setNumberFormatOverride(new DecimalFormat() {
+					@Override
+					public StringBuffer format(double number,
+							StringBuffer toAppendTo, FieldPosition pos) {
+						return new StringBuffer(String.format("%.1f", number))
+								.append("%");
+					}
+				});
+				// ////////////////////
+
+				final LineAndShapeRenderer renderer2 = new LineAndShapeRenderer();
+				renderer2.setToolTipGenerator(new StandardCategoryToolTipGenerator());
+
+				renderer2.setSeriesPaint(0, Color.BLUE);
+
+				BarRenderer renderer3 = (BarRenderer) plot.getRenderer();
+				renderer3.setSeriesPaint(0, new Color(56, 115, 137));
+				renderer3.setSeriesPaint(1, new Color(146, 192, 209));
+
+				plot.setRenderer(1, renderer2);
+				plot.setDatasetRenderingOrder(DatasetRenderingOrder.FORWARD);
+
+				if (chart != null) {
+					final ChartRenderingInfo info = new ChartRenderingInfo(
+							new StandardEntityCollection());
+					response.setContentType("image/png");
+					OutputStream out = response.getOutputStream();
+
+					ChartUtilities.writeChartAsPNG(out, chart, width, height,
+							info);
+				}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -2924,14 +2959,14 @@ public class ChartController {
 
 			final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
-//			if (pdstfrates != null) {
-				
+			if (pdstfrates != null) {
+				System.out.println("Rates: " + pdstfrates.size());
 				Date currDate = null;
 
-//				if (pdstfrates.size() != 0) {
+				if (pdstfrates.size() != 0) {
 
 					for (PdstFRates newAvg : pdstfrates) {
-//						if (newAvg != null) {
+						if (newAvg != null) {
 							String newDate = AppHelper.convertIntegerToMonth(newAvg.getMonth());
 
 							dataset.addValue(newAvg.getYear25Avg(), "25 Years",
@@ -2960,8 +2995,8 @@ public class ChartController {
 									newDate);
 							
 							currDate = newAvg.getDateUpdated();
-//						}
-//					}
+						}
+					}
 
 					JFreeChart chart = ChartFactory.createLineChart(
 							"2012 PDST-F Rates\n" + AppHelper.convertDateToString(currDate), // chart title
@@ -3035,7 +3070,7 @@ public class ChartController {
 
 				}
 
-//			}
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
