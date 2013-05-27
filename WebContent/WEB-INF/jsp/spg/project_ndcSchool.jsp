@@ -110,6 +110,7 @@
 						  				<ul>
 							  				<li>Palawan State University</li>
 							  					<ul>
+							  						<li>Contact Person: JETER S. SESPEÑE, University President</li>
 													<li>Contact No.: (048)4332379</li>
 													<li>Mobile No.: 09177247658</li>
 												</ul>
