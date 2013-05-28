@@ -10,7 +10,7 @@
 		<li> <a href="<c:url value="/dashboard/" />">View Dashboard</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/AMG/occupancy" />">Occupancy</a> </li>
 		<li> <a href="<c:url value="/dashboard/internal/AMG/maintenanceCost" />">Maintenance Cost</a> </li>
-		<li> <a href="<c:url value="/dashboard/internal/AMG/sourcesFunds" />">Sources & Uses of Funds</a>
+<%-- 		<li> <a href="<c:url value="/dashboard/internal/AMG/sourcesFunds" />">Sources & Uses of Funds</a> --%>
 		<li> <a href="<c:url value="/dashboard/internal/AMG/statusAssets" />">Status of Assets</a> </li>
 		
 		<security:authorize access="${username eq 'vel'}">
