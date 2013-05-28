@@ -5,7 +5,11 @@
 <div>
 	<ul class="nav nav-tabs nav-stacked">
 		<li> 
-			<a href="<c:url value="/dashboard/admin" />">View Dashboard</a> 
+			<a href="<c:url value="/dashboard/admin" />">Admin Dashboard</a> 
+		</li>
+		
+		<li> 
+			<a href="<c:url value="/dashboard/tactical" />">Tactical Dashboard</a> 
 		</li>
 			
 		<li> 
