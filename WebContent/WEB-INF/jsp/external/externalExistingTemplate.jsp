@@ -23,16 +23,15 @@
 				</div>
 				
 				<div class="row-fluid">
-					<div class="span2">
+					<div class="span12">
 						<a class="btn btn-primary" href="<c:url value="/external" />"><i class = "icon-backward icon-white"></i> External Dashboard</a>
-						
-						<br /> <br />
-						
-						<ul class="nav nav-tabs nav-stacked">
-							<li><a href="${pageContext.request.contextPath}/external/disclosures">Disclosure</a></li> <!-- pdf -->
-						</ul>
+						&nbsp;
+						<a class="btn btn-primary" href="<c:url value="/external/disclosures" />"><i class = "icon-file icon-white"></i> Project Disclosures</a>
 					</div>
-					<div class = "span8">
+				</div>
+				
+				<div style="margin-top:20px" class="row-fluid">
+					<div class = "span12">
 						<div>
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
@@ -60,7 +59,7 @@
 												var url = "${pageContext.request.contextPath}/visualization/shareholderspiechart";
 												var id = Number("${spgSubCategory.id}");
 												
-												createShareholdersPieChart(url, 900, 400, id);
+												createShareholdersPieChart(url, 1300, 400, id);
 											});
 										</script>
 							  		</div>
