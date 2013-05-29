@@ -755,6 +755,7 @@
 				$(".groupLangihanButuan").colorbox({rel:'groupLangihanButuan', transition:"none", width:"75%", height:"90%"});
 				$(".groupTalakagBukidnon").colorbox({rel:'groupTalakagBukidnon', transition:"none", width:"75%", height:"90%"});
 				$(".groupSanDionisioPque").colorbox({rel:'groupSanDionisioPque', transition:"none", width:"75%", height:"90%"});
+				$(".groupDelMonteQc").colorbox({rel:'groupDelMonteQc', transition:"none", width:"75%", height:"90%"});
 				$(".groupOneDtiMakati").colorbox({rel:'groupOneDtiMakati', transition:"none", width:"75%", height:"90%"});
 				$(".groupDMacapagalPasay").colorbox({rel:'groupDMacapagalPasay', transition:"none", width:"75%", height:"90%"});
 				$(".groupLankaanCavite").colorbox({rel:'groupLankaanCavite', transition:"none", width:"75%", height:"90%"});

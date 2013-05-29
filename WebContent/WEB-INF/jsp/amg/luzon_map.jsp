@@ -190,24 +190,22 @@
 				<div class="projectTitle" id="sandionisiopque">
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/site_image.png" class="groupSanDionisioPque" title="Site Image">San Dionisio, Paranaque</a></div>
 					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct1_image.png" class="groupSanDionisioPque" title="Subject Prop. with Dilapidated Structures"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct2_image.png" class="groupSanDionisioPque" title="View from the Fronting Road"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct1_image.png" class="groupSanDionisioPque" title="Pictures"></a>
 					</div>
 				</div>
 				<div class="projectTitle" id="delmonteqc">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/site_image.png" class="groupDelMonteQc" title="Site Image">San Francisco Del Monte, Quezon City</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/delmontequezoncity/site_image.png" class="groupDelMonteQc" title="Site Image">San Francisco Del Monte, Quezon City</a></div>
 					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct1_image.png" class="groupDelMonteQc" title="Subject Prop. with Dilapidated Structures"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/sandionisiopque/ct2_image.png" class="groupDelMonteQc" title="View from the Fronting Road"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/delmontequezoncity/ct1_image.png" class="groupDelMonteQc" title="Pictures"></a>
 					</div>
 				</div>
-				<div class="projectTitle" id="onedtimakati">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div>
-					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a>
-					</div>
-				</div>
+<!-- 				<div class="projectTitle" id="onedtimakati"> -->
+<%-- 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div> --%>
+<!-- 					<div style="display:none"> -->
+<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a> --%>
+<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a> --%>
+<!-- 					</div> -->
+<!-- 				</div> -->
 				<div class="projectTitle" id="dmacapagalpasay">
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal Pasay</a></div>
 					<div style="display:none">
@@ -245,7 +243,7 @@
 			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			<div id="sandionisiopque" title="San Dionisio, Paranaque" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="delmonteqc" title="San Francisco Del Monte, Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
-			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+<%-- 			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div> --%>
 			<div id="dmacapagalpasay" title="Central Business Park, D. Macapagal Pasay" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 		</div> <!-- /container -->

@@ -36,6 +36,10 @@
 							<ul class="nav nav-tabs">
 							  <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
 							  <li><a href="#share_holders" data-toggle="tab">Shareholders</a></li>
+							  
+							  <c:if test="${spgSubCategory.id eq 10 or spgSubCategory.id eq 11 or spgSubCategory.id eq 12 or spgSubCategory.id eq 13 or spgSubCategory.id eq 16 or spgSubCategory.id eq 17}">
+							  	<li><a href="#maps" data-toggle="tab">Maps</a></li>
+							  </c:if>
 							</ul>
 						</div>
 						
@@ -64,6 +68,42 @@
 										</script>
 							  		</div>
 							  	</div>
+						  </div>
+						  
+						  <div class="tab-pane" id="maps">
+						  	<div class="row-fluid">
+						  		<div class="span12">
+						  			<c:choose>
+						  				<c:when test="${spgSubCategory.id eq 10}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  			</c:when>
+							  			
+						  				<c:when test="${spgSubCategory.id eq 11}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/krcmap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 12}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/blcmap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 13}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 16}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/lidemap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 17}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/fciemap.jpg" />
+							  			</c:when>
+							  			
+							  			<c:otherwise>
+							  				Map to be uploaded
+							  			</c:otherwise>
+						  			</c:choose>
+						  		</div>
+						  	</div>
 						  </div>
 						</div>
 					</div>

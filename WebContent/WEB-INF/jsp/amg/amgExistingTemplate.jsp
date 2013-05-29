@@ -122,12 +122,28 @@
 						  	<div class="row-fluid">
 						  		<div class="span12">
 						  			<c:choose>
+						  				<c:when test="${spgSubCategory.id eq 10}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  			</c:when>
+							  			
+						  				<c:when test="${spgSubCategory.id eq 11}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/krcmap.png" />
+							  			</c:when>
+							  			
 							  			<c:when test="${spgSubCategory.id eq 12}">
 							  				<img src="${pageContext.request.contextPath}/resources/img/maps/blcmap.png" />
 							  			</c:when>
 							  			
+							  			<c:when test="${spgSubCategory.id eq 13}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  			</c:when>
+							  			
 							  			<c:when test="${spgSubCategory.id eq 16}">
 							  				<img src="${pageContext.request.contextPath}/resources/img/maps/lidemap.png" />
+							  			</c:when>
+							  			
+							  			<c:when test="${spgSubCategory.id eq 17}">
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/fciemap.jpg" />
 							  			</c:when>
 							  			
 							  			<c:otherwise>
