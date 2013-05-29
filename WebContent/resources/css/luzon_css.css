@@ -120,6 +120,16 @@ div.fixed#onedtimakati {
 	margin-top: 195px;
 }
 
+div.fixed#dmacapagalpasay {
+	margin-left: 205px;
+	margin-top: 210px;
+}
+
+div.fixed#lankaancavite {
+	margin-left: 215px;
+	margin-top: 220px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -228,4 +238,14 @@ div.projectTitle#delmonteqc {
 div.projectTitle#onedtimakati {
 	margin-left: 450px;
 	margin-top: 415px;
+}
+
+div.projectTitle#dmacapagalpasay {
+	margin-left: 450px;
+	margin-top: 435px;
+}
+
+div.projectTitle#lankaancavite {
+	margin-left: 450px;
+	margin-top: 455px;
 }

@@ -23,7 +23,8 @@
 					<div class = "span8">				
 						<div>
 							<ul class="nav nav-tabs">
-							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>					  							  
+							  <li class="active"><a href="#description" data-toggle="tab">Project Description</a></li>
+							  <li><a href="#status" data-toggle="tab">Status Updates</a></li>					  							  
 							  <li><a href="#contact" data-toggle="tab">Account Officer</a></li>
 							</ul>
 						</div>
@@ -102,24 +103,29 @@
 									<li><p class="para">Project Timeline</p></li>
 											<ul>
 												<li>Not yet established</li>
-											</ul>	
-									<li><p class="para">Project Status</p></li>
-											<ul>
-												<li>On December 4, 2012, a meeting with Sen. Francis Pangilinan, <br/>
-													together with DTI Sec. Domingo, DA Sec. Alcala, DOT Sec. Jimenez and <br/>
-													DA Usec. Palad, wherein the group agreed to undertake four (4). One <br/>
-													of which is the Davao Food Exchange Terminal Project.  </li>
-												<li>On December 12, 2012, NDC hosted a meeting in Davao City attended by <br/>
-													officials from DTI Region XI, DOT Region XI, DA Region XI, and Davao <br/>
-													City Agriculture Office to discuss the concept of the Davao Food <br/>
-													Exchange Terminal Project.</li>
-											</ul>	
-									<li><p class="para">Next Steps</p></li>
-											<ul>
-												<li> NDC to build out the conduct of Master Planning and Feasibility Study of the project. </li>
-											</ul>																
+											</ul>															
 						  		</ul>						  		 
-						  </div>						 						  
+						  </div>						 	
+						  
+						  <div class="tab-pane" id="status" style = "margin-left: 5%">
+							  	<p class="lead"> Project Status </p>
+									<ul>
+										<li>On December 4, 2012, a meeting with Sen. Francis Pangilinan, <br/>
+											together with DTI Sec. Domingo, DA Sec. Alcala, DOT Sec. Jimenez and <br/>
+											DA Usec. Palad, wherein the group agreed to undertake four (4). One <br/>
+											of which is the Davao Food Exchange Terminal Project.  </li>
+										<li>On December 12, 2012, NDC hosted a meeting in Davao City attended by <br/>
+											officials from DTI Region XI, DOT Region XI, DA Region XI, and Davao <br/>
+											City Agriculture Office to discuss the concept of the Davao Food <br/>
+											Exchange Terminal Project.</li>
+									</ul>	
+									
+									<p class="lead"> Next Steps </p>
+									<ul>
+										<li> NDC to build out the conduct of Master Planning and Feasibility Study of the project. </li>
+									</ul>	
+						  	</div>
+						  						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
 						  	<ul>
 						  		<li>Account Officer</li>

@@ -21,6 +21,7 @@
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png"></div><div style="margin-left: 35px; height: 35px;"> - For Titling</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withjoint.png"></div><div style="margin-left: 35px; height: 35px;"> - With Joint Venture</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - For Project Development</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png"></div><div style="margin-left: 35px; height: 35px;"> - On-Going Projects</div></li>
 					</ul>
 				</div>
 				<div class="projectTitle" id="iligan">
@@ -89,6 +90,13 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/talakagbukidnon/ct2_image.png" class="groupTalakagBukidnon" title="Certificate of Title"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="torildavao">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/torildavao/site_image.png" class="groupTorilDavao" title="Site Image">Bgy. Daliao, Toril, Davao City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/torildavao/ct1_image.png" class="groupTorilDavao" title="Pictures"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/torildavao/ct2_image.png" class="groupTorilDavao" title="Pictures (Cont.)"></a>
+					</div>
+				</div>
 		
 				<div id="iligan" title="Poblacion, Iligan City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 				<div id="zamboanga" title="Campo Islam, Zamboanga City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -97,6 +105,7 @@
 				<div id="fortichbukidnon" title="Manolo Fortich and Libona, Bukidnon" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="langihanbutuan" title="Langihan District, Butuan City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 				<div id="talakagbukidnon" title="Talakag, Bukidnon City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
+				<div id="torildavao" title="Bgy. Daliao, Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 			</div> <!-- /container -->
 			
 		</div>

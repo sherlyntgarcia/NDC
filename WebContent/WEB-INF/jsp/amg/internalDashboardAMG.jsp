@@ -106,7 +106,11 @@
 					</div>
 					
 					<div class="tab-pane" id="amgTab3">
-						Data to be uploaded.
+						<ul>
+							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/NDC NEGOTIATED SALE GUIDELINES.pdf">NDC Negotiated Sale Guidelines</a> </li>
+							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/Guidelines in the Determination of Lease Rates (Sample Only).pdf">Guidelines in the Determination of Lease Rates</a> </li>
+							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/Policies on Accreditation of Brokers.pdf">Policies on Accreditation of Brokers</a> </li>
+						</ul>
 					</div>
 					
 				</div>

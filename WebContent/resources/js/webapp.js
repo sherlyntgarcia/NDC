@@ -756,6 +756,8 @@
 				$(".groupTalakagBukidnon").colorbox({rel:'groupTalakagBukidnon', transition:"none", width:"75%", height:"90%"});
 				$(".groupSanDionisioPque").colorbox({rel:'groupSanDionisioPque', transition:"none", width:"75%", height:"90%"});
 				$(".groupOneDtiMakati").colorbox({rel:'groupOneDtiMakati', transition:"none", width:"75%", height:"90%"});
+				$(".groupDMacapagalPasay").colorbox({rel:'groupDMacapagalPasay', transition:"none", width:"75%", height:"90%"});
+				$(".groupLankaanCavite").colorbox({rel:'groupLankaanCavite', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
@@ -766,10 +768,9 @@
 				$(".groupZamboanga").colorbox({rel:'groupZamboanga', transition:'none', width:'75%', height:'90%'});
 				$(".groupDavao").colorbox({rel:'groupDavao', transition:'none', width:'75%', height:'90%'});
 				$(".groupCotabato").colorbox({rel:'groupCotabato', transition:'none', width:'75%', height:'90%'});
+				$(".groupTorilDavao").colorbox({rel:'groupTorilDavao', transition:'none', width:'75%', height:'90%'});
 				
-				
-				
-				//make all form textfields required using HTML5
+				//make all form textfields required
 				$("form input[type=text],input[type=password]").attr("required", "required");
 				
 				//make some fields numeric only

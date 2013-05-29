@@ -20,7 +20,7 @@
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png"></div><div style="margin-left: 35px; height: 35px;"> - Under Lease</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png"></div><div style="margin-left: 35px; height: 35px;"> - Sale/Lease/Project Development</div></li>
 						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/withjoint.png"></div><div style="margin-left: 35px; height: 35px;"> - With Joint Venture</div></li>
-						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png"></div><div style="margin-left: 35px; height: 35px;"> - On-going Project Development</div></li>
+						<li><div style="width:20px; position: absolute;"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png"></div><div style="margin-left: 35px; height: 35px;"> - On-Going Projects</div></li>
 					</ul>
 				</div>
 				<div class="projectTitle" id="isabela">
@@ -193,6 +193,20 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="dmacapagalpasay">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal Pasay</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/ct1_image.png" class="groupDMacapagalPasay" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/ct2_image.png" class="groupDMacapagalPasay" title="Certificate of Title"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="lankaancavite">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/site_image.png" class="groupLankaanCavite" title="Site Image">Bgy. Lankaan II, Dasmarinas Cavite</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct1_image.png" class="groupLankaanCavite" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct2_image.png" class="groupLankaanCavite" title="Pictures (Cont.)"></a>
+					</div>
+				</div>
 	
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -211,6 +225,8 @@
 			<div id="northaveqc" title="North Ave., Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="shawblvdpasig" title="Shaw Blvd., Bagong Ilog, Pasig City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="dmacapagalpasay" title="Central Business Park, D. Macapagal Pasay" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

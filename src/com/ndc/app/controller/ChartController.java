@@ -2748,6 +2748,9 @@ public class ChartController {
 						year = newCollectionEfficiency.getYear();
 					}
 					
+					System.out.println("Current amount collected: " + current_amountCollected);
+					System.out.println("Current amount billed: " + current_amountBilled);
+					
 					String month = AppHelper.convertIntegerToMonth(monthNum);
 
 					categoryDataset.setValue(pastDue_amountColleted,

@@ -40,6 +40,11 @@ div.fixed#talakagbukidnon {
 	margin-top: 200px;
 }
 
+div.fixed#torildavao {
+	margin-left: 295px;
+	margin-top: 235px;
+}
+
 div.projectTitle#iligan {
 	margin-left: 0px;
 	margin-top: 150px;
@@ -73,4 +78,9 @@ div.projectTitle#langihanbutuan {
 div.projectTitle#talakagbukidnon {
 	margin-left: 380px;
 	margin-top: 300px;
+}
+
+div.projectTitle#torildavao {
+	margin-left: 380px;
+	margin-top: 320px;
 }
