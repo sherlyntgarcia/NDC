@@ -82,7 +82,7 @@
 				<div id="guadalupecebu" title="Guadalupe, Cebu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 				<div id="rizalbacolod" title="Cor Lacson & Rizal Sts Bacolod City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="bantayancebu" title="Sta. Fe., Bantayan, Cebu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-				<div id="poblacionbacolod" title="San Juan St., Poblacion, Bacolod City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+				<div id="poblacionbacolod" title="San Juan St., Poblacion, Bacolod City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			
 			</div>
 			

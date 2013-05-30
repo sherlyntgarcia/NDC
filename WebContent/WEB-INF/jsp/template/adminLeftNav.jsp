@@ -11,6 +11,9 @@
 		<li class="dropdown-submenu">
 			<a href="#" tabindex="-1" >Dashboards</a>
 			<ul class="dropdown-menu">
+				<li> 
+					<a target="_blank" href="<c:url value="/dashboard/tactical" />">Tactical</a> 
+				</li>
 				<li>
 					<a target="_blank" href="<c:url value="/dashboard/internal/AMG" />">AMG</a>
 				</li>
@@ -22,9 +25,6 @@
 				</li>
 				<li>
 					<a target="_blank" href="<c:url value="/dashboard/internal/SPG" />">SPG</a>
-				</li>
-				<li> 
-					<a target="_blank" href="<c:url value="/dashboard/tactical" />">Tactical</a> 
 				</li>
 			</ul>
 		</li>

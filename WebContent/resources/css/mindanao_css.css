@@ -45,6 +45,16 @@ div.fixed#torildavao {
 	margin-top: 235px;
 }
 
+div.fixed#bugocagayandeoro {
+	margin-left: 255px;
+	margin-top: 160px;
+}
+
+div.fixed#puertocagayandeoro {
+	margin-left: 255px;
+	margin-top: 145px;
+}
+
 div.projectTitle#iligan {
 	margin-left: 0px;
 	margin-top: 150px;
@@ -83,4 +93,14 @@ div.projectTitle#talakagbukidnon {
 div.projectTitle#torildavao {
 	margin-left: 380px;
 	margin-top: 320px;
+}
+
+div.projectTitle#bugocagayandeoro {
+	margin-left: 380px;
+	margin-top: 340px;
+}
+
+div.projectTitle#puertocagayandeoro {
+	margin-left: 380px;
+	margin-top: 360px;
 }

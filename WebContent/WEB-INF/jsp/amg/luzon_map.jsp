@@ -217,7 +217,45 @@
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/site_image.png" class="groupLankaanCavite" title="Site Image">Bgy. Lankaan II, Dasmarinas Cavite</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct1_image.png" class="groupLankaanCavite" title="Pictures"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct2_image.png" class="groupLankaanCavite" title="Pictures (Cont.)"></a>
+<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct2_image.png" class="groupLankaanCavite" title="Pictures (Cont.)"></a> --%>
+					</div>
+				</div>
+				<div class="projectTitle" id="gilpuyatmakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/gilpuyatmakati/site_image.png" class="groupGilPuyatMakati" title="Site Image">I&I Bldg., Sen. Gil Puyat Ave., Makati City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/gilpuyatmakati/ct1_image.png" class="groupGilPuyatMakati" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="pasongtamomakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/pasongtamomakati/site_image.png" class="groupPasongTamoMakati" title="Site Image">Pasong Tamo Ext., Makati City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pasongtamomakati/ct1_image.png" class="groupPasongTamoMakati" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="kamagongmakati">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/kamagongmakati/site_image.png" class="groupKamagongMakati" title="Site Image">Kamagong cor. Sampaloc, Makati City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/kamagongmakati/ct1_image.png" class="groupKamagongMakati" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="bambanglaguna">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/bambanglaguna/site_image.png" class="groupBambangLaguna" title="Site Image">National Road, Bgy. Bambang, Los Banos Laguna</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/bambanglaguna/ct1_image.png" class="groupBambangLaguna" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="sanfelipepampanga">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/site_image.png" class="groupSanFelipePampanga" title="Site Image">San Felipe, San Fernando, Pampanga City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/ct1_image.png" class="groupSanFelipePampanga" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="batangasmarivelesbataan">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/batangasmarivelesbataan/site_image.png" class="groupBatangasMarivelesBataan" title="Site Image">Bgy. Batangas II, Mariveles, Bataan</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/batangasmarivelesbataan/ct1_image.png" class="groupBatangasMarivelesBataan" title="Lot Plan"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/batangasmarivelesbataan/ct2_image.png" class="groupBatangasMarivelesBataan" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/batangasmarivelesbataan/ct3_image.png" class="groupBatangasMarivelesBataan" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
 			
@@ -228,7 +266,7 @@
 			<div id="antipolo" title="San Jose, Antipolo" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="laguna" title="Sta. Rosa, Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="nuevaecija" title="Bongabon, Nueva Ecija" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="cavite" title="Humayao, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="cavite" title="Humayao, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 			<div id="alasasinbataan" title="Alas-asin, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="biaanbataan" title="Brgy. Bia-an, Mariveles Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="mabucobataan" title="San Pedro St., Brgy. Mabuco, Hermosa, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -245,7 +283,13 @@
 			<div id="delmonteqc" title="San Francisco Del Monte, Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 <%-- 			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div> --%>
 			<div id="dmacapagalpasay" title="Central Business Park, D. Macapagal Pasay" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
+			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="gilpuyatmakati" title="I&I Bldg., Sen. Gil Puyat Ave., Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="pasongtamomakati" title="Pasong Tamo Ext., Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="kamagongmakati" title="Kamagong cor. Sampaloc, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="bambanglaguna" title="National Road, Bgy. Bambang, Los Banos Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="sanfelipepampanga" title="San Felipe, San Fernando, Pampanga City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="batangasmarivelesbataan" title="Bgy. Batangas II, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

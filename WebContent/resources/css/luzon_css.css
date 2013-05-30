@@ -130,6 +130,36 @@ div.fixed#lankaancavite {
 	margin-top: 220px;
 }
 
+div.fixed#gilpuyatmakati {
+	margin-left: 205px;
+	margin-top: 198px;
+}
+
+div.fixed#pasongtamomakati {
+	margin-left: 213px;
+	margin-top: 205px;
+}
+
+div.fixed#kamagongmakati {
+	margin-left: 213px;
+	margin-top: 195px;
+}
+
+div.fixed#bambanglaguna {
+	margin-left: 205px;
+	margin-top: 190px;
+}
+
+div.fixed#sanfelipepampanga {
+	margin-left: 175px;
+	margin-top: 200px;
+}
+
+div.fixed#batangasmarivelesbataan {
+	margin-left: 155px;
+	margin-top: 215px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -243,4 +273,34 @@ div.projectTitle#dmacapagalpasay {
 div.projectTitle#lankaancavite {
 	margin-left: 450px;
 	margin-top: 435px;
+}
+
+div.projectTitle#gilpuyatmakati {
+	margin-left: -20px;
+	margin-top: 325px;
+}
+
+div.projectTitle#pasongtamomakati {
+	margin-left: -20px;
+	margin-top: 345px;
+}
+
+div.projectTitle#kamagongmakati {
+	margin-left: -20px;
+	margin-top: 365px;
+}
+
+div.projectTitle#bambanglaguna {
+	margin-left: -20px;
+	margin-top: 385px;
+}
+
+div.projectTitle#sanfelipepampanga {
+	margin-left: -20px;
+	margin-top: 405px;
+}
+
+div.projectTitle#batangasmarivelesbataan {
+	margin-left: -20px;
+	margin-top: 425px;
 }

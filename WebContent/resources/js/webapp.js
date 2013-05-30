@@ -759,6 +759,12 @@
 				$(".groupOneDtiMakati").colorbox({rel:'groupOneDtiMakati', transition:"none", width:"75%", height:"90%"});
 				$(".groupDMacapagalPasay").colorbox({rel:'groupDMacapagalPasay', transition:"none", width:"75%", height:"90%"});
 				$(".groupLankaanCavite").colorbox({rel:'groupLankaanCavite', transition:"none", width:"75%", height:"90%"});
+				$(".groupGilPuyatMakati").colorbox({rel:'groupGilPuyatMakati', transition:"none", width:"75%", height:"90%"});
+				$(".groupPasongTamoMakati").colorbox({rel:'groupPasongTamoMakati', transition:"none", width:"75%", height:"90%"});
+				$(".groupKamagongMakati").colorbox({rel:'groupKamagongMakati', transition:"none", width:"75%", height:"90%"});
+				$(".groupBambangLaguna").colorbox({rel:'groupBambangLaguna', transition:"none", width:"75%", height:"90%"});
+				$(".groupSanFelipePampanga").colorbox({rel:'groupSanFelipePampanga', transition:"none", width:"75%", height:"90%"});
+				$(".groupBatangasMarivelesBataan").colorbox({rel:'groupBatangasMarivelesBataan', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
@@ -770,6 +776,8 @@
 				$(".groupDavao").colorbox({rel:'groupDavao', transition:'none', width:'75%', height:'90%'});
 				$(".groupCotabato").colorbox({rel:'groupCotabato', transition:'none', width:'75%', height:'90%'});
 				$(".groupTorilDavao").colorbox({rel:'groupTorilDavao', transition:'none', width:'75%', height:'90%'});
+				$(".groupBugoCagayanDeOro").colorbox({rel:'groupBugoCagayanDeOro', transition:"none", width:"75%", height:"90%"});
+				$(".groupPuertoCagayanDeOro").colorbox({rel:'groupPuertoCagayanDeOro', transition:"none", width:"75%", height:"90%"});
 				
 				//make all form textfields required
 				$("form input[type=text],input[type=password]").attr("required", "required");

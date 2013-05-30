@@ -40,20 +40,20 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/zamboanga/ct2_image.png" class="groupZamboanga" title="Certificate of Title"></a>
 					</div>
 				</div>
-				<div class="projectTitle" id="davao">
-					<div><a href="${pageContext.request.contextPath}/resources/img/sites/davao/site_image.PNG" class="groupDavao">Toril, Davao City</a></div>
-					<div style="display:none;">
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/map_image.PNG" class="groupDavao" title="Map Image"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct1_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct2_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct3_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct4_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct5_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct6_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct7_image.png" class="groupDavao" title="Certificate Title"></a>
-						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct8_image.png" class="groupDavao" title="Certificate Title"></a>
-					</div>
-				</div>
+<!-- 				<div class="projectTitle" id="davao"> -->
+<%-- 					<div><a href="${pageContext.request.contextPath}/resources/img/sites/davao/site_image.PNG" class="groupDavao">Toril, Davao City</a></div> --%>
+<!-- 					<div style="display:none;"> -->
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/map_image.PNG" class="groupDavao" title="Map Image"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct1_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct2_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct3_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct4_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct5_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct6_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct7_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<%-- 						<a href="${pageContext.request.contextPath}/resources/img/sites/davao/ct8_image.png" class="groupDavao" title="Certificate Title"></a> --%>
+<!-- 					</div> -->
+<!-- 				</div> -->
 				<div class="projectTitle" id="cotabato">
 					<div><a href="${pageContext.request.contextPath}/resources/img/sites/cotabato/site_image.PNG" class="groupCotabato" title="Site Image">Parang, Cotabato</a></div>
 					<div style="display:none">
@@ -97,15 +97,30 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/torildavao/ct2_image.png" class="groupTorilDavao" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="bugocagayandeoro">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/bugocagayandeoro/site_image.png" class="groupBugoCagayanDeOro" title="Site Image">Bgy. Bugo, Cagayan De Oro City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/bugocagayandeoro/ct1_image.png" class="groupBugoCagayanDeOro" title="Lot Plan"></a>
+						<a href="${pageContext.request.contextPath}/resources/img/sites/bugocagayandeoro/ct2_image.png" class="groupBugoCagayanDeOro" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="puertocagayandeoro">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/puertocagayandeoro/site_image.png" class="groupPuertoCagayanDeOro" title="Site Image">Puerto, Cagayan De Oro City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/puertocagayandeoro/ct1_image.png" class="groupPuertoCagayanDeOro" title="Lot Plan"></a>
+					</div>
+				</div>
 		
 				<div id="iligan" title="Poblacion, Iligan City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 				<div id="zamboanga" title="Campo Islam, Zamboanga City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-				<div id="davao" title="Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+<%-- 				<div id="davao" title="Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div> --%>
 				<div id="cotabato" title="Parang, Cotabato" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 				<div id="fortichbukidnon" title="Manolo Fortich and Libona, Bukidnon" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="langihanbutuan" title="Langihan District, Butuan City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 				<div id="talakagbukidnon" title="Talakag, Bukidnon City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 				<div id="torildavao" title="Bgy. Daliao, Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
+				<div id="bugocagayandeoro" title="Bgy. Bugo, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+				<div id="puertocagayandeoro" title="Puerto, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			</div> <!-- /container -->
 			
 		</div>
