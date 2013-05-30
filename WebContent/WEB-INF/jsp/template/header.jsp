@@ -225,6 +225,7 @@
 							style="color: #FFF"> You are logged in as <c:out
 									value="${username}" /> (Edit Profile)
 						</a></li>
+						<li><a href="<c:url value="/dashboard"  />">Home</a></li>
 						<li><a href="<c:url value="/logout"  />">Logout</a></li>
 					</security:authorize>
 

@@ -8,8 +8,25 @@
 			<a href="<c:url value="/dashboard/admin" />">Admin Dashboard</a> 
 		</li>
 		
-		<li> 
-			<a href="<c:url value="/dashboard/tactical" />">Tactical Dashboard</a> 
+		<li class="dropdown-submenu">
+			<a href="#" tabindex="-1" >Dashboards</a>
+			<ul class="dropdown-menu">
+				<li>
+					<a target="_blank" href="<c:url value="/dashboard/internal/AMG" />">AMG</a>
+				</li>
+				<li>
+					<a target="_blank" href="<c:url value="/dashboard/internal/FAD" />">FAD</a>
+				</li>
+				<li>
+					<a target="_blank" href="<c:url value="/dashboard/internal/FMG" />">FMG</a>
+				</li>
+				<li>
+					<a target="_blank" href="<c:url value="/dashboard/internal/SPG" />">SPG</a>
+				</li>
+				<li> 
+					<a target="_blank" href="<c:url value="/dashboard/tactical" />">Tactical</a> 
+				</li>
+			</ul>
 		</li>
 			
 		<li> 
