@@ -246,10 +246,16 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/delmontebulacan/ct1_image.png" class="groupDelMonteBulacan" title="Pictures"></a>
 					</div>
 				</div>
-				<div class="projectTitle" id="sannicolaspampanga">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sannicolaspampanga/site_image.png" class="groupSanNicolasPampanga" title="Site Image">Aurea Subdivision, San Nicolas, San Fernando City, Pampanga</a></div>
+				<div class="projectTitle" id="aureasannicolaspampanga">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/aureasannicolaspampanga/site_image.png" class="groupAureaSanNicolasPampanga" title="Site Image">Aurea Subdivision, San Nicolas, San Fernando City, Pampanga</a></div>
 					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/sannicolaspampanga/ct1_image.png" class="groupSanNicolasPampanga" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/aureasannicolaspampanga/ct1_image.png" class="groupAureaSanNicolasPampanga" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="fernandinosannicolaspampanga">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/site_image.png" class="groupFernandinoSanNicolasPampanga" title="Site Image">Fernandino Subd., San Nicolas, San Fernando, Pampanga</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/ct1_image.png" class="groupFernandinoSanNicolasPampanga" title="Pictures"></a>
 					</div>
 				</div>
 	
@@ -280,7 +286,8 @@
 			<div id="batangasmarivelesbataan" title="Bgy. Batangas II, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="doloressanfernando" title="Bgy. Dolores, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="delmontebulacan" title="Bgy. Paradise III, San Jose Del Monte City, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="sannicolaspampanga" title="Aurea Subdivision, San Nicolas, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="aureasannicolaspampanga" title="Aurea Subdivision, San Nicolas, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="fernandinosannicolaspampanga" title="Fernandino Subd., San Nicolas, San Fernando, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

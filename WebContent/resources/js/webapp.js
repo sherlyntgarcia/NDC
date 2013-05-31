@@ -767,9 +767,10 @@
 				$(".groupBatangasMarivelesBataan").colorbox({rel:'groupBatangasMarivelesBataan', transition:"none", width:"75%", height:"90%"});
 				$(".groupDoloresSanFernando").colorbox({rel:'groupDoloresSanFernando', transition:"none", width:"75%", height:"90%"});
 				$(".groupDelMonteBulacan").colorbox({rel:'groupDelMonteBulacan', transition:"none", width:"75%", height:"90%"});
-				$(".groupSanNicolasPampanga").colorbox({rel:'groupSanNicolasPampanga', transition:"none", width:"75%", height:"90%"});
+				$(".groupAureaSanNicolasPampanga").colorbox({rel:'groupAureaSanNicolasPampanga', transition:"none", width:"75%", height:"90%"});
 				$(".groupPurezaManila").colorbox({rel:'groupPurezaManila', transition:"none", width:"75%", height:"90%"});
 				$(".groupCalataganBatangas").colorbox({rel:'groupCalataganBatangas', transition:"none", width:"75%", height:"90%"});
+				$(".groupFernandinoSanNicolasPampanga").colorbox({rel:'groupFernandinoSanNicolasPampanga', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});

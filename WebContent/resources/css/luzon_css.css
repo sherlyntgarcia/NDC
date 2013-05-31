@@ -170,7 +170,7 @@ div.fixed#delmontebulacan {
 	margin-top: 195px;
 }
 
-div.fixed#sannicolaspampanga {
+div.fixed#aureasannicolaspampanga {
 	margin-left: 175px;
 	margin-top: 185px;
 }
@@ -181,6 +181,11 @@ div.fixed#purezamanila {
 }
 
 div.fixed#calataganbatangas {
+	margin-left: 195px;
+	margin-top: 240px;
+}
+
+div.fixed#fernandinosannicolaspampanga {
 	margin-left: 195px;
 	margin-top: 240px;
 }
@@ -340,7 +345,7 @@ div.projectTitle#delmontebulacan {
 	margin-top: 455px;
 }
 
-div.projectTitle#sannicolaspampanga {
+div.projectTitle#aureasannicolaspampanga {
 	margin-left: 450px;
 	margin-top: 475px;
 }
@@ -353,4 +358,9 @@ div.projectTitle#purezamanila {
 div.projectTitle#calataganbatangas {
 	margin-left: 450px;
 	margin-top: 515px;
+}
+
+div.projectTitle#fernandinosannicolaspampanga {
+	margin-left: -20px;
+	margin-top: 465px;
 }
