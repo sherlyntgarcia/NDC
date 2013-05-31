@@ -41,26 +41,15 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="pampanga">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/site_image.PNG" class="groupPampanga1" title="Site Image">Sto. Domingo, Angeles City, Pampanga</a></div>
-					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/map_image.PNG" class="groupPampanga1" title="Map Image">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct1_image.PNG" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct2_image.PNG" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct3_image.PNG" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct4_image.png" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct5_image.png" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct6_image.png" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/angeles/ct7_image.png" class="groupPampanga1" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-					</div>
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/site_image.PNG" class="groupPampanga2">San Juan, San Fernando City, Pampanga</a></div>
 					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/map_image.PNG" class="groupPampanga2" title="Map Image">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct1_image.PNG" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct2_image.PNG" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct3_image.PNG" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct4_image.PNG" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct5_image.png" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct6_image.PNG" class="groupPampanga2" title="Certificate of Title">Sto. Domingo, Angeles City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/map_image.PNG" class="groupPampanga2" title="Map Image">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct1_image.PNG" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct2_image.PNG" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct3_image.PNG" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct4_image.PNG" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct5_image.png" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/pampanga/sanfernando/ct6_image.PNG" class="groupPampanga2" title="Certificate of Title">San Juan, San Fernando City, Pampanga</a>
 					</div>
 				</div>
 				<div class="projectTitle" id="antipolo">
@@ -245,10 +234,27 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/batangasmarivelesbataan/ct3_image.png" class="groupBatangasMarivelesBataan" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="doloressanfernando">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/doloressanfernando/site_image.png" class="groupDoloresSanFernando" title="Site Image">Bgy. Dolores, San Fernando City, Pampanga</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/doloressanfernando/ct1_image.png" class="groupDoloresSanFernando" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="delmontebulacan">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/delmontebulacan/site_image.png" class="groupDelMonteBulacan" title="Site Image">Bgy. Paradise III, San Jose Del Monte City, Bulacan</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/delmontebulacan/ct1_image.png" class="groupDelMonteBulacan" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="sannicolaspampanga">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sannicolaspampanga/site_image.png" class="groupSanNicolasPampanga" title="Site Image">Aurea Subdivision, San Nicolas, San Fernando City, Pampanga</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sannicolaspampanga/ct1_image.png" class="groupSanNicolasPampanga" title="Pictures"></a>
+					</div>
+				</div>
 	
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="angelespampanga" title="Sto. Domingo, Angeles City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="manila" title="Beata St., Pandacan, Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="antipolo" title="San Jose, Antipolo" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="laguna" title="Sta. Rosa, Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -262,6 +268,7 @@
 			<div id="tordesillasmakati" title="Tordesillas St., Salcedo Village, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="northaveqc" title="North Ave., Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="shawblvdpasig" title="Shaw Blvd., Bagong Ilog, Pasig City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
+			<div id="angellinaomalate" title="Angel Linao St., Malate Dist. Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 <%-- 			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div> --%>
 			<div id="dmacapagalpasay" title="Central Business Park, D. Macapagal Pasay" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
@@ -271,6 +278,9 @@
 			<div id="bambanglaguna" title="National Road, Bgy. Bambang, Los Banos Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="sanfelipepampanga" title="San Felipe, San Fernando, Pampanga City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="batangasmarivelesbataan" title="Bgy. Batangas II, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="doloressanfernando" title="Bgy. Dolores, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="delmontebulacan" title="Bgy. Paradise III, San Jose Del Monte City, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="sannicolaspampanga" title="Aurea Subdivision, San Nicolas, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

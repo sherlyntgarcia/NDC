@@ -78,13 +78,26 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/poblacionbacolod/ct10_image.png" class="groupPoblacionBacolod" title="Certificate of Title (Cont.)"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="poblacionlapulapu">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/poblacionlapulapu/site_image.png" class="groupPoblacionLapuLapu" title="Site Image">P. Rodriguez/Dad Cleland Road, Poblacion, Lapu-Lapu City</a></div>
+					<div style="display:none;">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/poblacionlapulapu/ct1_image.png" class="groupPoblacionLapuLapu" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="tagbilaranbohol">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/tagbilaranbohol/site_image.png" class="groupTagbilaranBohol" title="Site Image">Dao, Tagbilaran City, Bohol</a></div>
+					<div style="display:none;">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/tagbilaranbohol/ct1_image.png" class="groupTagbilaranBohol" title="Pictures"></a>
+					</div>
+				</div>
 			
 				<div id="sambagcebu" title="Sambag, Cebu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 				<div id="guadalupecebu" title="Guadalupe, Cebu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 				<div id="rizalbacolod" title="Cor Lacson & Rizal Sts Bacolod City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="bantayancebu" title="Sta. Fe., Bantayan, Cebu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="poblacionbacolod" title="San Juan St., Poblacion, Bacolod City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			
+				<div id="poblacionlapulapu" title="P. Rodriguez/Dad Cleland Road, Poblacion, Lapu-Lapu City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+				<div id="tagbilaranbohol" title="Dao, Tagbilaran City, Bohol" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			</div>
 			
 		</div>

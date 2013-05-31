@@ -160,6 +160,31 @@ div.fixed#batangasmarivelesbataan {
 	margin-top: 215px;
 }
 
+div.fixed#doloressanfernando {
+	margin-left: 175px;
+	margin-top: 195px;
+}
+
+div.fixed#delmontebulacan {
+	margin-left: 175px;
+	margin-top: 195px;
+}
+
+div.fixed#sannicolaspampanga {
+	margin-left: 175px;
+	margin-top: 185px;
+}
+
+div.fixed#purezamanila {
+	margin-left: 195px;
+	margin-top: 225px;
+}
+
+div.fixed#calataganbatangas {
+	margin-left: 195px;
+	margin-top: 240px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -303,4 +328,29 @@ div.projectTitle#sanfelipepampanga {
 div.projectTitle#batangasmarivelesbataan {
 	margin-left: -20px;
 	margin-top: 425px;
+}
+
+div.projectTitle#doloressanfernando {
+	margin-left: -20px;
+	margin-top: 445px;
+}
+
+div.projectTitle#delmontebulacan {
+	margin-left: 450px;
+	margin-top: 455px;
+}
+
+div.projectTitle#sannicolaspampanga {
+	margin-left: 450px;
+	margin-top: 475px;
+}
+
+div.projectTitle#purezamanila {
+	margin-left: 450px;
+	margin-top: 495px;
+}
+
+div.projectTitle#calataganbatangas {
+	margin-left: 450px;
+	margin-top: 515px;
 }

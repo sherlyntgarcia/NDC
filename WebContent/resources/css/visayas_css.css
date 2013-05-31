@@ -30,6 +30,16 @@ div.fixed#poblacionbacolod {
 	margin-top: 240px;
 }
 
+div.fixed#poblacionlapulapu {
+	margin-left: 190px;
+	margin-top: 230px;
+}
+
+div.fixed#tagbilaranbohol {
+	margin-left: 195px;
+	margin-top: 300px;
+}
+
 div.projectTitle#guadalupecebu {
 	margin-left: -30px;
 	margin-top: 270px;
@@ -53,4 +63,14 @@ div.projectTitle#bantayancebu {
 div.projectTitle#poblacionbacolod {
 	margin-left: 335px;
 	margin-top: 285px;
+}
+
+div.projectTitle#poblacionlapulapu {
+	margin-left: 335px;
+	margin-top: 305px;
+}
+
+div.projectTitle#tagbilaranbohol {
+	margin-left: 335px;
+	margin-top: 325px;
 }

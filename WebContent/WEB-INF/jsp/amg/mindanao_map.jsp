@@ -110,6 +110,18 @@
 						<a href="${pageContext.request.contextPath}/resources/img/sites/puertocagayandeoro/ct1_image.png" class="groupPuertoCagayanDeOro" title="Lot Plan"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="macasandigcagayandeoro">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/macasandigcagayandeoro/site_image.png" class="groupMacasandigCagayanDeOro" title="Site Image">Bgy. Macasandig, Cagayan De Oro City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/macasandigcagayandeoro/ct1_image.png" class="groupMacasandigCagayanDeOro" title="Pictures"></a>
+					</div>
+				</div>
+				<div class="projectTitle" id="iponancagayandeoro">
+					<div><a href="${pageContext.request.contextPath}/resources/img/sites/iponancagayandeoro/site_image.png" class="groupIponanCagayanDeOro" title="Site Image">Bgy. Iponan, Cagayan De Oro City</a></div>
+					<div style="display:none">
+						<a href="${pageContext.request.contextPath}/resources/img/sites/iponancagayandeoro/ct1_image.png" class="groupIponanCagayanDeOro" title="Pictures"></a>
+					</div>
+				</div>
 		
 				<div id="iligan" title="Poblacion, Iligan City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 				<div id="zamboanga" title="Campo Islam, Zamboanga City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -121,6 +133,8 @@
 				<div id="torildavao" title="Bgy. Daliao, Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 				<div id="bugocagayandeoro" title="Bgy. Bugo, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 				<div id="puertocagayandeoro" title="Puerto, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+				<div id="macasandigcagayandeoro" title="Bgy. Macasandig, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+				<div id="iponancagayandeoro" title="Bgy. Iponan, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			</div> <!-- /container -->
 			
 		</div>

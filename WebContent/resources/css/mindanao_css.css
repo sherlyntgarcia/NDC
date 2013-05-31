@@ -55,6 +55,16 @@ div.fixed#puertocagayandeoro {
 	margin-top: 145px;
 }
 
+div.fixed#macasandigcagayandeoro {
+	margin-left: 265px;
+	margin-top: 155px;
+}
+
+div.fixed#iponancagayandeoro {
+	margin-left: 270px;
+	margin-top: 150px;
+}
+
 div.projectTitle#iligan {
 	margin-left: 0px;
 	margin-top: 150px;
@@ -77,30 +87,40 @@ div.projectTitle#cotabato {
 
 div.projectTitle#fortichbukidnon {
 	margin-left: 380px;
-	margin-top: 260px;
+	margin-top: 100px;
 }
 
 div.projectTitle#langihanbutuan {
 	margin-left: 380px;
-	margin-top: 280px;
+	margin-top: 120px;
 }
 
 div.projectTitle#talakagbukidnon {
 	margin-left: 380px;
-	margin-top: 300px;
+	margin-top: 140px;
 }
 
 div.projectTitle#torildavao {
 	margin-left: 380px;
-	margin-top: 320px;
+	margin-top: 160px;
 }
 
 div.projectTitle#bugocagayandeoro {
 	margin-left: 380px;
-	margin-top: 340px;
+	margin-top: 180px;
 }
 
 div.projectTitle#puertocagayandeoro {
 	margin-left: 380px;
-	margin-top: 360px;
+	margin-top: 200px;
+}
+
+div.projectTitle#macasandigcagayandeoro {
+	margin-left: 380px;
+	margin-top: 220px;
+}
+
+div.projectTitle#iponancagayandeoro {
+	margin-left: 380px;
+	margin-top: 240px;
 }

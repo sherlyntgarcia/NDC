@@ -765,10 +765,17 @@
 				$(".groupBambangLaguna").colorbox({rel:'groupBambangLaguna', transition:"none", width:"75%", height:"90%"});
 				$(".groupSanFelipePampanga").colorbox({rel:'groupSanFelipePampanga', transition:"none", width:"75%", height:"90%"});
 				$(".groupBatangasMarivelesBataan").colorbox({rel:'groupBatangasMarivelesBataan', transition:"none", width:"75%", height:"90%"});
+				$(".groupDoloresSanFernando").colorbox({rel:'groupDoloresSanFernando', transition:"none", width:"75%", height:"90%"});
+				$(".groupDelMonteBulacan").colorbox({rel:'groupDelMonteBulacan', transition:"none", width:"75%", height:"90%"});
+				$(".groupSanNicolasPampanga").colorbox({rel:'groupSanNicolasPampanga', transition:"none", width:"75%", height:"90%"});
+				$(".groupPurezaManila").colorbox({rel:'groupPurezaManila', transition:"none", width:"75%", height:"90%"});
+				$(".groupCalataganBatangas").colorbox({rel:'groupCalataganBatangas', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});
 				$(".groupCebu2").colorbox({rel:'groupCebu2', transition:'none', width:'75%', height:'90%'});
+				$(".groupPoblacionLapuLapu").colorbox({rel:'groupPoblacionLapuLapu', transition:'none', width:'75%', height:'90%'});
+				$(".groupTagbilaranBohol").colorbox({rel:'groupTagbilaranBohol', transition:'none', width:'75%', height:'90%'});
 				
 				//mindanao
 				$(".groupIligan").colorbox({rel:'groupIligan', transition:'none', width:'75%', height:'90%'});
@@ -778,6 +785,8 @@
 				$(".groupTorilDavao").colorbox({rel:'groupTorilDavao', transition:'none', width:'75%', height:'90%'});
 				$(".groupBugoCagayanDeOro").colorbox({rel:'groupBugoCagayanDeOro', transition:"none", width:"75%", height:"90%"});
 				$(".groupPuertoCagayanDeOro").colorbox({rel:'groupPuertoCagayanDeOro', transition:"none", width:"75%", height:"90%"});
+				$(".groupMacasandigCagayanDeOro").colorbox({rel:'groupMacasandigCagayanDeOro', transition:"none", width:"75%", height:"90%"});
+				$(".groupIponanCagayanDeOro").colorbox({rel:'groupIponanCagayanDeOro', transition:"none", width:"75%", height:"90%"});
 				
 				//make all form textfields required
 				$("form input[type=text],input[type=password]").attr("required", "required");
