@@ -278,6 +278,7 @@
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/site_image.png" class="groupFernandinoSanNicolasPampanga" title="Site Image">Fernandino Subd., San Nicolas, San Fernando, Pampanga</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/ct1_image.png" class="groupFernandinoSanNicolasPampanga" title="Pictures"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/ct2_image.png" class="groupFernandinoSanNicolasPampanga" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
 			
