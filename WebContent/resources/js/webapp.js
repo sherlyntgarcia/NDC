@@ -771,6 +771,7 @@
 				$(".groupPurezaManila").colorbox({rel:'groupPurezaManila', transition:"none", width:"75%", height:"90%"});
 				$(".groupCalataganBatangas").colorbox({rel:'groupCalataganBatangas', transition:"none", width:"75%", height:"90%"});
 				$(".groupFernandinoSanNicolasPampanga").colorbox({rel:'groupFernandinoSanNicolasPampanga', transition:"none", width:"75%", height:"90%"});
+				$(".groupSucatMuntinlupa").colorbox({rel:'groupSucatMuntinlupa', transition:"none", width:"75%", height:"90%"});
 				
 				//visayas
 				$(".groupCebu1").colorbox({rel:'groupCebu1', transition:'none', width:'75%', height:'90%'});

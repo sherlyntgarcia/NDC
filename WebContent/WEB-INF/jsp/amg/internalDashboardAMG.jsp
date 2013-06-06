@@ -108,8 +108,8 @@
 					<div class="tab-pane" id="amgTab3">
 						<ul>
 							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/NDC NEGOTIATED SALE GUIDELINES.pdf">NDC Negotiated Sale Guidelines</a> </li>
-							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/Guidelines in the Determination of Lease Rates (Sample Only).pdf">Guidelines in the Determination of Lease Rates</a> </li>
-							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/Policies on Accreditation of Brokers.pdf">Policies on Accreditation of Brokers</a> </li>
+							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/GUIDELINES IN THE DETERMINATION OF LEASE RATES.pdf">Guidelines in the Determination of Lease Rates</a> </li>
+							<li> <a target="_blank" href="${pageContext.request.contextPath}/resources/files/GUIDELINES FOR THE ACCREDITATION OF REAL ESTATE BROKERS.pdf">Guidelines for the Accreditation of Real Estate Brokers</a> </li>
 						</ul>
 					</div>
 					

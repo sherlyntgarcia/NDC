@@ -188,13 +188,6 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/delmontequezoncity/ct1_image.png" class="groupDelMonteQc" title="Pictures"></a>
 					</div>
 				</div>
-<!-- 				<div class="projectTitle" id="onedtimakati"> -->
-<%-- 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div> --%>
-<!-- 					<div style="display:none"> -->
-<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a> --%>
-<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a> --%>
-<!-- 					</div> -->
-<!-- 				</div> -->
 				<div class="projectTitle" id="dmacapagalpasay">
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal Pasay</a></div>
 					<div style="display:none">
@@ -281,6 +274,13 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/ct2_image.png" class="groupFernandinoSanNicolasPampanga" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="sucatmuntinlupa">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/site_image.png" class="groupSucatMuntinlupa" title="Site Image">Bgy, Sucat, Muntinlupa City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct1_image.png" class="groupSucatMuntinlupa" title="Location Map"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct2_image.png" class="groupSucatMuntinlupa" title="Pictures"></a>
+					</div>
+				</div>
 			
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
@@ -303,7 +303,6 @@
 			<div id="malhacanbulacan" title="Brgy. Malhacan, Meycauayan, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 			<div id="sandionisiopque" title="San Dionisio, Paranaque" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="delmonteqc" title="San Francisco Del Monte, Quezon City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
-<%-- 			<div id="onedtimakati" title="One-DTI" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div> --%>
 			<div id="dmacapagalpasay" title="Central Business Park, D. Macapagal Pasay" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="lankaancavite" title="Bgy. Lankaan II, Dasmarinas Cavite" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="gilpuyatmakati" title="I&I Bldg., Sen. Gil Puyat Ave., Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
@@ -318,6 +317,7 @@
 			<div id="purezamanila" title="Pureza St., Sta. Mesa, Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="calataganbatangas" title="30 Bgy. Sambugan, Calatagan, Batangas" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="fernandinosannicolaspampanga" title="Fernandino Subd., San Nicolas, San Fernando, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="sucatmuntinlupa" title="Bgy. Sucat, Muntinlupa City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withjoint.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

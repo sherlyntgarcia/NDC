@@ -128,7 +128,7 @@
 						  		<div class="span12">
 						  			<c:choose>
 						  				<c:when test="${spgSubCategory.id eq 10}">
-							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/prcmap.png" />
 							  			</c:when>
 							  			
 						  				<c:when test="${spgSubCategory.id eq 11}">
@@ -140,11 +140,11 @@
 							  			</c:when>
 							  			
 							  			<c:when test="${spgSubCategory.id eq 13}">
-							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreiprcmap.png" />
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/gyreimap.png" />
 							  			</c:when>
 							  			
 							  			<c:when test="${spgSubCategory.id eq 16}">
-							  				<img src="${pageContext.request.contextPath}/resources/img/maps/lidemap.png" />
+							  				<img src="${pageContext.request.contextPath}/resources/img/maps/lidemap.jpg" />
 							  			</c:when>
 							  			
 							  			<c:when test="${spgSubCategory.id eq 17}">

@@ -259,6 +259,13 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/fernandinosannicolaspampanga/ct2_image.png" class="groupFernandinoSanNicolasPampanga" title="Pictures (Cont.)"></a>
 					</div>
 				</div>
+				<div class="projectTitle" id="sucatmuntinlupa">
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/site_image.png" class="groupSucatMuntinlupa" title="Site Image">Bgy, Sucat, Muntinlupa City</a></div>
+					<div style="display:none">
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct1_image.png" class="groupSucatMuntinlupa" title="Location Map"></a>
+						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct2_image.png" class="groupSucatMuntinlupa" title="Pictures"></a>
+					</div>
+				</div>
 	
 			<div id="isabela" title="Bo. Soyung, Echague, Isabela" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="sanfernandopampanga" title="San Juan, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
@@ -289,6 +296,7 @@
 			<div id="delmontebulacan" title="Bgy. Paradise III, San Jose Del Monte City, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="aureasannicolaspampanga" title="Aurea Subdivision, San Nicolas, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="fernandinosannicolaspampanga" title="Fernandino Subd., San Nicolas, San Fernando, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="sucatmuntinlupa" title="Bgy. Sucat, Muntinlupa City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withjoint.png" /></a></div>
 		</div> <!-- /container -->
 			
 		</div>

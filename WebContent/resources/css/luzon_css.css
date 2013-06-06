@@ -190,6 +190,11 @@ div.fixed#fernandinosannicolaspampanga {
 	margin-top: 190px;
 }
 
+div.fixed#sucatmuntinlupa {
+	margin-left: 215px;
+	margin-top: 230px;
+}
+
 div.projectTitle#isabela {
 	margin-left: 300px;
 	margin-top: 60px;
@@ -363,4 +368,9 @@ div.projectTitle#calataganbatangas {
 div.projectTitle#fernandinosannicolaspampanga {
 	margin-left: -20px;
 	margin-top: 465px;
+}
+
+div.projectTitle#sucatmuntinlupa {
+	margin-left: 450px;
+	margin-top: 535px;
 }
