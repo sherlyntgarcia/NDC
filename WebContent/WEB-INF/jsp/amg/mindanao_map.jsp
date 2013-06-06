@@ -132,7 +132,7 @@
 				<div id="talakagbukidnon" title="Talakag, Bukidnon City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/fortitling.png" /></a></div>
 				<div id="torildavao" title="Bgy. Daliao, Toril, Davao City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/ongoing.png" /></a></div>
 				<div id="bugocagayandeoro" title="Bgy. Bugo, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
-				<div id="puertocagayandeoro" title="Puerto, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+				<div id="puertocagayandeoro" title="Puerto, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 				<div id="macasandigcagayandeoro" title="Bgy. Macasandig, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 				<div id="iponancagayandeoro" title="Bgy. Iponan, Cagayan De Oro City" class="fixed"><a href="#" class="pin"><img src="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			</div> <!-- /container -->

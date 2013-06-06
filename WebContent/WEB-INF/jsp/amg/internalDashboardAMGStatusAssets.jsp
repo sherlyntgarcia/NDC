@@ -75,7 +75,11 @@
 						<div>
 							<spring:input path="year" class="span6" readonly="true" />
 						</div>
-						
+					</div>
+				</div>
+				
+				<div class="row-fluid">
+					<div class="span6">		
 						<label>Under Lease</label>
 						<div>
 							<spring:input path="underLease" class="span6" constraint="number" placeholder="(e.g. 30)" />
@@ -86,24 +90,19 @@
 							<spring:input path="forSaleLease" class="span6" constraint="number" placeholder="(e.g. 30)" />
 						</div>
 						
-						<label>For CMP</label>
-						<div>
-							<spring:input path="forCmp" class="span6" constraint="number" placeholder="(e.g. 30)" />
-						</div>
-						
-						<label>With Court Case</label>
+						<label>With Court Cases</label>
 						<div>
 							<spring:input path="withCourtCase" class="span6" constraint="number" placeholder="(e.g. 30)" />
 						</div>
-						
-					</div>
-					
-					<div class="span6">
 						
 						<label>For Relocation Survey</label>
 						<div>
 							<spring:input path="forRelocationSurvey" class="span6" constraint="number" placeholder="(e.g. 20)" />
 						</div>
+						
+					</div>
+					
+					<div class="span6">
 						
 						<label>For Titling/Issuance of ODCT</label>
 						<div>
@@ -120,7 +119,13 @@
 							<spring:input path="forProjectDevelopment" class="span6" constraint="number" placeholder="(e.g. 10)" />
 						</div>
 						
+						<label>On-Going Projects</label>
+						<div>
+							<spring:input path="onGoing" class="span6" constraint="number" placeholder="(e.g. 15)" />
+						</div>
+						
 					</div>
+					
 				</div>
 				
 				<div class="row-fluid">

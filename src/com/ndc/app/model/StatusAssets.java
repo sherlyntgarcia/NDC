@@ -25,8 +25,11 @@ public class StatusAssets implements java.io.Serializable {
 	@NotNull(message="For Sale/Lease is required")
 	private Double forSaleLease;
 	
-	@NotNull(message="For CMP is required")
-	private Double forCmp;
+//	@NotNull(message="For CMP is required")
+//	private Double forCmp;
+	
+	@NotNull(message="On-going Projects is required")
+	private Double onGoing;
 	
 	@NotNull(message="With Court Case is required")
 	private Double withCourtCase;
@@ -79,14 +82,14 @@ public class StatusAssets implements java.io.Serializable {
 		this.forSaleLease = forSaleLease;
 	}
 
-	@Column(name="FOR_CMP")
-	public Double getForCmp() {
-		return forCmp;
-	}
-
-	public void setForCmp(Double forCmp) {
-		this.forCmp = forCmp;
-	}
+//	@Column(name="FOR_CMP")
+//	public Double getForCmp() {
+//		return forCmp;
+//	}
+//
+//	public void setForCmp(Double forCmp) {
+//		this.forCmp = forCmp;
+//	}
 
 	@Column(name="WITH_COURT_CASE")
 	public Double getWithCourtCase() {
@@ -123,6 +126,24 @@ public class StatusAssets implements java.io.Serializable {
 	public void setForProjectDevelopment(Double forProjectDevelopment) {
 		this.forProjectDevelopment = forProjectDevelopment;
 	}
+	
+	@Column(name="ON_GOING")
+	public Double getOnGoing() {
+		return onGoing;
+	}
+
+	public void setOnGoing(Double onGoing) {
+		this.onGoing = onGoing;
+	}
+	
+	@Column(name="WITH_JV")
+	public Double getWithJv() {
+		return withJv;
+	}
+
+	public void setWithJv(Double withJv) {
+		this.withJv = withJv;
+	}
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="DATE_UPDATED")
@@ -150,15 +171,6 @@ public class StatusAssets implements java.io.Serializable {
 
 	public void setYear(Integer year) {
 		this.year = year;
-	}
-
-	@Column(name="WITH_JV")
-	public Double getWithJv() {
-		return withJv;
-	}
-
-	public void setWithJv(Double withJv) {
-		this.withJv = withJv;
 	}
 	
 }

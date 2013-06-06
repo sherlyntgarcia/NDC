@@ -1414,10 +1414,8 @@ public class ChartController {
 							"Under Lease", asset.getYear());
 					categoryDataset.setValue(asset.getForSaleLease(),
 							"For Sale/Lease", asset.getYear());
-					categoryDataset.setValue(asset.getForCmp(), "For CMP",
-							asset.getYear());
 					categoryDataset.setValue(asset.getWithCourtCase(),
-							"With Court Case", asset.getYear());
+							"With Court Cases", asset.getYear());
 					categoryDataset.setValue(asset.getForRelocationSurvey(),
 							"For Relocation Survey", asset.getYear());
 					categoryDataset.setValue(asset.getForTitling(),
@@ -1427,6 +1425,9 @@ public class ChartController {
 					categoryDataset.setValue(
 							asset.getForProjectDevelopment(),
 							"For Project Development", asset.getYear());
+					categoryDataset.setValue(
+							asset.getOnGoing(),
+							"On-Going Projects", asset.getYear());
 				}
 
 				JFreeChart chart = ChartFactory.createBarChart(
