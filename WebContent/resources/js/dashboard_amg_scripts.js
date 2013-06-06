@@ -42,7 +42,7 @@ function createOccupancyPieChart(url, width, height) {
 				},
 				plotOptions: {
 					pie: {
-						allowPointSelect: true,
+						allowPointSelect: false,
 						cursor: 'pointer',
 						borderWidth: 2,
 						showInLegend: false,

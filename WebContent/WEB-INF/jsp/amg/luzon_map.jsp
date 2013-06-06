@@ -227,7 +227,7 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="sanfelipepampanga">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/site_image.png" class="groupSanFelipePampanga" title="Site Image">San Felipe, San Fernando, Pampanga City</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/site_image.png" class="groupSanFelipePampanga" title="Site Image">San Felipe, San Fernando City, Pampanga</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/ct1_image.png" class="groupSanFelipePampanga" title="Pictures"></a>
 					</div>
@@ -262,7 +262,7 @@
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/purezamanila/site_image.png" class="groupPurezaManila" title="Site Image">Pureza St., Sta. Mesa, Manila</a></div>
 				</div>
 				<div class="projectTitle" id="calataganbatangas">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/calataganbatangas/site_image.png" class="groupCalataganBatangas" title="Site Image">30 Bgy. Sambugan, Calatagan, Batangas</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/calataganbatangas/site_image.png" class="groupCalataganBatangas" title="Site Image">Brgy. Sambungan, Calatagan, Batangas</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/calataganbatangas/ct1_image.png" class="groupCalataganBatangas" title="Pictures"></a>
 					</div>
@@ -309,13 +309,13 @@
 			<div id="pasongtamomakati" title="Pasong Tamo Ext., Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="kamagongmakati" title="Kamagong cor. Sampaloc, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="bambanglaguna" title="National Road, Bgy. Bambang, Los Banos Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
-			<div id="sanfelipepampanga" title="San Felipe, San Fernando, Pampanga City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
+			<div id="sanfelipepampanga" title="San Felipe, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="batangasmarivelesbataan" title="Bgy. Batangas II, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="doloressanfernando" title="Bgy. Dolores, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="delmontebulacan" title="Bgy. Paradise III, San Jose Del Monte City, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="aureasannicolaspampanga" title="Aurea Subdivision, San Nicolas, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="purezamanila" title="Pureza St., Sta. Mesa, Manila" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
-			<div id="calataganbatangas" title="30 Bgy. Sambugan, Calatagan, Batangas" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
+			<div id="calataganbatangas" title="Brgy. Sambungan, Calatagan, Batangas" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withcourt.png" /></a></div>
 			<div id="fernandinosannicolaspampanga" title="Fernandino Subd., San Nicolas, San Fernando, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/leasesale.png" /></a></div>
 			<div id="sucatmuntinlupa" title="Bgy. Sucat, Muntinlupa City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/withjoint.png" /></a></div>
 		</div> <!-- /container -->

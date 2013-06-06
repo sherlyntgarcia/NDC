@@ -98,7 +98,7 @@
 					<div class="tab-pane" id="amgTab2">
 				
 						<hr />
-							<p>You can click the <span class="badge badge-important">graphs</span> to update.</p>
+							<p>You can click the <span class="badge badge-important">graphs</span> to update. For occupancy chart, click <a href="${pageContext.request.contextPath}/dashboard/internal/AMG/occupancy">here</a>.</p>
 						<hr />
 				
 						<c:import url="internalAmgTemplate.jsp" />

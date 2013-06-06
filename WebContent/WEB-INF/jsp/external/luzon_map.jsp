@@ -161,27 +161,6 @@
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/tandangkutyorizal/ct2_image.png" class="groupTandangKutyoRizal" title="Vicinity within the existing Brgy. Road"></a>
 					</div>
 				</div>
-				<div class="projectTitle" id="bonotlegazpi">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/site_image.png" class="groupBonotLegazpi" title="Site Image">Brgy. Bonot, Legazpi City</a></div>
-					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/ct1_image.png" class="groupBonotLegazpi" title="View from the Road Lot"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/bonotlegazpi/ct2_image.png" class="groupBonotLegazpi" title="Vicinity Penaranda St. Ext."></a>
-					</div>
-				</div>
-				<div class="projectTitle" id="malhacanbulacan">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/site_image.png" class="groupMalhacanBulacan" title="Site Image">Brgy. Malhacan, Meycauayan, Bulacan</a></div>
-					<div style="display:none">
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct1_image.png" class="groupMalhacanBulacan" title="Subject Prop. with Dilapidated Structures"></a>
-						<a href ="${pageContext.request.contextPath}/resources/img/sites/malhacanbulacan/ct2_image.png" class="groupMalhacanBulacan" title="View from the Fronting Road"></a>
-					</div>
-				</div>
-<!-- 				<div class="projectTitle" id="onedtimakati"> -->
-<%-- 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/site_image.png" class="groupOneDtiMakati" title="Site Image">One-DTI</a></div> --%>
-<!-- 					<div style="display:none"> -->
-<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct1_image.png" class="groupOneDtiMakati" title="Subject Prop. with Dilapidated Structures"></a> --%>
-<%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/onedtimakati/ct2_image.png" class="groupOneDtiMakati" title="View from the Fronting Road"></a> --%>
-<!-- 					</div> -->
-<!-- 				</div> -->
 				<div class="projectTitle" id="dmacapagalpasay">
 					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal Pasay</a></div>
 					<div style="display:none">
@@ -221,7 +200,7 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="sanfelipepampanga">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/site_image.png" class="groupSanFelipePampanga" title="Site Image">San Felipe, San Fernando, Pampanga City</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/site_image.png" class="groupSanFelipePampanga" title="Site Image">San Felipe, San Fernando City, Pampanga</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/sanfelipepampanga/ct1_image.png" class="groupSanFelipePampanga" title="Pictures"></a>
 					</div>
@@ -290,7 +269,7 @@
 			<div id="pasongtamomakati" title="Pasong Tamo Ext., Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="kamagongmakati" title="Kamagong cor. Sampaloc, Makati City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/underlease.png" /></a></div>
 			<div id="bambanglaguna" title="National Road, Bgy. Bambang, Los Banos Laguna" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
-			<div id="sanfelipepampanga" title="San Felipe, San Fernando, Pampanga City" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
+			<div id="sanfelipepampanga" title="San Felipe, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="batangasmarivelesbataan" title="Bgy. Batangas II, Mariveles, Bataan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="doloressanfernando" title="Bgy. Dolores, San Fernando City, Pampanga" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
 			<div id="delmontebulacan" title="Bgy. Paradise III, San Jose Del Monte City, Bulacan" class="fixed"><a href="#" class="pin"><img src ="${pageContext.request.contextPath}/resources/img/pins/dev.png" /></a></div>
