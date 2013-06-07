@@ -93,7 +93,7 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="biaanbataan">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/biaanbataan/site_image.png" class="groupBiaanBataan" title="Site Image">Bgy. Bia-an, Mariveles Bataan</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/biaanbataan/site_image.png" class="groupBiaanBataan" title="Site Image">Bgy. Bia-an, Mariveles, Bataan</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/biaanbataan/ct1_image.png" class="groupBiaanBataan" title="Vicinity/Brgy. Road"></a>
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/biaanbataan/ct2_image.png" class="groupBiaanBataan" title="Bataan-Bagac Road/Conc. Portion of the Provincial Road"></a>
@@ -162,14 +162,14 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="dmacapagalpasay">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal Pasay</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/site_image.png" class="groupDMacapagalPasay" title="Site Image">Central Business Park, D. Macapagal, Pasay</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/ct1_image.png" class="groupDMacapagalPasay" title="Pictures"></a>
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/dmacapagalpasay/ct2_image.png" class="groupDMacapagalPasay" title="Certificate of Title"></a>
 					</div>
 				</div>
 				<div class="projectTitle" id="lankaancavite">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/site_image.png" class="groupLankaanCavite" title="Site Image">Bgy. Lankaan II, Dasmarinas Cavite</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/site_image.png" class="groupLankaanCavite" title="Site Image">Bgy. Lankaan II, Dasmarinas, Cavite</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct1_image.png" class="groupLankaanCavite" title="Pictures"></a>
 <%-- 						<a href ="${pageContext.request.contextPath}/resources/img/sites/lankaancavite/ct2_image.png" class="groupLankaanCavite" title="Pictures (Cont.)"></a> --%>
@@ -239,7 +239,7 @@
 					</div>
 				</div>
 				<div class="projectTitle" id="sucatmuntinlupa">
-					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/site_image.png" class="groupSucatMuntinlupa" title="Site Image">Bgy, Sucat, Muntinlupa City</a></div>
+					<div><a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/site_image.png" class="groupSucatMuntinlupa" title="Site Image">Bgy. Sucat, Muntinlupa City</a></div>
 					<div style="display:none">
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct1_image.png" class="groupSucatMuntinlupa" title="Location Map"></a>
 						<a href ="${pageContext.request.contextPath}/resources/img/sites/sucatmuntinlupa/ct2_image.png" class="groupSucatMuntinlupa" title="Pictures"></a>
