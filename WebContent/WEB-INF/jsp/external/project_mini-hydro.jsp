@@ -111,19 +111,11 @@
 						  	<ul>
 						  		<li>Account Officer</li>
 						  			<ul>
-						  				<li>RYAN J. MACAILING</li>
+						  				<li>COLETTE H. CORDIAL</li>
 						  					<ul>
-												<li>Contact No.: 8404838 loc. 257</li>
-												<li>Mobile No.:  09175822467</li>
+												<li>Contact No.: 8404838 loc. 245</li>
+												<li>Mobile No.:  09178550116</li>
 											</ul>
-<!-- 									<li>Client Contact Person</li> -->
-<!-- 						  			<ul> -->
-<!-- 										<li>JOB JACOB A. GONZALES, Project Manager</li> -->
-<!-- 										<ul> -->
-<!-- 											<li>Tel. No.:  7897662</li> -->
-<!-- 											<li>Mobile No. 09175822467</li> -->
-<!-- 										</ul>						  												 -->
-<!-- 						  			</ul>						  -->
 									</ul>
 							</div>
 						</div>
