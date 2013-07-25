@@ -15,7 +15,7 @@
 					
 				</div>
 
-				  <h1>Fund Management System </small>External</h1>
+				  <h1>Fund Management</h1>
 				  <a class="btn btn-primary btn-medium" href="<c:url value="/external" />"><i class="icon icon-backward icon-white"></i> Back to External</a>
 	
 			</div>

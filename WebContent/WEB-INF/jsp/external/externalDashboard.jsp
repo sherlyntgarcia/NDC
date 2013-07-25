@@ -139,7 +139,7 @@
 						</div>
 
 						<div style="margin-top: 20px">
-							<p class="lead">Legends</p>
+							<p class="lead">Legend</p>
 							<hr />
 							<ul class="unstyled">
 								<li><img onclick="window.location.href='${pageContext.request.contextPath}/external/luzon'"

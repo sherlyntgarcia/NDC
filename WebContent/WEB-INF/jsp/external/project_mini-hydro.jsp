@@ -108,15 +108,16 @@
 						  </div>
 						  			 						  
 						  <div class="tab-pane" id="contact" style = "margin-left: 5%">
-						  	<ul>
-						  		<li>Account Officer</li>
+						  		<ul>
+						  			<li>Account Officer</li>
 						  			<ul>
-						  				<li>COLETTE H. CORDIAL</li>
+						  					<li>COLETTE H. CORDIAL</li>
 						  					<ul>
 												<li>Contact No.: 8404838 loc. 245</li>
 												<li>Mobile No.:  09178550116</li>
 											</ul>
 									</ul>
+								</ul>
 							</div>
 						</div>
 					</div>
