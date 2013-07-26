@@ -153,6 +153,12 @@
 									constraint="number" placeholder="(e.g. 150000)" />
 							</div>
 							
+							<label>Budget Fidelity Bond and Insurance Premiums</label>
+							<div>
+								<spring:input path="budgetFidelityAndInsurance" class="span6"
+									constraint="number" placeholder="(e.g. 150000)" />
+							</div>
+							
 							<label>Budget Janitorial Services</label>
 							<div>
 								<spring:input path="budgetJanitorial" class="span6"
@@ -325,6 +331,12 @@
 							<label>Actual Extraordinary and Miscellaneous Expense</label>
 							<div>
 								<spring:input path="actualExtraordinary" class="span6"
+									constraint="number" placeholder="(e.g. 80000)" />
+							</div>
+							
+							<label>Actual Fidelity Bond and Insurance Premiums</label>
+							<div>
+								<spring:input path="actualFidelityAndInsurance" class="span6"
 									constraint="number" placeholder="(e.g. 80000)" />
 							</div>
 							

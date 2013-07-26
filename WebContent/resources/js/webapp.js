@@ -271,6 +271,10 @@
 					getTotalActual();
 				});
 				
+				$("input[name=actualFidelityAndInsurance]").keyup(function() {
+					getTotalActual();
+				});
+				
 				$("input[name=actualJanitorial]").keyup(function() {
 					getTotalActual();
 				});
@@ -377,6 +381,10 @@
 				});
 				
 				$("input[name=budgetExtraordinary]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetFidelityAndInsurance]").keyup(function() {
 					getTotalBudget();
 				});
 				
