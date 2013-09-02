@@ -106,6 +106,9 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	@NotNull(message="Actual Rewards is required")
 	private Double actualRewards;
 	
+	@NotNull(message="Actual for Fidelity Bond and Insurance Premiums")
+	private Double actualFidelityAndInsurance;
+	
 	@NotNull(message="Budget Advertising is required")
 	private Double budgetAdvertising;
 	
@@ -186,6 +189,9 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	
 	@NotNull(message="Budget Rewards is required")
 	private Double budgetRewards;
+	
+	@NotNull(message="Budget for Fidelity Bond and Insurance Premiums")
+	private Double budgetFidelityAndInsurance;
 	
 	private Integer year;
 	private Integer month;
@@ -537,6 +543,15 @@ public class ActualIncomeExpense implements java.io.Serializable {
 	public void setActualRewards(Double actualRewards) {
 		this.actualRewards = actualRewards;
 	}
+	
+	@Column(name="ACTUAL_FIDELITY_AND_INSURANCE")
+	public Double getActualFidelityAndInsurance() {
+		return actualFidelityAndInsurance;
+	}
+
+	public void setActualFidelityAndInsurance(Double actualFidelityAndInsurance) {
+		this.actualFidelityAndInsurance = actualFidelityAndInsurance;
+	}
 
 	@Column(name="BUDGET_BOARD_EXPENSES")
 	public Double getBudgetBoardExpenses() {
@@ -743,6 +758,15 @@ public class ActualIncomeExpense implements java.io.Serializable {
 
 	public void setBudgetRewards(Double budgetRewards) {
 		this.budgetRewards = budgetRewards;
+	}
+	
+	@Column(name="BUDGET_FIDELITY_AND_INSURANCE")
+	public Double getBudgetFidelityAndInsurance() {
+		return budgetFidelityAndInsurance;
+	}
+
+	public void setBudgetFidelityAndInsurance(Double budgetFidelityAndInsurance) {
+		this.budgetFidelityAndInsurance = budgetFidelityAndInsurance;
 	}
 	
 }

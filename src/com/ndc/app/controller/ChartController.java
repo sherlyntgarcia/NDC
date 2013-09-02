@@ -2093,8 +2093,9 @@ public class ChartController {
 						"Actual", "Donations");
 				categoryDataset.setValue(expense.getActualExtraordinary(), "Actual",
 						"Extraordinary and Misc.");
-				categoryDataset.setValue(expense.getActualJanitorial(), "Actual",
-						"Janitorial");
+				categoryDataset.setValue(expense.getActualFidelityAndInsurance(), "Actual",
+						"Fidelity Bond and Insurance Premium.");
+				
 
 				// Enrollment in Masters level
 				categoryDataset.setValue(expense.getBudgetCommunicationService(),
@@ -2105,8 +2106,8 @@ public class ChartController {
 						"Budget", "Donations");
 				categoryDataset.setValue(expense.getBudgetExtraordinary(), "Budget",
 						"Extraordinary and Misc.");
-				categoryDataset.setValue(expense.getBudgetJanitorial(), "Budget",
-						"Janitorial");
+				categoryDataset.setValue(expense.getBudgetFidelityAndInsurance(), "Budget",
+						"Fidelity Bond and Insurance Premium.");
 
 				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
@@ -2169,6 +2170,8 @@ public class ChartController {
 					.getActualIncomeExpenseById(id);
 
 //			if (expense != null) {
+				categoryDataset.setValue(expense.getActualJanitorial(), "Actual",
+					"Janitorial");
 				categoryDataset.setValue(expense.getActualLegal(), "Actual",
 					"Legal");
 				categoryDataset.setValue(expense.getActualLightWater(),
@@ -2177,9 +2180,10 @@ public class ChartController {
 						"Actual", "Meetings");
 				categoryDataset.setValue(expense.getActualMemberships(), "Actual",
 						"Memberships");
-				categoryDataset.setValue(expense.getActualMessengerial(), "Actual",
-						"Messengerial");
+				
 
+				categoryDataset.setValue(expense.getBudgetJanitorial(), "Budget",
+						"Janitorial");
 				categoryDataset.setValue(expense.getBudgetLegal(), "Budget",
 						"Legal");
 				categoryDataset.setValue(expense.getBudgetLightWater(),
@@ -2188,8 +2192,6 @@ public class ChartController {
 						"Budget", "Meetings");
 				categoryDataset.setValue(expense.getBudgetMemberships(), "Budget",
 						"Memberships");
-				categoryDataset.setValue(expense.getBudgetMessengerial(), "Budget",
-						"Messengerial");
 
 				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
@@ -2252,6 +2254,8 @@ public class ChartController {
 					.getActualIncomeExpenseById(id);
 
 //			if (expense != null) {
+				categoryDataset.setValue(expense.getActualMessengerial(), "Actual",
+					"Messengerial");
 				categoryDataset.setValue(expense.getActualMisc(), "Actual",
 					"Misc");
 				categoryDataset.setValue(expense.getActualOtherMisc(),
@@ -2262,9 +2266,9 @@ public class ChartController {
 						"Repair of Facilities");
 				categoryDataset.setValue(expense.getActualRepairVehicles(), "Actual",
 						"Repair of Vehicles");
-				categoryDataset.setValue(expense.getActualRewards(), "Actual",
-						"Rewards/Other Claims");
 
+				categoryDataset.setValue(expense.getActualMessengerial(), "Budget",
+						"Messengerial");
 				categoryDataset.setValue(expense.getBudgetMisc(), "Budget",
 						"Misc");
 				categoryDataset.setValue(expense.getBudgetOtherMisc(),
@@ -2275,8 +2279,6 @@ public class ChartController {
 						"Repair of Facilities");
 				categoryDataset.setValue(expense.getBudgetRepairVehicles(), "Budget",
 						"Repair of Vehicles");
-				categoryDataset.setValue(expense.getBudgetRewards(), "Budget",
-						"Rewards/Other Claims");
 
 				JFreeChart chart = ChartFactory.createBarChart3D(AppHelper.convertIntegerToMonth(expense.getMonth()) + " " + expense.getYear(), // Title
 						"", // X-Axis label
@@ -2339,6 +2341,8 @@ public class ChartController {
 					.getActualIncomeExpenseById(id);
 
 //			if (expense != null) {
+				categoryDataset.setValue(expense.getActualRewards(), "Actual",
+					"Rewards/Other Claims");
 				categoryDataset.setValue(expense.getActualSecurity(), "Actual",
 					"Security");
 				categoryDataset.setValue(expense.getActualSubscription(),
@@ -2352,7 +2356,8 @@ public class ChartController {
 				categoryDataset.setValue(expense.getActualTravelling(), "Actual",
 						"Travelling");
 
-				// Enrollment in Masters level
+				categoryDataset.setValue(expense.getActualRewards(), "Actual",
+						"Rewards/Other Claims");
 				categoryDataset.setValue(expense.getBudgetSecurity(), "Budget",
 						"Security");
 				categoryDataset.setValue(expense.getBudgetSubscription(),
@@ -2764,7 +2769,7 @@ public class ChartController {
 					categoryDataset.setValue(current_amountBilled,
 							"Amount Billed", "Current");
 
-					JFreeChart chart = ChartFactory.createStackedBarChart3D(
+					JFreeChart chart = ChartFactory.createBarChart3D(
 							"Collection Efficiency\nas of " + month + " " + year, // Title
 							"", // X-Axis label
 							"Php ",// Y-Axis label

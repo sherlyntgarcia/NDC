@@ -271,6 +271,10 @@
 					getTotalActual();
 				});
 				
+				$("input[name=actualFidelityAndInsurance]").keyup(function() {
+					getTotalActual();
+				});
+				
 				$("input[name=actualJanitorial]").keyup(function() {
 					getTotalActual();
 				});
@@ -377,6 +381,10 @@
 				});
 				
 				$("input[name=budgetExtraordinary]").keyup(function() {
+					getTotalBudget();
+				});
+				
+				$("input[name=budgetFidelityAndInsurance]").keyup(function() {
 					getTotalBudget();
 				});
 				
@@ -863,6 +871,7 @@
 				var budgetCommunicationService = Number($("#budgetCommunicationService").val());
 				var budgetDonations = Number($("#budgetDonations").val());
 				var budgetExtraordinary = Number($("#budgetExtraordinary").val());
+				var budgetFidelityAndInsurance = Number($("#budgetFidelityAndInsurance").val());
 				var budgetJanitorial = Number($("#budgetJanitorial").val());
 				var budgetLegal = Number($("#budgetLegal").val());
 				var budgetLightWater = Number($("#budgetLightWater").val());
@@ -883,7 +892,7 @@
 				var budgetTravelling = Number($("#budgetTravelling").val());
 				
 				var total = budgetAdvertising + budgetAthletics + budgetAuditing + budgetConsultancy + budgetBoardExpenses + budgetChristmasAnniversary + budgetDonations +
-					budgetCommunicationService + budgetExtraordinary + budgetJanitorial + budgetLegal + budgetLightWater + budgetMeetings + budgetMemberships + 
+					budgetCommunicationService + budgetExtraordinary + budgetFidelityAndInsurance + budgetJanitorial + budgetLegal + budgetLightWater + budgetMeetings + budgetMemberships + 
 					budgetMessengerial + budgetMisc + budgetOtherMisc + budgetRentals + budgetRepairFacilities + budgetRepairVehicles + budgetRewards + budgetSecurity + 
 					budgetSubscription + budgetSuppliesMaterials + budgetTaxes + budgetTraining + budgetTravelling;
 
@@ -903,6 +912,7 @@
 				var actualCommunicationService = Number($("#actualCommunicationService").val());
 				var actualDonations = Number($("#actualDonations").val());
 				var actualExtraordinary = Number($("#actualExtraordinary").val());
+				var actualFidelityAndInsurance = Number($("#actualFidelityAndInsurance").val());
 				var actualJanitorial = Number($("#actualJanitorial").val());
 				var actualLegal = Number($("#actualLegal").val());
 				var actualLightWater = Number($("#actualLightWater").val());
@@ -923,7 +933,7 @@
 				var actualTravelling = Number($("#actualTravelling").val());
 				
 				var total = actualAdvertising + actualAthletics + actualAuditing + actualConsultancy + actualBoardExpenses + actualChristmasAnniversary + 
-				    actualCommunicationService + actualDonations + actualExtraordinary + actualJanitorial + actualLegal + actualLightWater + actualMeetings + actualMemberships + 
+				    actualCommunicationService + actualDonations + actualExtraordinary + actualFidelityAndInsurance + actualJanitorial + actualLegal + actualLightWater + actualMeetings + actualMemberships + 
 				    actualMessengerial + actualMisc + actualOtherMisc + actualRentals + actualRepairFacilities + actualRepairVehicles + actualRewards + actualSecurity + 
 				    actualSubscription + actualSuppliesMaterials + actualTaxes + actualTraining + actualTravelling;
 
