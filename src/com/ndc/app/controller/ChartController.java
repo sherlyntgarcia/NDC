@@ -2769,7 +2769,7 @@ public class ChartController {
 					categoryDataset.setValue(current_amountBilled,
 							"Amount Billed", "Current");
 
-					JFreeChart chart = ChartFactory.createStackedBarChart3D(
+					JFreeChart chart = ChartFactory.createBarChart3D(
 							"Collection Efficiency\nas of " + month + " " + year, // Title
 							"", // X-Axis label
 							"Php ",// Y-Axis label
