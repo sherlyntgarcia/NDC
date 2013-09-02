@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 24, 2013 at 08:34 AM
+-- Generation Time: Sep 02, 2013 at 02:22 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -57,6 +57,9 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_actual_income_expense` (
   `actual_taxes` double NOT NULL,
   `actual_training` double NOT NULL,
   `actual_travelling` double NOT NULL,
+  `actual_donations` double NOT NULL,
+  `actual_rewards` double NOT NULL,
+  `actual_fidelity_and_insurance` double NOT NULL,
   `budget_advertising` double NOT NULL,
   `budget_athletics` double NOT NULL,
   `budget_auditing` double NOT NULL,
@@ -82,6 +85,9 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_actual_income_expense` (
   `budget_taxes` double NOT NULL,
   `budget_training` double NOT NULL,
   `budget_travelling` double NOT NULL,
+  `budget_donations` double NOT NULL,
+  `budget_rewards` double NOT NULL,
+  `budget_fidelity_and_insurance` double NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -91,8 +97,13 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_actual_income_expense` (
 -- Dumping data for table `ndc_tbl_actual_income_expense`
 --
 
-INSERT INTO `ndc_tbl_actual_income_expense` (`id`, `year`, `month`, `total_expense`, `total_income`, `actual_advertising`, `actual_athletics`, `actual_auditing`, `actual_consultancy`, `actual_board_expenses`, `actual_christmas_anniversary`, `actual_communication_service`, `actual_extraordinary`, `actual_janitorial`, `actual_legal`, `actual_light_water`, `actual_meetings`, `actual_memberships`, `actual_messengerial`, `actual_misc`, `actual_other_misc`, `actual_rentals`, `actual_repair_facilities`, `actual_repair_vehicles`, `actual_security`, `actual_subscription`, `actual_supplies_materials`, `actual_taxes`, `actual_training`, `actual_travelling`, `budget_advertising`, `budget_athletics`, `budget_auditing`, `budget_consultancy`, `budget_board_expenses`, `budget_christmas_anniversary`, `budget_communication_service`, `budget_extraordinary`, `budget_janitorial`, `budget_legal`, `budget_light_water`, `budget_meetings`, `budget_memberships`, `budget_messengerial`, `budget_misc`, `budget_other_misc`, `budget_rentals`, `budget_repair_facilities`, `budget_repair_vehicles`, `budget_security`, `budget_subscription`, `budget_supplies_materials`, `budget_taxes`, `budget_training`, `budget_travelling`, `date_updated`, `updated_by`) VALUES
-(1, 2012, 10, 93466800, 50558659, 66030, 200133, 2866670, 58498, 1884497, 819819, 1756313, 309948, 1489346, 1035124, 3316891, 2276426, 443792, 452008, 3330209, 760352, 1118766, 3163117, 939878, 10101552, 102948, 470904, 12405286, 600578, 589574, 70000, 147000, 5679000, 190000, 3123800, 1082800, 2836000, 406000, 2253600, 1440400, 3758100, 3088000, 462300, 722200, 7432400, 1557900, 1377000, 3619600, 1316000, 15201800, 126700, 588000, 35919400, 441800, 627000, '2013-05-16 14:02:29', 'lay');
+INSERT INTO `ndc_tbl_actual_income_expense` (`id`, `year`, `month`, `total_expense`, `total_income`, `actual_advertising`, `actual_athletics`, `actual_auditing`, `actual_consultancy`, `actual_board_expenses`, `actual_christmas_anniversary`, `actual_communication_service`, `actual_extraordinary`, `actual_janitorial`, `actual_legal`, `actual_light_water`, `actual_meetings`, `actual_memberships`, `actual_messengerial`, `actual_misc`, `actual_other_misc`, `actual_rentals`, `actual_repair_facilities`, `actual_repair_vehicles`, `actual_security`, `actual_subscription`, `actual_supplies_materials`, `actual_taxes`, `actual_training`, `actual_travelling`, `actual_donations`, `actual_rewards`, `actual_fidelity_and_insurance`, `budget_advertising`, `budget_athletics`, `budget_auditing`, `budget_consultancy`, `budget_board_expenses`, `budget_christmas_anniversary`, `budget_communication_service`, `budget_extraordinary`, `budget_janitorial`, `budget_legal`, `budget_light_water`, `budget_meetings`, `budget_memberships`, `budget_messengerial`, `budget_misc`, `budget_other_misc`, `budget_rentals`, `budget_repair_facilities`, `budget_repair_vehicles`, `budget_security`, `budget_subscription`, `budget_supplies_materials`, `budget_taxes`, `budget_training`, `budget_travelling`, `budget_donations`, `budget_rewards`, `budget_fidelity_and_insurance`, `date_updated`, `updated_by`) VALUES
+(1, 2012, 10, 93466800, 50558659, 66030, 200133, 2866670, 58498, 1884497, 819819, 1756313, 309948, 1489346, 1035124, 3316891, 2276426, 443792, 452008, 3330209, 760352, 1118766, 3163117, 939878, 10101552, 102948, 470904, 12405286, 600578, 589574, 0, 0, 0, 70000, 147000, 5679000, 190000, 3123800, 1082800, 2836000, 406000, 2253600, 1440400, 3758100, 3088000, 462300, 722200, 7432400, 1557900, 1377000, 3619600, 1316000, 15201800, 126700, 588000, 35919400, 441800, 627000, 0, 0, 0, '2013-05-16 14:02:29', 'lay'),
+(2, 2013, 0, 8582500, 6784553.48, 0, 0, 321555.21, 0, 0, 0, 4831.41, 0, 0, 46050, 78945.54, 171847.42, 0, 0, 221309.64, 6839.55, 12000, 208114.1, 27817.19, 0, 17980, 74374.5, 5496739.52, 3600, 92549.4, 0, 0, 0, 44583.33, 24250, 414333.33, 344666.67, 52500, 281250, 117083.33, 33833.33, 185833.33, 92250, 353166.67, 293750, 45416.67, 65333.33, 1146750, 70166.67, 121500, 575666.67, 152000, 1366666.67, 13916.67, 50833.33, 2396166.67, 134750, 205833.33, 0, 0, 0, '2013-05-27 03:16:37', 'lay'),
+(3, 2013, 1, 8582500, 2113248.61, 0, 0, 294759.64, 172580.64, 42489.72, 0, 80095.2, 0, 0, 123777.78, 278450.4, 231417.53, 18500, 0, 275572.93, 28511.39, 74757.54, 197888.77, 81173.96, 0, 8470, 44181.58, 33917.56, 24760.19, 101943.78, 0, 0, 0, 44583.33, 24250, 414333.33, 344666.67, 52500, 281250, 117083.33, 33833.33, 185833.33, 92250, 353166.67, 293750, 45416.67, 65333.33, 1146750, 70166.67, 121500, 575666.67, 152000, 1366666.67, 13916.67, 50833.33, 2396166.67, 134750, 205833.33, 0, 0, 0, '2013-05-27 03:23:06', 'lay'),
+(4, 2013, 2, 8582500, 7359168.130000001, 22320, 0, 296041.42, 255555.55, 64.28, 270097.55, 79589.39, 0, 0, 45500, 362121.93, 407276.54, 87278.5, 0, 256309.89, 107581, 122005.35, -280062.05, 163906.42, 0, 7700, 28262.53, 5086722.07, 401.76, 40496, 0, 0, 0, 44583.33, 24250, 414333.33, 344666.67, 52500, 281250, 117083.33, 33833.33, 185833.33, 92250, 353166.67, 293750, 45416.67, 65333.33, 1146750, 70166.67, 121500, 575666.67, 152000, 1366666.67, 13916.67, 50833.33, 2396166.67, 134750, 205833.33, 0, 0, 0, '2013-05-27 03:27:16', 'lay'),
+(5, 2013, 2, 8590833.34, 7359168.12, 22320, 0, 296041.42, 255555.54, 64.28, 270097.55, 79589.39, 0, 0, 45500, 362121.93, 407276.54, 87278.5, 0, 256309.89, 107581, 122005.35, -280062.05, 163906.42, 0, 7700, 28262.53, 5086722.07, 401.76, 40496, 0, 0, 0, 44583.33, 24250, 414333.33, 344666.67, 52500, 281250, 117083.33, 33833.33, 185833.33, 92250, 353166.67, 293750, 45416.67, 65333.33, 1146750, 70166.67, 121500, 575666.67, 152000, 1366666.67, 13916.67, 50833.33, 2396166.67, 134750, 205833.33, 4166.67, 4166.67, 0, '2013-05-28 05:22:57', 'lay'),
+(6, 2013, 3, 8590833.34, 5174223.01, 58140, 147.33, 357798.07, 227777.77, 0, 39313.93, 101651.68, 0, 143106.74, 84988.89, 409715.58, 191036.42, 25237, 52410.04, 260546.8, 54110.21, 96820.51, 97141.03, 67036.48, 2451823.3, 7315, 58632.4, 265360.07, 45322.25, 78791.51, 0, 0, 0, 44583.33, 24250, 414333.33, 344666.67, 52500, 281250, 117083.33, 33833.33, 185833.33, 92250, 353166.67, 293750, 45416.67, 65333.33, 1146750, 70166.67, 121500, 575666.67, 152000, 1366666.67, 13916.67, 50833.33, 2396166.67, 134750, 205833.33, 4166.67, 4166.67, 0, '2013-05-28 05:27:57', 'lay');
 
 -- --------------------------------------------------------
 
@@ -231,14 +242,18 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_capital_expenditures` (
   `budget_capital_expenditures` double NOT NULL,
   `actual_capital_expenditures` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `ndc_tbl_capital_expenditures`
 --
 
 INSERT INTO `ndc_tbl_capital_expenditures` (`id`, `month`, `year`, `date_updated`, `updated_by`, `budget_capital_expenditures`, `actual_capital_expenditures`) VALUES
-(1, 10, 2012, '2013-05-08 02:34:42', 'lay', 12920000, 1055937);
+(1, 10, 2012, '2013-05-08 02:34:42', 'lay', 12920000, 1055937),
+(2, 2, 2013, '2013-05-27 02:59:24', 'lay', 13498000, 180512.08),
+(3, 2, 2013, '2013-05-27 03:01:40', 'lay', 13498000, 14000000),
+(4, 2, 2013, '2013-05-27 03:04:00', 'lay', 13498000, 180512.08),
+(5, 3, 2013, '2013-05-28 05:17:06', 'lay', 13498000, 270422.79);
 
 -- --------------------------------------------------------
 
@@ -257,14 +272,15 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_collection_efficiency` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `ndc_tbl_collection_efficiency`
 --
 
 INSERT INTO `ndc_tbl_collection_efficiency` (`id`, `month`, `year`, `current_amount_collected`, `current_amount_billed`, `past_due_amount_collected`, `past_due_amount_billed`, `date_updated`, `updated_by`) VALUES
-(1, 0, 2013, 5000000, 4500000, 3000000, 2500000, '2013-04-15 02:28:33', 'lay');
+(2, 3, 2013, 14135265.46, 20085290.22, 5524256.11, 91649227.49, '2013-05-27 02:51:38', 'lay'),
+(6, 6, 2013, 50000000, 50000000, 50000000, 50000000, '2013-07-26 04:49:49', 'lay');
 
 -- --------------------------------------------------------
 
@@ -366,7 +382,52 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_logs` (
   `access_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+
+--
+-- Dumping data for table `ndc_tbl_logs`
+--
+
+INSERT INTO `ndc_tbl_logs` (`id`, `logged_by`, `access_time`, `description`) VALUES
+(1, 'jonathan', '2013-05-27 00:33:22', 'ERROR WHILE DISPLAYING BAR LINE CHART'),
+(2, 'lemuel', '2013-05-27 01:35:27', 'ADDED NEW PDST-F RATES'),
+(3, 'lemuel', '2013-05-27 01:40:41', 'ADDED NEW PDST-F RATES'),
+(4, 'lemuel', '2013-05-27 01:46:22', 'ADDED NEW PDST-F RATES'),
+(5, 'lay', '2013-05-27 02:45:56', 'ADDED NEW PROJECTED INCOME'),
+(6, 'lay', '2013-05-27 02:48:24', 'ADDED NEW PROJECTED ACTUAL INCOME'),
+(7, 'lay', '2013-05-27 02:48:42', 'ADDED NEW PROJECTED ACTUAL INCOME'),
+(8, 'lay', '2013-05-27 02:51:38', 'ADDED NEW COLLECTION EFFICIENCY'),
+(9, 'lay', '2013-05-27 02:56:21', 'ADDED NEW BUDGET UTILIZATION (PERSONAL SERVICES)'),
+(10, 'lay', '2013-05-27 02:58:42', 'ADDED NEW BUDGET UTILIZATION (MAINTENANCE & OTHER OPERATING EXPENSES)'),
+(11, 'lay', '2013-05-27 02:59:24', 'ADDED NEW BUDGET UTILIZATION (CAPITAL EXPENDITURES)'),
+(12, 'lay', '2013-05-27 03:01:43', 'ADDED NEW BUDGET UTILIZATION (CAPITAL EXPENDITURES)'),
+(13, 'lay', '2013-05-27 03:04:01', 'ADDED NEW BUDGET UTILIZATION (CAPITAL EXPENDITURES)'),
+(14, 'lay', '2013-05-27 03:16:37', 'ADDED NEW ACTUAL INCOME EXPENSE'),
+(15, 'lay', '2013-05-27 03:23:06', 'ADDED NEW ACTUAL INCOME EXPENSE'),
+(16, 'lay', '2013-05-27 03:27:16', 'ADDED NEW ACTUAL INCOME EXPENSE'),
+(17, 'colette', '2013-05-28 01:49:24', 'DEACTIVATED USERS WITH ID: 3 '),
+(18, 'colette', '2013-05-28 01:49:39', 'ACTIVATED USERS WITH ID: 3 '),
+(19, 'lay', '2013-05-28 05:14:25', 'ADDED NEW PROJECTED ACTUAL INCOME'),
+(20, 'lay', '2013-05-28 05:16:02', 'ADDED NEW BUDGET UTILIZATION (PERSONAL SERVICES)'),
+(21, 'lay', '2013-05-28 05:16:42', 'ADDED NEW BUDGET UTILIZATION (MAINTENANCE & OTHER OPERATING EXPENSES)'),
+(22, 'lay', '2013-05-28 05:17:06', 'ADDED NEW BUDGET UTILIZATION (CAPITAL EXPENDITURES)'),
+(23, 'lay', '2013-05-28 05:22:57', 'ADDED NEW ACTUAL INCOME EXPENSE'),
+(24, 'lay', '2013-05-28 05:27:58', 'ADDED NEW ACTUAL INCOME EXPENSE'),
+(25, 'lay', '2013-05-28 06:33:06', 'ADDED NEW COLLECTION EFFICIENCY'),
+(26, 'NDC User', '2013-05-30 03:11:44', 'ERROR WHILE DISPLAYING BAR CHART FOR NIA Loan Collection'),
+(27, 'NDC User', '2013-05-30 03:11:44', 'ERROR WHILE DISPLAYING BUDGET UTILIZATION CHART'),
+(28, 'NDC User', '2013-05-30 03:11:44', 'ERROR WHILE DISPLAYING COLLECTION EFFICIENCY CHART'),
+(29, 'NDC User', '2013-05-30 03:11:44', 'ERROR WHILE DISPLAYING PROJECTED ACTUAL INCOME SUB CHART'),
+(30, 'NDC User', '2013-05-30 03:11:44', 'ERROR WHILE DISPLAYING BAR CHART'),
+(31, 'anonymousUser', '2013-06-03 03:15:25', 'ERROR WHILE DISPLAYING BAR CHART'),
+(32, 'anonymousUser', '2013-06-03 03:15:25', 'ERROR WHILE DISPLAYING STOCK AREA CHART'),
+(33, 'anonymousUser', '2013-06-03 03:15:25', 'ERROR WHILE DISPLAYING PROJECTED ACTUAL INCOME SUB CHART'),
+(34, 'jonathan', '2013-06-03 08:04:15', 'UPLOADED NEW DOCUMENT ''1368656907349.pdf'''),
+(35, 'randy', '2013-06-06 05:02:01', 'ADDED NEW STATUS OF ASSETS'),
+(36, 'lay', '2013-07-26 04:37:52', 'ADDED NEW COLLECTION EFFICIENCY'),
+(37, 'lay', '2013-07-26 04:46:48', 'ADDED NEW COLLECTION EFFICIENCY'),
+(38, 'lay', '2013-07-26 04:48:19', 'ADDED NEW COLLECTION EFFICIENCY'),
+(39, 'lay', '2013-07-26 04:49:49', 'ADDED NEW COLLECTION EFFICIENCY');
 
 -- --------------------------------------------------------
 
@@ -391,9 +452,9 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_maintenance_cost` (
 --
 
 INSERT INTO `ndc_tbl_maintenance_cost` (`id`, `market_value`, `rpt`, `duesfees`, `security`, `date_updated`, `updated_by`, `year`) VALUES
-(2, 4752740930, 13334094.71, 3450542.38, 11919371.82, '2013-05-20 04:04:06', 'randy', 2010),
-(3, 5406729350, 10807097.58, 3450542.38, 12837697.35, '2013-05-20 04:07:24', 'randy', 2011),
-(4, 5089681387.5, 11485082.3, 3504290.38, 13561938.53, '2013-05-20 04:08:04', 'randy', 2012);
+(2, 114739653.74, 13334094.71, 3450542.38, 11919371.82, '2013-05-29 05:14:43', 'randy', 2010),
+(3, 116955865.74, 10807097.58, 3450542.38, 12837697.35, '2013-05-29 05:15:03', 'randy', 2011),
+(4, 97196201.31, 11485082.3, 3504290.38, 13561938.53, '2013-05-29 05:15:25', 'randy', 2012);
 
 -- --------------------------------------------------------
 
@@ -410,14 +471,16 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_mooe` (
   `budget_mooe` double NOT NULL,
   `actual_mooe` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ndc_tbl_mooe`
 --
 
 INSERT INTO `ndc_tbl_mooe` (`id`, `month`, `year`, `date_updated`, `updated_by`, `budget_mooe`, `actual_mooe`) VALUES
-(1, 10, 2012, '2013-05-08 02:33:32', 'lay', 93466800, 50558659);
+(1, 10, 2012, '2013-05-08 02:33:32', 'lay', 93466800, 50558659),
+(2, 2, 2013, '2013-05-27 02:58:42', 'lay', 103090000, 16256970.21),
+(3, 3, 2013, '2013-05-28 05:16:42', 'lay', 103090000, 21431193.22);
 
 -- --------------------------------------------------------
 
@@ -547,393 +610,132 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_notifications` (
   `triggered_by` varchar(255) NOT NULL,
   `visible` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=381 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=120 ;
 
 --
 -- Dumping data for table `ndc_tbl_notifications`
 --
 
 INSERT INTO `ndc_tbl_notifications` (`id`, `user_id`, `message`, `ndc_group`, `date_notified`, `triggered_by`, `visible`) VALUES
-(1, 3, 'Updated ''Net Lending''', 'FMG', '2013-05-06 04:17:38', 'lemuel', 1),
-(2, 4, 'Updated ''Net Lending''', 'FMG', '2013-05-06 04:17:38', 'lemuel', 1),
-(3, 5, 'Updated ''Net Lending''', 'FMG', '2013-05-06 04:17:38', 'lemuel', 1),
-(4, 6, 'Updated ''Net Lending''', 'FMG', '2013-05-06 04:17:38', 'lemuel', 1),
-(5, 3, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:33:40', 'lemuel', 1),
-(6, 4, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:33:40', 'lemuel', 1),
-(7, 5, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:33:40', 'lemuel', 1),
-(8, 6, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:33:40', 'lemuel', 1),
-(9, 3, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:08', 'lemuel', 1),
-(10, 4, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:08', 'lemuel', 1),
-(11, 5, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:08', 'lemuel', 1),
-(12, 6, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:08', 'lemuel', 1),
-(13, 3, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:27', 'lemuel', 1),
-(14, 4, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:27', 'lemuel', 1),
-(15, 5, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:27', 'lemuel', 1),
-(16, 6, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:27', 'lemuel', 1),
-(17, 3, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:56', 'lemuel', 1),
-(18, 4, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:57', 'lemuel', 1),
-(19, 5, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:57', 'lemuel', 1),
-(20, 6, 'Updated ''Agri-Agra Bonds''', 'FMG', '2013-05-06 04:34:57', 'lemuel', 1),
-(21, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-06 04:43:17', 'vel', 1),
-(22, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-06 04:43:17', 'vel', 1),
-(23, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-06 04:43:17', 'vel', 1),
-(24, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-06 04:43:17', 'vel', 1),
-(25, 3, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-06 04:51:27', 'vel', 1),
-(26, 4, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-06 04:51:27', 'vel', 1),
-(27, 5, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-06 04:51:27', 'vel', 1),
-(28, 6, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-06 04:51:27', 'vel', 1),
-(29, 3, 'Updated ''Status of Assets''', 'AMG', '2013-05-06 04:58:38', 'vel', 1),
-(30, 4, 'Updated ''Status of Assets''', 'AMG', '2013-05-06 04:58:38', 'vel', 1),
-(31, 5, 'Updated ''Status of Assets''', 'AMG', '2013-05-06 04:58:38', 'vel', 1),
-(32, 6, 'Updated ''Status of Assets''', 'AMG', '2013-05-06 04:58:38', 'vel', 1),
-(33, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:53:26', 'randy', 1),
-(34, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:53:26', 'randy', 1),
-(35, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:53:26', 'randy', 1),
-(36, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:53:26', 'randy', 1),
-(37, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:55:35', 'randy', 1),
-(38, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:55:35', 'randy', 1),
-(39, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:55:35', 'randy', 1),
-(40, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-08 01:55:35', 'randy', 1),
-(41, 3, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 01:59:34', 'randy', 1),
-(42, 4, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 01:59:34', 'randy', 1),
-(43, 5, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 01:59:35', 'randy', 1),
-(44, 6, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 01:59:35', 'randy', 1),
-(45, 3, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 02:00:17', 'randy', 1),
-(46, 4, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 02:00:17', 'randy', 1),
-(47, 5, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 02:00:17', 'randy', 1),
-(48, 6, 'Updated ''Sources & Uses of Funds''', 'AMG', '2013-05-08 02:00:18', 'randy', 1),
-(49, 3, 'Updated ''Status of Assets''', 'AMG', '2013-05-08 02:02:59', 'randy', 1),
-(50, 4, 'Updated ''Status of Assets''', 'AMG', '2013-05-08 02:02:59', 'randy', 1),
-(51, 5, 'Updated ''Status of Assets''', 'AMG', '2013-05-08 02:02:59', 'randy', 1),
-(52, 6, 'Updated ''Status of Assets''', 'AMG', '2013-05-08 02:02:59', 'randy', 1),
-(53, 3, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-08 02:15:09', 'lay', 1),
-(54, 4, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-08 02:15:09', 'lay', 1),
-(55, 5, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-08 02:15:09', 'lay', 1),
-(56, 6, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-08 02:15:09', 'lay', 1),
-(57, 3, 'Updated ''Projected Income''', 'FAD', '2013-05-08 02:17:02', 'lay', 1),
-(58, 4, 'Updated ''Projected Income''', 'FAD', '2013-05-08 02:17:02', 'lay', 1),
-(59, 5, 'Updated ''Projected Income''', 'FAD', '2013-05-08 02:17:02', 'lay', 1),
-(60, 6, 'Updated ''Projected Income''', 'FAD', '2013-05-08 02:17:02', 'lay', 1),
-(61, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:08', 'lay', 1),
-(62, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:08', 'lay', 1),
-(63, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:09', 'lay', 1),
-(64, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:09', 'lay', 1),
-(65, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:33', 'lay', 1),
-(66, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:33', 'lay', 1),
-(67, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:33', 'lay', 1),
-(68, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:28:33', 'lay', 1),
-(69, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:29:01', 'lay', 1),
-(70, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:29:01', 'lay', 1),
-(71, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:29:01', 'lay', 1),
-(72, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-08 02:29:01', 'lay', 1),
-(73, 3, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-08 02:32:23', 'lay', 1),
-(74, 4, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-08 02:32:23', 'lay', 1),
-(75, 5, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-08 02:32:23', 'lay', 1),
-(76, 6, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-08 02:32:23', 'lay', 1),
-(77, 3, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-08 02:33:32', 'lay', 1),
-(78, 4, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-08 02:33:32', 'lay', 1),
-(79, 5, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-08 02:33:32', 'lay', 1),
-(80, 6, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-08 02:33:32', 'lay', 1),
-(81, 3, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-08 02:34:43', 'lay', 1),
-(82, 4, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-08 02:34:43', 'lay', 1),
-(83, 5, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-08 02:34:43', 'lay', 1),
-(84, 6, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-08 02:34:43', 'lay', 1),
-(85, 3, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:43:30', 'lemuel', 1),
-(86, 4, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:43:30', 'lemuel', 1),
-(87, 5, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:43:30', 'lemuel', 1),
-(88, 6, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:43:30', 'lemuel', 1),
-(89, 3, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:44:34', 'lemuel', 1),
-(90, 4, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:44:35', 'lemuel', 1),
-(91, 5, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:44:35', 'lemuel', 1),
-(92, 6, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:44:35', 'lemuel', 1),
-(93, 3, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:45:19', 'lemuel', 1),
-(94, 4, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:45:19', 'lemuel', 1),
-(95, 5, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:45:19', 'lemuel', 1),
-(96, 6, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:45:19', 'lemuel', 1),
-(97, 3, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:46:02', 'lemuel', 1),
-(98, 4, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:46:02', 'lemuel', 1),
-(99, 5, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:46:02', 'lemuel', 1),
-(100, 6, 'Updated ''Principal & Coupon Payments''', 'FMG', '2013-05-08 02:46:02', 'lemuel', 1),
-(101, 3, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:27', 'lemuel', 1),
-(102, 4, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:27', 'lemuel', 1),
-(103, 5, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:27', 'lemuel', 1),
-(104, 6, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:27', 'lemuel', 1),
-(105, 3, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:53', 'lemuel', 1),
-(106, 4, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:53', 'lemuel', 1),
-(107, 5, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:53', 'lemuel', 1),
-(108, 6, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:52:53', 'lemuel', 1),
-(109, 3, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:15', 'lemuel', 1),
-(110, 4, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:15', 'lemuel', 1),
-(111, 5, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:15', 'lemuel', 1),
-(112, 6, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:15', 'lemuel', 1),
-(113, 3, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:37', 'lemuel', 1),
-(114, 4, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:37', 'lemuel', 1),
-(115, 5, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:37', 'lemuel', 1),
-(116, 6, 'Updated ''Bond Maturity''', 'FMG', '2013-05-08 02:53:37', 'lemuel', 1),
-(117, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:02:29', 'lay', 1),
-(118, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:02:29', 'lay', 1),
-(119, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:02:29', 'lay', 1),
-(120, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:02:29', 'lay', 1),
-(121, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:07:35', 'lay', 1),
-(122, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:07:35', 'lay', 1),
-(123, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:07:35', 'lay', 1),
-(124, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-16 14:07:35', 'lay', 1),
-(125, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:07', 'jonathan', 1),
-(126, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:07', 'jonathan', 1),
-(127, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:08', 'jonathan', 1),
-(128, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:08', 'jonathan', 1),
-(129, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:26', 'jonathan', 1),
-(130, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:26', 'jonathan', 1),
-(131, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:26', 'jonathan', 1),
-(132, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:26', 'jonathan', 1),
-(133, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:47', 'jonathan', 1),
-(134, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:47', 'jonathan', 1),
-(135, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:47', 'jonathan', 1),
-(136, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:48:47', 'jonathan', 1),
-(137, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:04', 'jonathan', 1),
-(138, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:04', 'jonathan', 1),
-(139, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:04', 'jonathan', 1),
-(140, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:04', 'jonathan', 1),
-(141, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:24', 'jonathan', 1),
-(142, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:24', 'jonathan', 1),
-(143, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:24', 'jonathan', 1),
-(144, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:24', 'jonathan', 1),
-(145, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:41', 'jonathan', 1),
-(146, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:41', 'jonathan', 1),
-(147, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:41', 'jonathan', 1),
-(148, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:41', 'jonathan', 1),
-(149, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:55', 'jonathan', 1),
-(150, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:55', 'jonathan', 1),
-(151, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:55', 'jonathan', 1),
-(152, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:49:55', 'jonathan', 1),
-(153, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:11', 'jonathan', 1),
-(154, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:11', 'jonathan', 1),
-(155, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:11', 'jonathan', 1),
-(156, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:11', 'jonathan', 1),
-(157, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
-(158, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
-(159, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
-(160, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 01:50:29', 'jonathan', 1),
-(161, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:06', 'randy', 1),
-(162, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
-(163, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
-(164, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:04:07', 'randy', 1),
-(165, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
-(166, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
-(167, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
-(168, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:07:24', 'randy', 1),
-(169, 3, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
-(170, 4, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
-(171, 5, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
-(172, 6, 'Updated ''Occupancy Chart''', 'AMG', '2013-05-20 04:08:05', 'randy', 1),
-(173, 3, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
-(174, 4, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
-(175, 5, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
-(176, 6, 'Updated ''Status of Assets''', 'AMG', '2013-05-20 05:36:48', 'randy', 1),
-(177, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
-(178, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
-(179, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
-(180, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:23:46', 'jonathan', 1),
-(181, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
-(182, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
-(183, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
-(184, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:24:13', 'jonathan', 1),
-(185, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
-(186, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
-(187, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
-(188, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:14', 'jonathan', 1),
-(189, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:33', 'jonathan', 1),
-(190, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:33', 'jonathan', 1),
-(191, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:34', 'jonathan', 1),
-(192, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:34', 'jonathan', 1),
-(193, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
-(194, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
-(195, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
-(196, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:29:52', 'jonathan', 1),
-(197, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
-(198, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
-(199, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
-(200, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 08:30:20', 'jonathan', 1),
-(201, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
-(202, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
-(203, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
-(204, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:31:47', 'jonathan', 1),
-(205, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
-(206, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
-(207, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
-(208, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:09', 'jonathan', 1),
-(209, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
-(210, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
-(211, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
-(212, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:33', 'jonathan', 1),
-(213, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
-(214, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
-(215, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
-(216, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:32:56', 'jonathan', 1),
-(217, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
-(218, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
-(219, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
-(220, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:15', 'jonathan', 1),
-(221, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
-(222, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
-(223, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
-(224, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:32', 'jonathan', 1),
-(225, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
-(226, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
-(227, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
-(228, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:33:53', 'jonathan', 1),
-(229, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
-(230, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
-(231, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
-(232, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:14', 'jonathan', 1),
-(233, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
-(234, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
-(235, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
-(236, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:34:31', 'jonathan', 1),
-(237, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
-(238, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
-(239, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:00', 'jonathan', 1),
-(240, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:36:01', 'jonathan', 1),
-(241, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
-(242, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
-(243, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
-(244, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:37:31', 'jonathan', 1),
-(245, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
-(246, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
-(247, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
-(248, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:07', 'jonathan', 1),
-(249, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
-(250, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
-(251, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
-(252, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:39:54', 'jonathan', 1),
-(253, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
-(254, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
-(255, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
-(256, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:07', 'jonathan', 1),
-(257, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
-(258, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
-(259, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
-(260, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:28', 'jonathan', 1),
-(261, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
-(262, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
-(263, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
-(264, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:43:48', 'jonathan', 1),
-(265, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
-(266, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
-(267, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
-(268, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:06', 'jonathan', 1),
-(269, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
-(270, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
-(271, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
-(272, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:24', 'jonathan', 1),
-(273, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
-(274, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
-(275, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
-(276, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:40', 'jonathan', 1),
-(277, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
-(278, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
-(279, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
-(280, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:44:54', 'jonathan', 1),
-(281, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
-(282, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
-(283, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
-(284, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:45:06', 'jonathan', 1),
-(285, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
-(286, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
-(287, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
-(288, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:49:44', 'jonathan', 1),
-(289, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
-(290, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
-(291, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
-(292, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:02', 'jonathan', 1),
-(293, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
-(294, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
-(295, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
-(296, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:22', 'jonathan', 1),
-(297, 3, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
-(298, 4, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
-(299, 5, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
-(300, 6, 'Updated ''Shareholder''', 'SPG', '2013-05-20 09:50:40', 'jonathan', 1),
-(301, 3, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
-(302, 4, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
-(303, 5, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
-(304, 6, 'Updated ''Shareholder''', 'AMG', '2013-05-22 09:08:11', 'vel', 1),
-(305, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
-(306, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
-(307, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:19', 'jonathan', 1),
-(308, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-23 11:01:20', 'jonathan', 1),
-(309, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
-(310, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
-(311, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
-(312, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:13:35', 'lay', 1),
-(313, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
-(314, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
-(315, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
-(316, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-23 12:14:56', 'lay', 1),
-(317, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
-(318, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
-(319, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
-(320, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:36:40', 'jonathan', 1),
-(321, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:07', 'jonathan', 1),
-(322, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
-(323, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
-(324, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:08', 'jonathan', 1),
-(325, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
-(326, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
-(327, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
-(328, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:41:41', 'jonathan', 1),
-(329, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
-(330, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
-(331, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
-(332, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:44:36', 'jonathan', 1),
-(333, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
-(334, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
-(335, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
-(336, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:45:45', 'jonathan', 1),
-(337, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
-(338, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
-(339, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
-(340, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:46:33', 'jonathan', 1),
-(341, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
-(342, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
-(343, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
-(344, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:48:23', 'jonathan', 1),
-(345, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
-(346, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
-(347, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
-(348, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:04', 'jonathan', 1),
-(349, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
-(350, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
-(351, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
-(352, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 02:49:35', 'jonathan', 1),
-(353, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
-(354, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
-(355, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
-(356, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:54:52', 'jonathan', 1),
-(357, 3, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
-(358, 4, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
-(359, 5, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
-(360, 6, 'Updated ''Income Statement''', 'SPG', '2013-05-24 02:55:23', 'jonathan', 1),
-(361, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
-(362, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
-(363, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
-(364, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:58:21', 'jonathan', 1),
-(365, 3, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
-(366, 4, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
-(367, 5, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
-(368, 6, 'Updated ''Balance Sheet''', 'SPG', '2013-05-24 02:59:19', 'jonathan', 1),
-(369, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
-(370, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
-(371, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
-(372, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:18', 'jonathan', 1),
-(373, 3, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
-(374, 4, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
-(375, 5, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
-(376, 6, 'Updated ''Cash Flow''', 'SPG', '2013-05-24 03:00:46', 'jonathan', 1),
-(377, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:07', 'lay', 1),
-(378, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:07', 'lay', 1),
-(379, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:08', 'lay', 1),
-(380, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-24 06:30:08', 'lay', 1);
+(1, 3, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-28 02:08:01', 'lemuel', 0),
+(2, 4, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:35:27', 'lemuel', 1),
+(3, 5, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:35:27', 'lemuel', 1),
+(4, 6, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:35:27', 'lemuel', 1),
+(5, 3, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-28 02:08:01', 'lemuel', 0),
+(6, 4, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:40:41', 'lemuel', 1),
+(7, 5, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:40:42', 'lemuel', 1),
+(8, 6, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:40:42', 'lemuel', 1),
+(9, 3, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-28 02:08:01', 'lemuel', 0),
+(10, 4, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:46:22', 'lemuel', 1),
+(11, 5, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:46:22', 'lemuel', 1),
+(12, 6, 'Updated ''PDST-F Rates''', 'FMG', '2013-05-27 01:46:22', 'lemuel', 1),
+(13, 3, 'Updated ''Projected Income''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(14, 4, 'Updated ''Projected Income''', 'FAD', '2013-05-27 02:45:56', 'lay', 1),
+(15, 5, 'Updated ''Projected Income''', 'FAD', '2013-05-27 02:45:56', 'lay', 1),
+(16, 6, 'Updated ''Projected Income''', 'FAD', '2013-05-27 02:45:56', 'lay', 1),
+(17, 3, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(18, 4, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:24', 'lay', 1),
+(19, 5, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:24', 'lay', 1),
+(20, 6, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:24', 'lay', 1),
+(21, 3, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(22, 4, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:43', 'lay', 1),
+(23, 5, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:43', 'lay', 1),
+(24, 6, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-27 02:48:43', 'lay', 1),
+(25, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(26, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-27 02:51:38', 'lay', 1),
+(27, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-27 02:51:38', 'lay', 1),
+(28, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-27 02:51:39', 'lay', 1),
+(29, 3, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(30, 4, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-27 02:56:21', 'lay', 1),
+(31, 5, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-27 02:56:21', 'lay', 1),
+(32, 6, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-27 02:56:21', 'lay', 1),
+(33, 3, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(34, 4, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-27 02:58:42', 'lay', 1),
+(35, 5, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-27 02:58:42', 'lay', 1),
+(36, 6, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-27 02:58:42', 'lay', 1),
+(37, 3, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(38, 4, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 02:59:24', 'lay', 1),
+(39, 5, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 02:59:24', 'lay', 1),
+(40, 6, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 02:59:24', 'lay', 1),
+(41, 3, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(42, 4, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:01:46', 'lay', 1),
+(43, 5, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:01:46', 'lay', 1),
+(44, 6, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:01:46', 'lay', 1),
+(45, 3, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(46, 4, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:04:01', 'lay', 1),
+(47, 5, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:04:01', 'lay', 1),
+(48, 6, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-27 03:04:01', 'lay', 1),
+(49, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(50, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:16:37', 'lay', 1),
+(51, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:16:37', 'lay', 1),
+(52, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:16:37', 'lay', 1),
+(53, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(54, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:23:06', 'lay', 1),
+(55, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:23:06', 'lay', 1),
+(56, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:23:06', 'lay', 1),
+(57, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 02:08:00', 'lay', 0),
+(58, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:27:16', 'lay', 1),
+(59, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:27:16', 'lay', 1),
+(60, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-27 03:27:16', 'lay', 1),
+(61, 1, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(62, 3, 'Updated ''Projected Actual Income''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(63, 4, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-28 05:14:25', 'lay', 1),
+(64, 5, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-28 05:14:25', 'lay', 1),
+(65, 6, 'Updated ''Projected Actual Income''', 'FAD', '2013-05-28 05:14:25', 'lay', 1),
+(66, 1, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(67, 3, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(68, 4, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-28 05:16:03', 'lay', 1),
+(69, 5, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-28 05:16:03', 'lay', 1),
+(70, 6, 'Updated ''Budget Utilization (Personal Services)''', 'FAD', '2013-05-28 05:16:03', 'lay', 1),
+(71, 1, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(72, 3, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(73, 4, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-28 05:16:43', 'lay', 1),
+(74, 5, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-28 05:16:43', 'lay', 1),
+(75, 6, 'Updated ''Budget Utilization (Maintenance & Other Operating Expenses)''', 'FAD', '2013-05-28 05:16:43', 'lay', 1),
+(76, 1, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(77, 3, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(78, 4, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 05:17:06', 'lay', 1),
+(79, 5, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 05:17:06', 'lay', 1),
+(80, 6, 'Updated ''Budget Utilization (Capital Expenditures)''', 'FAD', '2013-05-28 05:17:06', 'lay', 1),
+(81, 1, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(82, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(83, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:22:57', 'lay', 1),
+(84, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:22:57', 'lay', 1),
+(85, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:22:57', 'lay', 1),
+(86, 1, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(87, 3, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(88, 4, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:27:58', 'lay', 1),
+(89, 5, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:27:58', 'lay', 1),
+(90, 6, 'Updated ''Actual Income and Actual Expense''', 'FAD', '2013-05-28 05:27:59', 'lay', 1),
+(91, 1, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-30 03:12:47', 'lay', 0),
+(92, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-06-03 07:09:48', 'lay', 0),
+(93, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-28 06:33:06', 'lay', 1),
+(94, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-28 06:33:06', 'lay', 1),
+(95, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-05-28 06:33:06', 'lay', 1),
+(96, 3, 'Updated New Document <a target=''_blank'' href=''/NDC/download/ASEAN/1368656907349.pdf''> 1368656907349.pdf </a>', 'SPG', '2013-06-03 08:04:15', 'jonathan', 1),
+(97, 4, 'Updated New Document <a target=''_blank'' href=''/NDC/download/ASEAN/1368656907349.pdf''> 1368656907349.pdf </a>', 'SPG', '2013-06-03 08:04:15', 'jonathan', 1),
+(98, 5, 'Updated New Document <a target=''_blank'' href=''/NDC/download/ASEAN/1368656907349.pdf''> 1368656907349.pdf </a>', 'SPG', '2013-06-03 08:04:15', 'jonathan', 1),
+(99, 6, 'Updated New Document <a target=''_blank'' href=''/NDC/download/ASEAN/1368656907349.pdf''> 1368656907349.pdf </a>', 'SPG', '2013-06-03 08:04:15', 'jonathan', 1),
+(100, 3, 'Updated ''Status of Assets''', 'AMG', '2013-06-06 05:02:01', 'randy', 1),
+(101, 4, 'Updated ''Status of Assets''', 'AMG', '2013-06-06 05:02:01', 'randy', 1),
+(102, 5, 'Updated ''Status of Assets''', 'AMG', '2013-06-06 05:02:01', 'randy', 1),
+(103, 6, 'Updated ''Status of Assets''', 'AMG', '2013-06-06 05:02:01', 'randy', 1),
+(104, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:37:52', 'lay', 1),
+(105, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:37:52', 'lay', 1),
+(106, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:37:52', 'lay', 1),
+(107, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:37:52', 'lay', 1),
+(108, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:46:49', 'lay', 1),
+(109, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:46:49', 'lay', 1),
+(110, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:46:49', 'lay', 1),
+(111, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:46:49', 'lay', 1),
+(112, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:48:19', 'lay', 1),
+(113, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:48:19', 'lay', 1),
+(114, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:48:19', 'lay', 1),
+(115, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:48:19', 'lay', 1),
+(116, 3, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:49:49', 'lay', 1),
+(117, 4, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:49:49', 'lay', 1),
+(118, 5, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:49:49', 'lay', 1),
+(119, 6, 'Updated ''Collection Efficiency''', 'FAD', '2013-07-26 04:49:49', 'lay', 1);
 
 -- --------------------------------------------------------
 
@@ -1089,7 +891,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_pdst_f_rates` (
   `year` int(11) NOT NULL,
   `month` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `ndc_tbl_pdst_f_rates`
@@ -1108,7 +910,10 @@ INSERT INTO `ndc_tbl_pdst_f_rates` (`id`, `1_month_avg`, `3_month_avg`, `6_month
 (10, 1.6975, 1.1803, 1.5879, 2.0923, 2.788, 3.8412, 4.2842, 4.5909, 4.6717, 4.7603, 5.6115, 5.7662, '2013-04-15 02:33:33', 'lemuel', 2012, 8),
 (11, 0.9398, 0.6895, 0.9065, 1.1593, 2.3035, 3.087, 3.5229, 3.6741, 3.7226, 3.9013, 4.5506, 4.7384, '2013-04-15 02:33:33', 'lemuel', 2012, 9),
 (12, 1.1141, 0.5715, 0.8254, 1.0197, 3.0078, 3.9493, 4.3408, 4.2533, 4.482, 5.087, 5.8485, 5.9762, '2013-04-15 02:33:33', 'lemuel', 2012, 10),
-(13, 0.5568, 0.3088, 0.4854, 0.6414, 1.6532, 2.1147, 2.26, 2.2048, 2.2661, 2.4919, 3.2412, 3.1894, '2013-04-15 02:33:33', 'lemuel', 2012, 11);
+(13, 0.5568, 0.3088, 0.4854, 0.6414, 1.6532, 2.1147, 2.26, 2.2048, 2.2661, 2.4919, 3.2412, 3.1894, '2013-04-15 02:33:33', 'lemuel', 2012, 11),
+(14, 0.4048, 0.329, 0.5615, 0.9372, 2.7139, 3.4959, 3.6537, 3.6747, 3.8872, 4.1581, 5.5234, 5.3289, '2013-05-27 01:35:27', 'lemuel', 2013, 0),
+(15, 0.3888, 0.3947, 0.6603, 1.1903, 2.9761, 3.1086, 3.6521, 3.6842, 3.9343, 4.0945, 5.4958, 5.0851, '2013-05-27 01:40:41', 'lemuel', 2013, 1),
+(16, 0.3748, 0.3452, 0.4119, 0.7985, 2.2378, 2.5725, 2.8107, 2.8587, 3.0455, 3.2595, 4.121, 4.1054, '2013-05-27 01:46:22', 'lemuel', 2013, 2);
 
 -- --------------------------------------------------------
 
@@ -1125,14 +930,16 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_personal_services` (
   `budget_personal_services` double NOT NULL,
   `actual_personal_services` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ndc_tbl_personal_services`
 --
 
 INSERT INTO `ndc_tbl_personal_services` (`id`, `month`, `year`, `date_updated`, `updated_by`, `budget_personal_services`, `actual_personal_services`) VALUES
-(1, 10, 2012, '2013-05-08 02:32:23', 'lay', 22308000, 17532213);
+(1, 10, 2012, '2013-05-08 02:32:23', 'lay', 22308000, 17532213),
+(2, 2, 2013, '2013-05-27 02:56:20', 'lay', 25678750, 5323634.41),
+(3, 3, 2013, '2013-05-28 05:16:02', 'lay', 25678750, 7732715.62);
 
 -- --------------------------------------------------------
 
@@ -1179,14 +986,17 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_projected_actual_income` (
   `actual_gain_on_sale` double NOT NULL,
   `actual_other_income` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `ndc_tbl_projected_actual_income`
 --
 
 INSERT INTO `ndc_tbl_projected_actual_income` (`id`, `actual_income`, `date_updated`, `updated_by`, `actual_dividend`, `actual_interest`, `actual_rental`, `actual_gain_on_sale`, `actual_other_income`) VALUES
-(1, 720790000, '2013-05-08 02:15:09', 'lay', 147600000, 461600000, 88840000, 22650000, 100000);
+(1, 720790000, '2013-05-08 02:15:09', 'lay', 147600000, 461600000, 88840000, 22650000, 100000),
+(2, 185128661, '2013-05-27 02:48:24', 'lay', 15140564, 149636065, 20100242, 251790, 0),
+(3, 185128661, '2013-05-27 02:48:41', 'lay', 15140564, 149636065, 20100242, 251790, 0),
+(4, 237047246.47, '2013-05-28 05:14:25', 'lay', 15140564, 186523457.05, 35122120.64, 261104.78, 0);
 
 -- --------------------------------------------------------
 
@@ -1205,14 +1015,15 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_projected_actual_income_2` (
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `ndc_tbl_projected_actual_income_2`
 --
 
 INSERT INTO `ndc_tbl_projected_actual_income_2` (`id`, `projected_income`, `projected_dividend`, `projected_interest`, `projected_rental`, `projected_gain_on_sale`, `projected_other_income`, `date_updated`, `updated_by`) VALUES
-(1, 992200000, 265900000, 356800000, 97900000, 271400000, 200000, '2013-05-08 02:17:02', 'lay');
+(1, 992200000, 265900000, 356800000, 97900000, 271400000, 200000, '2013-05-08 02:17:02', 'lay'),
+(2, 1115800000, 193800000, 447700000, 130000000, 344300000, 0, '2013-05-27 02:45:56', 'lay');
 
 -- --------------------------------------------------------
 
@@ -1499,54 +1310,54 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_spg_income_statement` (
   `project_id` bigint(20) NOT NULL,
   `revenue` double NOT NULL,
   `net_income` double NOT NULL,
+  `profit_margin` double NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `ndc_tbl_spg_income_statement`
 --
 
-INSERT INTO `ndc_tbl_spg_income_statement` (`id`, `project_id`, `revenue`, `net_income`, `date_updated`, `updated_by`, `year`) VALUES
-(1, 1, 700388, 164249, '2013-04-15 02:37:27', 'jonathan', 2009),
-(2, 1, 513239, 65957, '2013-04-15 02:37:27', 'jonathan', 2010),
-(3, 1, 652663, 205144, '2013-04-15 02:37:27', 'jonathan', 2011),
-(4, 6, 11943.7, 1846, '2013-04-15 02:37:27', 'jonathan', 2009),
-(5, 6, 22897.8, 3952, '2013-04-15 02:37:27', 'jonathan', 2010),
-(6, 6, 25813.6, 6031.1, '2013-04-15 02:37:27', 'jonathan', 2011),
-(7, 8, 110398620, 1993213, '2013-04-15 02:37:27', 'jonathan', 2009),
-(8, 8, 135798151, 15892033, '2013-04-15 02:37:27', 'jonathan', 2010),
-(9, 8, 127334325, -1329201, '2013-04-15 02:37:27', 'jonathan', 2011),
-(10, 9, 902806208, 83334998, '2013-04-15 02:37:27', 'jonathan', 2009),
-(11, 9, 677573396, 58717920, '2013-04-15 02:37:27', 'jonathan', 2010),
-(12, 9, 1484743648, 429563731, '2013-04-15 02:37:27', 'jonathan', 2011),
-(13, 12, 23982025, 437698, '2013-04-15 02:37:27', 'jonathan', 2009),
-(14, 12, 34534428, 23352699, '2013-04-15 02:37:27', 'jonathan', 2010),
-(15, 12, 17718418, 9523856, '2013-04-15 02:37:27', 'jonathan', 2011),
-(16, 11, 3566627, 2092812, '2013-04-15 02:37:27', 'jonathan', 2009),
-(17, 11, 3660681, 1850102, '2013-04-15 02:37:27', 'jonathan', 2010),
-(18, 11, 3624800, 1710709, '2013-04-15 02:37:27', 'jonathan', 2011),
-(19, 13, 397532, 62685, '2013-04-15 02:37:27', 'jonathan', 2009),
-(20, 13, 397532, 50714, '2013-04-15 02:37:27', 'jonathan', 2010),
-(21, 13, 8313858, -720532, '2013-04-15 02:37:27', 'jonathan', 2011),
-(22, 10, 695522, 64404, '2013-04-15 02:37:27', 'jonathan', 2009),
-(23, 10, 695522, 53625, '2013-04-15 02:37:27', 'jonathan', 2010),
-(24, 10, 13748946, 9535407, '2013-04-15 02:37:27', 'jonathan', 2011),
-(25, 17, 649931, -100413, '2013-04-15 02:37:27', 'jonathan', 2009),
-(26, 17, 597047, -2778511, '2013-04-15 02:37:27', 'jonathan', 2010),
-(27, 17, 527455, -1912332, '2013-04-15 02:37:27', 'jonathan', 2011),
-(28, 16, 0, 0, '2013-04-15 02:37:27', 'jonathan', 2009),
-(29, 16, 127171115, 8738775, '2013-04-15 02:37:27', 'jonathan', 2010),
-(30, 16, 126711894, 4338094, '2013-04-15 02:37:27', 'jonathan', 2011),
-(31, 15, 2018848, 1092399, '2013-04-15 02:37:27', 'jonathan', 2009),
-(32, 15, 1459202, 457009, '2013-04-15 02:37:27', 'jonathan', 2010),
-(33, 15, 1329731, 383795, '2013-04-15 02:37:27', 'jonathan', 2011),
-(35, 5, 38815875, -34713327, '2013-05-24 02:41:07', 'jonathan', 2011),
-(36, 5, 113440010.51, 73830821.57, '2013-05-24 02:41:41', 'jonathan', 2010),
-(37, 7, 1030682808, -286271233, '2013-05-24 02:54:51', 'jonathan', 2011),
-(38, 7, 509626568, -496216771, '2013-05-24 02:55:23', 'jonathan', 2010);
+INSERT INTO `ndc_tbl_spg_income_statement` (`id`, `project_id`, `revenue`, `net_income`, `profit_margin`, `date_updated`, `updated_by`, `year`) VALUES
+(1, 1, 700388, 164249, 33.5, '2013-05-27 00:53:14', 'jonathan', 2009),
+(2, 1, 513239, 65957, 18.9, '2013-05-27 00:53:27', 'jonathan', 2010),
+(3, 1, 652663, 205144, 45.7, '2013-05-27 00:53:39', 'jonathan', 2011),
+(4, 6, 11943.7, 1846, 21.7, '2013-05-27 00:54:30', 'jonathan', 2009),
+(5, 6, 22897.8, 3952, 30, '2013-05-27 00:54:47', 'jonathan', 2010),
+(6, 6, 25813.6, 6031.1, 35.3, '2013-05-27 00:55:00', 'jonathan', 2011),
+(7, 8, 110398620, 1993213, 2.6, '2013-05-27 00:55:26', 'jonathan', 2009),
+(8, 8, 135798151, 15892033, 12.1, '2013-05-27 00:55:34', 'jonathan', 2010),
+(9, 8, 127334325, -1329201, -1.3, '2013-05-27 00:55:43', 'jonathan', 2011),
+(10, 9, 902806208, 83334998, 89.6, '2013-05-27 00:56:48', 'jonathan', 2009),
+(11, 9, 677573396, 58717920, 89.9, '2013-05-27 00:58:40', 'jonathan', 2010),
+(12, 9, 1484743648, 429563731, 67, '2013-05-27 00:58:48', 'jonathan', 2011),
+(13, 12, 23982025, 437698, 1.6, '2013-05-27 00:59:05', 'jonathan', 2009),
+(14, 12, 34534428, 23352699, 94.4, '2013-05-27 00:59:16', 'jonathan', 2010),
+(15, 12, 17718418, 9523856, 74.2, '2013-05-27 00:59:27', 'jonathan', 2011),
+(16, 11, 3566627, 2092812, 29.9, '2013-05-27 00:59:52', 'jonathan', 2009),
+(17, 11, 3660681, 1850102, 63.6, '2013-05-27 01:00:01', 'jonathan', 2010),
+(18, 11, 3624800, 1710709, 64, '2013-05-27 01:00:10', 'jonathan', 2011),
+(19, 13, 397532, 62685, 21.4, '2013-05-27 01:00:33', 'jonathan', 2009),
+(20, 13, 397532, 50714, 17.1, '2013-05-27 01:00:40', 'jonathan', 2010),
+(21, 13, 8313858, -720532, -6.8, '2013-05-27 01:00:49', 'jonathan', 2011),
+(22, 10, 695522, 64404, 12.9, '2013-05-27 01:01:12', 'jonathan', 2009),
+(23, 10, 695522, 53625, 10.6, '2013-05-27 01:01:22', 'jonathan', 2010),
+(24, 10, 13748946, 9535407, 98.1, '2013-05-27 01:01:32', 'jonathan', 2011),
+(25, 17, 649931, -100413, -15.4, '2013-05-27 01:01:52', 'jonathan', 2009),
+(26, 17, 597047, -2778511, -464.1, '2013-05-27 01:02:07', 'jonathan', 2010),
+(27, 17, 527455, -1912332, -361.2, '2013-05-27 01:02:15', 'jonathan', 2011),
+(29, 16, 127171115, 8738775, 28.7, '2013-05-27 01:03:55', 'jonathan', 2010),
+(30, 16, 126711894, 4338094, 29.3, '2013-05-27 01:04:03', 'jonathan', 2011),
+(32, 15, 1459202, 457009, 31.3, '2013-05-27 01:04:48', 'jonathan', 2010),
+(33, 15, 1329731, 383795, 28.9, '2013-05-27 01:05:01', 'jonathan', 2011),
+(35, 5, 38815875, -34713327, -25.11, '2013-05-27 01:07:36', 'jonathan', 2011),
+(36, 5, 113440010.51, 73830821.57, 72.44, '2013-05-27 01:07:26', 'jonathan', 2010),
+(37, 7, 1030682808, -286271233, 5.7, '2013-05-27 01:08:09', 'jonathan', 2011),
+(38, 7, 509626568, -496216771, -20.9, '2013-05-27 01:08:00', 'jonathan', 2010),
+(39, 15, 2018848, 1092399, 54.1, '2013-05-27 01:05:31', 'jonathan', 2009);
 
 -- --------------------------------------------------------
 
@@ -1578,13 +1389,13 @@ INSERT INTO `ndc_tbl_spg_sub_categories_existing` (`id`, `category_id`, `name`, 
 (7, 3, 'San Carlos Bio-Energy Incorporated', 'San Carlos Bioenergy, Inc. (SCBI), a joint venture project between the private and the government sector, is an integrated ethanol distillery and power cogeneration plant with an output capacity of 125,000 liters per day (lpd) of fuel grade ethanol and approximately 8 MW of electricity.', '', 'Philippine Peso(PHP)', '2013-05-17 16:26:10'),
 (8, 4, 'Manila Exposition Complex, Incorporated', 'MECI was registered on March 2, 1995, primarily to acquire by purchase, exchange, assignment, gift or otherwise, and to hold, own and use for investment.\n\nThe company owned World Trade Center Manila.', '', 'Philippine Peso(PHP)', '2013-05-17 16:26:10'),
 (9, 4, 'Science Park of the Philippines, Incorporated', 'SPPI, established in 1989, is an industrial estate developer. An industry pioneer and leader, it has developed a series of well-managed and strategically located industrial parks, registered as Special Economic Zones.\r\n\\n\\n\r\nSPPI provides well-managed locations for light and medium industries, especially support and manufacturing industries, with environment-friendly operations. HEIP also caters to heavy industries. Industries include electronics, telecommunications, electrical appliances, auto parts, packaging and consumer goods. \r\n\\n\\n\r\nSPPI offers complete and advanced infrastructure and facilities to support manufacturing operations. It provides abundant supply of power, water and telecommunications to ensure non-stop manufacturing activities. \r\n\\n\\n\r\nSPPI industrial parks are strategically located and easily accessible; proximate to financial and industrial cities sans the noise and pollution. For local and foreign expatriates, nearby are first-class residences, schools, commercial, leisure, sports and cultural facilities.', '', 'Philippine Peso(PHP)', '2013-05-23 02:56:41'),
-(10, 4, 'Pinagkaisa Realty Corporation', 'The Pinagkaisa Realty Corporation (PRC) was organized in 1977 under the Corporation Law of the Philippines and registered with the Securities and Exchange Commission on March 13, 1978 under Registry Number 78665.\r\n\\n\\n\r\nThe Company was organized to acquire, buy, sell, exchange, manage, improve, lease, or otherwise deal in real property.\r\n\\n\\n\r\nWith the termination of the American Parity Agreement on July 3, 1974, the National Development Company (NDC) acquired through absolute purchase 60% undivided interest in the four parcels of land owned by the Philippine Electric Manufacturing Company (PEMCO), [now GE Lighting Philippines, Inc. (GELP)]. On September 30, 1977, a Deed of Assignment and Transfer was executed wherein NDC and PEMCO conveyed their respective 60% and 40% undivided interest in exchange for fully paid shares of stock of PRC.\r\n\\n\\n\r\nIn November 1977, a Contract of Lease was executed between PRC and PEMCO leasing the subject parcels of land to the latter for a period of twenty-five (25) years, renewable for another twenty-five (25) years.   The said Contract of Lease, which was effective October 1, 1977, expired on September 30, 2002.  \r\n\\n\\n\r\nA New Lease Contract was executed on July 4, 2011 for a period of 18 years and 3 months commencing on 01 October 2002 and ending on December 31, 2020.', '', 'Philippine Peso(PHP)', '2013-05-23 02:55:15'),
-(11, 4, 'Kamayan Realty Corporation', 'KRC was organized with the primary purpose of allowing then Getty Oil Philippines Inc. (now Pilipinas Shell Petroleum Corporation) [Shell]) to continue its business on the land they used to own.  The National Development Company (NDC) owns 60% of KRC and the balance of 40% is owned by Shell.\r\nKRC owns 54 parcels of land located in various cities and municipalities in the Philippines with a land area of 40,139 square meters. The estimated fair market value of the KRC landholdings as of July and August 2010 based on third party appraisal is P352,356,000.00.\r\nIn 2001, Shell renewed the lease for ten (10) years covering 26 parcels in eleven (11) locations with an area of 15,046.8 square meters and returned to KRC 28 parcels in four (4) locations or an area of 25,092.20 square meters for KRC to dispose through sale or lease via public bidding. \r\n\\n\\n\r\nIn 2012, Shell renewed the lease for fifteen (15) years covering 14 parcels in seven locations or an area of 7,242.10 square meters; returned to KRC eight (8) parcels in three (3) locations with an area of 5,982 square meters while awaiting completion of environmental clean-up of the Sta. Mesa site consisting of four (4) parcels or an area of 1,822.70 square meters.', '', 'Philippine Peso(PHP)', '2013-05-22 09:55:14'),
-(12, 4, 'Batangas Land Co. Inc.', 'Batangas Land Company, Inc. (BLC) was organized with the primary purpose of allowing Caltex Philippines, Inc. (now Chevron Philippines Inc. [Chevron]) to continue its business in the lands they used to own. NDC owns 60% of BLC and the balance of 40% is owned by Chevron.\r\nBLC owns 162 parcels of land located in various cities and provinces in the Philippines with a land area of 1,929,205 square meters. The estimated fair market value of the BLC landholdings as of 28 November 2007 based on the average of two (2) third party appraisal is P3.8 Billion.\r\nOut of the 162 parcels of land, 15 parcels with a total area of 116,921 square meters were returned by Chevron for BLC to dispose through public bidding.  \r\n\\n\\n\r\nThe balance of 147 parcels or 1,812,284 square meters are leased to Chevron until 30 September 2025.', '', 'Philippine Peso(PHP)', '2013-05-23 02:54:35'),
-(13, 4, 'Gy Real Estate, Inc.', 'The GY Real Estate, Inc. (GYREI) was organized in 1973 under the Corporation Law of the Philippines and registered with the Securities and Exchange Commission on February 1, 1974 under Registry Number 54511.\r\n\\n\\n\r\nThe Company was created to acquire, buy, sell, exchange, manage, improve, lease, or otherwise deal in real property.\r\n\\n\\n\r\nWith the termination of the American Parity Agreement on July 3, 1974, Goodyear Phils., Inc. (GPI) (formerly Goodyear Tire and Rubber Company of the Philippines, Ltd.) donated 60% of its undivided interest, right and title to its two (2) parcels of land to the National Development Company (NDC) on May 26, 1975.  On the same day, NDC and GPI entered into a Deed of Transfer and Conveyance and conveyed these two (2) parcels of land to GYREI for a 60% and 40% undivided interest, respectively, in exchange for fully paid shares of stock of the Company.  Still on the same date, a Contract of Lease was executed by and between GYREI and GPI leasing to the latter the two (2) parcels of land located at Almanza, Las Piñas for a period of 25 years, renewable for another 25 years.  The Contract of Lease has expired on May 26, 2000.  \r\nIn their meetings on November 18 and 27, 2009, respectively, the NDC and GYREI Boards approved the renewal of the Contract of Lease with GPI retroactive May 26, 2000 and was terminated effective April 15, 2011.  \r\n\\n\\n\r\nThe Company has an existing Contract of Lease  with  HH  Asia   Tyre  Corporation (HH ATC) for the period April 16, 2011 to November 30, 2013.', '', 'Philippine Peso(PHP)', '2013-05-22 09:54:36'),
+(10, 4, 'Pinagkaisa Realty Corporation', 'Pinagkaisa Realty Corporation (PRC) was organized in 1977 under the Corporation Law of the Philippines and registered with the Securities and Exchange Commission on March 13, 1978 under Registry Number 78665.\r\n\\n\\n\r\nThe Company was organized to acquire, buy, sell, exchange, manage, improve, lease or otherwise deal in real property.\r\n\\n\\n\r\nWith the termination of the American Parity Agreement on July 3, 1974, the National Development Company (NDC) acquired through absolute purchase 60% undivided interest in the four parcels of land owned by the Philippine Electric Manufacturing Company (PEMCO), [now GE Lighting Philippines, Inc. (GELP)]. On September 30, 1977, a Deed of Assignment and Transfer was executed wherein NDC and PEMCO conveyed their respective 60% and 40% undivided interest in exchange for fully paid shares of stock of PRC.\r\n\\n\\n\r\nThe property is currently under lease to GE Lighting Philippines, Inc.', '', 'Philippine Peso(PHP)', '2013-06-06 06:23:27'),
+(11, 4, 'Kamayan Realty Corporation', 'Kamayan Realty Corporation (KRC) was organized with the primary purpose of allowing then Getty Oil Philippines Inc. (now Pilipinas Shell Petroleum Corporation [Shell]) to continue its business on the land it used to own. NDC owns 60% of KRC and the balance of 40% is owned by Shell.\r\n\\n\\n\r\nKRC owns 54 parcels of land located in various cities and municipalities in the Philippines with a land area of 40,139 square meters. The fair market value of the KRC landholdings as of 2010 is P352,356,000.00.\r\n\\n\\n\r\nShell leases 14 parcels of land in seven locations. The lease expires on February 28, 2026.', '', 'Philippine Peso(PHP)', '2013-06-06 06:11:26'),
+(12, 4, 'Batangas Land Co. Inc.', 'Batangas Land Company, Inc. (BLC) was organized with the primary purpose of allowing Caltex Philippines, Inc. (now Chevron Philippines Inc. [Chevron]) to continue its business in the lands it used to own. NDC owns 60% of BLC and the balance of 40% is owned by Chevron.\r\n\\n\\n\r\nBLC owns 162 parcels of land located in various cities and provinces in the Philippines with a land area of 1,929,205 square meters. The fair market value of the BLC landholdings as of 28 November 2007 is P3.8 Billion.\r\n\\n\\n\r\nChevron leases 147 parcels of land, the biggest of which is in San Pascual, Batangas. The lease is up to September 2025. There are parcels of land which are still available for lease by other interested parties.', '', 'Philippine Peso(PHP)', '2013-06-07 05:49:45'),
+(13, 4, 'Gy Real Estate, Inc.', 'GY Real Estate, Inc. (GYREI) was organized in 1973 under the Corporation Law of the Philippines and registered with the Securities and Exchange Commission on February 1, 1974 under Registry Number 54511.\r\n\\n\\n\r\nThe Company was created to acquire, buy, sell, exchange, manage, improve, lease or otherwise deal in real property.\r\n\\n\\n\r\nWith the termination of the American Parity Agreement on July 3, 1974, Goodyear Phils, Inc. (GPI) (formerly Goodyear Tire and Rubber Company of the Philippines, Ltd.) donated 60% of its undivided interest, right and title to its two (2) parcels of land to the National Development Company (NDC) on May 26, 1975. On the same day, NDC and GPI entered into a Deed of Transfer and Conveyance and conveyed these two(2) parcels of land to GYREI for a 60% and 40% undivided interest, respectively, in exchange for fully paid shares of stock of the Company.\r\n\\n\\n\r\nThe property was leased by GPI until April 15, 2011, when GPI decided not to renew its occupancy of the property.\r\n\\n\\n\r\nThe Company has an existing Contract of Lease with HH Asia Tyre Corporation (HH ATC) for the period April 16, 2011 to November 30, 2013.', '', 'Philippine Peso(PHP)', '2013-06-06 06:19:39'),
 (14, 5, 'Refractories Corporation of the Philippines', 'RCP was established on 13 October 1976 to manufacture refractory products. It operates a plant for monolithic refractories in Valenzuela City, Metro Manila. It closed its other manufacturing plant in Iligan City which was designed to produce refractory bricks for the cement industry. \r\n\\n\\n\r\nDownturn in the cement industry resulted in financial difficulties for RCP. This led the company to file for corporate rehabilitation on 2 September 2009 before the Regional Trial Court, Branch 159, in Pasig City.', '', 'Philippine Peso(PHP)', '2013-05-23 02:52:00'),
 (15, 6, 'Philippine Infrastructure Corporation', 'NDC-Philippine Infrastructure Corporation (NPIC) was incorporated under the Securities and Exchange Commission under Registration No. CS200501240 on January 27, 2005.  Its incorporation was authorized per Memorandum from the Executive Secretary, dated December 13, 2004, upon the  recommendation of the Secretary of the Department of Trade and Industry and Secretary of Finance and shall be attached to the DTI.\r\n\r\nMandate:\r\n\r\nDevelop, package, structure and or manage investments in infrastructure projects and commercial ventures related to the development of infrastructure in which the NDC wishes to participate or invest. \r\n\r\nStatus and Accomplishments:\r\n\r\n<ul style="margin-left:50px">\r\n<li>	Completed the Business Plan for the Laguindingan and Mindanao Airports Development Projects.</li>\r\n\r\n<li>	Completed the Preliminary Engineering Design for the Daang Hari-SLEX Link Road Project</li>\r\n\r\n<li>	Completed the Feasibility Study on the Calamba-Laguna (CALA) North-South Expressway Project</li>\r\n\r\n<li>	Completed the Feasibility Study on the R10C3R9 Expressway Project</li>\r\n</ul>\r\n\r\n<p style="margin-left:20px">Plans and Programs:</p>\r\n\r\n<ul style="margin-left:50px">\r\n<li>	To channel the Official Development Assistance (ODA) loans from Japan International Cooperation Agency (JICA) to NDC-PIC that will eventually be provide by a sovereign guarantee cover from NDC  and DOF</li>\r\n\r\n<li>	These loans will be re-lend to private infrastructure projects  with the private commercial banks providing additional loans to the projects.</li>\r\n</ul>', '', 'Philippine Peso(PHP)', '2013-05-23 03:04:35'),
-(16, 4, 'LIDE Management Corporation', 'The Leyte Industrial Estate (LIDE) was established in November 1979 through Letter of Instruction No. 962 to spur economic development in Region VIII and as prime site for heavy industries.\r\n\\n\\n\r\nThe LIDE property is owned by the Nationa l Development Company, a government owned and controlled corporation, attached to the Department of Trade and Industry.\r\n\\n\\n\r\nLIDE has been proclaimed as Special Economic Zone (SEZ) under RA 7195 as amended by RA 8748 or the Special Economic Zone Act of 1995.\r\n\\n\\n\r\nThe LIDE Management Corporation (LMC) through the collective efforts of the National Development Company (NDC), PHILPHOS and PASAR, has been organized and incorporated on December 31, 1993 to manage and administer the entire LIDE Complex, and assume the functions of PHILPHOS and PASAR over the operations of the LIDE Water Supply System (LWSS) Project and Support Facilities Administration (SFA).\r\n\\n\\n\r\nThe LIDE Management Corporation is located at the LIDE Compound in Isabel, Leyte. It is being managed and operated by key competent personnel composed of General Manager, Department Managers, Section Heads, Community Relations Officer and Administrative Support Staff. The Company is under the supervision of the Board of Directors (BOD) composed of highly qualified experts and well-respected officers from the NDC as the BOD Chair, and members from PASAR and PHILPHOS.', '', 'Philippine Peso(PHP)', '2013-05-23 02:57:20'),
+(16, 4, 'LIDE Management Corporation', '<b>Creation of LIDE</b>\r\n\\n\\n\r\nLeyte Industrial Development Estate (LIDE) was established in November 1979 through Letter of Instruction No. 962 to spur economic development in Region VIII and as prime site for heavy industries.\r\n\\n\\n\r\nThe LIDE property is owned by the National Development Company, a government-owned and controlled corporation, attached to the Department of Trade and Industry.\r\n\\n\\n\r\nLIDE has been proclaimed as Special Economic Zone (SEZ) under RA 7195 as amended by RA 8748 or the Special Economic Zone Act of 1995.\r\n\\n\\n\r\n<b> LIDE Industry Locators </b>\r\n\\n\\n\r\n<table class="table table-bordered" style="width:700px">\r\n<tr>\r\n<th> Major Locators </th>\r\n<th> Industry/Product </th>\r\n</tr>\r\n<tr>\r\n<td> Philippine Phosphate Fertilizer Corporation </td>\r\n<td> Phosphate fertilizer </td>\r\n</tr>\r\n<tr>\r\n<td> Philippine Associated Smelting and Refining Corporation </td>\r\n<td> Copper Smelter and refinery. Primary product is electrolytic copper cathodes </td>\r\n</tr>\r\n<tr>\r\n<td> Century Hua Guang Smelting, Inc. (new locator) </td>\r\n<td> Ferronickel </td>\r\n</tr>\r\n<tr>\r\n<td> Other Locators: </td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> Cleanaway Philippines, Inc. </td>\r\n<td> Industries'' hazardous/toxic wastes management </td>\r\n</tr>\r\n<tr>\r\n<td> ALC Tonggo Fertilizer Manufacturing </td>\r\n<td> Aluminum sulfate </td>\r\n</tr>\r\n<tr>\r\n<td> Scorpio Cable Vision </td>\r\n<td> Cable TV network </td>\r\n</tr>\r\n<tr>\r\n<td> FAG Machine Shop and Services Co. </td>\r\n<td> Fabrication shop of industrial parts </td>\r\n</tr>\r\n<tr>\r\n<td> Islacom, Eastern Visayas Telecom, SMART Comm, Inc. </td>\r\n<td> Telecommunications </td>\r\n</tr>\r\n<tr>\r\n<td> Petron Corporation </td>\r\n<td> Fuel (for the requirements of industry locators) </td>\r\n</tr>\r\n<tr>\r\n<td> LIDE Management Corporation </td>\r\n<td> Supervise/manage the Estate and the LIDE Water Supply System </td>\r\n</tr>\r\n</table>\r\n\\n\\n\r\n<b> Feature of the Estate </b>\r\n\\n\\n\r\n<b>LIDE Location</b>: Municipality of Isabel, Northwestern part of the Province of Leyte, Philippines. It can be reached from Manila via airlines to:\r\n\\n\\n\r\na. Cebu City, then a fast craft to Ormoc City, from there a 40-minute ride to LIDE; or\r\n\\n\r\nb. Tacloban City, then ride a chartered or passenger bus for about 3-hours to LIDE.\r\n\\n\\n\r\n<b>Total Area</b>: 420 hectares\r\n\\n\\n\r\n<b>Available Area</b>: 50-hectares may be developed further for other industries for lease or sale to interested locators.\r\n\\n\\n\r\n<b>Support Facilities and Amenities</b>: Security, port and cargo handling facilities, communication facilities, airstrip, reliable water system, fuel tank farm, recreational facilities and direct power connection at Tongonan Geothermal Power Plant.\r\n\\n\\n\r\n<b>Administration of LIDE</b>\r\n\\n\\n\r\nThe LIDE Management Corporation (LMC) was organized and incorporated to manage and administer the entire LIDE complex.', '', 'Philippine Peso(PHP)', '2013-06-07 09:42:31'),
 (17, 4, 'First Cavite Industrial Estate, Inc.', 'First Cavite Industrial Estate, Inc. (FCIEI) is a joint venture project of the National Development Company (NDC), Marubeni Corporation and Japan International Development Organization Ltd. (JAIDO), a corporation established by KEIDANREN (Japan Federation of Economic Organization).  FCIEI was registered with the Securities and Exchange Commission (SEC) on December 14, 1990 under SEC Registry No. 184885 and with the Board of Investments (BOI) under Certificate of Registration No. 89-491 dated January 09, 1991.\r\n\\n\\n\r\nMandate:\r\n\\n\\n\r\nFCIEI was created principally to acquire, own, lease, hold, subdivide, construct, develop, equip, operate, maintain and generally deal in industrial estates and in any and all lands, estates, buildings, plants, construction or manufacturing works, canneries, mills, factories, refineries, warehouses and other business structures.  Secondarily, and for such purposes, to acquire, construct, maintain and operate roads, bridges, pumping plants, drainage systems, structures, systems and works of all kinds, and all machinery, equipment, instrument, apparatus and appliances which may be required, needed or used in connection therewith and to do all acts, matters, and things incidental to, necessary or desirable for and in connection with the foregoing\r\n\\n\\n\r\nStatus and Accomplishments:\r\n\r\n<ul style="margin-left:50px">\r\n<li>	FCIE developed the 154.5 hectare property of NDC at Dasmarinas,Cavite into an industrial estate and economic zone.</li>\r\n\r\n<li>	In 1997, after having sold all the saleable lots within the industrial estate, FCIEI transferred the Management and operation of the estate including the infrastructure and common facilities to the FCIE Association, an association composed of all the locators inside the estate.</li>\r\n\r\n<li>	FCIEI executed Contract of lease with the FCIE Association, Inc. for the common areas, roads and open spaces.</li>\r\n\r\n<li>	Signed  MOA providing ROW for the following NDC properties; the NDC Humayao property and the NDC Housing Project (Pueblocillo)</li></ul>\r\n\r\n<p style="margin-left:20px">Plans and Programs:</p>\r\n\r\n<ul style="margin-left:50px">\r\n<li>	The development of NDC’s 19.2 hectares of   land property located at Humayao, Dasmarinas, Cavite, as an expansion of FCIEI.</li> </ul>\r\n', '', 'Philippine Peso(PHP)', '2013-05-22 09:57:34');
 
 -- --------------------------------------------------------
@@ -1597,24 +1408,24 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_status_assets` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `under_lease` double NOT NULL,
   `for_sale_lease` double NOT NULL,
-  `for_cmp` double NOT NULL,
   `with_court_case` double NOT NULL,
   `for_relocation_survey` double NOT NULL,
   `for_titling` double NOT NULL,
   `with_jv` double NOT NULL,
   `for_project_development` double NOT NULL,
+  `on_going` double NOT NULL,
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_by` varchar(255) NOT NULL,
   `year` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ndc_tbl_status_assets`
 --
 
-INSERT INTO `ndc_tbl_status_assets` (`id`, `under_lease`, `for_sale_lease`, `for_cmp`, `with_court_case`, `for_relocation_survey`, `for_titling`, `with_jv`, `for_project_development`, `date_updated`, `updated_by`, `year`) VALUES
-(2, 12, 19, 10, 4, 3, 6, 1, 3, '2013-05-20 05:23:21', 'randy', 2012);
+INSERT INTO `ndc_tbl_status_assets` (`id`, `under_lease`, `for_sale_lease`, `with_court_case`, `for_relocation_survey`, `for_titling`, `with_jv`, `for_project_development`, `on_going`, `date_updated`, `updated_by`, `year`) VALUES
+(3, 13, 27, 3, 3, 7, 1, 3, 2, '2013-06-06 05:02:01', 'randy', 2013);
 
 -- --------------------------------------------------------
 
@@ -1630,7 +1441,14 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_uploads` (
   `description` text NOT NULL,
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `ndc_tbl_uploads`
+--
+
+INSERT INTO `ndc_tbl_uploads` (`id`, `date_updated`, `updated_by`, `filename`, `description`, `category`) VALUES
+(1, '2013-06-03 08:04:15', 'jonathan', '1368656907349.pdf', 'sample upload', 'ASEAN');
 
 -- --------------------------------------------------------
 
@@ -1660,7 +1478,7 @@ CREATE TABLE IF NOT EXISTS `ndc_tbl_users` (
 --
 
 INSERT INTO `ndc_tbl_users` (`id`, `first_name`, `middle_name`, `last_name`, `username`, `password`, `email`, `ndc_group`, `role`, `is_activated`, `login_attempts`, `secret_question`, `secret_answer`) VALUES
-(1, 'first', 'middle', 'last', 'mlfr', 'b4aee7857a870c9d88d1c189dfca612e', 'sample@yahoo.com', '', 'POWER_USER', 1, 0, 'sample?', 'sample'),
+(1, 'first', 'middle', 'last', 'mlfr', 'b4aee7857a870c9d88d1c189dfca612e', 'sample@yahoo.com', '', 'POWER_USER', 1, 0, NULL, NULL),
 (2, 'first', 'middle', 'last', 'colette', 'b0c817ea37fc4d673d4e83b5c666d736', 'sample@yahoo.com', NULL, 'POWER_USER', 1, 0, NULL, NULL),
 (3, 'first', 'middle', 'last', 'shm', 'b1a269e5ad5f5e338d64b561def7cce2', 'sample@yahoo.com', NULL, 'TACTICAL_USER', 1, 0, NULL, NULL),
 (4, 'first', 'middle', 'last', 'lla', '90fb64acdd95670179c0758edbefe339', 'sample@yahoo.com', NULL, 'TACTICAL_USER', 1, 0, NULL, NULL),
