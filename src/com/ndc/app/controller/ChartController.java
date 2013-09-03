@@ -147,7 +147,7 @@ public class ChartController {
 						"Millions",// Y-Axis label
 						categoryDataset, // Dataset
 						PlotOrientation.VERTICAL, true, // Show legend
-						true, false);
+						true, false); 
 
 				CategoryPlot plot = chart.getCategoryPlot();
 				plot.getRenderer().setSeriesPaint(0, new Color(0, 204, 143));
